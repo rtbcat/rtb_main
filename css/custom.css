@@ -1,0 +1,72 @@
+/* Initial Screen */
+.first-screen {
+    background: url(../images/map.jpg) no-repeat 50% 50%;
+}
+
+/* Main Navigation Links */
+.codrops-demos a:hover {
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+    animation-delay: 10ms;
+    animation-name: jello;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
+}
+.related a:hover {
+    opacity: 1;
+    color: #576475;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.65) 100%);
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.related a:hover img {
+    
+}
+.related a:hover h3 {
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+    animation-delay: 400ms;
+    animation-name: flash;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+}
+
+/* Contact Form CSS */
+#contact-us {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 9999;
+    display: block;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+    animation-name: zoomIn;
+}
+.fs-form-wrap {
+    max-width: 1000px;
+    margin: auto;
+    border: 1px solid red;
+}
+.fs-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 40px;
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: bold;
+}
+.fs-title,.fs-form {
+    color: #576475;
+}
+.fs-fields input:focus {
+    background-color: transparent;
+}
+.fs-fields input,
+.fs-fields textarea {
+    color: rgba(0,0,0,0.5);
+    border: 1px solid #555;
+    padding: 10px;
+}
