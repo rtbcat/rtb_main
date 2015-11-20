@@ -7,14 +7,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Programmatic Platform</title>
 		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/ani.css" />
-		<link rel="stylesheet" type="text/css" href="css/rtb_main.css" />
-		<link rel="stylesheet" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/tooltip-curved.css" />
+		<link rel="stylesheet" type="text/css" href="css/rtb_main.css" />
+		<link rel="stylesheet" type="text/css" href="css/perspective-component.css" />
 		<!-- Form CSS -->
         
         <!-- Custom Main CSS -->
+        <style>
+        	/* Glyph Icons */
+			@font-face {
+			  font-family: 'Glyphicons Halflings';
+
+			  src: url('fonts/glyphicons-halflings-regular.eot');
+			  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+			}
+			.glyphicon {
+			  position: relative;
+			  top: 1px;
+			  display: inline-block;
+			  font-family: 'Glyphicons Halflings';
+			  font-style: normal;
+			  font-weight: normal;
+			  line-height: 1;
+
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			}
+			.glyphicon-link:before {
+			  content: "\e144";
+			}
+			.glyphicon-wrench:before {
+			  content: "\e136";
+			}
+			.glyphicon-apple:before {
+			  content: "\f8ff";
+			}
+			.glyphicon-book:before {
+			  content: "\e043";
+			}
+			.glyphicon-shopping-cart:before {
+			  content: "\e116";
+			}
+
+        </style>
         <link rel="stylesheet" type="text/css" href="css/custom.css" />
         <script src="js/modernizr.custom.js"></script>
 		<!--[if IE]>
@@ -22,104 +60,120 @@
 		<![endif]-->
 	</head>
 	<body class="color-3">
-		<div class="container first-screen">
-			<!-- Top Navigation -->
-			<div class="content">
-				<header class="codrops-header">
-					<h1>rtb.cat <span> Programmatic Access </span></h1>
-					<nav class="codrops-demos">
-						<a href="#">About us</a>
-						<a href="inventory.html">Inventory</a>
-						<a href="http://adx.rtb.cat/">login</a>
-						<a href="contact.html">Contact</a>
-
-					</nav>
-				</header>
-				<div class="dummy dummy-image">
-					<div class="dummy-pois">
-						<div class="tooltip tooltip-west">
-							<span class="tooltip-item"></span>
-							<span class="tooltip-content">Male, 18-24, iPhone6, searched for "Cinema tickets"</span>
-						</div>
-						<div class="tooltip tooltip-west">
-							<span class="tooltip-item"></span>
-							<span class="tooltip-content">Female, 25-34, on Cosmopolitan.com, recently searched for "Blahnik"</span>
-						</div>
-						<div class="tooltip tooltip-east">
-							<span class="tooltip-item"></span>
-							<span class="tooltip-content">Female, 35-50, Staying home for the weekend, recipes searched</span>
-						</div>
-						<div class="tooltip tooltip-east">
-							<span class="tooltip-item"></span>
-							<span class="tooltip-content">reading Self-Help articles, logged-in on amazon </span>
-						</div>
-					</div>
+		<div id="perspective" class="perspective effect-rotatetop">
+			<div class="container">
+				<div class="wrapper">
+					<div class="first-screen">
+						<!-- Top Navigation -->
+						<div class="content">
+							<header class="codrops-header">
+								<h1>rtb.cat <span> Programmatic Access </span></h1>
+								<nav class="codrops-demos">
+									<a href="#">About us</a>
+									<a href="#" id="showMenu">Inventory</a>
+									<a href="http://adx.rtb.cat/">login</a>
+									<a href="contact.html">Contact</a>
+								</nav>
+							</header>
+							<div class="dummy dummy-image">
+								<div class="dummy-pois">
+									<div class="tooltip tooltip-west">
+										<span class="tooltip-item"></span>
+										<span class="tooltip-content">Male, 18-24, iPhone6, searched for "Cinema tickets"</span>
+									</div>
+									<div class="tooltip tooltip-west">
+										<span class="tooltip-item"></span>
+										<span class="tooltip-content">Female, 25-34, on Cosmopolitan.com, recently searched for "Blahnik"</span>
+									</div>
+									<div class="tooltip tooltip-east">
+										<span class="tooltip-item"></span>
+										<span class="tooltip-content">Female, 35-50, Staying home for the weekend, recipes searched</span>
+									</div>
+									<div class="tooltip tooltip-east">
+										<span class="tooltip-item"></span>
+										<span class="tooltip-content">reading Self-Help articles, logged-in on amazon </span>
+									</div>
+								</div>
+							</div>
+						</div><!-- /content -->
+					</div><!-- /container -->
+					<!-- Related demos -->
+					<section class="related">
+						<p>for direct access or DSP/SSP integration to:</p>
+						<a href="https://www.doubleclickbygoogle.com/" target="_blank">
+							<img src="images/doubleclick.png" />
+							<h3>DoubleClick</h3>
+						</a>
+						<a href="http://www.appnexus.com/" target="_blank">
+							<img src="images/appnexus.png" />
+							<h3>AppNexus</h3>
+						</a>
+						<a href="https://www.facebook.com/advertising/" target="_blank">
+							<img src="images/facebook.png" />
+							<h3>FbX</h3>
+							
+						</a>
+						<a href="http://advertising.microsoft.com/en/ad-exchange" target="_blank">
+							<img src="images/microsoft.png" />
+							<h3>MSFT AdX</h3>
+						</a>
+						<a href="http://mopub.com" target="_blank">
+							<img src="images/mopub.png" />
+							<h3>MoPub</h3>
+						</a>
+						<a href="https://advertising.amazon.com" target="_blank">
+							<img src="images/amazon.png" />
+							<h3>Amazon</h3>
+						</a>
+						<a href="https://rubiconproject.com" target="_blank">
+							<img src="images/rubicon.png" />
+							<h3>Rubicon</h3>
+						</a>
+						<a href="http://operamediaworks.com" target="_blank">
+							<img src="images/opera.png" />
+							<h3>Opera</h3>
+						</a>
+						<a href="http://www2.ebayadvertising.com/uk/programmatic" target="_blank">
+							<img src="images/ebay.png" />
+							<h3>Ebay</h3>
+						</a>
+						<a href="https://help.apple.com/iadworkbench/mac/2.0/#/slvabdfd563f" target="_blank">
+							<img src="images/iad.png" />
+							<h3>iAd</h3>
+						</a>
+						<a href="http://openx.com" target="_blank">
+							<img src="images/openx.png" />
+							<h3>OpenX</h3>
+						</a>
+						<a href="http://www.pubmatic.com" target="_blank">
+							<img src="images/pubmatic.png" />
+							<h3>PubMatic</h3>
+						</a>
+						<a href="https://www.smaato.com" target="_blank">
+							<img src="images/smaato.png" />
+							<h3>Smaato</h3>
+						</a>
+						<a href="http://www.taboola.com" target="_blank">
+							<img src="images/taboola.png" />
+							<h3>Programmatic &amp; Retargeting</h3>
+						</a>
+					</section>
 				</div>
-			</div><!-- /content -->
-		</div><!-- /container -->
-		<!-- Related demos -->
-		<section class="related">
-			<p>for direct access or DSP/SSP integration to:</p>
-			<a href="https://www.doubleclickbygoogle.com/" target="_blank">
-				<img src="images/doubleclick.png" />
-				<h3>DoubleClick</h3>
-			</a>
-			<a href="http://www.appnexus.com/" target="_blank">
-				<img src="images/appnexus.png" />
-				<h3>AppNexus</h3>
-			</a>
-			<a href="https://www.facebook.com/advertising/" target="_blank">
-				<img src="images/facebook.png" />
-				<h3>FbX</h3>
-				
-			</a>
-			<a href="http://advertising.microsoft.com/en/ad-exchange" target="_blank">
-				<img src="images/microsoft.png" />
-				<h3>MSFT AdX</h3>
-			</a>
-			<a href="http://mopub.com" target="_blank">
-				<img src="images/mopub.png" />
-				<h3>MoPub</h3>
-			</a>
-			<a href="https://advertising.amazon.com" target="_blank">
-				<img src="images/amazon.png" />
-				<h3>Amazon</h3>
-			</a>
-			<a href="https://rubiconproject.com" target="_blank">
-				<img src="images/rubicon.png" />
-				<h3>Rubicon</h3>
-			</a>
-			<a href="http://operamediaworks.com" target="_blank">
-				<img src="images/opera.png" />
-				<h3>Opera</h3>
-			</a>
-			<a href="http://www2.ebayadvertising.com/uk/programmatic" target="_blank">
-				<img src="images/ebay.png" />
-				<h3>Ebay</h3>
-			</a>
-			<a href="https://help.apple.com/iadworkbench/mac/2.0/#/slvabdfd563f" target="_blank">
-				<img src="images/iad.png" />
-				<h3>iAd</h3>
-			</a>
-			<a href="http://openx.com" target="_blank">
-				<img src="images/openx.png" />
-				<h3>OpenX</h3>
-			</a>
-			<a href="http://www.pubmatic.com" target="_blank">
-				<img src="images/pubmatic.png" />
-				<h3>PubMatic</h3>
-			</a>
-			<a href="https://www.smaato.com" target="_blank">
-				<img src="images/smaato.png" />
-				<h3>Smaato</h3>
-			</a>
-			<a href="http://www.taboola.com" target="_blank">
-				<img src="images/taboola.png" />
-				<h3>Programmatic &amp; Retargeting</h3>
-			</a>
-		</section>
-		<!-- Form -->
+			</div>
+			<nav class="outer-nav bottom horizontal">
+				<a href="inventory.html"><span class="glyphicon glyphicon-wrench"></span> Inventory Tool</a>
+				<a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> eBay PMP</a>
+				<a href="#"><span class="glyphicon glyphicon-book"></span> Amazon US, UK, DE PMP</a>
+				<a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> eBay US, UK, DE PMP</a>
+				<a href="#"><span class="glyphicon glyphicon-apple"></span> iAd &amp; Apple TV</a>
+			</nav>
+		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/perspectiveMenu.js"></script>
+
 		<!-- Chat -->
+		<!--
 		<script type="text/javascript" src=//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/5f91ed8d49e8856fcbcda1b9c8bc2fad96b50240aaae8389a8b9ac6188ab4c8d.js></script>
+		-->
 	</body>
 </html>
