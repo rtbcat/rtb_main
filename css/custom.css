@@ -38,6 +38,7 @@
 /* Perspective Menu CSS */
 .outer-nav {
     z-index: 99;
+    display: none;
 }
 .outer-nav a {
     color: white;

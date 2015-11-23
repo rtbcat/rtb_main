@@ -41,11 +41,13 @@
 		var showMenu = document.getElementById( 'showMenu' ),
 			perspectiveWrapper = document.getElementById( 'perspective' ),
 			container = perspectiveWrapper.querySelector( '.container' ),
-			contentWrapper = container.querySelector( '.wrapper' );
+			contentWrapper = container.querySelector( '.wrapper' ),
+			outerNav = perspectiveWrapper.querySelector("nav.outer-nav");
 
 		showMenu.addEventListener( clickevent, function( ev ) {
 			ev.stopPropagation();
 			ev.preventDefault();
+			outerNav.style.display = "block";
 			docscroll = scrollY();
 			// change top of contentWrapper
 			contentWrapper.style.top = docscroll * -1 + 'px';
@@ -59,6 +61,7 @@
 
 		container.addEventListener( clickevent, function( ev ) {
 			if( classie.has( perspectiveWrapper, 'animate') ) {
+				outerNav.style.display = "none";
 				var onEndTransFn = function( ev ) {
 					if( support && ( ev.target.className !== 'container' || ev.propertyName.indexOf( 'transform' ) == -1 ) ) return;
 					this.removeEventListener( transEndEventName, onEndTransFn );
