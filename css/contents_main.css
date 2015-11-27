@@ -53,6 +53,20 @@ main .embed-responsive {
 }
 
 /* Responsive CSS */
+@media (max-width: 850px) {
+	header .logo a {
+		font-size: 18px;
+		padding: 10px;
+	}
+	main h1 {
+		font-size: 22px;
+		margin-top: 0;
+		margin-bottom: 18px;
+	}
+	main p {
+		font-size: 14px;
+	}
+}
 @media (max-width: 660px) {
 	header a {
 		display: inline-block;
@@ -61,7 +75,7 @@ main .embed-responsive {
 		display: block;
 		width: 100%;
 		text-align: center;
-		margin: auto auto 20px auto;
+		/*margin: auto auto 20px auto;*/
 	}
 	.logo a {
 		margin: 0 !important;
