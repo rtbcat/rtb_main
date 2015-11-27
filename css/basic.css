@@ -54,6 +54,11 @@ header .nav a:hover {
     max-height: 360px;
     margin: auto;
 }
+.youtube-480 {
+    max-width: 850px;
+    max-height: 480px;
+    margin: auto;
+}
 p {
     line-height: 1.5;
     margin: 20px auto;

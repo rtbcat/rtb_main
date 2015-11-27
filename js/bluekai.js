@@ -58,7 +58,7 @@ function page_submit(e){
     loader.open();
     $.ajax({
         method : "GET",
-        url : "http://localhost/rtb/index.php/search/bk",
+        url : "http://sandbox.lat.com.es/index.php/search/bk",
         data : data,
         success : function(response,status_code,xhr){
             var result = JSON.parse(response);
