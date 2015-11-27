@@ -1,9 +1,55 @@
 header .logo a {
+	font-size: 25px;
+	display: inline-block;
+	padding: 15px;
+	color: #232529;
 	margin-right: 20px;
+	line-height: 0.4;
+	border: 3px solid #232529;
+	border-radius: 50%;
+}
+header .logo a:hover {
+	color: white;
+	background-color: #232529;
 }
 main {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 25px;
+	color: white;
+}
+main h1 {
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 32px;
+}
+main p,
+main h1,
+main h2,
+main h3 {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+}
+main a {
+	color: #232529;
+}
+main a:hover {
+	color: #E35583;
+}
+main .img-responsive {
+	border: 3px solid rgba(255,255,255,0.5);
+}
+main .embed-responsive {
+	border: 5px solid rgba(255,255,255,0.5);
+	border-radius: 5px;
+}
+.wrapper {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Responsive CSS */
@@ -21,9 +67,9 @@ main {
 		margin: 0 !important;
 		line-height: 1;
 	}
-	.nav {
+	/*.nav {
 		display: block;
 		width: 100%;
 		text-align: center;
-	}
+	}*/
 }

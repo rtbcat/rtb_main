@@ -25,9 +25,9 @@ header .logo a {
     font-size: 35px;
     font-weight: 800;
 }
-header .logo a:hover {
+/*header .logo a:hover {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
-}
+}*/
 header .nav {
     display: inline-block;
     height: 100%;
@@ -48,15 +48,6 @@ header .nav a:last-child {
 }
 header .nav a:hover {
     background-color: rgba(255,255,255,1);
-}
-main {
-    background-color: white;
-}
-.wrapper {
-    max-width: 1000px;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 .youtube-360 {
     max-width: 640px;
