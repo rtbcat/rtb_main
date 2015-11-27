@@ -1,24 +1,220 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<title>Inventory Research</title>
-		<script src="js/jquery-1.11.3.min.js"></script>
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-			}
-			iframe {
-				display: block;
-				position: fixed;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-			}
-		</style>
-	</head>
-	<body>
-		<iframe id="inventory"  frameBorder="0" src="http://sandbox.lat.com.es/"></iframe>
-	</body>
+<html lang="en">
+    <head>
+        <base href="" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Inventory Tool</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/basic.css" />
+        <link rel="stylesheet" href="css/tables_main.css" />
+        <script src="js/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="#">rtb.cat</a>
+            </div>
+            <div class="nav">
+                <nav>
+                    <a href="#">About Us</a><a href="#">Inventory</a><a href="#">Login</a><a href="#">Contact</a>
+                </nav>
+            </div>
+            <div style="clear:both"></div>
+        </header>
+        <main>
+            <aside id="sidebar" class="docked">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Search
+                        <button class="btn toggler" onclick="toggle_side(this)">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+                    <div class="panel-body">
+                    <!-- Form Fields -->
+                        <form id="search_form">
+                            <div class="field-entry">
+                                <input type="text" class="form-control" name="keyword" placeholder="Name or ID" />
+                            </div>
+                            <div class="field-entry">
+                                <div class="filter-title">Country</div>
+                                <div class="filter-content">
+                                    <ul id="filter_country">
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="country" value="all" checked="true" onclick="countries.all()" />
+                                                &nbsp;Worldwide (All Countries)
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="country" value="" onclick="return country_select()" />
+                                                &nbsp;<span id="filter_country_choice" title="Click to change.">Select Country</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="field-entry">
+                                <div class="filter-title">Device Type</div>
+                                <div class="filter-content">
+                                    <ul>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="all" checked="true" /> All</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="0" /> Desktop</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="1" /> Phone</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="2" /> Tablet</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="field-entry">
+                                <div class="filter-title">Supply Type</div>
+                                <div class="filter-content">
+                                    <ul>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="all" checked="true" /> All</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="0" /> Web</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="1" /> Mobile Web</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="2" /> Mobile App</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input type="hidden" name="sort_by" value="" />
+                            <input type="hidden" name="order_by" value="acs" />
+                            <input type="hidden" name="page" value="1" />
+                            <div class="field-entry form-buttons">
+                                <button type="submit" class="btn btn-info btn-sm">Apply Filter</button>
+                                <button type="reset" class="btn btn-warning btn-sm" onclick="countries.all()">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+            <section>
+                <div class="section-header">
+                    <div class="title">Inventory Tool &gt; Results</div>
+                    <div id="pagination_container" class="pagination">
+                        <select id="pagination" name="page" disabled="true">
+                            <option value="1">1</option>
+                        </select>
+                        &nbsp;
+                        of 0
+                    </div>
+                </div>
+                <div id="table_container" class="section-body">
+                    <!--
+                        Ajax table will fill this section.
+                    -->
+                </div>
+                <div class="section-footer">
+                    <div id="pagination_container_bottom" class="pagination">
+                        <div class="sort_by">Sort by </div>
+                        <select id="sorting" onchange="page_sort()">
+                            <option value="seller_name">Seller</option>
+                            <!--<option value="seller_id">ID</option>-->
+                            <option value="filtered_impressions" selected="true">Filtered Impressions</option>
+                        </select>
+                        <select id="ordering" onchange="page_sort()">
+                            <option value="asc">Ascending</option>
+                            <option value="des" selected="true">Descending</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            &nbsp;
+        </footer>
+        <div id="loader" class="screen-overlay">
+            <div class="box">
+                <img src="images/spinner.gif" />&nbsp;LOADING
+            </div>
+        </div>
+        <div id="message" class="screen-overlay">
+            <div class="box">
+                <div class="message">
+                    Message goes here.
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default btn-sm" onclick="message.close()">
+                        Ok
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="country_select" class="screen-overlay">
+            <div class="box">
+                <div class="message">
+                    <p>Select a country.</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li data-code="AR" onclick="countries.select(this)">Argentina</li>
+                        <li data-code="AU" onclick="countries.select(this)">Australia</li>
+                        <li data-code="BR" onclick="countries.select(this)">Brazi</li>
+                        <li data-code="CA" onclick="countries.select(this)">Canada</li>
+                        <li data-code="CN" onclick="countries.select(this)">China</li>
+                        <li data-code="DE" onclick="countries.select(this)">Germany</li>
+                        <li data-code="ES" onclick="countries.select(this)">Spain</li>
+                        <li data-code="FR" onclick="countries.select(this)">France</li>
+                        <li data-code="GB" onclick="countries.select(this)">United Kingdom</li>
+                        <li data-code="ID" onclick="countries.select(this)">Indonesia</li>
+                        <li data-code="IN" onclick="countries.select(this)">India</li>
+                        <li data-code="IT" onclick="countries.select(this)">Italy</li>
+                        <li data-code="JP" onclick="countries.select(this)">Japan</li>
+                        <li data-code="KR" onclick="countries.select(this)">South Korea</li>
+                        <li data-code="MX" onclick="countries.select(this)">Mexico</li>
+                        <li data-code="NL" onclick="countries.select(this)">Netherlands</li>
+                        <li data-code="PH" onclick="countries.select(this)">Philippines</li>
+                        <li data-code="PL" onclick="countries.select(this)">Poland</li>
+                        <li data-code="RU" onclick="countries.select(this)">Russia</li>
+                        <li data-code="TH" onclick="countries.select(this)">Thailand</li>
+                        <li data-code="TR" onclick="countries.select(this)">Turkey</li>
+                        <li data-code="TW" onclick="countries.select(this)">Taiwan</li>
+                        <li data-code="UA" onclick="countries.select(this)">Ukraine</li>
+                        <li data-code="US" onclick="countries.select(this)">United States</li>
+                        <li data-code="VN" onclick="countries.select(this)">Vietnam</li>
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default btn-sm" onclick="countries.close()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            $("a[href='#']").click(function(e){e.preventDefault()});
+        </script>
+        <script src="js/inventory_tool.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            function toggle_side(elem){
+                if($("#sidebar").hasClass("docked")){
+                    $("#sidebar").removeClass("docked");
+                    $(elem).children("span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
+                }
+                else{
+                    $("#sidebar").addClass("docked");
+                    $(elem).children("span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
+                }
+            }
+        </script>
+    </body>
 </html>
