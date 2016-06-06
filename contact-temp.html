@@ -97,7 +97,7 @@
 				$("#contact_container").css("opacity","0");
 				$.ajax({
 					method : 'GET',
-					url : 'http://sandbox.lat.com.es/index.php/contact/mail',
+					url : 'http://sandbox.lat.com.es/index.php/contact',
 					data : data,
 					success : function(response){
 						var reply = JSON.parse(response);
