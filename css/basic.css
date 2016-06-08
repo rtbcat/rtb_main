@@ -25,9 +25,12 @@ header .logo a {
     font-size: 35px;
     font-weight: 800;
 }
-/*header .logo a:hover {
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
-}*/
+header .banner-ad-space {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
 header .nav {
     display: inline-block;
     height: 100%;
