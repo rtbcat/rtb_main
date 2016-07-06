@@ -1,0 +1,364 @@
+body {
+    background-color: white;
+}
+header {
+
+}
+header .logo a {
+    color: #3A4D61 !important;
+    margin: auto 20px;
+    font-size: 18px;
+    font-weight: normal;
+}
+main {
+    width: 100%;
+    display: table;
+    padding: 0 15px 15px 15px;
+    background-color: #fff;
+}
+main > aside,
+main > section {
+    display: table-cell;
+    padding: 5px;
+    vertical-align: top;
+}
+main > aside {
+    width: 240px;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+}
+main > aside .spanel {
+    width: 240px;
+}
+main > aside .spanel-body ul {
+    height: 500px;
+    margin-top: 15px;
+    overflow-y: auto;
+}
+main > aside .spanel-body li {
+    list-style-type: none;
+    min-height: 40px;
+    padding: 5px;
+    padding-left: 40px;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+    position: relative;
+}
+main > aside .spanel-body li:before {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: "";
+    border: 1px solid #ccc;
+    border-radius: 100%;
+
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+}
+main > aside .spanel-body li:hover {
+    background: -moz-linear-gradient(top,  rgba(250,250,250,0.1) 20%, rgba(100,100,100,0.2) 100%);
+    background: -webkit-linear-gradient(top,  rgba(250,250,250,0.1) 20%,rgba(100,100,100,0.2) 100%);
+    background: linear-gradient(to bottom,  rgba(250,250,250,0.1) 20%,rgba(100,100,100,0.2) 100%);
+}
+main > aside .spanel-body li:hover:before {
+    
+}
+main > aside .spanel-body li:hover img {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+main > aside .spanel-body li img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+main > aside .spanel-body li.active {
+    background: -moz-linear-gradient(bottom,  rgba(180,180,180,0.15) 65%,rgba(120,120,120,0.2) 100%);
+    background: -webkit-linear-gradient(bottom,  rgba(180,180,180,0.15) 65%,rgba(120,120,120,0.2) 100%);
+    background: linear-gradient(to top, rgba(180,180,180,0.1) 65%,rgba(120,120,120,0.2) 100%);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid white;
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+main > aside .spanel-body li.active:hover {
+    background: -moz-linear-gradient(bottom,  rgba(180,180,180,0.15) 65%,rgba(120,120,120,0.2) 100%);
+    background: -webkit-linear-gradient(bottom,  rgba(180,180,180,0.15) 65%,rgba(120,120,120,0.2) 100%);
+    background: linear-gradient(to top, rgba(180,180,180,0.1) 65%,rgba(120,120,120,0.2) 100%);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid white;
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+main > aside .spanel-body li.active:before {
+    top: 11px;
+}
+main > aside .spanel-body li.active:after {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 14px;
+    left: 13px;
+    content: "";
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    background: rgb(237,192,45);
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(237,192,45,1) 0%, rgba(224,82,0,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(237,192,45,1) 0%,rgba(224,82,0,1) 100%);
+    background: radial-gradient(ellipse at center,  rgba(237,192,45,1) 0%,rgba(224,82,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edc02d', endColorstr='#e05200',GradientType=1 );
+}
+main > aside .spanel-body li.active img {
+    position: relative;
+    top: 1px;
+    -webkit-filter: none;
+    filter: none;
+}
+main > aside .spanel-body li.active:hover img {
+    -webkit-filter: none;
+    filter: none;
+}
+main > aside .spanel-body li:active {
+    background: -moz-linear-gradient(bottom,  rgba(180,180,180,0.15) 65%,rgba(120,120,120,0.2) 100%);
+    background: -webkit-linear-gradient(bottom,  rgba(180,180,180,0.15) 65%,rgba(120,120,120,0.2) 100%);
+    background: linear-gradient(to top, rgba(180,180,180,0.1) 65%,rgba(120,120,120,0.2) 100%);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid white;
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+main > aside .spanel-body li:active img {
+    position: relative;
+    top: 1px;
+    opacity: 0.9;
+}
+main > aside .spanel-body li:active:before {
+    top: 11px;
+}
+main > aside .spanel-body input {
+    display: none;
+}
+
+main > section {
+    overflow-x: auto;
+}
+main > section select {
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+main > section .section-header {
+    overflow: auto;
+    margin-bottom: 15px;
+    padding-top: 6px;
+}
+main > section .title {
+    font-size: 18px;
+    float: left;
+}
+main > section .pagination {
+    line-height: 28px;
+    float: right;
+    margin: 0;
+}
+main > section .pagination .sort_by {
+    display: inline-block;
+}
+main table.table th {
+    cursor: pointer;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    display: block;
+    clear: both;
+}
+.sort-direction {
+    display: inline-block;
+    float: right;
+}
+.screen-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    display: none;
+    z-index: 1;
+}
+.screen-overlay .box {
+    border-radius: 5px;
+}
+#filter_country_choice,
+#category_branded_select_choice,
+#category_demographic_select_choice {
+    cursor: pointer;
+}
+#filter_country_choice:hover,
+#category_branded_select_choice:hover,
+#category_demographic_select_choice:hover,
+a:hover {
+    color: #5bc0de;
+    z-index: 9;
+}
+#loader .box {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 250px;
+    border: 1px solid #999;
+    background-color: white;
+    line-height: 1.2;
+}
+#loader .box img {
+    vertical-align: middle;
+}
+#message .box {
+    margin-top: 200px;
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid #999;
+    background-color: white;
+}
+#message .box .buttons,
+#country_select .box .buttons,
+#category_branded_select .box .buttons,
+#category_demographic_select .box .buttons {
+    margin-top: 15px;
+}
+#country_select .box,
+#category_branded_select .box,
+#category_demographic_select .box {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 15px;
+    background-color: white;
+    margin-top: 50px;
+}
+#country_select .box .list,
+#category_branded_select .box .list,
+#category_demographic_select .box .list {
+    min-width: 220px;
+    max-height: 250px;
+    overflow-y: scroll;
+    border: 1px solid #999;
+}
+#country_select .box .list ul,
+#category_branded_select .box .list ul,
+#category_demographic_select .box .list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#country_select .box .list ul li,
+#category_branded_select .box .list ul li,
+#category_demographic_select .box .list ul li {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+#country_select .box .list ul li:first-child,
+#category_branded_select .box .list ul li:first-child,
+#category_demographic_select .box .list ul li:first-child {
+    border-top: none;
+}
+#country_select .box .list ul li:hover,
+#category_branded_select .box .list ul li:hover,
+#category_demographic_select .box .list ul li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Bootstrap Resets */
+.dropdown-menu {
+    min-width: 50px !important;
+    left: auto;
+    right: 0;
+}
+body,span,div {
+    color: #3A4D61;
+}
+
+/* BlueKai Table */
+#table_container {
+    overflow-x:auto;
+}
+#table_container span.badge {
+    display: inline-block;
+    border-radius: 0;
+    border: 1px solid #677484;
+    overflow: visible !important;
+    position: relative;
+    margin-right: 9px;
+    color: #3A4D61;
+    background-color: transparent;
+}
+#table_container span.badge:last-child .point {
+    display: none;
+}
+#table_container div.point {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    line-height: 0;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #677484;
+    border-bottom: 10px solid transparent;
+}
+/* Responsive CSS */
+
+@media(max-width:950px){
+    table.table td:nth-child(5) {
+        min-width: 300px;
+    }
+}
+
+@media(max-width:660px){
+    header {
+        text-align: center;
+    }
+    header div.header-title {
+        width: 100%;
+    }
+    header div.header-title,
+    header div.user-widget {
+        display: inline-block;
+        float: none;
+        clear: both;
+    }
+    main,
+    main > aside,
+    main > section {
+        display: block !important;
+    }
+    main > aside {
+        position: absolute;
+        top: 113px;
+    }
+    main > aside.docked {
+        -webkit-transform: translateX(-110%);
+        transform: translateX(-105%);
+    }
+    main > aside .page-heading {
+        border-top-right-radius: 0;
+    }
+    main > aside button.toggler {
+        display: block;
+    }
+    main > section {
+        width: 100%;
+    }
+}
