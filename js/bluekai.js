@@ -44,6 +44,10 @@ function page_change(){
     $("#search_form input[name='page']").val($("#pagination").val());
     $("#search_form").submit();
 }
+function page_go(page_num){
+    $("#search_form input[name='page']").val(page_num);
+    $("#search_form").submit();
+}
 function page_sort(){
     $("#search_form input[name='sort_by']").val($("#sorting").val());
     $("#search_form input[name='order_by']").val($("#ordering").val());
