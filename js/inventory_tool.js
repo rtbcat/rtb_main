@@ -1,4 +1,5 @@
 /* Global Values */
+var form_value = "";
 var delay = 300;
 var loader = {
     open : function(){
@@ -29,9 +30,12 @@ var countries = {
         radio.checked = true;
         $("#filter_country_choice").text(name);
         countries.close();
+        $('.form-buttons [type="reset"]').removeClass('display-none');
+        page_submit();
     },
     all : function(){
         $("#filter_country_choice").text("Select Country");
+        page_submit();
     },
     close : function(){
         $("#country_select").css("display","none");
@@ -50,32 +54,37 @@ function page_sort(){
     $("#search_form").submit();
 }
 function page_submit(e){
-    e.preventDefault();
+    if(e) e.preventDefault();
     $("#search_form input[name='page']").val($("#pagination").val());
     $("#search_form input[name='sort_by']").val($("#sorting").val());
     $("#search_form input[name='order_by']").val($("#ordering").val());
-    var data = $(this).serialize();
-    loader.open();
-    $.ajax({
-        method : "GET",
-        url : "http://sandbox.lat.com.es/index.php/search",
-        data : data,
-        success : function(response,status_code,xhr){
-            var result = JSON.parse(response);
-            if(result.status == "success"){
-                setTimeout(function(){
-                    loader.close();
-                    // Payload here
-                    $("#pagination_container").html(result.pagination);
-                    $("#table_container").html(result.table);
-                    //-------------
-                },delay);
-            }
-            else {
 
+    var data = $('#search_form').serialize();
+
+    //if(form_value != data){
+        form_value = data;
+        loader.open();
+        $.ajax({
+            method : "GET",
+            url : "http://sandbox.lat.com.es/index.php/search",
+            data : data,
+            success : function(response,status_code,xhr){
+                var result = JSON.parse(response);
+                if(result.status == "success"){
+                    setTimeout(function(){
+                        loader.close();
+                        // Payload here
+                        $("#pagination_container").html(result.pagination);
+                        $("#table_container").html(result.table);
+                        //-------------
+                    },delay);
+                }
+                else {
+
+                }
             }
-        }
-    });
+        });
+    //}
 }
 function country_select(e){
     countries.open();
@@ -96,5 +105,6 @@ function column_sort(elem){
     }
     $("#search_form").submit();
 }
+
 $("#search_form").submit(page_submit);
 $(document).ready($("#search_form").submit());
