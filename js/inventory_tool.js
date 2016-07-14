@@ -38,7 +38,10 @@ var countries = {
     }
 }
 function page_change(){
-    $("#search_form input[name='page']").val($("#pagination").val());
+    $("#search_form").submit();
+}
+function page_go(page_num){
+    $("#pagination").val(page_num);
     $("#search_form").submit();
 }
 function page_sort(){
