@@ -27,6 +27,7 @@
         loader.setAttribute('class','fullscreen');
         loader.setAttribute('src','http://sandbox.lat.com.es/index.php/stat/index'+location.search);
         document.body.appendChild(loader);
+        loader.contentWindow.postMessage('access','*');
     })();
     </script>
 </body>
