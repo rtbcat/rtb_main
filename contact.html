@@ -100,9 +100,17 @@
 				e.preventDefault();
 				var data = $(this).serialize();
 				$("#contact_container").css("opacity","0");
+				// Trigger url call to iframe.
+				var cache_buster = (new Date()).getTime();
+				var callback_url = 'http://trends.revcontent.com/conv.php?t=eJwFwYEBwCAIA7CXZsEK51AH%2F59gQmpWubBlE%2Ba3cMKsBSJZX6ZtrOU0IaDjw%2F96qyJa0%2FkAJPwRWg%3D%3D&cache_bust='+cache_buster;
+				$('#pixel_loader_1').attr('src',callback_url);
+				$.ajax({
+
+				});
+				console.log(callback_url);
 				$.ajax({
 					method : 'GET',
-					url : 'http://sandbox.lat.com.es/index.php/contact',
+					url : 'http://sandbox.lat.com.es/index.php/contact/test',
 					data : data,
 					success : function(response){
 						var reply = JSON.parse(response);
@@ -112,17 +120,18 @@
 							var fx = function(){
 								$("#message_box .overlay_box").css("display","none");
 								setTimeout(function(){
-									top.location = "/";
+									location = location.protocol+'//'+location.host;
 								},1000);
 							}
 							
 							$('#twitter_converter').attr('src','twitter-convert.html');
 							message_box.open("Message sent.",fx);
-						}	
+						}
 					}
 				});
 			})
 		</script>
+		<img id="pixel_loader_1" src="" style="display: none" />
 		<!-- Twitter universal website tag code -->
 		<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
 		<script type="text/javascript">twttr.conversion.trackPid('nuzl2', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
