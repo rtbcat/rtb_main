@@ -109,11 +109,15 @@
                 <div class="section-header">
                     <div class="title">Inventory Tool <i class="glyphicon glyphicon-chevron-right"></i> Results</div>
                     <div id="pagination_container" class="pagination">
-                        <select id="pagination" name="page" disabled="true">
-                            <option value="1">1</option>
+                        <div class="sort_by">Sort by </div>
+                        <select id="sorting" onchange="page_sort()">
+                            <option value="seller_name">Seller</option>
+                            <option value="filtered_impressions" selected="true">Filtered Impressions</option>
                         </select>
-                        &nbsp;
-                        of 0
+                        <select id="ordering" onchange="page_sort()">
+                            <option value="asc">Ascending</option>
+                            <option value="des" selected="true">Descending</option>
+                        </select>
                     </div>
                 </div>
                 <div id="table_container" class="section-body">
@@ -123,16 +127,15 @@
                 </div>
                 <div class="section-footer">
                     <div id="pagination_container_bottom" class="pagination">
-                        <div class="sort_by">Sort by </div>
+                        <!-- <div class="sort_by">Sort by </div>
                         <select id="sorting" onchange="page_sort()">
                             <option value="seller_name">Seller</option>
-                            <!--<option value="seller_id">ID</option>-->
                             <option value="filtered_impressions" selected="true">Filtered Impressions</option>
                         </select>
                         <select id="ordering" onchange="page_sort()">
                             <option value="asc">Ascending</option>
                             <option value="des" selected="true">Descending</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
             </section>
@@ -225,7 +228,6 @@
             document.getElementById('search_form').addEventListener('reset', function(){
                 $('.form-buttons [type="reset"]').addClass('display-none');
                 $('#search_form').submit();
-                console.log("Reset activated.");
             });
         </script>
 		<!-- Twitter universal website tag code -->
