@@ -69,7 +69,7 @@ function page_submit(e){
                 setTimeout(function(){
                     loader.close();
                     // Payload here
-                    $("#pagination_container").html(result.pagination);
+                    $("#pagination_container_bottom").html(result.pagination);
                     $("#table_container").html(result.table);
                     //-------------
                 },delay);

@@ -205,21 +205,7 @@
             <section>
                 <div class="section-header">
                     <div class="title">BlueKai <i class="glyphicon glyphicon-chevron-right"></i> Search Results</div>
-                    <div id="pagination_container" class="pagination">
-                        <select id="pagination" name="page" disabled="true">
-                            <option value="1">1</option>
-                        </select>
-                        &nbsp;
-                        of 0
-                    </div>
-                </div>
-                <div id="table_container" class="section-body">
-                    <!--
-                        Ajax table will fill this section.
-                    -->
-                </div>
-                <div class="section-footer">
-                    <div id="pagination_container_bottom" class="pagination">
+                    <div id="pagination_container_top" class="pagination">
                         <div class="sort_by">Sort by </div>
                         <select id="sorting" onchange="page_sort()">
                             <option value="bk_id">BlueKai ID</option>
@@ -232,6 +218,20 @@
                             <option value="asc">Ascending</option>
                             <option value="des" selected="true">Descending</option>
                         </select>
+                    </div>
+                </div>
+                <div id="table_container" class="section-body">
+                    <!--
+                        Ajax table will fill this section.
+                    -->
+                </div>
+                <div class="section-footer">
+                    <div id="pagination_container_bottom" class="pagination">
+                        <select id="pagination" name="page" disabled="true">
+                            <option value="1">1</option>
+                        </select>
+                        &nbsp;
+                        of 0
                     </div>
                 </div>
             </section>

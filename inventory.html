@@ -108,7 +108,7 @@
             <section>
                 <div class="section-header">
                     <div class="title">Inventory Tool <i class="glyphicon glyphicon-chevron-right"></i> Results</div>
-                    <div id="pagination_container" class="pagination">
+                    <div id="pagination_container_top" class="pagination">
                         <div class="sort_by">Sort by </div>
                         <select id="sorting" onchange="page_sort()">
                             <option value="seller_name">Seller</option>
@@ -127,15 +127,11 @@
                 </div>
                 <div class="section-footer">
                     <div id="pagination_container_bottom" class="pagination">
-                        <!-- <div class="sort_by">Sort by </div>
-                        <select id="sorting" onchange="page_sort()">
-                            <option value="seller_name">Seller</option>
-                            <option value="filtered_impressions" selected="true">Filtered Impressions</option>
+                        <select id="pagination" name="page" disabled="true">
+                            <option value="1">1</option>
                         </select>
-                        <select id="ordering" onchange="page_sort()">
-                            <option value="asc">Ascending</option>
-                            <option value="des" selected="true">Descending</option>
-                        </select> -->
+                        &nbsp;
+                        of 0
                     </div>
                 </div>
             </section>
