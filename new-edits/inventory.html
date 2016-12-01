@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Inventory Tool</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/basic.css" />
+        <link rel="stylesheet" href="css/inventory.css" />
+        <style>
+            .display-none {display: none;}
+        </style>
+        <script src="js/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="width-constrainer">
+                <section class="grid-item">
+                    <div class="logo" title="Home">
+                        <a href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="width-constrainer">
+                <h1 class="page-title">Inventory Data</h1>
+                <aside id="side_bar" class="grid-item">
+                    <div class="spanel">
+                        <form id="search_form">
+                            <input type="hidden" name="sort_by" value="filtered_impressions" />
+                            <input type="hidden" name="order_by" value="des" />
+                            <input type="hidden" name="page" value="1" />
+                            <input type="hidden" name="limit" value="25" />
+                            <div class="spanel-head">
+                                <div class="search-field">
+                                    <input type="text" name="keyword" placeholder="Name or ID" />
+                                    <i class="search-icon"></i>
+                                </div>
+                                <i class="toggle-icon"></i>
+                            </div>
+                            <div class="spanel-body">
+                                <div class="field-entry">
+                                    <div class="filter-title">Country</div>
+                                    <div class="filter-content">
+                                        <ul id="filter_country">
+                                            <li>
+                                                <label>
+                                                    <input type="radio" name="country" value="all" checked="true" />
+                                                    &nbsp;Worldwide (All Countries)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <input id="filter_country_single" type="radio" name="country" value="" />
+                                                    &nbsp;<span id="filter_country_choice" title="Click to change.">Select Country</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="device_block" class="field-entry">
+                                    <div class="filter-title">Device Type</div>
+                                    <div class="filter-content">
+                                        <ul>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="0" checked="true" /> All</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="1" /> Desktop</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="2" /> Phone</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="3" /> Tablet</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="supply_block" class="field-entry">
+                                    <div class="filter-title">Supply Type</div>
+                                    <div class="filter-content">
+                                        <ul>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="0" checked="true" /> All</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="1" /> Web</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="2" /> Mobile Web</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="3" /> Mobile App</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="field-entry form-buttons">
+                                    <button type="reset" class="btn btn-default btn-sm display-none">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+                <section id="main_content" class="grid-item">
+                    <div class="table-control section-header clearfix">
+                        <div class="filter-result-widget left">
+                            <select class="sorting">
+                                <option value="seller_name">Seller</option>
+                                <option value="filtered_impressions" selected="true">Imps</option>
+                            </select>
+                            <select class="ordering">
+                                <option value="asc">Asc</option>
+                                <option value="des" selected="true">Desc</option>
+                            </select>
+                        </div>
+                        <div class="pagination-widget right">
+                            <button class="btn btn-default btn-sm btn-prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </button>
+                            <select class="page-number" name="page">
+                                <option value="1">1</option>
+                            </select>
+                            &nbsp;of <span class="page-total">0</span>
+                            <button class="btn btn-default btn-sm btn-next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="table_container" class="section-body clearfix">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th data-sort="seller_name" class="sort" title="Click to sort">
+                                        Seller
+                                        <div class="sort-direction">
+                                            <span class="glyphicon"></span> 
+                                        </div>
+                                    </th>
+                                    <th data-sort="filtered_impressions" class="sort" title="Click to sort">
+                                        Avg. Daily Impressions
+                                        <div class="sort-direction">
+                                            <span class="glyphicon"></span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td colspan="2">Fetching...</td></tr>
+                                <!--
+                                    Ajax table will fill this section.
+                                -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-control section-footer clearfix">
+                        <div class="filter-result-widget left">
+                            <select class="sorting">
+                                <option value="seller_name">Seller</option>
+                                <option value="filtered_impressions" selected="true">Imps</option>
+                            </select>
+                            <select class="ordering">
+                                <option value="asc">Asc</option>
+                                <option value="des" selected="true">Desc</option>
+                            </select>
+                        </div>
+                        <div class="pagination-widget right">
+                            <button class="btn btn-default btn-sm btn-prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </button>
+                            <select class="page-number" name="page">
+                                <option value="1">1</option>
+                            </select>
+                            &nbsp;of <span class="page-total">0</span>
+                            <button class="btn btn-default btn-sm btn-next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>&nbsp;</footer>
+        <div id="loader" class="screen-overlay">
+            <div class="box">
+                <img src="images/spinner.gif" />&nbsp;LOADING
+            </div>
+        </div>
+        <div id="message" class="screen-overlay">
+            <div class="box">
+                <div class="message">
+                    Message goes here.
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default btn-sm" onclick="message.close()">
+                        Ok
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="country_modal" class="screen-overlay">
+            <div class="box">
+                <div class="message">
+                    <p>Select a country.</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li data-code="AR">Argentina</li>
+                        <li data-code="AU">Australia</li>
+                        <li data-code="BR">Brazil</li>
+                        <li data-code="CA">Canada</li>
+                        <li data-code="CN">China</li>
+                        <li data-code="DE">Germany</li>
+                        <li data-code="ES">Spain</li>
+                        <li data-code="FR">France</li>
+                        <li data-code="GB">United Kingdom</li>
+                        <li data-code="ID">Indonesia</li>
+                        <li data-code="IN">India</li>
+                        <li data-code="IT">Italy</li>
+                        <li data-code="JP">Japan</li>
+                        <li data-code="KR">South Korea</li>
+                        <li data-code="MX">Mexico</li>
+                        <li data-code="NL">Netherlands</li>
+                        <li data-code="PH">Philippines</li>
+                        <li data-code="PL">Poland</li>
+                        <li data-code="RU">Russia</li>
+                        <li data-code="TH">Thailand</li>
+                        <li data-code="TR">Turkey</li>
+                        <li data-code="TW">Taiwan</li>
+                        <li data-code="UA">Ukraine</li>
+                        <li data-code="US">United States</li>
+                        <li data-code="VN">Vietnam</li>
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-default btn-sm btn-cancel">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/app.inventory.js"></script>
+		<!-- Twitter universal website tag code -->
+        <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+        <script type="text/javascript">twttr.conversion.trackPid('nuzl2', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+        <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+        <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+        </noscript>
+        <!-- End Twitter universal website tag code -->
+        <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
+        <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
+        <!-- End of Segment Pixel -->
+    </body>
+</html>
