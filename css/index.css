@@ -1099,19 +1099,3 @@ html, body, .perspective {
     animation-name: flash;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
 }
-
-/* Perspective Menu CSS */
-.outer-nav {
-    z-index: 99;
-    display: none;
-}
-.outer-nav a {
-    color: white;
-}
-.effect-rotatetop .outer-nav a:hover {
-    color: white;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
-}
-.effect-rotatetop .outer-nav a:hover span {
-    animation: swing 500ms both;
-}

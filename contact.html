@@ -10,9 +10,7 @@
 		<meta name="author" content="rtb.cat" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/contact_main.css" />
-		<script src="js/modernizr.custom.js"></script>
-		<script src="js/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/contact.css" />
 	</head>
 	<body>
 		<div id="contact_container" class="container">
@@ -58,9 +56,11 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/classie.js"></script>
-		<script src="js/selectFx.js"></script>
-		<script src="js/fullscreenForm.js"></script>
+		<script src="libs/jquery-1.11.3.min.js"></script>
+		<script src="plugins/modernizr/modernizr.custom.js"></script>
+		<script src="js/fullscreenForm/classie.js"></script>
+		<script src="js/fullscreenForm/selectFx.js"></script>
+		<script src="js/fullscreenForm/fullscreenForm.js"></script>
 		<script>
 			function load_JS(filename){
 				var script_tag = document.createElement('script');
@@ -96,40 +96,42 @@
 					$("#message_box").css("display","none");
 				}
 			}
-			$("#myform").submit(function(e){
-				e.preventDefault();
-				var data = $(this).serialize();
-				$("#contact_container").css("opacity","0");
-				// Trigger url call to iframe.
-				var cache_buster = (new Date()).getTime();
-				var callback_url = 'http://trends.revcontent.com/conv.php?t=eJwFwYEBwCAIA7CXZsEK51AH%2F59gQmpWubBlE%2Ba3cMKsBSJZX6ZtrOU0IaDjw%2F96qyJa0%2FkAJPwRWg%3D%3D&cache_bust='+cache_buster;
-				$('#pixel_loader_1').attr('src',callback_url);
-				$.ajax({
+			;(function($){
+				$("#myform").submit(function(e){
+					e.preventDefault();
+					var data = $(this).serialize();
+					$("#contact_container").css("opacity","0");
+					// Trigger url call to iframe.
+					var cache_buster = (new Date()).getTime();
+					var callback_url = 'http://trends.revcontent.com/conv.php?t=eJwFwYEBwCAIA7CXZsEK51AH%2F59gQmpWubBlE%2Ba3cMKsBSJZX6ZtrOU0IaDjw%2F96qyJa0%2FkAJPwRWg%3D%3D&cache_bust='+cache_buster;
+					$('#pixel_loader_1').attr('src',callback_url);
+					$.ajax({
 
-				});
-				console.log(callback_url);
-				$.ajax({
-					method : 'GET',
-					url : 'http://sandbox.lat.com.es/index.php/contact',
-					data : data,
-					success : function(response){
-						var reply = JSON.parse(response);
-						if(reply.status == "success"){
-							$("#contact_container").css("opacity","1");
+					});
+					console.log(callback_url);
+					$.ajax({
+						method : 'GET',
+						url : 'http://sandbox.lat.com.es/index.php/contact',
+						data : data,
+						success : function(response){
+							var reply = JSON.parse(response);
+							if(reply.status == "success"){
+								$("#contact_container").css("opacity","1");
 
-							var fx = function(){
-								$("#message_box .overlay_box").css("display","none");
-								setTimeout(function(){
-									location = location.protocol+'//'+location.host;
-								},1000);
+								var fx = function(){
+									$("#message_box .overlay_box").css("display","none");
+									setTimeout(function(){
+										location = location.protocol+'//'+location.host;
+									},1000);
+								}
+								
+								$('#twitter_converter').attr('src','twitter-convert.html');
+								message_box.open("Message sent.",fx);
 							}
-							
-							$('#twitter_converter').attr('src','twitter-convert.html');
-							message_box.open("Message sent.",fx);
 						}
-					}
+					});
 				});
-			})
+			}(jQuery))
 		</script>
 		<img id="pixel_loader_1" src="" style="display: none" />
 		<!-- Twitter universal website tag code -->
