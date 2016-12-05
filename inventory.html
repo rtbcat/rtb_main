@@ -8,137 +8,183 @@
         <title>Inventory Tool</title>
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/basic.css" />
-        <link rel="stylesheet" href="css/tables_main.css" />
+        <link rel="stylesheet" href="css/inventory.css" />
         <style>
-            .display-none {
-                display: none;
-            }
+            .display-none {display: none;}
         </style>
         <script src="js/jquery-1.11.3.min.js"></script>
     </head>
     <body>
         <header>
-            <div class="logo" title="Home">
-                <a href="/"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+            <div class="width-constrainer">
+                <section class="grid-item">
+                    <div class="logo" title="Home">
+                        <a href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
-            <aside id="sidebar" class="docked">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Search
-                        <button class="btn toggler" onclick="toggle_side(this)">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </button>
-                    </div>
-                    <div class="panel-body">
-                    <!-- Form Fields -->
+            <div class="width-constrainer">
+                <h1 class="page-title">Inventory Data</h1>
+                <aside id="side_bar" class="grid-item">
+                    <div class="spanel">
                         <form id="search_form">
-                            <div class="field-entry">
-                                <input type="text" class="form-control" name="keyword" placeholder="Name or ID" />
-                            </div>
-                            <div class="field-entry">
-                                <div class="filter-title">Country</div>
-                                <div class="filter-content">
-                                    <ul id="filter_country">
-                                        <li>
-                                            <label>
-                                                <input type="radio" name="country" value="all" checked="true" onclick="countries.all()" />
-                                                &nbsp;Worldwide (All Countries)
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input id="country_single" type="radio" name="country" value="" onclick="return country_select()" />
-                                                &nbsp;<span id="filter_country_choice" title="Click to change.">Select Country</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="device_block" class="field-entry">
-                                <div class="filter-title">Device Type</div>
-                                <div class="filter-content">
-                                    <ul>
-                                        <li>
-                                            <label><input type="radio" name="device_type" value="0" checked="true" /> All</label>
-                                        </li>
-                                        <li>
-                                            <label><input type="radio" name="device_type" value="1" /> Desktop</label>
-                                        </li>
-                                        <li>
-                                            <label><input type="radio" name="device_type" value="2" /> Phone</label>
-                                        </li>
-                                        <li>
-                                            <label><input type="radio" name="device_type" value="3" /> Tablet</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="supply_block" class="field-entry">
-                                <div class="filter-title">Supply Type</div>
-                                <div class="filter-content">
-                                    <ul>
-                                        <li>
-                                            <label><input type="radio" name="supply_type" value="0" checked="true" /> All</label>
-                                        </li>
-                                        <li>
-                                            <label><input type="radio" name="supply_type" value="1" /> Web</label>
-                                        </li>
-                                        <li>
-                                            <label><input type="radio" name="supply_type" value="2" /> Mobile Web</label>
-                                        </li>
-                                        <li>
-                                            <label><input type="radio" name="supply_type" value="3" /> Mobile App</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <input type="hidden" name="sort_by" value="" />
-                            <input type="hidden" name="order_by" value="acs" />
+                            <input type="hidden" name="sort_by" value="filtered_impressions" />
+                            <input type="hidden" name="order_by" value="des" />
                             <input type="hidden" name="page" value="1" />
-                            <div class="field-entry form-buttons">
-                                <!--<button type="submit" class="btn btn-info btn-sm">Apply Filter</button>-->
-                                <button type="reset" class="btn btn-warning btn-sm display-none" onclick="countries.all()">Reset</button>
+                            <input type="hidden" name="limit" value="25" />
+                            <div class="spanel-head">
+                                <div class="search-field">
+                                    <input type="text" name="keyword" placeholder="Name or ID" />
+                                    <i class="search-icon"></i>
+                                </div>
+                                <i class="toggle-icon"></i>
+                            </div>
+                            <div class="spanel-body">
+                                <div class="field-entry">
+                                    <div class="filter-title">Country</div>
+                                    <div class="filter-content">
+                                        <ul id="filter_country">
+                                            <li>
+                                                <label>
+                                                    <input type="radio" name="country" value="all" checked="true" />
+                                                    &nbsp;Worldwide (All Countries)
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <input id="filter_country_single" type="radio" name="country" value="" />
+                                                    &nbsp;<span id="filter_country_choice" title="Click to change.">Select Country</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="device_block" class="field-entry">
+                                    <div class="filter-title">Device Type</div>
+                                    <div class="filter-content">
+                                        <ul>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="0" checked="true" /> All</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="1" /> Desktop</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="2" /> Phone</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="device_type" value="3" /> Tablet</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="supply_block" class="field-entry">
+                                    <div class="filter-title">Supply Type</div>
+                                    <div class="filter-content">
+                                        <ul>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="0" checked="true" /> All</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="1" /> Web</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="2" /> Mobile Web</label>
+                                            </li>
+                                            <li>
+                                                <label><input type="radio" name="supply_type" value="3" /> Mobile App</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="field-entry form-buttons">
+                                    <button type="reset" class="btn btn-default btn-sm display-none">Reset</button>
+                                </div>
                             </div>
                         </form>
                     </div>
-                </div>
-            </aside>
-            <section>
-                <div class="section-header">
-                    <div class="title">Inventory Tool <i class="glyphicon glyphicon-chevron-right"></i> Results</div>
-                    <div id="pagination_container_top" class="pagination">
-                        <div class="sort_by">Sort by </div>
-                        <select id="sorting" onchange="page_sort()">
-                            <option value="seller_name">Seller</option>
-                            <option value="filtered_impressions" selected="true">Filtered Impressions</option>
-                        </select>
-                        <select id="ordering" onchange="page_sort()">
-                            <option value="asc">Ascending</option>
-                            <option value="des" selected="true">Descending</option>
-                        </select>
+                </aside>
+                <section id="main_content" class="grid-item">
+                    <div class="table-control section-header clearfix">
+                        <div class="filter-result-widget left">
+                            <select class="sorting">
+                                <option value="seller_name">Seller</option>
+                                <option value="filtered_impressions" selected="true">Imps</option>
+                            </select>
+                            <select class="ordering">
+                                <option value="asc">Asc</option>
+                                <option value="des" selected="true">Desc</option>
+                            </select>
+                        </div>
+                        <div class="pagination-widget right">
+                            <button class="btn btn-default btn-sm btn-prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </button>
+                            <select class="page-number" name="page">
+                                <option value="1">1</option>
+                            </select>
+                            &nbsp;of <span class="page-total">0</span>
+                            <button class="btn btn-default btn-sm btn-next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div id="table_container" class="section-body">
-                    <!--
-                        Ajax table will fill this section.
-                    -->
-                </div>
-                <div class="section-footer">
-                    <div id="pagination_container_bottom" class="pagination">
-                        <select id="pagination" name="page" disabled="true">
-                            <option value="1">1</option>
-                        </select>
-                        &nbsp;
-                        of 0
+                    <div id="table_container" class="section-body clearfix">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th data-sort="seller_name" class="sort" title="Click to sort">
+                                        Seller
+                                        <div class="sort-direction">
+                                            <span class="glyphicon"></span> 
+                                        </div>
+                                    </th>
+                                    <th data-sort="filtered_impressions" class="sort" title="Click to sort">
+                                        Avg. Daily Impressions
+                                        <div class="sort-direction">
+                                            <span class="glyphicon"></span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td colspan="2">Fetching...</td></tr>
+                                <!--
+                                    Ajax table will fill this section.
+                                -->
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-            </section>
+                    <div class="table-control section-footer clearfix">
+                        <div class="filter-result-widget left">
+                            <select class="sorting">
+                                <option value="seller_name">Seller</option>
+                                <option value="filtered_impressions" selected="true">Imps</option>
+                            </select>
+                            <select class="ordering">
+                                <option value="asc">Asc</option>
+                                <option value="des" selected="true">Desc</option>
+                            </select>
+                        </div>
+                        <div class="pagination-widget right">
+                            <button class="btn btn-default btn-sm btn-prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </button>
+                            <select class="page-number" name="page">
+                                <option value="1">1</option>
+                            </select>
+                            &nbsp;of <span class="page-total">0</span>
+                            <button class="btn btn-default btn-sm btn-next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
-        <footer>
-            &nbsp;
-        </footer>
+        <footer>&nbsp;</footer>
         <div id="loader" class="screen-overlay">
             <div class="box">
                 <img src="images/spinner.gif" />&nbsp;LOADING
@@ -156,76 +202,49 @@
                 </div>
             </div>
         </div>
-        <div id="country_select" class="screen-overlay">
+        <div id="country_modal" class="screen-overlay">
             <div class="box">
                 <div class="message">
                     <p>Select a country.</p>
                 </div>
                 <div class="list">
                     <ul>
-                        <li data-code="AR" onclick="countries.select(this)">Argentina</li>
-                        <li data-code="AU" onclick="countries.select(this)">Australia</li>
-                        <li data-code="BR" onclick="countries.select(this)">Brazil</li>
-                        <li data-code="CA" onclick="countries.select(this)">Canada</li>
-                        <li data-code="CN" onclick="countries.select(this)">China</li>
-                        <li data-code="DE" onclick="countries.select(this)">Germany</li>
-                        <li data-code="ES" onclick="countries.select(this)">Spain</li>
-                        <li data-code="FR" onclick="countries.select(this)">France</li>
-                        <li data-code="GB" onclick="countries.select(this)">United Kingdom</li>
-                        <li data-code="ID" onclick="countries.select(this)">Indonesia</li>
-                        <li data-code="IN" onclick="countries.select(this)">India</li>
-                        <li data-code="IT" onclick="countries.select(this)">Italy</li>
-                        <li data-code="JP" onclick="countries.select(this)">Japan</li>
-                        <li data-code="KR" onclick="countries.select(this)">South Korea</li>
-                        <li data-code="MX" onclick="countries.select(this)">Mexico</li>
-                        <li data-code="NL" onclick="countries.select(this)">Netherlands</li>
-                        <li data-code="PH" onclick="countries.select(this)">Philippines</li>
-                        <li data-code="PL" onclick="countries.select(this)">Poland</li>
-                        <li data-code="RU" onclick="countries.select(this)">Russia</li>
-                        <li data-code="TH" onclick="countries.select(this)">Thailand</li>
-                        <li data-code="TR" onclick="countries.select(this)">Turkey</li>
-                        <li data-code="TW" onclick="countries.select(this)">Taiwan</li>
-                        <li data-code="UA" onclick="countries.select(this)">Ukraine</li>
-                        <li data-code="US" onclick="countries.select(this)">United States</li>
-                        <li data-code="VN" onclick="countries.select(this)">Vietnam</li>
+                        <li data-code="AR">Argentina</li>
+                        <li data-code="AU">Australia</li>
+                        <li data-code="BR">Brazil</li>
+                        <li data-code="CA">Canada</li>
+                        <li data-code="CN">China</li>
+                        <li data-code="DE">Germany</li>
+                        <li data-code="ES">Spain</li>
+                        <li data-code="FR">France</li>
+                        <li data-code="GB">United Kingdom</li>
+                        <li data-code="ID">Indonesia</li>
+                        <li data-code="IN">India</li>
+                        <li data-code="IT">Italy</li>
+                        <li data-code="JP">Japan</li>
+                        <li data-code="KR">South Korea</li>
+                        <li data-code="MX">Mexico</li>
+                        <li data-code="NL">Netherlands</li>
+                        <li data-code="PH">Philippines</li>
+                        <li data-code="PL">Poland</li>
+                        <li data-code="RU">Russia</li>
+                        <li data-code="TH">Thailand</li>
+                        <li data-code="TR">Turkey</li>
+                        <li data-code="TW">Taiwan</li>
+                        <li data-code="UA">Ukraine</li>
+                        <li data-code="US">United States</li>
+                        <li data-code="VN">Vietnam</li>
                     </ul>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="btn btn-default btn-sm" onclick="countries.close()">
+                    <button type="button" class="btn btn-default btn-sm btn-cancel">
                         Cancel
                     </button>
                 </div>
             </div>
         </div>
-        <script>
-            $("a[href='#']").click(function(e){e.preventDefault()});
-        </script>
-        <script src="js/inventory_tool.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script>
-            function toggle_side(elem){
-                if($("#sidebar").hasClass("docked")){
-                    $("#sidebar").removeClass("docked");
-                    $(elem).children("span").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-left");
-                }
-                else{
-                    $("#sidebar").addClass("docked");
-                    $(elem).children("span").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-right");
-                }
-            }
-            $("#device_block label").mouseup(function(){
-                $('.form-buttons [type="reset"]').removeClass('display-none');
-                page_submit();
-            });
-            $("#supply_block label").mouseup(function(){
-                $('.form-buttons [type="reset"]').removeClass('display-none');
-                page_submit();
-            });
-            document.getElementById('search_form').addEventListener('reset', function(){
-                $('.form-buttons [type="reset"]').addClass('display-none');
-                $('#search_form').submit();
-            });
-        </script>
+        <script src="js/app.inventory.js"></script>
 		<!-- Twitter universal website tag code -->
         <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
         <script type="text/javascript">twttr.conversion.trackPid('nuzl2', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
