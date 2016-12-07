@@ -11,6 +11,77 @@ main aside .spanel .form-buttons {text-align: right;}
 /* Main Content */
 main section .section-body .sort-direction {display: inline-block; float: right;}
 
+/* Map Modal */
+#world_map {overflow: hidden;}
+#world_map.fullscreened .width-constrainer {max-width: 100% !important;}
+#world_map .box {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding-bottom: 56.25%;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 300ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: scale(0.3);
+    overflow: hidden;
+}
+#world_map .box.open {
+    opacity: 1;
+    transform: scale(1);
+}
+#world_map .box .jvectormap-container {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 20px; left: 20px;
+    overflow: visible;
+}
+#world_map .box .jvectormap-zoomin,
+#world_map .box .jvectormap-zoomout {
+    padding: 7px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+#world_map .box .jvectormap-zoomin:hover,
+#world_map .box .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,1)}
+#world_map .box .jvectormap-zoomin {top: 0; left: 0; margin-top: -5px; margin-left: -5px;}
+#world_map .box .jvectormap-zoomout {top: 27px; left: 0; margin-top: -5px; margin-left: -5px;}
+#world_map .box .map-title {
+    position: absolute;
+    bottom: 15px; left: 15px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 4px;
+    z-index: 2;
+    display: none;
+}
+#world_map .box .controls {
+    position: absolute;
+    top: 15px; right: 15px;
+    z-index: 2;
+    display: none;
+}
+#world_map .box .controls .glyphicon {
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    background: rgba(0,0,0,0.7);
+    padding: 5px;
+    border-radius: 4px;
+}
+#world_map .box .controls .glyphicon.max:before {content: "\e096";}
+#world_map .box .controls .glyphicon.restore:before {content: "\e097";}
+#world_map .box .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,1);}
+#world_map .box:hover .jvectormap-zoomin,
+#world_map .box:hover .jvectormap-zoomout,
+#world_map .box:hover .map-title,
+#world_map .box:hover .controls {display: inline-block;}
+.jvectormap-tip {z-index: 2147483647;}
+
 /* Country Selection Modal */
 #filter_country_choice,
 #category_branded_select_choice,

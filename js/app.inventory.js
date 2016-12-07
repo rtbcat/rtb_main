@@ -4,11 +4,11 @@
         loading: false,
         last_data: null,
         sellers: [
-            {id:181,link:"stats.html?seller=google&name=Google%20AdExchange"},
-            {id:357,link:"stats.html?seller=openx&name=OpenX"},
-            {id:459,link:"stats.html?seller=rubicon&name=Rubicon"},
-            {id:1752,link:"stats.html?seller=smaato&name=Smaato%20Inc."},
-            {id:280,link:"stats.html?seller=microsoft&name=Microsoft%20Advertising%20Exchange"}
+            {id:181,link:"google"},
+            {id:357,link:"openx"},
+            {id:459,link:"rubicon"},
+            {id:1752,link:"smaato"},
+            {id:280,link:"microsoft"}
         ]
     }
     var data = {items:[],page:{current:1,total:0}};
@@ -63,7 +63,7 @@
                     }
                 }
                 if(seller_link != ""){
-                    entries += '<tr><td><a href="'+seller_link+'" target="_blank">'+item.seller_member_name+'</a></td><td>'+formatNumber(item.filtered_imps)+'</td></tr>';
+                    entries += '<tr><td><a onclick="displayMap(event)" data-seller="'+seller_link+'">'+item.seller_member_name+'</a></td><td>'+formatNumber(item.filtered_imps)+'</td></tr>';
                 }else{
                     entries += '<tr><td>'+item.seller_member_name+'</td><td>'+formatNumber(item.filtered_imps)+'</td></tr>';
                 }
@@ -216,6 +216,107 @@
     // Initialize app.
     init()
 }(jQuery))
+;(function($){
+    function goFullScreen(id) {
+        var el = document.getElementById(id);
+        if (el.requestFullscreen) {
+            el.requestFullscreen();
+        } else if (el.webkitRequestFullscreen) {
+            el.webkitRequestFullscreen();
+        } else if (el.mozRequestFullScreen) {
+            el.mozRequestFullScreen();
+        } else if (el.msRequestFullscreen) {
+            el.msRequestFullscreen();
+        }
+    }
+    function exitFullScreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+    function displayMap(e){
+        var seller = $(e.target).attr('data-seller');
+        var name = $(e.target).text();
+        var url = "http://sandbox.lat.com.es/index.php/stat/json?seller="+seller;
+        var obj = $('#world_map');
+        var box = $('#world_map .box');
+        var map = $('#world_map .jvectormap-container');
+        var leg = $('#world_map .map-title');
+        var fsb = $('#world_map .scr-toggle');
+        var ldr = $('#loader');
+        // Functions.
+        var closeAll = function(e){
+            var target = $(e.target);
+            if(e.target.nodeName === "DIV"){
+                if(target.hasClass('screen-overlay')){
+                    box.removeClass('open');
+                    setTimeout(function(){target.css('display','none')},300);
+                }
+            }
+            if(e.target.nodeName === "I"){
+                if(target.hasClass('glyphicon-remove')){
+                    if(obj.hasClass('fullscreened')){
+                        obj.removeClass('fullscreened');
+                        fsb.removeClass("restore").addClass("max").attr("title","Fullscreen");
+                        exitFullScreen();
+                        setTimeout(function(){box.removeClass('open');},200);
+                        setTimeout(function(){obj.css('display','none')},500);
+                    }else{
+                        box.removeClass('open')
+                        setTimeout(function(){obj.css('display','none')},300);
+                    }
+                }
+            }
+        }
+        var toggleFS = function(e){
+            if(obj.hasClass('fullscreened')){
+                obj.removeClass('fullscreened');
+                $(this).removeClass("restore").addClass("max").attr("title","Fullscreen");
+                exitFullScreen();
+            }else{
+                obj.addClass('fullscreened');
+                $(this).addClass("restore").removeClass("max").attr("title","Exit fullscreen");
+                goFullScreen('world_map');
+            }
+        }
+        // Prep view.
+        box.removeClass('open');
+        ldr.css('display','block');
+        // Bind events
+        obj.unbind('click').on('click',closeAll);
+        fsb.unbind('click').on('click',toggleFS);
+        // Ajax call.
+        if(seller.length > 0){
+            leg.text("");
+            $.getJSON(url, function(data){
+                map.remove();
+                ldr.css('display','none');
+                obj.css('display','block');
+                leg.text(name);
+                setTimeout(function(){
+                    box.addClass('open')
+                    .vectorMap({
+                        map: 'world_mill',
+                        backgroundColor: '#fff',
+                        series: {
+                            regions: [{values: data,scale: ['#7b9f35', '#cc2129'],normalizeFunction: 'polynomial'}]
+                        },
+                        onRegionTipShow: function(e, el, code){
+                            el.html(el.html()+' = '+parseInt(data[code]).toLocaleString());
+                        }
+                    });
+                },100);
+            });
+        }else{console.log("No seller provided.");}
+    };
+    window.displayMap = displayMap;
+}(jQuery));
 
 ;(function($){
     var obj = {

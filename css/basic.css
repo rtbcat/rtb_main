@@ -104,6 +104,8 @@ footer {
     text-align: center;
     display: none;
     z-index: 1;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 .screen-overlay .box {border-radius: 5px;}
 .youtube-360 {
@@ -212,6 +214,7 @@ main #table_container th.active .sort-direction {opacity: 1 !important;}
 main #table_container th.sort .glyphicon:before {content: "\e150";}
 main #table_container th.asc .glyphicon:before {content: "\e113";}
 main #table_container th.des .glyphicon:before {content: "\e114";}
+main #table_container td a {cursor: pointer;}
 main section .table-control select[disabled] {opacity: .65;}
 main section .section-header {margin-bottom: 15px !important;}
 main section .section-body {margin-bottom: 15px !important;}
