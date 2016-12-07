@@ -48,14 +48,13 @@ main section .section-body .sort-direction {display: inline-block; float: right;
 }
 #world_map .box .jvectormap-zoomin:hover,
 #world_map .box .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,1)}
-#world_map .box .jvectormap-zoomin {top: 0; left: 0; margin-top: -5px; margin-left: -5px;}
-#world_map .box .jvectormap-zoomout {top: 27px; left: 0; margin-top: -5px; margin-left: -5px;}
+#world_map .box .jvectormap-zoomin {top: auto; bottom: 0; left: 27px; margin-bottom: -5px; margin-left: -5px;}
+#world_map .box .jvectormap-zoomout {top: auto; bottom: 0; left: 0; margin-bottom: -5px; margin-left: -5px;}
 #world_map .box .map-title {
     position: absolute;
-    bottom: 15px; left: 15px;
+    top: 15px; left: 15px;
+    font-size: 22px;
     font-weight: bold;
-    padding: 5px;
-    background-color: rgba(255,255,255,0.8);
     border-radius: 4px;
     z-index: 2;
     display: none;
