@@ -305,7 +305,7 @@
                         map: 'world_mill',
                         backgroundColor: '#fff',
                         series: {
-                            regions: [{values: data,scale: ['#7b9f35', '#cc2129'],normalizeFunction: 'polynomial'}]
+                            regions: [{values: data, scale: ['#9bd62c', '#cc2129'], normalizeFunction: 'polynomial'}]
                         },
                         onRegionTipShow: function(e, el, code){
                             el.html(el.html()+' = '+parseInt(data[code]).toLocaleString());
