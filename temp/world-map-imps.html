@@ -7,8 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>World Map - Impressions</title>
         <link rel="stylesheet" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
         <link rel="stylesheet" href="plugins/jvectormap-2.0.3/jvectormap.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="css/basic.css" />
+        <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
         <style>
             main.fullscreened .width-constrainer {max-width: 100% !important;}
             #world_map {
@@ -67,7 +69,7 @@
         </style>
     </head>
     <body>
-        <header>
+        <!-- <header>
             <div class="width-constrainer">
                 <section class="grid-item">
                     <div class="logo" title="Home">
@@ -75,8 +77,37 @@
                     </div>
                 </div>
             </div>
-        </header>
-        <main>
+        </header> -->
+        <div class="megamenu_wrapper megamenu_fixed">
+            <ul class="megamenu">
+                <li class="megamenu_button"><span>Menu</span></li>
+                <li>
+                    <span class="nodrop"><a href="index.html">Home</a></span>
+                </li>
+                <li>
+                    <span class="nodrop"><a>About Us</a></span>
+                </li>
+                <li>
+                    <span class="drop">TV</span>
+                    <div class="megamenu_fullwidth">
+                        <p>DROP DOWN CONTENT</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="nodrop"><a href="world-map-imps.html">Inventory</a></span>
+                </li>
+                <li>
+                    <span class="nodrop"><a href="dmp.html">3rd Party Data</a></span>
+                </li>
+                <li>
+                    <span class="nodrop"><a href="contact.html">Contact</a></span>
+                </li>
+                <li>
+                    <span class="nodrop"><a href="https://docs.google.com/a/rtb.cat/forms/d/e/1FAIpQLSeCU2430zqJNNj9IGNRtMhvPfQsmQCvtvySBnUIyDAF0as_Zw/viewform">Integrate</a></span>
+                </li>
+            </ul>
+        </div>
+        <main style="margin-top: 90px;">
             <div class="width-constrainer">
                 <h1 class="page-title">World Map - Impressions</h1>
                 <div id="world_map">
@@ -136,6 +167,28 @@
                     });
                 });
             }(jQuery))
+        </script>
+        <script src="plugins/megamenu/js/jquery.easing.js"></script>
+        <script src="plugins/megamenu/js/megamenu_plugins.js"></script>
+        <script src="plugins/megamenu/js/megamenu.min.js"></script>
+        <script>
+            $(document).ready(function($){
+                $('.megamenu').megaMenuReloaded({
+                    menu_speed_show : 300, // Time (in milliseconds) to show a drop down
+                    menu_speed_hide : 200, // Time (in milliseconds) to hide a drop down
+                    menu_speed_delay : 200, // Time (in milliseconds) before showing a drop down
+                    menu_effect : 'open_close_slide', // Drop down effect, choose between 'hover_fade', 'hover_slide', 'click_fade', 'click_slide', 'open_close_fade', 'open_close_slide'
+                    menu_easing : 'jswing', // Easing Effect : 'easeInQuad', 'easeInElastic', etc.
+                    menu_click_outside : 1, // Clicks outside the drop down close it (1 = true, 0 = false)
+                    menu_show_onload : 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
+                    menubar_trigger : 1, // Show the menu trigger (button to show / hide the menu bar), only for the fixed version of the menu (1 = show, 0 = hide)
+                    menubar_hide : 0, // Hides the menu bar on load (1 = hide, 0 = show)
+                    menu_responsive : 1, // Enables mobile-specific script
+                    menu_carousel : 0, // Enable / disable carousel
+                    menu_carousel_groups : 0 // Number of groups of elements in the carousel
+                });
+                $('#megamenu_form').ajaxForm({target:'#alert'}); 
+            });
         </script>
 		<!-- Twitter universal website tag code -->
         <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
