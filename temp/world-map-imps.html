@@ -157,6 +157,9 @@
                                           '<tbody>'+trows+'</tbody>'+
                                         '</table>';
                             el.html(table);
+                        },
+                        onRegionClick(e, code){
+                            window.location = "inventory.html#country="+code;
                         }
                     });
                 });

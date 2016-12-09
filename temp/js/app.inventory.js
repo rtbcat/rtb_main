@@ -13,13 +13,14 @@
     }
     var data = {items:[],page:{current:1,total:0}};
     var obj = {
-        $form : $('#search_form'),
+        $page_country_title: $('#selected_country_title'),
+        $form: $('#search_form'),
         $country_selected: $('#filter_country_choice'),
         $country_modal: $('#country_modal'),
         $country_modal_options: $('#country_modal li[data-code]'),
         $country_modal_cancel: $('#country_modal button.btn-cancel'),
-        $th : $('#table_container th'),
-        $tbody : $('#table_container tbody'),
+        $th: $('#table_container th'),
+        $tbody: $('#table_container tbody'),
         $sort_box: $('.table-control select.sorting'),
         $order_box: $('.table-control select.ordering'),
         $prev_btn: $('.table-control .btn-prev'),
@@ -40,6 +41,18 @@
         obj.$country_modal_options.on('click',setCountry);
         obj.$country_modal_cancel.on('click',closeCountryModal);
         obj.$th.on('click',sortColumn);
+        // Check for query string with specific country.
+        var country_query = location.hash;
+        if(country_query){
+            var str_pieces = country_query.split('=');
+            var country_value = ($.trim(str_pieces[1])).length == 2? $.trim(str_pieces[1]) : "all";
+            var country_name = $('#country_modal [data-code="'+country_value+'"]').text();
+            if(country_name.length > 2){
+                obj.$form.find('[name="country"]').prop('checked',false);
+                $('#filter_country_single').val(country_value).prop('checked',true);
+                $('#filter_country_choice').text(country_name);
+            }
+        }
         update();
     }
     function render(){
@@ -50,6 +63,14 @@
         }else{
             $('#loader').css('display','none');
         }
+        // Update page title for selected country.
+        var country_name = "All";
+        var country_value = obj.$form.find('input[name="country"]:checked').val();
+        if(country_value != "all"){
+            country_name = $('#country_modal [data-code="'+country_value+'"]').text();
+            location.hash = 'country='+country_value;
+        }
+        obj.$page_country_title.text(country_name);
         // Update table entries.
         var entries = '';
         if(data.items.length > 0){
@@ -179,6 +200,7 @@
         if(e.target.value == "all"){
             $('#filter_country_single').val("");
             obj.$country_selected.text("Select Country");
+            obj.$page_country_title.text("All");
             update();
         }else{
             e.preventDefault();
