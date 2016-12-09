@@ -14,6 +14,7 @@ main section .section-body .sort-direction {display: inline-block; float: right;
 /* Map Modal */
 #world_map {overflow: hidden;}
 #world_map.fullscreened .width-constrainer {max-width: 100% !important;}
+#world_map.fullscreened .box {margin-top: 0; margin-left: 0; margin-right: 0; border-radius: 0 !important;}
 #world_map .box {
     width: 100%;
     height: auto;
