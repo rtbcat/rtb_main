@@ -75,7 +75,10 @@ a:hover, a:focus {color: #74777b;}
 	font-family: Raleway, Arial, sans-serif;
 	font-weight: 500;
 	letter-spacing: 0.5px;
-	margin: auto 10px;
+	margin: auto 10px 10px 10px;
+}
+.related .brands {
+	margin-top: 36px;
 }
 .related .brands a {
 	width: calc(100% - 20px);

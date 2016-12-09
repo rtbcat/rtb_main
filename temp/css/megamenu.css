@@ -52,7 +52,7 @@
     top: 0; left: 0;
 }
 @media only screen and (max-width: 980px) {
-    .megamenu_bar {position: absolute;}
+    .megamenu_bar, .megamenu_fixed {position: absolute; top: 0;}
 }
 @media only screen and (max-width: 768px) {
     .megamenu_bar {display: none}
