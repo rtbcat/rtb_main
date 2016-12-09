@@ -1,16 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
 
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'codropsicons';
-	src:url('../fonts/codropsicons/codropsicons.eot');
-	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
-}
-
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
@@ -148,13 +137,11 @@ a:hover, a:focus {
 	padding: 1em 0 3em;
 	letter-spacing: -1px;
 }
-
 .codrops-header h1 {
 	font-weight: 800;
 	font-size: 4.5em;
 	line-height: 1;
 }
-
 .codrops-header h1 span {
 	display: block;
 	font-size: 50%;
@@ -177,7 +164,7 @@ a:hover, a:focus {
 .related > h2,
 .related > h3 {
 	font-family: Raleway, Arial, sans-serif;
-	font-weight: 200;
+	font-weight: 500;
 	letter-spacing: 0.5px;
 }
 .related > a {
@@ -191,7 +178,7 @@ a:hover, a:focus {
 	text-align: center;
 	border-radius: 4px;
 	border: 1px solid rgba(255,255,255,0.5);
-	margin: 20px 10px 0 10px;
+	margin: 25px 10px 0 10px;
 	padding: 25px;
 	opacity: 0.8;
 }
