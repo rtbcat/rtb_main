@@ -13,6 +13,7 @@
         <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
         <style>
             main.fullscreened .width-constrainer {max-width: 100% !important;}
+            main.fullscreened #world_map {border:none;}
             #world_map {
                 width: calc(100% - 30px);
                 height: auto;
@@ -20,9 +21,10 @@
                 margin-right: 15px;
                 padding-bottom: 56.25%;
                 position: relative;
-                background-color: white;
+                background-color: #f5f5f5;
                 border-radius: 4px;
                 overflow: hidden;
+                border: 10px solid #333;
             }
             #world_map .jvectormap-container {
                 width: calc(100% - 40px);
@@ -40,7 +42,7 @@
                 display: none;
             }
             #world_map .jvectormap-zoomin:hover,
-            #world_map .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,1)}
+            #world_map .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8)}
             #world_map .jvectormap-zoomin {top: auto; bottom: 0; left: 27px; margin-bottom: -5px; margin-left: -5px;}
             #world_map .jvectormap-zoomout {top: auto; bottom: 0; left: 0; margin-bottom: -5px; margin-left: -5px;}
             #world_map .controls {
@@ -58,7 +60,7 @@
             }
             #world_map .controls .glyphicon.max:before {content: "\e096";}
             #world_map .controls .glyphicon.restore:before {content: "\e097";}
-            #world_map .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,1);}
+            #world_map .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8);}
             #world_map:hover .jvectormap-zoomin,
             #world_map:hover .jvectormap-zoomout,
             #world_map:hover .map-title,
@@ -69,15 +71,6 @@
         </style>
     </head>
     <body>
-        <!-- <header>
-            <div class="width-constrainer">
-                <section class="grid-item">
-                    <div class="logo" title="Home">
-                        <a href="/"><span class="glyphicon glyphicon-home"></span></a>
-                    </div>
-                </div>
-            </div>
-        </header> -->
         <div class="megamenu_bar"></div>
         <div class="megamenu_wrapper megamenu_fixed">
             <ul class="megamenu">
@@ -108,7 +101,7 @@
                 </li>
             </ul>
         </div>
-        <main style="margin-top: 90px;">
+        <main>
             <div class="width-constrainer">
                 <h1 class="page-title">World Map - Impressions</h1>
                 <div id="world_map">
@@ -145,7 +138,7 @@
                 $.getJSON(data_url, function(data){
                     $('#world_map').vectorMap({
                         map: 'world_mill',
-                        backgroundColor: 'white',
+                        backgroundColor: '#f5f5f5',
                         series: {
                             regions: [{
                                 values: data.map,
@@ -169,6 +162,7 @@
                 });
             }(jQuery))
         </script>
+        <!-- Megamenu -->
         <script src="plugins/megamenu/js/jquery.easing.js"></script>
         <script src="plugins/megamenu/js/megamenu_plugins.js"></script>
         <script src="plugins/megamenu/js/megamenu.min.js"></script>

@@ -303,7 +303,7 @@
                     box.addClass('open')
                     .vectorMap({
                         map: 'world_mill',
-                        backgroundColor: '#fff',
+                        backgroundColor: '#f5f5f5',
                         series: {
                             regions: [{values: data, scale: ['#9bd62c', '#cc2129'], normalizeFunction: 'polynomial'}]
                         },

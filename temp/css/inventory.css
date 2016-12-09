@@ -1,6 +1,6 @@
 /* Inventory Selector Widget */
 main aside .spanel .spanel-body {
-    background-color: white;
+    background-color: #f5f5f5;
     padding: 15px;
 }
 main aside .spanel ul {list-style-type: none;}
@@ -17,10 +17,10 @@ main section .section-body .sort-direction {display: inline-block; float: right;
 #world_map .box {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 48px;
     padding-bottom: 56.25%;
     position: relative;
-    background-color: white;
+    background-color: #f5f5f5;
     border-radius: 5px;
     transition: transform 300ms ease, opacity 300ms ease;
     opacity: 0;
@@ -47,7 +47,7 @@ main section .section-body .sort-direction {display: inline-block; float: right;
     display: none;
 }
 #world_map .box .jvectormap-zoomin:hover,
-#world_map .box .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,1)}
+#world_map .box .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8)}
 #world_map .box .jvectormap-zoomin {top: auto; bottom: 0; left: 27px; margin-bottom: -5px; margin-left: -5px;}
 #world_map .box .jvectormap-zoomout {top: auto; bottom: 0; left: 0; margin-bottom: -5px; margin-left: -5px;}
 #world_map .box .map-title {
@@ -74,7 +74,7 @@ main section .section-body .sort-direction {display: inline-block; float: right;
 }
 #world_map .box .controls .glyphicon.max:before {content: "\e096";}
 #world_map .box .controls .glyphicon.restore:before {content: "\e097";}
-#world_map .box .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,1);}
+#world_map .box .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8);}
 #world_map .box:hover .jvectormap-zoomin,
 #world_map .box:hover .jvectormap-zoomout,
 #world_map .box:hover .map-title,
