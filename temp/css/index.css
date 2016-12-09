@@ -4,7 +4,7 @@
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
-body, html, .container {height: 100%;}
+body, html {height: 100%;}
 
 body {
 	background: #fff;
@@ -23,26 +23,6 @@ a {
 a:hover, a:focus {
 	color: #74777b;
 }
-
-.color-1 {
-	background: #434d55;
-	color: #eee;
-}
-
-.color-2 {
-	background: #47c9af;
-	color: #fff;
-}
-
-.color-2 a {
-	color: rgba(0,0,0,0.3);
-}
-
-.color-2 a:hover,
-.color-2 a:focus {
-	color: #fff;
-}
-
 .color-3 {
 	color: #fff;
 	background: #566473;
@@ -57,75 +37,35 @@ a:hover, a:focus {
 	color: #fff;
 }
 
-.color-3 .container {
-	background-size: cover;
-	min-height: 1000px;
+/* Initial Screen */
+.intro-screen {
+    height: 100%;
+    background: url(../images/map.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.intro-screen .content header {
+	padding-top: 10%;
 }
 
-.color-4 {
-	background: url(../img/map.jpg) no-repeat 50% 50%;
-	color: rgba(102,49,54,0.8);
-	background: #dd5864;
+/* Main Navigation Links */
+.related a:hover {
+    opacity: 1;
+    color: #576475;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.65) 100%);
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
+    transition: opacity 0.5s ease-in-out;
 }
 
-.color-4 a {
-	color: rgba(255,255,255,0.9);
+.related a:hover img {
+    
 }
-
-.color-4 a:hover,
-.color-4 a:focus {
-	color: #fff;
+.related a:hover h3 {
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+    animation-delay: 400ms;
+    animation-name: flash;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
 }
-
-.color-5 {
-	background: #e4eaea;
-}
-
-.color-5 .codrops-demos a {
-	color: #e35583;
-}
-
-.color-6 {
-	background: #ffdab9;
-}
-
-.color-6 a {
-	color: #e74c3c;
-}
-
-.color-6 a:hover,
-.color-6 a:focus {
-	color: #74777b;
-}
-
-.color-7 {
-	color: #fff;
-	background: #f08080;
-}
-
-.color-7 a {
-	color: #fffaf0;
-}
-
-.color-7 a:hover,
-.color-7 a:focus {
-	color: #fff;
-}
-
-.color-8 {
-	color: #fff;
-	background: #2f3238;
-}
-
-.color-8 a {
-	color: #ddd;
-}
-
-.color-8 a:hover,
-.color-8 a:focus {
-	color: #fff;
-}
-
 .content {
 	padding: 0 1em;
 	margin: 0 auto;
@@ -141,6 +81,7 @@ a:hover, a:focus {
 	font-weight: 800;
 	font-size: 4.5em;
 	line-height: 1;
+    text-shadow: 1px 1px 1px #000000;
 }
 .codrops-header h1 span {
 	display: block;
@@ -341,37 +282,4 @@ a:hover, a:focus {
 		url('../fonts/typicons/typicons.svg#typicons') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
-
-html, body, .perspective {
-	width: 100%;
-	height: 100%;
-}
-
-/* CUSTOM Values */
-
-/* Initial Screen */
-.first-screen {
-    height: 900px;
-    background: url(../images/map.jpg) no-repeat 50% 50%;
-}
-
-/* Main Navigation Links */
-.related a:hover {
-    opacity: 1;
-    color: #576475;
-    background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.65) 100%);
-    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
-    transition: opacity 0.5s ease-in-out;
-}
-
-.related a:hover img {
-    
-}
-.related a:hover h3 {
-    animation-duration: 500ms;
-    animation-fill-mode: both;
-    animation-delay: 400ms;
-    animation-name: flash;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
 }

@@ -4,6 +4,9 @@
     left: calc(50% + 550px);
     display: none;
 }
+#megamenu_trigger:hover {
+    background-color: rgba(0,0,0,0.5);
+}
 .megamenu_container {
     width: 100%;
     max-width: 1072px;
@@ -37,6 +40,7 @@
     -webkit-box-shadow: none;
     height: auto;
     box-shadow: none;
+    z-index: 1;
 }
 .megamenu_bar {
     width: 100%;
@@ -46,4 +50,10 @@
     border: solid 1px #434343;
     position: fixed;
     top: 0; left: 0;
+}
+@media only screen and (max-width: 980px) {
+    .megamenu_bar {position: absolute;}
+}
+@media only screen and (max-width: 768px) {
+    .megamenu_bar {display: none}
 }
