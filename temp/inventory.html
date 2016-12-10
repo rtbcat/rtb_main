@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Inventory Tool</title>
         <link rel="stylesheet" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.min.css" />
         <link rel="stylesheet" href="plugins/jvectormap-2.0.3/jvectormap.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="css/basic.css" />
         <link rel="stylesheet" href="css/inventory.css" />
@@ -19,10 +19,10 @@
             <ul class="megamenu">
                 <li class="megamenu_button"><span>Menu</span></li>
                 <li>
-                    <span class="nodrop"><a href="index.html">Home</a></span>
+                    <a class="nodrop" href="index.html">Home</a>
                 </li>
                 <li>
-                    <span class="nodrop"><a>About Us</a></span>
+                    <a class="nodrop">About Us</a>
                 </li>
                 <li>
                     <span class="drop">TV</span>
@@ -31,16 +31,30 @@
                     </div>
                 </li>
                 <li>
-                    <span class="nodrop"><a href="world-map-imps.html">Inventory</a></span>
+                    <a class="nodrop" href="world-map-imps.html">Inventory</a>
                 </li>
                 <li>
-                    <span class="nodrop"><a href="dmp.html">3rd Party Data</a></span>
+                    <span class="drop">3rd Party Data</span>
+                    <div class="megamenu_fullwidth">
+                        <div class="col-row">
+                            <div class="col-half">
+                                <h3>Suppliers Available</h3>
+                                
+                            </div>
+                            <div class="col-half">
+                                <h3>What is a DMP?</h3>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe src="http://www.youtube.com/embed/QInrK3S-0Mg?wmode=transparent"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <span class="nodrop"><a href="contact.html">Contact</a></span>
+                    <a class="nodrop" href="contact.html">Contact</a>
                 </li>
                 <li>
-                    <span class="nodrop"><a href="https://docs.google.com/a/rtb.cat/forms/d/e/1FAIpQLSeCU2430zqJNNj9IGNRtMhvPfQsmQCvtvySBnUIyDAF0as_Zw/viewform">Integrate</a></span>
+                    <a class="nodrop" href="https://docs.google.com/a/rtb.cat/forms/d/e/1FAIpQLSeCU2430zqJNNj9IGNRtMhvPfQsmQCvtvySBnUIyDAF0as_Zw/viewform">Integrate</a>
                 </li>
             </ul>
         </div>
@@ -289,14 +303,13 @@
                     menu_effect : 'open_close_slide', // Drop down effect, choose between 'hover_fade', 'hover_slide', 'click_fade', 'click_slide', 'open_close_fade', 'open_close_slide'
                     menu_easing : 'jswing', // Easing Effect : 'easeInQuad', 'easeInElastic', etc.
                     menu_click_outside : 1, // Clicks outside the drop down close it (1 = true, 0 = false)
-                    menu_show_onload : 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
-                    menubar_trigger : 1, // Show the menu trigger (button to show / hide the menu bar), only for the fixed version of the menu (1 = show, 0 = hide)
+                    menu_show_onload : 1, // Drop down to show on page load (type the number of the drop down, 0 for none)
+                    menubar_trigger : 0, // Show the menu trigger (button to show / hide the menu bar), only for the fixed version of the menu (1 = show, 0 = hide)
                     menubar_hide : 0, // Hides the menu bar on load (1 = hide, 0 = show)
                     menu_responsive : 1, // Enables mobile-specific script
                     menu_carousel : 0, // Enable / disable carousel
                     menu_carousel_groups : 0 // Number of groups of elements in the carousel
                 });
-                $('#megamenu_form').ajaxForm({target:'#alert'}); 
             });
         </script>
 		<!-- Twitter universal website tag code -->

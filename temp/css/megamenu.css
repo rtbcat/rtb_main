@@ -1,4 +1,4 @@
-/* Megamenu Resets */
+ /* Megamenu Resets */
 #megamenu_trigger {
     margin-left: 0;
     left: calc(50% + 550px);
@@ -20,8 +20,22 @@
     transform: translateX(-50%);
     border-right: none;
 }
+.megamenu_fixed .megamenu > li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+}
 .megamenu {
     font-family: 'Raleway', Arial, sans-serif;
+}
+.megamenu > li .nodrop {
+    padding: 15px 8px 15px 10px;
+}
+.megamenu li.megamenu_button span,
+.megamenu > li .drop {
+    padding: 15px 20px 15px 10px;
+    background-position-y: center !important;
 }
 .megamenu > li .megamenu_fullwidth {
     width: 100%;
@@ -51,9 +65,43 @@
     position: fixed;
     top: 0; left: 0;
 }
-@media only screen and (max-width: 980px) {
-    .megamenu_bar, .megamenu_fixed {position: absolute; top: 0;}
+
+/* Custom Grid System */
+.megamenu_fullwidth .col-row {
+    width: 100%;
 }
-@media only screen and (max-width: 768px) {
-    .megamenu_bar {display: none}
+.megamenu_fullwidth .col-row .col-half {
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Custom Responsiveness */
+@media only screen and (max-width: 767px) {
+    .megamenu > li.megamenu_button,
+    .megamenu_fixed .megamenu > li {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .megamenu > li > span {
+        margin-left: 0 !important;
+    }
+    .megamenu > li .drop,
+    .megamenu > li .nodrop {
+        width: 100%;
+        border-top: 1px solid rgba(100,100,100,0.2);
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+        display: inline-block;
+    }
+    .megamenu > li:hover .drop,
+    .megamenu > li:hover .nodrop {
+        border-top-color: transparent !important;
+    }
+    .megamenu > li.active .drop,
+    .megamenu > li.active .nodrop {
+        border-bottom-color: rgba(255,255,255,0.1) !important;
+    }
 }

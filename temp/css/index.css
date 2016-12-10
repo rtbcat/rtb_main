@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
-
 *, *:after, *:before {-webkit-box-sizing: border-box; box-sizing: border-box;}
 .clearfix:before, .clearfix:after {content: ''; display: table;}
 .clearfix:after { clear: both; }
@@ -14,7 +13,7 @@ body {
 }
 a {
 	color: rgba(58,77,97,1);
-	text-decoration: none;
+	text-decoration: none !important;
 	outline: none;
 }
 a:hover, a:focus {color: #74777b;}
@@ -38,8 +37,8 @@ a:hover, a:focus {color: #74777b;}
 	letter-spacing: -1px;
 }
 .intro-screen .content .header h1 {
-	font-weight: 800;
-	font-size: 4.5em;
+	font-weight: 500;
+	font-size: 8em;
 	line-height: 1;
     text-shadow: 1px 1px 1px #000000;
 }
@@ -74,7 +73,7 @@ a:hover, a:focus {color: #74777b;}
 .related > h2,
 .related > h3 {
 	font-family: Raleway, Arial, sans-serif;
-	font-weight: 500;
+	font-weight: 300;
 	letter-spacing: 0.5px;
 	margin: auto 10px 10px 10px;
 }
@@ -93,13 +92,13 @@ a:hover, a:focus {color: #74777b;}
 	border: 1px solid rgba(255,255,255,0.5);
 	margin: 25px 10px 0 10px;
 	padding: 25px;
-	opacity: 0.8;
+	opacity: 0.9;
 }
 .related .brands a:hover {
     opacity: 1;
     color: #576475;
     background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.65) 100%);
-    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
     transition: opacity 0.5s ease-in-out;
 }
 .related .brands a:hover h3 {
@@ -124,6 +123,13 @@ a:hover, a:focus {color: #74777b;}
 	text-align: left;
 }
 
+/* Responsiveness */
+@media screen and (max-width: 420px) {
+    .intro-screen .content .header h1 {font-size: 6.5em;}
+    .related {padding-top:40px;padding-bottom:0px;}
+    .related .brands {margin-top:10px;margin-bottom:30px;}
+    .related > h2 {font-size: 20px;}
+}
 @media screen and (max-width: 27em) {
 	.codrops-icon {
 		font-size: 1.5em;

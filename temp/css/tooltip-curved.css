@@ -1,10 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
 .tooltip {
 	position: absolute;
-	z-index: 999;
+	z-index: 1;
 	width: 2.2em;
 	height: 2.2em;
 	cursor: pointer;
+	opacity: 1;
 }
 
 /* Trigger item */
@@ -15,9 +16,9 @@
 	left: 50%;
 	top: 50%;
 	margin: -15px 0 0 -15px;
-	position: absolute;
+	position: absolute !important;
 	border-radius: 50%;
-	border: 2px solid #FDF103;
+	border: 2px solid #FDF103 !important;
 	-webkit-animation: pulse 0.6s infinite alternate;
 	animation: pulse 0.6s infinite alternate;
 }
@@ -65,9 +66,9 @@
 	width: 200px;
 	bottom: 50%;
 	margin-bottom: -1em;
-	padding: 20px;
+	padding: 15px;
 	border-radius: 20px;
-	font-size: 1.1em;
+	font-size: 1.4em;
 	text-align: center;
 	color: #fff;
 	opacity: 0;
