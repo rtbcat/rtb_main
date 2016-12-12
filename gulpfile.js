@@ -13,5 +13,5 @@ gulp.task('default', function(){
         .pipe(must())
         .pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))
-        .pipe(gulp.dest('dev'))
+        .pipe(gulp.dest('temp'))
 });
