@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>World Map - Impressions</title>
+        <link rel="stylesheet" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
+        <link rel="stylesheet" href="plugins/jvectormap-2.0.3/jvectormap.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/basic.css" />
+        <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+        <style>
+            main.fullscreened .width-constrainer {max-width: 100% !important;}
+            main.fullscreened #world_map {border:none; border-radius: 0 !important;}
+            #world_map {
+                width: calc(100% - 30px);
+                height: auto;
+                margin-left: 15px;
+                margin-right: 15px;
+                padding-bottom: 56.25%;
+                position: relative;
+                background-color: #f5f5f5;
+                border-radius: 4px;
+                overflow: hidden;
+                border: 10px solid #333;
+            }
+            #world_map .jvectormap-container {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                position: absolute;
+                top: 20px; left: 20px;
+                overflow: visible;
+            }
+            #world_map .jvectormap-zoomin,
+            #world_map .jvectormap-zoomout {
+                padding: 7px;
+                font-weight: bold;
+                color: rgba(255,255,255,0.8);
+                background: rgba(0,0,0,0.7);
+                display: none;
+            }
+            #world_map .jvectormap-zoomin:hover,
+            #world_map .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8)}
+            #world_map .jvectormap-zoomin {top: auto; bottom: 0; left: 27px; margin-bottom: -5px; margin-left: -5px;}
+            #world_map .jvectormap-zoomout {top: auto; bottom: 0; left: 0; margin-bottom: -5px; margin-left: -5px;}
+            #world_map .controls {
+                position: absolute;
+                top: 15px; right: 15px;
+                z-index: 2;
+                display: none;
+            }
+            #world_map .controls .glyphicon {
+                color: rgba(255,255,255,0.8);
+                cursor: pointer;
+                background: rgba(0,0,0,0.7);
+                padding: 5px;
+                border-radius: 4px;
+            }
+            #world_map .controls .glyphicon.max:before {content: "\e096";}
+            #world_map .controls .glyphicon.restore:before {content: "\e097";}
+            #world_map .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8);}
+            #world_map:hover .jvectormap-zoomin,
+            #world_map:hover .jvectormap-zoomout,
+            #world_map:hover .map-title,
+            #world_map:hover .controls {display: inline-block;}
+            .jvectormap-tip {z-index: 2147483647;}
+            .jvectormap-tip table {margin-left:5px;margin-right:5px;margin-bottom:3px;}
+            .jvectormap-tip table th {font-size: 15px;}
+        </style>
+    </head>
+    <body>
+        <!-- Megamenu HTML Tags -->
+		{{> ../partials/megamenu_html.html }}
+        <main>
+            <div class="width-constrainer">
+                <h1 class="page-title">World Map - Impressions</h1>
+                <div id="world_map">
+                    <div class="controls">
+                        <i class="glyphicon scr-toggle max" title="Fullscreen"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>&nbsp;</footer>
+        <script src="libs/jquery-1.11.3.min.js"></script>
+        <script src="plugins/jvectormap-2.0.3/jvectormap.min.js"></script>
+        <script src="plugins/jvectormap-2.0.3/world-mill.js"></script>
+        <script>
+            ;(function($){
+                var main_div = $('main');
+                var scrn_btn = $('#world_map .scr-toggle');
+                var data_url = "http://sandbox.lat.com.es/index.php/stat/json?seller=map_all";
+
+                function goFullScreen(id){var el = document.getElementById(id);if (el.requestFullscreen) {el.requestFullscreen();} else if(el.webkitRequestFullscreen) {el.webkitRequestFullscreen();} else if(el.mozRequestFullScreen){el.mozRequestFullScreen();} else if(el.msRequestFullscreen) {el.msRequestFullscreen();}}
+                function exitFullScreen(){if(document.exitFullscreen){document.exitFullscreen();}else if(document.webkitExitFullscreen){document.webkitExitFullscreen();}else if(document.mozCancelFullScreen){document.mozCancelFullScreen();} else if(document.msExitFullscreen) {document.msExitFullscreen();}}
+                function toggleFS(e){
+                    if(main_div.hasClass('fullscreened')){
+                        main_div.removeClass('fullscreened');
+                        $(this).removeClass("restore").addClass("max").attr("title","Fullscreen");
+                        exitFullScreen();
+                    }else{
+                        main_div.addClass('fullscreened');
+                        $(this).addClass("restore").removeClass("max").attr("title","Exit fullscreen");
+                        goFullScreen('world_map');
+                    }
+                }
+                scrn_btn.click(toggleFS);
+                $.getJSON(data_url, function(data){
+                    $('#world_map').vectorMap({
+                        map: 'world_mill',
+                        backgroundColor: '#f5f5f5',
+                        series: {
+                            regions: [{
+                                values: data.map,
+                                scale: ['#9bd62c', '#cc2129'],
+                                normalizeFunction: 'polynomial'
+                            }]
+                        },
+                        onRegionTipShow: function(e, el, code){
+                            var trows = '';
+                            for(var seller in data.label[code]){
+                                var name = seller.charAt(0).toUpperCase()+seller.slice(1);
+                                trows += '<tr><td>'+name+'</td><td>&nbsp;=&nbsp;</td><td>'+parseInt(data.label[code][seller]).toLocaleString()+'</td></tr>';
+                            }
+                            var table = '<table>'+
+                                          '<thead><th colspan="3" style="text-align:left">'+el.html()+'</th></thead>'+
+                                          '<tbody>'+trows+'</tbody>'+
+                                        '</table>';
+                            el.html(table);
+                        },
+                        onRegionClick(e, code){
+                            window.location = "inventory.html#country="+code;
+                        }
+                    });
+                });
+            }(jQuery))
+        </script>
+        <!-- Megamenu JS Tags -->
+		{{> ../partials/megamenu_js.html }}
+		<!-- Twitter universal website tag code -->
+        <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+        <script type="text/javascript">twttr.conversion.trackPid('nuzl2', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+        <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+        <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+        </noscript>
+        <!-- End Twitter universal website tag code -->
+        <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
+        <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
+        <!-- End of Segment Pixel -->
+    </body>
+</html>
