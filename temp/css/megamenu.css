@@ -120,6 +120,15 @@ figure.r16by9 .wrapper .item a {
         width: 100% !important;
         position: absolute !important;
         left: 0; top: 0;
+        display: none;
+    }
+    .megamenu_fixed {
+        width: 100% !important;
+        height: auto;
+        margin: 0;
+        position: relative;
+        left: 0 !important; top: 0;
+        transform: none !important;
     }
     .megamenu > li.megamenu_button,
     .megamenu_fixed .megamenu > li {

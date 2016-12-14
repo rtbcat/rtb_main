@@ -143,6 +143,7 @@ main aside .spanel-body li:active:before {top: 11px;}
         position: fixed;
         left: 0;
         transform: translateX(calc(-100% + 10px));
+        -webkit-transform: translateX(calc(-100% + 10px));
     }
     main aside .search-field,
     main aside .search-field input[type="text"] {
@@ -154,6 +155,9 @@ main aside .spanel-body li:active:before {top: 11px;}
         width: calc(100% - 0px) !important;
     }
 }
+@media(max-width: 640px) {
+    main aside {position: absolute;}
+}
 @media(max-width: 580px) {
     #table_container td:first-child+td,
     #table_container th:first-child+th,
@@ -161,7 +165,6 @@ main aside .spanel-body li:active:before {top: 11px;}
     #table_container th:first-child+th+td {display: none}
 }
 @media(max-width: 430px) {
-    main aside {position: absolute;}
     #table_container th:last-child,
     #table_container td:last-child {display: none}
     main section .table-control .left {

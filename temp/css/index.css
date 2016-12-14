@@ -23,13 +23,14 @@ a:hover, a:focus {color: #74777b;}
     height: 100%;
     background: url(../images/map.jpg) no-repeat center center;
     background-size: cover;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .intro-screen .content {
 	text-align: center;
 	position: relative;
     top: 50%;
     transform: translateY(-60%);
+	-webkit-transform: translateY(-60%);
 }
 .intro-screen .content .header {
 	position: relative;

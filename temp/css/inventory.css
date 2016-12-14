@@ -153,3 +153,17 @@ main section .section-body .sort-direction {display: inline-block; float: right;
         width: calc(100% - 0px) !important;
     }
 }
+@media(max-width: 640px) {
+    main aside {position: absolute;}
+}
+@media(max-width: 430px) {
+    main section .table-control .left {
+        margin-bottom: 15px;
+    }
+    main section .table-control .left,
+    main section .table-control .right {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+}
