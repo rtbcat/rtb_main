@@ -35,7 +35,7 @@ header .banner-ad-space {
     overflow: hidden;
 }
 main {margin-top: 90px; padding-bottom: 20px;}
-main aside {z-index: 2;}
+main aside {z-index: 1;}
 footer {
     width: 100%;
     padding-top: 20px;
@@ -138,6 +138,7 @@ img.fl-left {float: left;margin-right: 15px;}
 img.fl-right {float: right;margin-left: 15px;}
 
 /* Specific UI Objects */
+#loader.screen-overlay {z-index: 2147483647 !important;}
 #loader .box {
     display: inline-block;
     padding: 5px 10px;

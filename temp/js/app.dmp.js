@@ -185,6 +185,7 @@
                         // Remove sidebar toggle.
                         $('#side_bar').removeClass('toggled');
                         render();
+                        $('body').animate({scrollTop:0},250);
                         var brand_selected = obj.$form.find('li.active');
                         var amount_scroll = Math.abs((brand_selected.offset().top + obj.$brands_scrollbox.scrollTop()) - obj.$brands_scrollbox.offset().top);
                         obj.$brands_scrollbox.animate({scrollTop:amount_scroll},300);

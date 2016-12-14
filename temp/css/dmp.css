@@ -160,3 +160,17 @@ main aside .spanel-body li:active:before {top: 11px;}
     #table_container td:first-child+td+td,
     #table_container th:first-child+th+td {display: none}
 }
+@media(max-width: 430px) {
+    main aside {position: absolute;}
+    #table_container th:last-child,
+    #table_container td:last-child {display: none}
+    main section .table-control .left {
+        margin-bottom: 15px;
+    }
+    main section .table-control .left,
+    main section .table-control .right {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+}
