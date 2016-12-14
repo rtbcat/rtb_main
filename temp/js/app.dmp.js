@@ -185,11 +185,9 @@
                         // Remove sidebar toggle.
                         $('#side_bar').removeClass('toggled');
                         render();
-                        obj.$brands_scrollbox.scrollTop(0);
                         var brand_selected = obj.$form.find('li.active');
-                        var amount_scroll = brand_selected.offset().top - obj.$brands_scrollbox.offset().top;
+                        var amount_scroll = Math.abs((brand_selected.offset().top + obj.$brands_scrollbox.scrollTop()) - obj.$brands_scrollbox.offset().top);
                         obj.$brands_scrollbox.animate({scrollTop:amount_scroll},300);
-                        console.log(amount_scroll);
                     },500);
                 }
             });
