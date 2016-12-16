@@ -148,7 +148,7 @@ main section .section-body .sort-direction {display: inline-block; float: right;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
     }
-    main aside .spanel .spanel-head .toggle-icon {display: inline-block;}
+    main aside .spanel .toggle-icon {display: inline-block;}
     main #main_content {
         width: calc(100% - 0px) !important;
     }

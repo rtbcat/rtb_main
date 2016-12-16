@@ -225,7 +225,7 @@
     </div>
     <main>
         <div class="width-constrainer">
-            <h1 class="page-title">Inventory Data (<span id="selected_country_title">All</span>)</h1>
+            <h1 class="page-title"><span id="selected_country_title">All</span></h1>
             <aside id="side_bar" class="grid-item">
                 <div class="spanel">
                     <form id="search_form">
@@ -233,14 +233,14 @@
                         <input type="hidden" name="order_by" value="des" />
                         <input type="hidden" name="page" value="1" />
                         <input type="hidden" name="limit" value="25" />
-                        <div class="spanel-head">
+                        <div class="spanel-head" style="display:none">
                             <div class="search-field">
                                 <input type="text" name="keyword" placeholder="Seller's name or ID" />
                                 <i class="search-icon"></i>
                             </div>
-                            <i class="toggle-icon"></i>
                         </div>
                         <div class="spanel-body">
+                            <i class="toggle-icon"></i>
                             <div class="field-entry">
                                 <div class="filter-title">Country</div>
                                 <div class="filter-content">

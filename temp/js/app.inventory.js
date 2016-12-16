@@ -64,7 +64,7 @@
             $('#loader').css('display','none');
         }
         // Update page title for selected country.
-        var country_name = "All";
+        var country_name = "All Countries";
         var country_value = obj.$form.find('input[name="country"]:checked').val();
         if(country_value != "all"){
             country_name = $('#country_modal [data-code="'+country_value+'"]').text();
@@ -200,7 +200,7 @@
         if(e.target.value == "all"){
             $('#filter_country_single').val("");
             obj.$country_selected.text("Select Country");
-            obj.$page_country_title.text("All");
+            obj.$page_country_title.text("All Countries");
             update();
         }else{
             e.preventDefault();

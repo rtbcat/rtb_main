@@ -108,14 +108,18 @@ figure.r16by9 .wrapper .item a {
     padding-left: 10px;
     padding-right: 10px;
 }
-@media only screen and (max-width: 860px) {
+@media (max-width: 860px) {
     .megamenu_fullwidth .col-row .col-half {
         width: 100%;
     }
 }
 
 /* Custom Responsiveness */
-@media only screen and (max-width: 767px) {
+@media (max-width: 980px) {
+    main {margin-top: 44px;}
+}
+@media (max-width: 768px) {
+    main {margin-top: 40px;}
     .megamenu_bar {
         width: 100% !important;
         position: absolute !important;
