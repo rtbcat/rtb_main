@@ -121,12 +121,12 @@
             for(var i=0;i<data.items.length;i++){
                 var item = data.items[i];
                 entries += '<tr>';
-                entries +=     '<td>'+item.bk_id+'</td>';
-                entries +=     '<td>'+item.apn_id+'</td>';
+                //entries +=     '<td>'+item.bk_id+'</td>';
+                //entries +=     '<td>'+item.apn_id+'</td>';
                 entries +=     '<td>'+item.path+'</td>';
                 entries +=     '<td>'+formatNumber(item.size)+'</td>';
                 entries +=     '<td>'+item.description+'</td>';
-                entries +=     '<td>'+item.cpm+'</td>';
+                //entries +=     '<td>'+item.cpm+'</td>';
                 entries += '</tr>';
             }
             obj.$sort_box.prop('disabled',false);

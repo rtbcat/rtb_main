@@ -232,14 +232,14 @@
                     <input type="hidden" name="order_by" value="acs" />
                     <input type="hidden" name="page" value="1" />
                     <div class="spanel">
-                        <div class="spanel-head">
+                        <div class="spanel-head" style="display:none">
                             <div class="search-field">
                                 <input type="text" name="keyword" placeholder="Name or ID" />
                                 <i class="search-icon"></i>
                             </div>
-                            <i class="toggle-icon"></i>
                         </div>
                         <div class="spanel-body">
+                            <i class="toggle-icon"></i>
                             <ul>
                                 <li class="active" data-category="bk_branded_data">
                                     <img src="images/logos/all-brands.png" />
@@ -416,7 +416,7 @@
                                 <option value="apn_id">Appnexus ID</option> -->
                                 <option value="path">Path</option>
                                 <option value="size" selected="true">Size</option>
-                                <option value="cpm">CPM</option>
+                                <!-- <option value="cpm">CPM</option> -->
                             </select>
                         <select class="ordering">
                                 <option value="asc">Asc</option>
@@ -439,14 +439,14 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>
+                                <!-- <th>
                                     Blukai ID
                                 </th>
                                 <th>
                                     Apnx ID
-                                </th>
+                                </th> -->
                                 <th data-sort="path" class="sort" title="Click to sort">
-                                    Path
+                                    Category
                                     <div class="sort-direction">
                                         <span class="glyphicon"></span>
                                     </div>
@@ -463,12 +463,12 @@
                                         <span class="glyphicon"></span>
                                     </div>
                                 </th>
-                                <th data-sort="cpm" class="sort" title="Click to sort">
+                                <!-- <th data-sort="cpm" class="sort" title="Click to sort">
                                     CPM
                                     <div class="sort-direction">
                                         <span class="glyphicon"></span>
                                     </div>
-                                </th>
+                                </th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -486,9 +486,9 @@
                         <select class="sorting">
                                 <!-- <option value="bk_id">BlueKai ID</option>
                                 <option value="apn_id">Appnexus ID</option> -->
-                                <option value="path">Path</option>
+                                <option value="path">Category</option>
                                 <option value="size" selected="true">Size</option>
-                                <option value="cpm">CPM</option>
+                                <!-- <option value="cpm">CPM</option> -->
                             </select>
                         <select class="ordering">
                                 <option value="asc">Asc</option>

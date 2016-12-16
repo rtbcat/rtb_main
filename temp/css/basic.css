@@ -169,7 +169,7 @@ main #main_content {
 main aside, main section {vertical-align: top;}
 main aside .spanel *{color: #555;}
 main aside .spanel .spanel-head {margin-bottom: 15px;position: relative;}
-main aside .spanel .spanel-head .toggle-icon {
+main aside .spanel .toggle-icon {
     position: absolute;
     right: 0;
     top: 0;
@@ -185,8 +185,8 @@ main aside .spanel .spanel-head .toggle-icon {
     cursor: pointer;
     display: none;
 }
-main aside .spanel .spanel-head .toggle-icon:hover {color: #f5f5f5;}
-main aside .spanel .spanel-head .toggle-icon:before {content: "\e080";}
+main aside .spanel .toggle-icon:hover {color: #f5f5f5;}
+main aside .spanel .toggle-icon:before {content: "\e080";}
 main aside .spanel .spanel-body {background-color: #f5f5f5; border-radius: 2px;}
 main aside .spanel .spanel-body ul {margin-top: 0; margin-bottom: 0;}
 main section .table-control {
@@ -196,7 +196,7 @@ main section .table-control {
     white-space: nowrap;
 }
 main aside.toggled {transform: translateX(calc(0% + 0px));}
-main aside.toggled .spanel .spanel-head .toggle-icon:before {content: "\e079";}
+main aside.toggled .spanel .toggle-icon:before {content: "\e079";}
 main section .table-control select {
     padding: 5px 10px;
     border-radius: 2px;
