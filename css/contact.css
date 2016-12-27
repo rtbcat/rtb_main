@@ -1,3 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
+* {
+	font-family: Raleway, Arial, sans-serif !important;
+	font-weight: 400 !important;
+}
+
 /* Custom Styles */
 #contact_container {
 	transition: opacity 1s ease;
@@ -18,19 +24,19 @@
 	position: relative;
 	top: 45%;
 	margin-top: -150px;
-	border: 3px solid #232529;;
+	border: 3px solid #202020;;
 	border-radius: 5px;
 	padding: 20px;
 	min-width: 200px;
 	font-size: 1.2em;
-	color: #232529;
+	color: #202020;
 	background-color: white;
 }
 .overlay_box .message {
 	margin-bottom: 20px;
 }
 .overlay_box button {
-	border: 3px solid #232529;
+	border: 3px solid #202020;
 	border-radius: 40px;
 	padding: 0.6em 1.5em;
 	background-color: white;
@@ -39,7 +45,7 @@
 }
 .overlay_box button:hover {
 	color: white;
-	background-color: #232529;
+	background-color: #202020;
 }
 
 /* Main form wrapper */
@@ -95,7 +101,7 @@
 	padding: 2.5em 30% 6em;
 	width: 100%;
 	height: 100%;
-	background: #fffed8;
+	background: #f5f5f5;
 	color: #3b3f45;
 	font-size: 1.2em;
 }
@@ -140,7 +146,7 @@
 
 /* Visibility control of elements */
 .fs-form-full .fs-fields > li,
-.fs-nav-dots, 
+.fs-nav-dots,
 .fs-progress,
 .fs-numbers,
 button.fs-continue,
@@ -223,7 +229,7 @@ button.fs-continue,
 .fs-fields > li label.fs-field-label {
 	display: inline-block;
 	padding: 0 5px 1em 0;
-	font-weight: 700;
+	font-weight: 500 !important;
 	pointer-events: none;
 }
 
@@ -233,13 +239,12 @@ button.fs-continue,
 	margin-left: 10px;
 	width: 24px;
 	height: 24px;
-	border: 2px solid rgba(0,0,0,0.4);
+	border: 2px solid rgba(32,32,32,0.5);
 	color: rgba(0,0,0,0.4);
 	border-radius: 50%;
 	content: 'i';
 	vertical-align: top;
 	text-align: center;
-	font-weight: 700;
 	font-style: italic;
 	font-size: 14px;
 	font-family: Georgia, serif;
@@ -256,8 +261,7 @@ button.fs-continue,
     min-width: 200px;
 	content: attr(data-info);
 	font-size: 0.4em;
-	color: #6a7b7e;
-	text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
+	color: #8ce158;
     opacity: 0;
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
@@ -271,7 +275,10 @@ button.fs-continue,
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
-
+.fs-form-full .fs-fields > li label[data-info]:hover::after {
+	color: #8ce158;
+	border-color:rgba(32,32,32,1);
+}
 .fs-form-full .fs-fields > li label:hover ~ .fs-info,
 .fs-form-full .fs-fields > li .fs-info:hover {
 	opacity: 1;
@@ -289,7 +296,7 @@ button.fs-continue,
 	border: none;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #fffed8;
+	color: #4cc0e5;
 	text-overflow: ellipsis;
 	font-weight: bold;
 	font-size: 1.5em;
@@ -317,7 +324,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields input:focus {
-	background-color: #fffed8; /* Fixes chrome bug with placeholder */
+	background-color: white; /* Fixes chrome bug with placeholder */
 }
 
 .fs-form-overview .fs-fields input {
@@ -348,7 +355,7 @@ li[data-input-trigger] > div {
 	max-width: 200px;
 	width: 30%;
 	text-align: center;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 50%;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -377,6 +384,7 @@ li[data-input-trigger] > div {
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
+	color: rgba(32,32,32,0.5);
 }
 
 .fs-fields .fs-radio-custom label::after {
@@ -399,11 +407,23 @@ li[data-input-trigger] > div {
 .fs-fields .fs-radio-custom label.radio-owner::after {
 	background-image: url(../images/group.svg);
 }
-
 .fs-fields .fs-radio-custom label.radio-affiliate::after {
 	background-image: url(../images/hands.svg);
 }
+.fs-fields .fs-radio-custom label.radio-video::after {
+	background-image: url(../images/video.svg);
+}
+.fs-fields .fs-radio-custom label.radio-mobile::after {
+	background-image: url(../images/mobile.svg);
+}
+.fs-fields .fs-radio-custom label.radio-web::after {
+	background-image: url(../images/web.svg);
+}
+.fs-fields .fs-radio-custom label.radio-native::after {
+	background-image: url(../images/native.svg);
+}
 
+.fs-fields .fs-radio-custom label:hover {color: rgba(32,32,32,1);}
 .fs-fields .fs-radio-custom label:hover::after,
 .fs-fields input[type="radio"]:focus + label::after,
 .fs-fields input[type="radio"]:checked + label::after {
@@ -411,11 +431,11 @@ li[data-input-trigger] > div {
 }
 
 .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
-	color: #fffed8;
+	color: #4cc0e5;
 }
 
 .fs-form-overview .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
-	color: rgba(0,0,0,0.8);
+	color: #202020;
 }
 
 .fs-fields textarea {
@@ -424,8 +444,8 @@ li[data-input-trigger] > div {
 	height: 200px;
 	border: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #fffed8;
-	font-weight: 700;
+	color: #4cc0e5;
+	font-weight: 500;
 	font-size: 0.85em;
 	resize: none;
 }
@@ -445,7 +465,7 @@ li[data-input-trigger] > div {
 }
 
 .fs-form-overview .fs-fields textarea:focus {
-	background: #fffed8;
+	background: white;
 }
 
 .fs-form div.cs-select.cs-skin-boxes {
@@ -556,7 +576,7 @@ li[data-input-trigger] > div {
 
 .fs-nav-dots button:hover::before,
 .fs-nav-dots button.fs-dot-current::before {
-	background: #fffed8;
+	background: #4cc0e5;
 }
 
 /* Progress bar */
@@ -565,7 +585,7 @@ li[data-input-trigger] > div {
 	top: 0;
 	width: 0%;
 	height: 0.5em;
-	background: #fffed8;
+	background: #4cc0e5;
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
 }
@@ -579,7 +599,7 @@ li[data-input-trigger] > div {
 	color: rgba(0,0,0,0.4);
 	margin: 40px;
 	width: 2em;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 2em;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	cursor: default;
@@ -675,9 +695,9 @@ li[data-input-trigger] > div {
 button.fs-submit,
 button.fs-continue {
 	padding: 0.6em 1.5em;
-	border: 3px solid #232529;
+	border: 3px solid #202020;
 	border-radius: 40px;
-	font-weight: 700;
+	font-weight: 500;
 	color: rgba(0,0,0,0.4);
 }
 
@@ -688,8 +708,8 @@ button.fs-continue {
 }
 
 .fs-form-overview .fs-submit {
-	border-color: #232529;
-	color: #232529;
+	border-color: #202020;
+	color: #202020;
 }
 
 button.fs-continue {
@@ -703,7 +723,7 @@ button.fs-continue {
 button.fs-submit:hover,
 button.fs-submit:focus,
 button.fs-continue:hover {
-	background: #232529;
+	background: #202020;
 	color: #fff;
 }
 
@@ -729,8 +749,8 @@ button.fs-continue:hover {
 	z-index: 800;
 	max-width: 960px;
 	width: 70%;
-	color: #eb7e7f;
-	font-weight: 700;
+	color: #FF50E5;
+	font-weight: 500;
 	font-size: 1em;
 	opacity: 0;
 	-webkit-transform: translate3d(-50%,-5px,0);
@@ -1054,7 +1074,7 @@ div.cs-select:focus {
 div.cs-skin-boxes {
 	background: transparent;
 	font-size: 0.65em;
-	font-weight: 700;
+	font-weight: 500;
 	max-width: 300px;
 	z-index: 2000;
 	color: #fff;
@@ -1260,7 +1280,7 @@ div.cs-skin-boxes:focus > span {
 }
 
 @media screen and (max-width: 30em) {
-	.cs-skin-boxes .cs-options li.cs-selected::after { 
+	.cs-skin-boxes .cs-options li.cs-selected::after {
 		-webkit-transform: translate3d(-50%,-50%,0);
 		transform: translate3d(-50%,-50%,0);
 	}
@@ -1363,19 +1383,6 @@ div.cs-skin-boxes:focus > span {
 .cs-skin-boxes li.cs-focus span,
 .cs-skin-boxes li.cs-selected span {
 	color: #fff;
-}
-
-/* DEMO CSS */
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'codropsicons';
-	src:url('../fonts/codropsicons/codropsicons.eot');
-	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
