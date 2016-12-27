@@ -34,10 +34,10 @@
 							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
 								<!-- <span><input id="q3b" name="type" type="radio" value="owner"/><label for="q3b" class="radio-owner">Product Owner</label></span>
 								<span><input id="q3c" name="type" type="radio" value="affiliate"/><label for="q3c" class="radio-affiliate">Affiliate</label></span> -->
-								<span><input id="q1b" name="type" type="radio" value="in-banner-video"/><label for="q1b" class="radio-video">In-banner Video</label></span>
-								<span><input id="q2b" name="type" type="radio" value="mobile-app-traffic"/><label for="q2b" class="radio-mobile">Mobile App Traffic</label></span>
-								<span><input id="q3b" name="type" type="radio" value="web"/><label for="q3b" class="radio-web">Web</label></span>
-								<span><input id="q4b" name="type" type="radio" value="native"/><label for="q4b" class="radio-native">Native</label></span>
+								<span title="Click to select or deselect."><input id="q1b" name="type[]" type="checkbox" value="in-banner-video"/><label for="q1b" class="radio-video">In-banner Video</label></span>
+								<span title="Click to select or deselect."><input id="q2b" name="type[]" type="checkbox" value="mobile-app-traffic"/><label for="q2b" class="radio-mobile">Mobile App Traffic</label></span>
+								<span title="Click to select or deselect."><input id="q3b" name="type[]" type="checkbox" value="web"/><label for="q3b" class="radio-web">Web</label></span>
+								<span title="Click to select or deselect."><input id="q4b" name="type[]" type="checkbox" value="native"/><label for="q4b" class="radio-native">Native</label></span>
 							</div>
 						</li>
 						<li>
@@ -114,7 +114,7 @@
 						url : 'http://sandbox.lat.com.es/index.php/contact',
 						data : data,
 						success : function(response){
-							var reply = JSON.parse(response);
+							var reply = response;
 							if(reply.status == "success"){
 								$("#contact_container").css("opacity","1");
 
