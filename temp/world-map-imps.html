@@ -16,12 +16,12 @@
         main.fullscreened .width-constrainer {
             max-width: 100% !important;
         }
-        
+
         main.fullscreened #world_map {
             border: none;
             border-radius: 0 !important;
         }
-        
+
         #world_map {
             width: calc(100% - 30px);
             height: auto;
@@ -34,7 +34,7 @@
             overflow: hidden;
             border: 10px solid #333;
         }
-        
+
         #world_map .jvectormap-container {
             width: calc(100% - 40px);
             height: calc(100% - 40px);
@@ -43,7 +43,7 @@
             left: 20px;
             overflow: visible;
         }
-        
+
         #world_map .jvectormap-zoomin,
         #world_map .jvectormap-zoomout {
             padding: 7px;
@@ -52,13 +52,13 @@
             background: rgba(0, 0, 0, 0.7);
             display: none;
         }
-        
+
         #world_map .jvectormap-zoomin:hover,
         #world_map .jvectormap-zoomout:hover {
             color: rgba(255, 255, 255, 1);
             background: rgba(0, 0, 0, 0.8)
         }
-        
+
         #world_map .jvectormap-zoomin {
             top: auto;
             bottom: 0;
@@ -66,7 +66,7 @@
             margin-bottom: -5px;
             margin-left: -5px;
         }
-        
+
         #world_map .jvectormap-zoomout {
             top: auto;
             bottom: 0;
@@ -74,7 +74,7 @@
             margin-bottom: -5px;
             margin-left: -5px;
         }
-        
+
         #world_map .controls {
             position: absolute;
             top: 15px;
@@ -82,7 +82,7 @@
             z-index: 2;
             display: none;
         }
-        
+
         #world_map .controls .glyphicon {
             color: rgba(255, 255, 255, 0.8);
             cursor: pointer;
@@ -90,37 +90,37 @@
             padding: 5px;
             border-radius: 4px;
         }
-        
+
         #world_map .controls .glyphicon.max:before {
             content: "\e096";
         }
-        
+
         #world_map .controls .glyphicon.restore:before {
             content: "\e097";
         }
-        
+
         #world_map .controls .glyphicon:hover {
             color: rgba(255, 255, 255, 1);
             background: rgba(0, 0, 0, 0.8);
         }
-        
+
         #world_map:hover .jvectormap-zoomin,
         #world_map:hover .jvectormap-zoomout,
         #world_map:hover .map-title,
         #world_map:hover .controls {
             display: inline-block;
         }
-        
+
         .jvectormap-tip {
             z-index: 2147483647;
         }
-        
+
         .jvectormap-tip table {
             margin-left: 5px;
             margin-right: 5px;
             margin-bottom: 3px;
         }
-        
+
         .jvectormap-tip table th {
             font-size: 15px;
         }
@@ -527,16 +527,17 @@
                             normalizeFunction: 'polynomial'
                         }]
                     },
-                    onRegionTipShow: function(e, el, code) {
+                    onRegionTipShow: function(e, el, code){
                         var trows = '';
-                        for (var seller in data.label[code]) {
-                            var name = seller.charAt(0).toUpperCase() + seller.slice(1);
-                            trows += '<tr><td>' + name + '</td><td>&nbsp;=&nbsp;</td><td>' + parseInt(data.label[code][seller]).toLocaleString() + '</td></tr>';
+                        for(var seller in data.label[code]){
+                            var name = seller.charAt(0).toUpperCase()+seller.slice(1);
+                            trows += '<tr><td>'+name+'</td><td>&nbsp;=&nbsp;</td><td>'+parseInt(data.label[code][seller]).toLocaleString()+'</td></tr>';
                         }
-                        var table = '<table>' +
-                            '<thead><th colspan="3" style="text-align:left">' + el.html() + '</th></thead>' +
-                            '<tbody>' + trows + '</tbody>' +
-                            '</table>';
+                        trows += '<tr><td colspan=3 style="text-align:center;color:#eee;line-height:1;padding-top:4px"><small>(Click for all 800+ exchanges <br>&amp; direct publishers.)</small></td><tr>';
+                        var table = '<table style="margin:5px">'+
+                                      '<thead><th colspan="3" style="text-align:left;padding-bottom:3px;font-size:15px">'+el.html()+'</th></thead>'+
+                                      '<tbody>'+trows+'</tbody>'+
+                                    '</table>';
                         el.html(table);
                     },
                     onRegionClick(e, code) {
