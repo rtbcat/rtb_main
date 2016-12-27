@@ -29,6 +29,20 @@
 .megamenu {
     font-family: 'Raleway', Arial, sans-serif;
 }
+.megamenu > li .megamenu_fullwidth p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 10px !important;
+}
+.embed-responsive {
+    margin-bottom: 10px !important;
+}
+.embed-responsive:last-child {
+    margin-bottom: 0px !important;
+}
+.megamenu > li .megamenu_fullwidth p:last-child {margin-bottom: 0px !important;}
+.megamenu > li .megamenu_fullwidth p.justify {text-align: justify;}
+.megamenu > li .megamenu_fullwidth p.center {text-align: center;}
 .megamenu > li .nodrop {
     padding: 15px 8px 15px 10px;
 }
