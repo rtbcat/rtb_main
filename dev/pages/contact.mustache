@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Send Us a Message</title>
 		<meta name="description" content="contact rtb.cat" />
 		<meta name="keywords" content="contact, rtb, programmatic advertising" />
@@ -30,10 +30,14 @@
 							<input class="fs-anim-lower" id="q2" name="email" type="email" placeholder="email@domain.us" required/>
 						</li>
 						<li data-input-trigger>
-							<label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us understand what kind of service you need">Are you a...</label>
+							<label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us understand what kind of service you need">Are you looking to buy:</label>
 							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-								<span><input id="q3b" name="type" type="radio" value="owner"/><label for="q3b" class="radio-owner">Product Owner</label></span>
-								<span><input id="q3c" name="type" type="radio" value="affiliate"/><label for="q3c" class="radio-affiliate">Affiliate</label></span>
+								<!-- <span><input id="q3b" name="type" type="radio" value="owner"/><label for="q3b" class="radio-owner">Product Owner</label></span>
+								<span><input id="q3c" name="type" type="radio" value="affiliate"/><label for="q3c" class="radio-affiliate">Affiliate</label></span> -->
+								<span title="Click to select or deselect."><input id="q1b" name="type[]" type="checkbox" value="in-banner-video"/><label for="q1b" class="radio-video">In-banner Video</label></span>
+								<span title="Click to select or deselect."><input id="q2b" name="type[]" type="checkbox" value="mobile-app-traffic"/><label for="q2b" class="radio-mobile">Mobile App Traffic</label></span>
+								<span title="Click to select or deselect."><input id="q3b" name="type[]" type="checkbox" value="web"/><label for="q3b" class="radio-web">Web</label></span>
+								<span title="Click to select or deselect."><input id="q4b" name="type[]" type="checkbox" value="native"/><label for="q4b" class="radio-native">Native</label></span>
 							</div>
 						</li>
 						<li>
@@ -70,7 +74,7 @@
 			(function() {
 				var formWrap = document.getElementById( 'fs-form-wrap' );
 
-				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
 					new SelectFx( el, {
 						stickyPlaceholder: false,
 						onChange: function(val){
@@ -106,15 +110,11 @@
 					var callback_url = 'http://trends.revcontent.com/conv.php?t=eJwFwYEBwCAIA7CXZsEK51AH%2F59gQmpWubBlE%2Ba3cMKsBSJZX6ZtrOU0IaDjw%2F96qyJa0%2FkAJPwRWg%3D%3D&cache_bust='+cache_buster;
 					$('#pixel_loader_1').attr('src',callback_url);
 					$.ajax({
-
-					});
-					console.log(callback_url);
-					$.ajax({
 						method : 'GET',
 						url : 'http://sandbox.lat.com.es/index.php/contact',
 						data : data,
 						success : function(response){
-							var reply = JSON.parse(response);
+							var reply = response;
 							if(reply.status == "success"){
 								$("#contact_container").css("opacity","1");
 
@@ -124,7 +124,7 @@
 										location = location.protocol+'//'+location.host;
 									},1000);
 								}
-								
+
 								$('#twitter_converter').attr('src','twitter-convert.html');
 								message_box.open("Message sent.",fx);
 							}
