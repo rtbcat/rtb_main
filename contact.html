@@ -114,7 +114,7 @@
 						url : 'http://sandbox.lat.com.es/index.php/contact',
 						data : data,
 						success : function(response){
-							var reply = JSON.parse(response);
+							var reply = response;
 							if(reply.status == "success"){
 								$("#contact_container").css("opacity","1");
 
