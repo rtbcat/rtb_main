@@ -29,11 +29,6 @@
 .megamenu {
     font-family: 'Raleway', Arial, sans-serif;
 }
-.megamenu > li .megamenu_fullwidth p {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-bottom: 10px !important;
-}
 .embed-responsive {
     margin-bottom: 10px !important;
 }
@@ -57,12 +52,22 @@
     margin: auto;
 }
 .megamenu > li .megamenu_fullwidth p {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
     font-family: Raleway, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.5;
+}
+.megamenu > li .megamenu_fullwidth p.yellow,
+.megamenu > li .megamenu_fullwidth p.red,
+.megamenu > li .megamenu_fullwidth p.blue,
+.megamenu > li .megamenu_fullwidth p.green {padding-left: 15px;}
+.megamenu > li .megamenu_fullwidth p.black_bg {padding-left: 15px; padding-right: 15px;}
+.megamenu > li .megamenu_fullwidth p.iconed {padding-left: 30px !important;}
+.megamenu > li .megamenu_tabs_nav {padding-left: 15px !important;}
+.megamenu > li ul, .megamenu > li ol {
+    padding: 0 0 0 40px;
 }
 .megamenu_fixed {
     -webkit-box-shadow: none;
