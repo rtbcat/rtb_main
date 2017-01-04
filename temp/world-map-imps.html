@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>World Map - Impressions</title>
-    <link rel="stylesheet" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
-    <link rel="stylesheet" href="plugins/jvectormap-2.0.3/jvectormap.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/jvectormap-2.0.3/jvectormap.css" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
     <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
     <style>
         main.fullscreened .width-constrainer {
@@ -267,7 +267,14 @@
                 <!-- ------------ /Products -------------- -->
             </li>
             <li>
-                <a class="nodrop" href="world-map-imps.html">Traffic Map</a>
+                <span class="drop">Traffic Map</span>
+                <div class="megamenu_fullwidth">
+                    <div class="col-row">
+                        <div id="map_container">
+                            <iframe id="menu_world_map" src="world-map-full.html"></iframe>
+                        </div>
+                    </div>
+                </div>
             </li>
             <li>
                 <span class="drop">3rd Party Data</span>
@@ -483,7 +490,7 @@
     <footer>&nbsp;</footer>
     <script src="libs/jquery-1.11.3.min.js"></script>
     <script src="plugins/jvectormap-2.0.3/jvectormap.min.js"></script>
-    <script src="plugins/jvectormap-2.0.3/world-mill.js"></script>
+    <script src="plugins/jvectormap-2.0.3/world-mill-mod.js"></script>
     <script>
         ;
         (function($) {

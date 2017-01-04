@@ -12,10 +12,10 @@ main aside .spanel .form-buttons {text-align: right;}
 main section .section-body .sort-direction {display: inline-block; float: right;}
 
 /* Map Modal */
-#world_map {overflow: hidden;}
-#world_map.fullscreened .width-constrainer {max-width: 100% !important;}
-#world_map.fullscreened .box {margin-top: 0; margin-left: 0; margin-right: 0; border-radius: 0 !important;}
-#world_map .box {
+#world_map_modal {overflow: hidden;}
+#world_map_modal.fullscreened .width-constrainer {max-width: 100% !important;}
+#world_map_modal.fullscreened .box {margin-top: 0; margin-left: 0; margin-right: 0; border-radius: 0 !important;}
+#world_map_modal .box {
     width: 100%;
     height: auto;
     margin-top: 48px;
@@ -28,30 +28,30 @@ main section .section-body .sort-direction {display: inline-block; float: right;
     transform: scale(0.3);
     overflow: hidden;
 }
-#world_map .box.open {
+#world_map_modal .box.open {
     opacity: 1;
     transform: scale(1);
 }
-#world_map .box .jvectormap-container {
+#world_map_modal .box .jvectormap-container {
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     position: absolute;
     top: 20px; left: 20px;
     overflow: visible;
 }
-#world_map .box .jvectormap-zoomin,
-#world_map .box .jvectormap-zoomout {
+#world_map_modal .box .jvectormap-zoomin,
+#world_map_modal .box .jvectormap-zoomout {
     padding: 7px;
     font-weight: bold;
     color: rgba(255,255,255,0.8);
     background: rgba(0,0,0,0.7);
     display: none;
 }
-#world_map .box .jvectormap-zoomin:hover,
-#world_map .box .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8)}
-#world_map .box .jvectormap-zoomin {top: auto; bottom: 0; left: 27px; margin-bottom: -5px; margin-left: -5px;}
-#world_map .box .jvectormap-zoomout {top: auto; bottom: 0; left: 0; margin-bottom: -5px; margin-left: -5px;}
-#world_map .box .map-title {
+#world_map_modal .box .jvectormap-zoomin:hover,
+#world_map_modal .box .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8)}
+#world_map_modal .box .jvectormap-zoomin {top: auto; bottom: 0; left: 27px; margin-bottom: -5px; margin-left: -5px;}
+#world_map_modal .box .jvectormap-zoomout {top: auto; bottom: 0; left: 0; margin-bottom: -5px; margin-left: -5px;}
+#world_map_modal .box .map-title {
     position: absolute;
     top: 15px; left: 15px;
     font-size: 22px;
@@ -60,26 +60,26 @@ main section .section-body .sort-direction {display: inline-block; float: right;
     z-index: 2;
     display: none;
 }
-#world_map .box .controls {
+#world_map_modal .box .controls {
     position: absolute;
     top: 15px; right: 15px;
     z-index: 2;
     display: none;
 }
-#world_map .box .controls .glyphicon {
+#world_map_modal .box .controls .glyphicon {
     color: rgba(255,255,255,0.8);
     cursor: pointer;
     background: rgba(0,0,0,0.7);
     padding: 5px;
     border-radius: 4px;
 }
-#world_map .box .controls .glyphicon.max:before {content: "\e096";}
-#world_map .box .controls .glyphicon.restore:before {content: "\e097";}
-#world_map .box .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8);}
-#world_map .box:hover .jvectormap-zoomin,
-#world_map .box:hover .jvectormap-zoomout,
-#world_map .box:hover .map-title,
-#world_map .box:hover .controls {display: inline-block;}
+#world_map_modal .box .controls .glyphicon.max:before {content: "\e096";}
+#world_map_modal .box .controls .glyphicon.restore:before {content: "\e097";}
+#world_map_modal .box .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8);}
+#world_map_modal .box:hover .jvectormap-zoomin,
+#world_map_modal .box:hover .jvectormap-zoomout,
+#world_map_modal .box:hover .map-title,
+#world_map_modal .box:hover .controls {display: inline-block;}
 .jvectormap-tip {z-index: 2147483647;}
 
 /* Country Selection Modal */

@@ -266,11 +266,11 @@
         var seller = $(e.target).attr('data-seller');
         var name = $(e.target).text();
         var url = "http://sandbox.lat.com.es/index.php/stat/json?seller="+seller;
-        var obj = $('#world_map');
-        var box = $('#world_map .box');
-        var map = $('#world_map .jvectormap-container');
-        var leg = $('#world_map .map-title');
-        var fsb = $('#world_map .scr-toggle');
+        var obj = $('#world_map_modal');
+        var box = $('#world_map_modal .box');
+        var map = $('#world_map_modal .jvectormap-container');
+        var leg = $('#world_map_modal .map-title');
+        var fsb = $('#world_map_modal .scr-toggle');
         var ldr = $('#loader');
         // Functions.
         var closeAll = function(e){
@@ -304,7 +304,7 @@
             }else{
                 obj.addClass('fullscreened');
                 $(this).addClass("restore").removeClass("max").attr("title","Exit fullscreen");
-                goFullScreen('world_map');
+                goFullScreen('world_map_modal');
             }
         }
         // Prep view.
