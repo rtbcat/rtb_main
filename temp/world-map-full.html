@@ -21,10 +21,9 @@
                 width: 100%;
                 height: auto;
                 margin: 0;
-                padding-bottom: 49%;
+                padding-bottom: 51%;
                 position: relative;
                 background-color: #fff;
-                border-radius: 2px;
                 overflow: hidden;
             }
             #world_map .jvectormap-container {
@@ -34,13 +33,86 @@
                 top: 0; left: 0;
                 overflow: visible;
                 background-color: transparent;
-                padding-top: 10px;
-                padding-left: 10px;
-                padding-right: 12px;
             }
             #world_map .jvectormap-zoomin,
             #world_map .jvectormap-zoomout {
+                padding: 7px;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 0.8);
+                background: rgba(0, 0, 0, 0.7);
                 display: none;
+            }
+            
+            #world_map .jvectormap-zoomin:hover,
+            #world_map .jvectormap-zoomout:hover {
+                color: rgba(255, 255, 255, 1);
+                background: rgba(0, 0, 0, 0.8)
+            }
+            
+            #world_map .jvectormap-zoomin {
+                top: auto;
+                bottom: 0;
+                left: 27px;
+                margin-bottom: 15px;
+                margin-left: 15px;
+            }
+            
+            #world_map .jvectormap-zoomout {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                margin-bottom: 15px;
+                margin-left: 15px;
+            }
+            
+            #world_map .controls {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 2;
+                display: none;
+            }
+            
+            #world_map .controls .glyphicon {
+                color: rgba(255, 255, 255, 0.8);
+                cursor: pointer;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 5px;
+                border-radius: 4px;
+            }
+            
+            #world_map .controls .glyphicon.max:before {
+                content: "\e096";
+            }
+            
+            #world_map .controls .glyphicon.restore:before {
+                content: "\e097";
+            }
+            
+            #world_map .controls .glyphicon:hover {
+                color: rgba(255, 255, 255, 1);
+                background: rgba(0, 0, 0, 0.8);
+            }
+            
+            #world_map:hover .jvectormap-zoomin,
+            #world_map:hover .jvectormap-zoomout,
+            #world_map:hover .map-title,
+            #world_map:hover .controls {
+                display: inline-block;
+            }
+            
+            .jvectormap-tip {
+                z-index: 2147483647;
+            }
+            
+            .jvectormap-tip table {
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 3px;
+            }
+            
+            .jvectormap-tip table th {
+                font-size: 15px;
             }
         </style>
     </head>
@@ -69,10 +141,12 @@
                         main_div.removeClass('fullscreened');
                         $(this).removeClass("restore").addClass("max").attr("title","Fullscreen");
                         exitFullScreen();
+                        top.exitFullScreen();
                     }else{
                         main_div.addClass('fullscreened');
                         $(this).addClass("restore").removeClass("max").attr("title","Exit fullscreen");
                         goFullScreen('world_map');
+                        top.goFullScreen('menu_world_map');
                     }
                 }
                 scrn_btn.click(toggleFS);
