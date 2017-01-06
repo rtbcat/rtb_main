@@ -74,7 +74,7 @@
     -webkit-box-shadow: none;
     height: auto;
     box-shadow: none;
-    z-index: 1;
+    z-index: 2;
 }
 .megamenu_bar {
     width: 100%;
@@ -226,6 +226,9 @@ figure.r16by9 .wrapper .item-square a {background-size: cover;}
     .megamenu > li.active .drop,
     .megamenu > li.active .nodrop {
         border-bottom-color: rgba(255,255,255,0.1) !important;
+    }
+    .megamenu > li ul li, .megamenu > li ol li {
+        font-size: 14px;
     }
     .megamenu_fullwidth .col-row .col-half:first-child {
         margin-bottom: 20px;
