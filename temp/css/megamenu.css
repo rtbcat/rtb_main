@@ -70,6 +70,10 @@
 .megamenu > li ul, .megamenu > li ol {
     padding: 0 0 0 40px;
 }
+.megamenu > li ul li, .megamenu > li ol li {
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 15px;
+}
 .megamenu_fixed {
     -webkit-box-shadow: none;
     height: auto;
