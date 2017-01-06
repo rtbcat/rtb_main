@@ -140,9 +140,9 @@
 
 .tooltip-text {
 	font-size: 0.85em;
-	line-height: 1.35;
+	line-height: 1.5;
 	display: block;
-	padding: 1.31em 1.21em 1.21em 0;
+	padding: 0.8em;
 	color: #fff;
 }
 

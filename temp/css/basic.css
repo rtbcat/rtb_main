@@ -98,6 +98,9 @@ footer {
 .width-constrainer h2,
 .width-constrainer h3,
 .width-constrainer h4{font-family: 'Raleway', Arial, sans-serif;margin-bottom: 0;}
+.width-constrainer ol,
+.width-constrainer ul {margin-left: 40px;}
+.width-constrainer li {font-size: 18px;}
 .grid-item {padding-top: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px;}
 .screen-overlay {
     width: 100%;
