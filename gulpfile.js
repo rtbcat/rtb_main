@@ -65,7 +65,10 @@ gulp.task('build', function(){
             'dev/pages/dmp.mustache',
             'dev/pages/inventory.mustache',
             'dev/pages/world-map-imps.mustache',
-            'dev/pages/template.mustache'
+            'dev/pages/template.mustache',
+            'dev/pages/story-board.mustache',
+            'dev/pages/fill-rate-tool.mustache',
+            'dev/pages/appnexus-co-pilot.mustache'
         ])
         .pipe(must()).pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))
