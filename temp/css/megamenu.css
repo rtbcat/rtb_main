@@ -93,49 +93,57 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+.megamenu_tabs .megamenu_tabs_panels { margin: 0 0 0; }
 .megamenu_tabs li a.current, .megamenu_tabs li a.current:hover {
     background-color: #05a417 !important;
 }
 
 /* Content Specific */
-figure.r16by9 {
+figure {
     width: 100%;
-    padding-bottom: 56.25%;
     position: relative;
 }
-figure.r16by9 .wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0; top: 0;
-    overflow-y: auto;
+figure .wrapper {
     text-align: center;
 }
-figure.r16by9 .wrapper .item {
+figure .wrapper .item {
     width: 160px;
     height: 40px;
     display: inline-block;
     background-color: rgba(255,255,255,0.8);
 }
-figure.r16by9 .wrapper .item-square {
+figure .wrapper .item-square {
     width: 96px;
     height: 96px;
     display: inline-block;
     opacity: 0.8;
 }
-figure.r16by9 .wrapper .item:hover {
+figure .wrapper .item:hover {
     background-color: rgba(255,255,255,1);
 }
-figure.r16by9 .wrapper .item-square:hover {opacity: 1}
-figure.r16by9 .wrapper .item a,
-figure.r16by9 .wrapper .item-square a {
+figure .wrapper .item-square:hover {opacity: 1}
+figure .wrapper .item a,
+figure .wrapper .item-square a {
     display: block;
     width: 100%;
     height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
 }
-figure.r16by9 .wrapper .item-square a {background-size: cover;}
+figure .wrapper .item-square a {background-size: cover;}
+figure.mh300 {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+figure.r16by9 {padding-bottom: 56.25%;}
+figure.r16by9 .wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    overflow-y: auto;
+}
 #map_container {
     width: calc(100% - 20px);
     height: auto;
@@ -174,7 +182,7 @@ figure.r16by9 .wrapper .item-square a {background-size: cover;}
 }
 .megamenu_fullwidth .col-row .col-20 {width: 20%;}
 .megamenu_fullwidth .col-row .col-30 {width: 30%;}
-.megamenu_fullwidth .col-row .col-20 {width: 40%;}
+.megamenu_fullwidth .col-row .col-40 {width: 40%;}
 .megamenu_fullwidth .col-row .col-half,
 .megamenu_fullwidth .col-row .col-50 {width: 50%;}
 .megamenu_fullwidth .col-row .col-60 {width: 60%;}
