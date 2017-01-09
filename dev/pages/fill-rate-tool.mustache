@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fill Rate Tool</title>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/jvectormap-2.0.3/jvectormap.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/tooltip/css/tooltip-classic.css" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+</head>
+
+<body>
+    <!-- Megamenu HTML Tags -->
+    {{> ../partials/megamenu_html.html }}
+    <main>
+        <div class="width-constrainer">
+            <h1 class="page-title">For In-banner Video Buying</h1>
+            <p class="justify">
+                A special tool to optimise for fill-rate or video-starts is available to selected clients. 
+                If you require in-banner video that optimises between the parameters: 
+                Fill-rate(ad-starts) vs. Payout vs. CPM, then this tool is for you.
+            </p>
+            <p>
+                This tool is custom built on top of the AppNexus API. 
+                Once you have set your payout rate, the tool optimizes according to the ad-starts that are reported to our “ad-start API”. 
+                The CPM-bid is then adjusted at either a domain or 
+                <span class="tooltip tooltip-effect-5">
+                <span class="tooltip-item">placement</span>
+                <span class="tooltip-content clearfix">
+                    <span class="tooltip-text">A specific ad-spot on a page, as opposed to generally targeting a domain’s URL.
+</span>
+                </span>
+                 level.
+            </p>
+            <p>Additional targeting such as GEO, Carrier, etc fall under the usual campaign-settings.</p>
+        </div>
+    </main>
+    <footer>&nbsp;</footer>
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <!-- Megamenu JS Tags -->
+    <script src="plugins/megamenu/js/jquery.easing.js"></script>
+    <script src="plugins/megamenu/js/megamenu_plugins.js"></script>
+    <script src="plugins/megamenu/js/megamenu.min.js"></script>
+    <script>
+        $(document).ready(function($) {
+            $('.megamenu').megaMenuReloaded({
+                menu_speed_show: 300, // Time (in milliseconds) to show a drop down
+                menu_speed_hide: 200, // Time (in milliseconds) to hide a drop down
+                menu_speed_delay: 200, // Time (in milliseconds) before showing a drop down
+                menu_effect: 'open_close_slide', // Drop down effect, choose between 'hover_fade', 'hover_slide', 'click_fade', 'click_slide', 'open_close_fade', 'open_close_slide'
+                menu_easing: 'jswing', // Easing Effect : 'easeInQuad', 'easeInElastic', etc.
+                menu_click_outside: 1, // Clicks outside the drop down close it (1 = true, 0 = false)
+                menu_show_onload: 1, // Drop down to show on page load (type the number of the drop down, 0 for none)
+                menubar_trigger: 0, // Show the menu trigger (button to show / hide the menu bar), only for the fixed version of the menu (1 = show, 0 = hide)
+                menubar_hide: 0, // Hides the menu bar on load (1 = hide, 0 = show)
+                menu_responsive: 1, // Enables mobile-specific script
+                menu_carousel: 0, // Enable / disable carousel
+                menu_carousel_groups: 0 // Number of groups of elements in the carousel
+            });
+        });
+
+        function goFullScreen(id) {
+            var el = document.getElementById(id);
+            if (el.requestFullscreen) {
+                el.requestFullscreen();
+            } else if (el.webkitRequestFullscreen) {
+                el.webkitRequestFullscreen();
+            } else if (el.mozRequestFullScreen) {
+                el.mozRequestFullScreen();
+            } else if (el.msRequestFullscreen) {
+                el.msRequestFullscreen();
+            }
+        }
+
+        function exitFullScreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+    </script>
+</body>
+
+</html>

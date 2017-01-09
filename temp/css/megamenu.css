@@ -136,6 +136,16 @@ figure.mh300 {
     overflow-y: auto;
     margin-bottom: 10px;
 }
+figure.mh400 {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+figure.mh500 {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
 figure.r16by9 {padding-bottom: 56.25%;}
 figure.r16by9 .wrapper {
     width: 100%;
