@@ -1,8 +1,10 @@
+var fs   = require('fs');
 var gulp = require('gulp');
 var must = require("gulp-mustache");
 var beau = require('gulp-html-beautify');
 var name = require('gulp-rename');
 var repl = require('gulp-replace');
+var msql = require('mysql');
 var brnd =
 {
     acxiom  			: "acxiom",
@@ -73,6 +75,76 @@ gulp.task('build', function(){
         .pipe(must()).pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))
         .pipe(gulp.dest('temp'))
+});
+
+gulp.task('write_standard_ads',function(){
+    var con = msql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "root",
+        database: "appnexus_data"
+    });
+    con.connect(function(err){if(err){console.log('Error connecting to Db');return;};console.log('Connection established');});
+    var query = "SELECT * FROM `inventory_all` WHERE `inventory_type`='standard' AND `include`=1 ORDER BY `total_imps` DESC";
+    con.query(query,function(err,rows){
+        if(err) throw err;
+        var html = "";
+        for(let i in rows){
+            var id   = rows[i].seller_member_id;
+            var name = rows[i].seller_member_name;
+            var logo = rows[i].logo_name;
+            var url  = rows[i].website_url;
+            var file = 'images/sellers-logo/';
+
+            if(logo.length > 0){
+                file += logo+'.jpg';
+            }else{
+                file += id+'.jpg';
+            }
+            html +=
+            '<div class="item-square">'+
+                '<a href="'+url+'" target="_blank" title="'+name+'"'+
+                ' style="background-image: url(\''+file+'\')"></a>'+
+            '</div>';
+        }
+        fs.writeFileSync('dev/partials/standard_ads.html',html);
+    });
+    con.end(function(err){console.log("DB connection end.");});
+});
+
+gulp.task('write_native_ads',function(){
+    var con = msql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "root",
+        database: "appnexus_data"
+    });
+    con.connect(function(err){if(err){console.log('Error connecting to Db');return;};console.log('Connection established');});
+    var query = "SELECT * FROM `inventory_all` WHERE `inventory_type`='native' AND `include`=1 ORDER BY `total_imps` DESC";
+    con.query(query,function(err,rows){
+        if(err) throw err;
+        var html = "";
+        for(let i in rows){
+            var id   = rows[i].seller_member_id;
+            var name = rows[i].seller_member_name;
+            var logo = rows[i].logo_name;
+            var url  = rows[i].website_url;
+            var file = 'images/sellers-logo/';
+
+            if(logo.length > 0){
+                file += logo+'.jpg';
+            }else{
+                file += id+'.jpg';
+            }
+            html +=
+            '<div class="item-square">'+
+                '<a href="'+url+'" target="_blank" title="'+name+'"'+
+                ' style="background-image: url(\''+file+'\')"></a>'+
+            '</div>';
+        }
+        fs.writeFileSync('dev/partials/native_ads.html',html);
+    });
+    con.end(function(err){console.log("DB connection end.");});
 });
 
 // gulp.task('temp', function(){
