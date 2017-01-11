@@ -106,7 +106,7 @@
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    text-shadow: 0 1px 1px #000000;
+    text-shadow: 1px 1px 2px #000000;
     -webkit-box-shadow: 0 1px 1px #000000;
     -moz-box-shadow: 0 1px 1px #000000;
     -o-box-shadow: 0 1px 1px #000000;
@@ -131,9 +131,16 @@
     display: inline-block;
     margin-top: 0 !important;
     margin-right: 0 !important;
+    border-left: none !important;
 }
 .megamenu-btn.orange {background-color: rgb(248,160,0);}
 .megamenu-btn.orange:hover {background-color: rgb(220,125,0);}
+.megamenu-btn.yellow {
+    color: rgba(0,0,0,0.8) !important;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
+    background-color: rgb(255,240,0);
+}
+.megamenu-btn.yellow:hover {background-color: rgb(240,210,0);}
 figure {
     width: 100%;
     position: relative;
