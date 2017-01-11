@@ -33,6 +33,7 @@
 .embed-responsive {
     margin-bottom: 10px !important;
 }
+.r16by9,
 .embed-responsive:last-child {
     margin-bottom: 0px !important;
 }
