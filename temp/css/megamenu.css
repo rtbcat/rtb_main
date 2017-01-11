@@ -99,6 +99,41 @@
 }
 
 /* Content Specific */
+.megamenu-btn {
+    border: 1px solid #000;
+    color: #ffffff !important;
+    background-color: #222222;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0 1px 1px #000000;
+    -webkit-box-shadow: 0 1px 1px #000000;
+    -moz-box-shadow: 0 1px 1px #000000;
+    -o-box-shadow: 0 1px 1px #000000;
+    box-shadow: 0 1px 1px #000000;
+    font: bold 11px Sans-Serif;
+    padding: 7px 12px;
+    margin: 9px 12px 0 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #ffffff;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+}
+.megamenu-btn.orange {background-color: rgb(248,160,0);}
+.megamenu-btn.orange:hover {background-color: rgb(220,125,0);}
 figure {
     width: 100%;
     position: relative;
@@ -198,6 +233,7 @@ figure.r16by9 .wrapper {
 .megamenu_fullwidth .col-row .col-60 {width: 60%;}
 .megamenu_fullwidth .col-row .col-70 {width: 70%;}
 .megamenu_fullwidth .col-row .col-80 {width: 80%;}
+.megamenu_fullwidth .col-row .col-100 {width: 100%;}
 @media (max-width: 860px) {
     .megamenu_fullwidth .col-row .col-half {
         width: 100%;
