@@ -9,11 +9,11 @@
 }
 .megamenu_container {
     width: 100%;
-    max-width: 1072px;
+    max-width: 780px;
 }
 .megamenu_fixed {
     width: 100%;
-    max-width: 1072px;
+    max-width: 780px;
     left: 50%;
     margin-left: 0px;
     margin-right: 0px;
@@ -89,6 +89,7 @@
     border: solid 1px #434343;
     position: fixed;
     top: 0; left: 0;
+    z-index: 1;
 }
 .megamenu_tabs .megamenu_tabs_nav {
     margin-top: 0;
