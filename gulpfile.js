@@ -72,6 +72,7 @@ gulp.task('build', function(){
             'dev/pages/fill-rate-tool.mustache',
             'dev/pages/appnexus-co-pilot.mustache',
             'dev/pages/programmatic-audio.mustache',
+            'dev/pages/proprietary-bidder.mustache'
         ])
         .pipe(must()).pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))
@@ -149,7 +150,7 @@ gulp.task('write_native_ads',function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch('dev/pages/*.mustache',['build']);
+    gulp.watch(['dev/pages/*.mustache','dev/partials/*'],['build']);
 });
 // gulp.task('temp', function(){
 //     var fs = require('fs');
