@@ -86,6 +86,11 @@ footer {
 }
 
 /* Layout Classes */
+.max-700 {max-width: 700px !important;}
+.max-750 {max-width: 750px !important;}
+.max-800 {max-width: 800px !important;}
+.max-850 {max-width: 850px !important;}
+.max-900 {max-width: 900px !important;}
 .width-constrainer {
     max-width: 980px;
     margin: auto;

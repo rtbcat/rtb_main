@@ -302,3 +302,12 @@ figure.r16by9 .wrapper {
         margin-bottom: 20px;
     }
 }
+@media (max-width: 640px) {
+    #menu_products .col-row > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 10px;
+    }
+    #menu_products .col-row h3 {margin-top: 10px;}
+    #menu_products .col-row h3:first-child {margin-top: 0px !important;}
+}
