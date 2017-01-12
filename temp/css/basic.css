@@ -6,8 +6,8 @@ a:hover {color: #8ce158; text-decoration: none;}
 body {
     color: white;
     background-color: #566473;
-    /*background-color: #434d55;*/
 }
+small {color: white !important; font-size: 45% !important;}
 header {margin: auto;padding: 20px 0px;}
 header .logo {
     display: inline-block;
@@ -102,12 +102,14 @@ footer {
 .width-constrainer h1,
 .width-constrainer h2,
 .width-constrainer h3,
-.width-constrainer h4{font-family: 'Raleway', Arial, sans-serif;margin-bottom: 0;}
+.width-constrainer h4{font-family: 'Raleway', Arial, sans-serif; margin-bottom: 20px;}
 .width-constrainer ol,
 .width-constrainer ul {margin-left: 40px;}
 .width-constrainer li {font-size: 18px;}
 .width-constrainer table th,
 .width-constrainer table td {font-size: 16px;}
+.width-constrainer p,
+.width-constrainer ul {margin-top: 0; margin-bottom: 20px;}
 .grid-item {padding-top: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px;}
 .screen-overlay {
     width: 100%;
