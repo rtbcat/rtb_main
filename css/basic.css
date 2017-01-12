@@ -186,7 +186,7 @@ main aside .spanel .spanel-head .toggle-icon {
 main aside .spanel .spanel-head .toggle-icon:hover {background-color: #ddd;}
 main aside .spanel .spanel-head .toggle-icon:before {content: "\e080";}
 main aside .spanel .spanel-body {background-color: white; border-radius: 2px;}
-main aside .spanel .spanel-body ul {margin-top: 0; margin-bottom: 0;}
+main aside .spanel .spanel-body ul {margin-top: 0; margin-bottom: 0; margin-left: 0;}
 main section .table-control {
     line-height: 28px;
     margin-left: 0;

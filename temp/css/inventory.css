@@ -5,7 +5,7 @@ main aside .spanel .spanel-body {
 }
 main aside .spanel ul {list-style-type: none;}
 main aside .spanel li {padding-left: 25px;}
-main aside .spanel label {font-weight: normal;}
+main aside .spanel label {font-weight: normal; font-size: 14px;}
 main aside .spanel .form-buttons {text-align: right;}
 
 /* Main Content */

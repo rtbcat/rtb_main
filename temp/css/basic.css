@@ -87,7 +87,7 @@ footer {
 
 /* Layout Classes */
 .width-constrainer {
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -173,13 +173,15 @@ img.fl-right {float: right;margin-left: 15px;}
 
 /* Specific UI Objects Inventory & BlueKai */
 main #side_bar {
-    display: inline-block;
+    display: block;
+    float: left;
     width: 260px;
     transition: all 0.5s ease-in;
 }
 main #main_content {
-    display: inline-block;
-    width: calc(100% - 280px);
+    display: block;
+    float: left;
+    width: calc(100% - 260px);
 }
 main aside, main section {vertical-align: top;}
 main aside .spanel *{color: #555;}
@@ -203,7 +205,7 @@ main aside .spanel .toggle-icon {
 main aside .spanel .toggle-icon:hover {color: #f5f5f5;}
 main aside .spanel .toggle-icon:before {content: "\e080";}
 main aside .spanel .spanel-body {background-color: #f5f5f5; border-radius: 2px; position: relative;}
-main aside .spanel .spanel-body ul {margin-top: 0; margin-bottom: 0;}
+main aside .spanel .spanel-body ul {margin-top: 0; margin-bottom: 0; margin-left: 0;}
 main section .table-control {
     line-height: 28px;
     margin-left: 0;
