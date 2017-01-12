@@ -70,7 +70,8 @@ gulp.task('build', function(){
             'dev/pages/template.mustache',
             'dev/pages/story-board.mustache',
             'dev/pages/fill-rate-tool.mustache',
-            'dev/pages/appnexus-co-pilot.mustache'
+            'dev/pages/appnexus-co-pilot.mustache',
+            'dev/pages/programmatic-audio.mustache',
         ])
         .pipe(must()).pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))
@@ -147,6 +148,9 @@ gulp.task('write_native_ads',function(){
     con.end(function(err){console.log("DB connection end.");});
 });
 
+gulp.task('watch', function(){
+    gulp.watch('dev/pages/*.mustache',['build']);
+});
 // gulp.task('temp', function(){
 //     var fs = require('fs');
 //     var logos = fs.readdirSync('temp/images/suppliers');

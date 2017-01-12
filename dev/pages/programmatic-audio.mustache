@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programmatic Audio</title>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/jvectormap-2.0.3/jvectormap.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/tooltip/css/tooltip-classic.css" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+</head>
+
+<body>
+    <!-- Megamenu HTML Tags -->
+    {{> ../partials/megamenu_html.html }}
+    <main>
+        <div class="width-constrainer">
+            <h1 class="page-title">Programmatic Audio</h1>
+            <p class="left max-800">
+                Inventory available: Spotify, Triton digital, AdsWizz.
+            </p>
+            <h2>Spotify</h2>
+            <p class="left max-800">
+                File type: MP3, WAV or OGG<br>
+                Companion Banner: 640x640 or 300x250<br>
+                Bit rate: Minimum 128 kbps<br>
+                Ad length: 15 or 30 seconds<br>
+            </p>
+            <p class="left max-800">
+                Companion banner: Optional static companion banner images available, 640x640 hosted JPG<br>
+                Creatives must be submitted for audit and be fully SSL compliant<br>
+                (Alcohol: Allowed only with 21+ age targeting)<br>
+                Users hear 1 ad every 15 minutes.<br>
+                All ads are non-skippable<br>
+                All ads come with completion rate percentage.<br>
+                Global inventory available at scale. Daily imps by market available on request.<br>
+                Rate card by geo available on request.
+            </p>
+            <p class="left max-800">
+                Targeting available:
+            </p>
+            <ul>
+                <li>Geo/DMA, time-of-day, re-targeting (Android only)</li>
+                <li>Age &amp; gender</li>
+                <li>Song genre</li>
+                <li>Playlist</li>
+            </ul>
+            <p>&nbsp;</p>
+            <h2>Triton</h2>
+            <p class="left max-800">
+                File type: MP3<br>
+                Bit rate:128 kbps<br>
+                Ad length: 15, 30, or 60 seconds<br>
+                Sample rate: 44100 Hz<br>
+                Volume: Normalized to -4db
+            </p>
+            <div class="max-800" style="padding: auto 10px">
+                <table class="table table-bordered" style="margin-bottom: 0">
+                    <thead>
+                        <tr>
+                            <th>Device</th>
+                            <th>Spec</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Computer App</td>
+                            <td>Players in PC-based apps such as iTunes, Windows Media Player, Winamp, or VLC. Does not use cookies.</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Browsers</td>
+                            <td>Players rendered in PC-based web browsers. Uses cookies.</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Apps</td>
+                            <td>Players in mobile device player apps. Does not use cookies.</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Browser</td>
+                            <td>Players in device-optimized mobile web browsers, such as iOS Safari and Android Chrome. Uses cookies.</td>
+                        </tr>
+                        <tr>
+                            <td>Uncategorized</td>
+                            <td>The vast majority of this inventory is intended for mobile apps, but it also includes consoles such as Roku. Does not use cookies.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>&nbsp;</p>
+            <h2>AdsWizz</h2>
+            <p class="left max-800">
+                File type: MP3, AAC, WAV<br>
+                File size: Maximum 20MB<br>
+                Bit rate: Minimum 128 kbps, 196kbs recommended<br>
+                Ad length: 15, 30, or 60 seconds
+            </p>
+        </div>
+    </main>
+    <footer>&nbsp;</footer>
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <!-- Megamenu JS Tags -->
+    <script src="plugins/megamenu/js/jquery.easing.js"></script>
+    <script src="plugins/megamenu/js/megamenu_plugins.js"></script>
+    <script src="plugins/megamenu/js/megamenu.min.js"></script>
+    <script>
+        $(document).ready(function($) {
+            $('.megamenu').megaMenuReloaded({
+                menu_speed_show: 300, // Time (in milliseconds) to show a drop down
+                menu_speed_hide: 200, // Time (in milliseconds) to hide a drop down
+                menu_speed_delay: 200, // Time (in milliseconds) before showing a drop down
+                menu_effect: 'open_close_slide', // Drop down effect, choose between 'hover_fade', 'hover_slide', 'click_fade', 'click_slide', 'open_close_fade', 'open_close_slide'
+                menu_easing: 'jswing', // Easing Effect : 'easeInQuad', 'easeInElastic', etc.
+                menu_click_outside: 1, // Clicks outside the drop down close it (1 = true, 0 = false)
+                menu_show_onload: 1, // Drop down to show on page load (type the number of the drop down, 0 for none)
+                menubar_trigger: 0, // Show the menu trigger (button to show / hide the menu bar), only for the fixed version of the menu (1 = show, 0 = hide)
+                menubar_hide: 0, // Hides the menu bar on load (1 = hide, 0 = show)
+                menu_responsive: 1, // Enables mobile-specific script
+                menu_carousel: 0, // Enable / disable carousel
+                menu_carousel_groups: 0 // Number of groups of elements in the carousel
+            });
+        });
+
+        function goFullScreen(id) {
+            var el = document.getElementById(id);
+            if (el.requestFullscreen) {
+                el.requestFullscreen();
+            } else if (el.webkitRequestFullscreen) {
+                el.webkitRequestFullscreen();
+            } else if (el.mozRequestFullScreen) {
+                el.mozRequestFullScreen();
+            } else if (el.msRequestFullscreen) {
+                el.msRequestFullscreen();
+            }
+        }
+
+        function exitFullScreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+    </script>
+</body>
+
+</html>

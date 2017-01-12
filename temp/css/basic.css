@@ -106,6 +106,8 @@ footer {
 .width-constrainer ol,
 .width-constrainer ul {margin-left: 40px;}
 .width-constrainer li {font-size: 18px;}
+.width-constrainer table th,
+.width-constrainer table td {font-size: 16px;}
 .grid-item {padding-top: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px;}
 .screen-overlay {
     width: 100%;
