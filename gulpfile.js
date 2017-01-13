@@ -77,7 +77,7 @@ gulp.task('build', function(){
         ])
         .pipe(must()).pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))
-        .pipe(gulp.dest('temp'))
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('write_standard_ads',function(){
