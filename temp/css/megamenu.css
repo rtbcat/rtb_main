@@ -40,6 +40,7 @@
 .megamenu > li .megamenu_fullwidth p:last-child {margin-bottom: 0px !important;}
 .megamenu > li .megamenu_fullwidth p.justify {text-align: justify;}
 .megamenu > li .megamenu_fullwidth p.center {text-align: center;}
+.megamenu > li .megamenu_fullwidth p.right {text-align: right;}
 .megamenu > li .nodrop {
     padding: 15px 8px 15px 10px;
 }
