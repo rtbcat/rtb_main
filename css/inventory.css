@@ -1,0 +1,169 @@
+/* Inventory Selector Widget */
+main aside .spanel .spanel-body {
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+main aside .spanel ul {list-style-type: none;}
+main aside .spanel li {padding-left: 25px;}
+main aside .spanel label {font-weight: normal; font-size: 14px;}
+main aside .spanel .form-buttons {text-align: right;}
+
+/* Main Content */
+main section .section-body .sort-direction {display: inline-block; float: right;}
+
+/* Map Modal */
+#world_map_modal {overflow: hidden;}
+#world_map_modal.fullscreened .width-constrainer {max-width: 100% !important;}
+#world_map_modal.fullscreened .box {margin-top: 0; margin-left: 0; margin-right: 0; border-radius: 0 !important;}
+#world_map_modal .box {
+    width: 100%;
+    height: auto;
+    margin-top: 48px;
+    padding-bottom: 56.25%;
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: transform 300ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: scale(0.3);
+    overflow: hidden;
+}
+#world_map_modal .box.open {
+    opacity: 1;
+    transform: scale(1);
+}
+#world_map_modal .box .jvectormap-container {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 20px; left: 20px;
+    overflow: visible;
+}
+#world_map_modal .box .jvectormap-zoomin,
+#world_map_modal .box .jvectormap-zoomout {
+    padding: 7px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+#world_map_modal .box .jvectormap-zoomin:hover,
+#world_map_modal .box .jvectormap-zoomout:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8)}
+#world_map_modal .box .jvectormap-zoomin {top: auto; bottom: 0; left: 27px; margin-bottom: -5px; margin-left: -5px;}
+#world_map_modal .box .jvectormap-zoomout {top: auto; bottom: 0; left: 0; margin-bottom: -5px; margin-left: -5px;}
+#world_map_modal .box .map-title {
+    position: absolute;
+    top: 15px; left: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 2;
+    display: none;
+}
+#world_map_modal .box .controls {
+    position: absolute;
+    top: 15px; right: 15px;
+    z-index: 2;
+    display: none;
+}
+#world_map_modal .box .controls .glyphicon {
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    background: rgba(0,0,0,0.7);
+    padding: 5px;
+    border-radius: 4px;
+}
+#world_map_modal .box .controls .glyphicon.max:before {content: "\e096";}
+#world_map_modal .box .controls .glyphicon.restore:before {content: "\e097";}
+#world_map_modal .box .controls .glyphicon:hover {color: rgba(255,255,255,1);background: rgba(0,0,0,0.8);}
+#world_map_modal .box:hover .jvectormap-zoomin,
+#world_map_modal .box:hover .jvectormap-zoomout,
+#world_map_modal .box:hover .map-title,
+#world_map_modal .box:hover .controls {display: inline-block;}
+.jvectormap-tip {z-index: 2147483647;}
+
+/* Country Selection Modal */
+#filter_country_choice,
+#category_branded_select_choice,
+#category_demographic_select_choice {cursor: pointer;}
+#filter_country_choice:hover,
+#category_branded_select_choice:hover,
+#category_demographic_select_choice:hover{color: #5bc0de;z-index: 9;}
+#message .box .buttons,
+#country_modal .box .buttons,
+#category_branded_select .box .buttons,
+#category_demographic_select .box .buttons {margin-top: 15px;}
+#country_modal .box,
+#category_branded_select .box,
+#category_demographic_select .box {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 15px;
+    background-color: white;
+    margin-top: 50px;
+}
+#country_modal .box .list,
+#category_branded_select .box .list,
+#category_demographic_select .box .list {
+    min-width: 220px;
+    max-height: 250px;
+    overflow-y: scroll;
+    border: 1px solid #999;
+}
+#country_modal .box .list ul,
+#category_branded_select .box .list ul,
+#category_demographic_select .box .list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#country_modal .box .list ul li,
+#category_branded_select .box .list ul li,
+#category_demographic_select .box .list ul li {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+#country_modal .box .list ul li:first-child,
+#category_branded_select .box .list ul li:first-child,
+#category_demographic_select .box .list ul li:first-child {
+    border-top: none;
+}
+#country_modal .box .list ul li:hover,
+#category_branded_select .box .list ul li:hover,
+#category_demographic_select .box .list ul li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive Layout */
+@media(max-width: 800px){
+    main aside {
+        position: fixed;
+        left: 0;
+        transform: translateX(calc(-100% + 10px));
+    }
+    main aside .search-field,
+    main aside .search-field input[type="text"] {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    main aside .spanel .toggle-icon {display: inline-block;}
+    main #main_content {
+        width: calc(100% - 0px) !important;
+    }
+}
+@media(max-width: 640px) {
+    main aside {position: absolute;}
+}
+@media(max-width: 430px) {
+    main section .table-control .left {
+        margin-bottom: 15px;
+    }
+    main section .table-control .left,
+    main section .table-control .right {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+}

@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
+*, *:after, *:before {-webkit-box-sizing: border-box; box-sizing: border-box;}
+.clearfix:before, .clearfix:after {content: ''; display: table;}
+.clearfix:after { clear: both; }
+
+body, html {height: 100%;}
+body {
+	color: #fff;
+	background: #566473;
+	font-weight: 500;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+a {
+	color: rgba(58,77,97,1);
+	text-decoration: none !important;
+	outline: none;
+}
+a:hover, a:focus {color: #74777b;}
+
+/* Initial Screen */
+.intro-screen {
+    height: 100%;
+    background: url(../images/map.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.intro-screen .content {
+	text-align: center;
+	position: relative;
+    top: 50%;
+    transform: translateY(-60%);
+	-webkit-transform: translateY(-60%);
+}
+.intro-screen .content .header {
+	position: relative;
+	top: 50%;
+	letter-spacing: -1px;
+}
+.intro-screen .content .header h1 {
+	font-weight: 500;
+	font-size: 8em;
+	line-height: 1;
+    text-shadow: 1px 1px 1px #000000;
+}
+.intro-screen .content .header h1 span {
+	display: block;
+	font-size: 50%;
+	font-weight: 200;
+	padding-top: 0.325em;
+	opacity: 0.6;
+}
+.intro-screen .content .leads {
+	width: 100%;
+	max-width: 1100px;
+	text-align: left;
+	min-height: 300px;
+	margin: 0 auto;
+	font-weight: 300;
+	position: relative;
+}
+
+/* Brand Links */
+.related {
+	width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	padding: 60px 0;
+	clear: both;
+}
+.related > h1,
+.related > h2,
+.related > h3 {
+	font-family: Raleway, Arial, sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	margin: auto 10px 10px 10px;
+}
+.related .brands {
+	margin-top: 36px;
+}
+.related .brands a {
+	width: calc(100% - 20px);
+	max-width: 340px;
+	color: #576475;
+	background-color: white;
+	background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 100%);
+	display: inline-block;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid rgba(255,255,255,0.5);
+	margin: 25px 10px 0 10px;
+	padding: 25px;
+	opacity: 0.9;
+}
+.related .brands a:hover {
+    opacity: 1;
+    color: #576475;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.65) 100%);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+    transition: opacity 0.5s ease-in-out;
+}
+.related .brands a:hover h3 {
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+    animation-delay: 400ms;
+    animation-name: flash;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+}
+.related .brands a img {
+	max-width: 100%;
+	opacity: 0.9;
+}
+.related .brands a:hover img,
+.related .brands a:active img {
+	opacity: 1;
+}
+.related .brands a h3 {
+	margin: 0;
+	padding: 0.5em 0 0.3em;
+	max-width: 300px;
+	text-align: left;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 420px) {
+    .intro-screen .content .header h1 {font-size: 6.5em;}
+    .related {padding-top:40px;padding-bottom:0px;}
+    .related .brands {margin-top:10px;margin-bottom:30px;}
+    .related > h2 {font-size: 20px;}
+}
+@media screen and (max-width: 27em) {
+	.codrops-icon {
+		font-size: 1.5em;
+	}
+	.codrops-icon span {
+		display: none;
+	}
+}

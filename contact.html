@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Send Us a Message</title>
+		<meta name="description" content="contact rtb.cat" />
+		<meta name="keywords" content="contact, rtb, programmatic advertising" />
+		<meta name="author" content="rtb.cat" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/contact.css" />
+	</head>
+	<body>
+		<div id="contact_container" class="container">
+
+			<div class="fs-form-wrap" id="fs-form-wrap">
+				<div class="fs-title">
+					<h1>Contact Us</h1>
+				</div>
+				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
+					<ol class="fs-fields">
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
+							<input class="fs-anim-lower" id="q1" name="name" type="text" placeholder="your name" required/>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
+							<input class="fs-anim-lower" id="q2" name="email" type="email" placeholder="email@domain.us" required/>
+						</li>
+						<li data-input-trigger>
+							<label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us understand what kind of service you need">Are you looking to buy:</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<!-- <span><input id="q3b" name="type" type="radio" value="owner"/><label for="q3b" class="radio-owner">Product Owner</label></span>
+								<span><input id="q3c" name="type" type="radio" value="affiliate"/><label for="q3c" class="radio-affiliate">Affiliate</label></span> -->
+								<span title="Click to select or deselect."><input id="q1b" name="type[]" type="checkbox" value="in-banner-video"/><label for="q1b" class="radio-video">In-banner Video</label></span>
+								<span title="Click to select or deselect."><input id="q2b" name="type[]" type="checkbox" value="mobile-app-traffic"/><label for="q2b" class="radio-mobile">Mobile App Traffic</label></span>
+								<span title="Click to select or deselect."><input id="q3b" name="type[]" type="checkbox" value="web"/><label for="q3b" class="radio-web">Web</label></span>
+								<span title="Click to select or deselect."><input id="q4b" name="type[]" type="checkbox" value="native"/><label for="q4b" class="radio-native">Native</label></span>
+							</div>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q4">How can we help you?</label>
+							<textarea class="fs-anim-lower" id="q4" name="message" placeholder="I would like to scale..."></textarea>
+						</li>
+					</ol><!-- /fs-fields -->
+					<button class="fs-submit" type="submit">Send</button>
+				</form><!-- /fs-form -->
+			</div><!-- /fs-form-wrap -->
+
+		</div><!-- /container -->
+		<div id="message_box" class="window_overlay">
+			<div class="overlay_box">
+				<div class="message">
+					Message here.
+				</div>
+				<div class="control">
+					<button role="ok" type="button">Ok</button>
+				</div>
+			</div>
+		</div>
+		<script src="libs/jquery-1.11.3.min.js"></script>
+		<script src="plugins/modernizr/modernizr.custom.js"></script>
+		<script src="js/fullscreenForm/classie.js"></script>
+		<script src="js/fullscreenForm/selectFx.js"></script>
+		<script src="js/fullscreenForm/fullscreenForm.js"></script>
+		<script>
+			function load_JS(filename){
+				var script_tag = document.createElement('script');
+				script_tag.setAttribute("type","text/javascript");
+				script_tag.setAttribute("src", filename);
+			}
+			(function() {
+				var formWrap = document.getElementById( 'fs-form-wrap' );
+
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+					new SelectFx( el, {
+						stickyPlaceholder: false,
+						onChange: function(val){
+							document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+						}
+					});
+				} );
+
+				new FForm( formWrap, {
+					onReview : function() {
+						classie.add( document.body, 'overview' ); // for demo purposes only
+					}
+				} );
+			})();
+
+			var message_box = {
+				open : function(message,fx){
+					$("#message_box .message").text(message);
+					$("#message_box").css("display","block");
+					$("#message_box button[role='ok']").unbind().click(fx);
+				},
+				close : function(){
+					$("#message_box").css("display","none");
+				}
+			}
+			;(function($){
+				$("#myform").submit(function(e){
+					e.preventDefault();
+					var data = $(this).serialize();
+					$("#contact_container").css("opacity","0");
+					// Trigger url call to iframe.
+					var cache_buster = (new Date()).getTime();
+					var callback_url = 'http://trends.revcontent.com/conv.php?t=eJwFwYEBwCAIA7CXZsEK51AH%2F59gQmpWubBlE%2Ba3cMKsBSJZX6ZtrOU0IaDjw%2F96qyJa0%2FkAJPwRWg%3D%3D&cache_bust='+cache_buster;
+					$('#pixel_loader_1').attr('src',callback_url);
+					$.ajax({
+						method : 'GET',
+						url : 'http://sandbox.lat.com.es/index.php/contact',
+						data : data,
+						success : function(response){
+							var reply = response;
+							if(reply.status == "success"){
+								$("#contact_container").css("opacity","1");
+
+								var fx = function(){
+									$("#message_box .overlay_box").css("display","none");
+									setTimeout(function(){
+										location = location.protocol+'//'+location.host;
+									},1000);
+								}
+
+								$('#twitter_converter').attr('src','twitter-convert.html');
+								message_box.open("Message sent.",fx);
+							}
+						}
+					});
+				});
+			}(jQuery))
+		</script>
+		<img id="pixel_loader_1" src="" style="display: none" />
+		<!-- Twitter universal website tag code -->
+		<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+		<script type="text/javascript">twttr.conversion.trackPid('nuzl2', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+		<noscript>
+		<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+		<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+		</noscript>
+		<!-- End Twitter universal website tag code -->
+		<iframe id="twitter_converter" style="width:1px;height:1px;position:absolute;top:0;left:0;opacity:0"></iframe>
+		<!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
+		<script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
+		<!-- End of Segment Pixel -->
+	</body>
+</html>

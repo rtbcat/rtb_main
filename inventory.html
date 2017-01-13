@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
     <base href="" />
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Programmatic Platform</title>
-    <link rel="shortcut icon" href="favicon.ico">
+    <title>Inventory Tool</title>
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.min.css" />
-    <link rel="stylesheet" type="text/css" href="plugins/tooltip/css/tooltip-curved.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/jvectormap-2.0.3/jvectormap.css" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/inventory.css" />
     <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
-    <!--[if IE]>
-  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 </head>
 
 <body>
@@ -1270,15 +1267,15 @@
                         <div class="col-50">
                             <div style="overflow:auto;margin-bottom: 10px">
                                 <div style="float:left;width:50%">
-                                    <h3>Corporate addres:</h3>
+                                    <h3>Head Office:</h3>
                                     <p>
                                         Crown House<br> 37 High street<br> East Grinstead, West Sussex<br> RH19 3AF<br> +44 01273 906 777
                                     </p>
                                 </div>
                                 <div style="float:left;width:50%">
-                                    <h3>Main office:</h3>
+                                    <h3>Text Head:</h3>
                                     <p>
-                                        75 West str.<br> East Grinstead, West Sussex<br> RH19 4EL<br> +44 01273 906 777
+                                        Text body<br> Text body<br> Text body<br>
                                     </p>
                                 </div>
                             </div>
@@ -1286,13 +1283,13 @@
                         <div class="col-50">
                             <div style="overflow:auto;margin-bottom: 10px">
                                 <div style="float:left;width:50%">
-                                    <h3>Support Offices:</h3>
+                                    <h3>Support Office:</h3>
                                     <p>
                                         Belgium<br> Oudaan 32<br> 2000 Antwerpen<br> bel [AT] rtb.cat
                                     </p>
                                 </div>
                                 <div style="float:left;width:50%">
-                                    <h3>Sales Office:</h3>
+                                    <h3>Support Office:</h3>
                                     <p>
                                         Israel<br> Shefa Tal 10<br> Tel Aviv<br> tlv [AT] rtb.cat
                                     </p>
@@ -1310,14 +1307,15 @@
                         <div class="col-50">
                             <div style="overflow:auto;margin-bottom: 10px">
                                 <div style="float:left;width:50%">
-                                   
+                                    <h3>Text Head:</h3>
                                     <p>
-                                        Denmark<br> Kaløvej 5 <br>2720 VANLØSE<br> cph [AT] rtb.cat
+                                        Text body<br> Text body<br> Text body<br>
+                                    </p>
                                 </div>
                                 <div style="float:left;width:50%">
-                                    
+                                    <h3>Text Head:</h3>
                                     <p>
-                                        Australia<br> 130 Pitt str.<br> Sydney<br> NSW 2000<br> oz [AT] rtb.cat
+                                        Text body<br> Text body<br> Text body<br>
                                     </p>
                                 </div>
                             </div>
@@ -1333,91 +1331,238 @@
             </li>
         </ul>
     </div>
-    <section class="intro-screen">
-        <div class="content">
-            <div class="header">
-                <h1>rtb.cat <span> Programmatic Access </span></h1>
+    <main>
+        <div class="width-constrainer">
+            <h1 class="page-title">Inventory Data (<span id="selected_country_title">All</span>)</h1>
+            <aside id="side_bar" class="grid-item">
+                <div class="spanel">
+                    <form id="search_form">
+                        <input type="hidden" name="sort_by" value="filtered_impressions" />
+                        <input type="hidden" name="order_by" value="des" />
+                        <input type="hidden" name="page" value="1" />
+                        <input type="hidden" name="limit" value="25" />
+                        <div class="spanel-head">
+                            <div class="search-field">
+                                <input type="text" name="keyword" placeholder="Seller's name or ID" />
+                                <i class="search-icon"></i>
+                            </div>
+                            <i class="toggle-icon"></i>
+                        </div>
+                        <div class="spanel-body">
+                            <div class="field-entry">
+                                <div class="filter-title">Country</div>
+                                <div class="filter-content">
+                                    <ul id="filter_country">
+                                        <li>
+                                            <label>
+                                                    <input type="radio" name="country" value="all" checked="true" />
+                                                    &nbsp;Worldwide (All Countries)
+                                                </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                    <input id="filter_country_single" type="radio" name="country" value="" />
+                                                    &nbsp;<span id="filter_country_choice" title="Click to change.">Select Country</span>
+                                                </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="device_block" class="field-entry">
+                                <div class="filter-title">Device Type</div>
+                                <div class="filter-content">
+                                    <ul>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="0" checked="true" /> All</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="1" /> Desktop</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="2" /> Phone</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="device_type" value="3" /> Tablet</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="supply_block" class="field-entry">
+                                <div class="filter-title">Supply Type</div>
+                                <div class="filter-content">
+                                    <ul>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="0" checked="true" /> All</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="1" /> Web</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="2" /> Mobile Web</label>
+                                        </li>
+                                        <li>
+                                            <label><input type="radio" name="supply_type" value="3" /> Mobile App</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </aside>
+            <section id="main_content" class="grid-item">
+                <div class="table-control section-header clearfix">
+                    <div class="filter-result-widget left">
+                        <select class="sorting">
+                                <option value="seller_name">Seller</option>
+                                <option value="filtered_impressions" selected="true">Imps</option>
+                            </select>
+                        <select class="ordering">
+                                <option value="asc">Asc</option>
+                                <option value="des" selected="true">Desc</option>
+                            </select>
+                    </div>
+                    <div class="pagination-widget right">
+                        <button class="btn btn-default btn-sm btn-prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </button>
+                        <select class="page-number" name="page">
+                                <option value="1">1</option>
+                            </select> &nbsp;of <span class="page-total">0</span>
+                        <button class="btn btn-default btn-sm btn-next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                    </div>
+                </div>
+                <div id="table_container" class="section-body clearfix">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th data-sort="seller_name" class="sort" title="Click to sort">
+                                    Seller
+                                    <div class="sort-direction">
+                                        <span class="glyphicon"></span>
+                                    </div>
+                                </th>
+                                <th data-sort="filtered_impressions" class="sort" title="Click to sort">
+                                    Avg. Daily Impressions
+                                    <div class="sort-direction">
+                                        <span class="glyphicon"></span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">Fetching...</td>
+                            </tr>
+                            <!--
+                                    Ajax table will fill this section.
+                                -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-control section-footer clearfix">
+                    <div class="filter-result-widget left">
+                        <select class="sorting">
+                                <option value="seller_name">Seller</option>
+                                <option value="filtered_impressions" selected="true">Imps</option>
+                            </select>
+                        <select class="ordering">
+                                <option value="asc">Asc</option>
+                                <option value="des" selected="true">Desc</option>
+                            </select>
+                    </div>
+                    <div class="pagination-widget right">
+                        <button class="btn btn-default btn-sm btn-prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </button>
+                        <select class="page-number" name="page">
+                                <option value="1">1</option>
+                            </select> &nbsp;of <span class="page-total">0</span>
+                        <button class="btn btn-default btn-sm btn-next">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>&nbsp;</footer>
+    <div id="loader" class="screen-overlay">
+        <div class="box">
+            <img src="images/spinner.gif" />&nbsp;LOADING
+        </div>
+    </div>
+    <div id="message" class="screen-overlay">
+        <div class="box">
+            <div class="message">
+                Message goes here.
             </div>
-            <div class="leads">
-                <div class="tooltip tooltip-west">
-                    <span class="tooltip-item"></span>
-                    <span class="tooltip-content">Target Males, 18-24, using an iPhone, on T-Mobile</span>
-                </div>
-                <div class="tooltip tooltip-west">
-                    <span class="tooltip-item"></span>
-                    <span class="tooltip-content">Target Female, 25-34, on Cosmopolitan.com, recently viewed "acne products" video</span>
-                </div>
-                <div class="tooltip tooltip-east">
-                    <span class="tooltip-item"></span>
-                    <span class="tooltip-content">Female, 35-50, Staying home for the weekend, recipes searched</span>
-                </div>
-                <div class="tooltip tooltip-east">
-                    <span class="tooltip-item"></span>
-                    <span class="tooltip-content">reading Self-Help articles, logged-in on amazon </span>
-                </div>
+            <div class="buttons">
+                <button type="button" class="btn btn-default btn-sm" onclick="message.close()">
+                        Ok
+                    </button>
             </div>
         </div>
-    </section>
-    <section class="related">
-        <h2>Gain access to these partners via self-serve DSP on the open market</h2>
-        <h2>Get direct deals through deal ID / PMP </h2>
-        <div class="brands">
-            <a href="https://www.doubleclickbygoogle.com/" target="_blank">
-                <img src="images/doubleclick.png" />
-                <h3>DSP & OpenRTB</h3>
-            </a>
-            <a href="http://www.appnexus.com/" target="_blank">
-                <img src="images/appnexus.png" />
-                <h3>DSP & OpenRTB</h3>
-            </a>
-            <a href="https://www.facebook.com/advertising/" target="_blank">
-                <img src="images/facebook.png" />
-                <h3>DSP only</h3>
-            </a>
-            <a href="http://advertising.microsoft.com/en/ad-exchange" target="_blank">
-                <img src="images/microsoft.png" />
-                <h3>DSP & OpenRTB</h3>
-            </a>
-            <a href="http://mopub.com" target="_blank">
-                <img src="images/mopub.png" />
-                <h3>DSP & OpenRTB</h3>
-            </a>
-            <a href="https://advertising.amazon.com" target="_blank">
-                <img src="images/amazon.png" />
-                <h3>DSP</h3>
-            </a>
-            <a href="https://rubiconproject.com" target="_blank">
-                <img src="images/rubicon.png" />
-                <h3>DSP & OpenRTB</h3>
-            </a>
-            <a href="http://operamediaworks.com" target="_blank">
-                <img src="images/opera.png" />
-                <h3>DSP</h3>
-            </a>
-            <a href="http://www2.ebayadvertising.com/uk/programmatic" target="_blank">
-                <img src="images/ebay.png" />
-                <h3>Deal ID </h3>
-            </a>
-            <a href="http://openx.com" target="_blank">
-                <img src="images/openx.png" />
-                <h3>DSP & OpenRTB</h3>
-            </a>
-            <a href="http://www.pubmatic.com" target="_blank">
-                <img src="images/pubmatic.png" />
-                <h3>DSP & OpenRTB</h3>
-            </a>
-            <a href="https://www.smaato.com" target="_blank">
-                <img src="images/smaato.png" />
-                <h3>Smaato</h3>
-            </a>
-            <a href="http://www.taboola.com" target="_blank">
-                <img src="images/taboola.png" />
-                <h3>Retargeting</h3>
-            </a>
+    </div>
+    <div id="world_map_modal" class="screen-overlay">
+        <div class="width-constrainer">
+            <div class="box">
+                <div class="controls">
+                    <i class="glyphicon scr-toggle max" title="Fullscreen"></i>
+                    <i class="glyphicon glyphicon-remove" title="Close"></i>
+                </div>
+                <div class="map-title">Title</div>
+            </div>
         </div>
-    </section>
-    <!-- Page Scripts -->
+    </div>
+    <div id="country_modal" class="screen-overlay">
+        <div class="box">
+            <div class="message">
+                <p>Select a country.</p>
+            </div>
+            <div class="list">
+                <ul>
+                    <li data-code="AR">Argentina</li>
+                    <li data-code="AU">Australia</li>
+                    <li data-code="BR">Brazil</li>
+                    <li data-code="CA">Canada</li>
+                    <li data-code="CN">China</li>
+                    <li data-code="DE">Germany</li>
+                    <li data-code="ES">Spain</li>
+                    <li data-code="FR">France</li>
+                    <li data-code="GB">United Kingdom</li>
+                    <li data-code="ID">Indonesia</li>
+                    <li data-code="IN">India</li>
+                    <li data-code="IT">Italy</li>
+                    <li data-code="JP">Japan</li>
+                    <li data-code="KR">South Korea</li>
+                    <li data-code="MX">Mexico</li>
+                    <li data-code="NL">Netherlands</li>
+                    <li data-code="PH">Philippines</li>
+                    <li data-code="PL">Poland</li>
+                    <li data-code="RU">Russia</li>
+                    <li data-code="TH">Thailand</li>
+                    <li data-code="TR">Turkey</li>
+                    <li data-code="TW">Taiwan</li>
+                    <li data-code="UA">Ukraine</li>
+                    <li data-code="US">United States</li>
+                    <li data-code="VN">Vietnam</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn btn-default btn-sm btn-cancel">
+                        Cancel
+                    </button>
+            </div>
+        </div>
+    </div>
+    <!-- Basic -->
     <script src="libs/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jvectormap-2.0.3/jvectormap.min.js"></script>
+    <script src="plugins/jvectormap-2.0.3/world-mill-mod.js"></script>
+    <script src="js/app.inventory.js"></script>
     <!-- Megamenu JS Tags -->
     <script src="plugins/megamenu/js/jquery.easing.js"></script>
     <script src="plugins/megamenu/js/megamenu_plugins.js"></script>
@@ -1474,9 +1619,9 @@
         });
     </script>
     <noscript>
-		<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-		<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-		</noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+        <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+        </noscript>
     <!-- End Twitter universal website tag code -->
     <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
     <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
