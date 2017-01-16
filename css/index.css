@@ -17,6 +17,8 @@ a {
 	outline: none;
 }
 a:hover, a:focus {color: #74777b;}
+a {color: #4cc0e5; transition: color ease 500ms; -webkit-transition: color ease 500ms;}
+a:hover {color: #8ce158; text-decoration: none;}
 
 /* Initial Screen */
 .intro-screen {
@@ -80,6 +82,7 @@ a:hover, a:focus {color: #74777b;}
 }
 .related .brands {
 	margin-top: 36px;
+    margin-bottom: 36px;
 }
 .related .brands a {
 	width: calc(100% - 20px);
