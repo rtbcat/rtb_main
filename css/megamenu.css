@@ -29,6 +29,14 @@
 .megamenu {
     font-family: 'Raleway', Arial, sans-serif;
 }
+.megamenu h1,
+.megamenu h2,
+.megamenu h3,
+.megamenu h4,
+.megamenu p {
+    color: #bbb;
+}
+.megamenu
 .r16by9,
 .embed-responsive {
     margin-bottom: 10px !important;
@@ -37,6 +45,8 @@
 .embed-responsive:last-child {
     margin-bottom: 0px !important;
 }
+.megamenu > li a {color: #fff;}
+.megamenu > li a:hover {color: #fff;}
 .megamenu > li .megamenu_fullwidth p:last-child {margin-bottom: 0px !important;}
 .megamenu > li .megamenu_fullwidth p.justify {text-align: justify;}
 .megamenu > li .megamenu_fullwidth p.center {text-align: center;}
