@@ -118,15 +118,16 @@
 							if(reply.status == "success"){
 								$("#contact_container").css("opacity","1");
 
-								var fx = function(){
-									$("#message_box .overlay_box").css("display","none");
-									setTimeout(function(){
-										location = location.protocol+'//'+location.host;
-									},1000);
-								}
+								// var fx = function(){
+								// 	$("#message_box .overlay_box").css("display","none");
+								// 	setTimeout(function(){
+								// 		location = location.protocol+'//'+location.host;
+								// 	},1000);
+								// }
 
-								$('#twitter_converter').attr('src','twitter-convert.html');
-								message_box.open("Message sent.",fx);
+								// $('#twitter_converter').attr('src','twitter-convert.html');
+								// message_box.open("Message sent.",fx);
+								top.location = "thank-you.html";
 							}
 						}
 					});
