@@ -74,7 +74,8 @@ gulp.task('build', function(){
             'dev/pages/fill-rate-tool.mustache',
             'dev/pages/appnexus-co-pilot.mustache',
             'dev/pages/programmatic-audio.mustache',
-            'dev/pages/proprietary-bidder.mustache'
+            'dev/pages/proprietary-bidder.mustache',
+            'dev/pages/swipe-file.mustache'
         ])
         .pipe(must()).pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))
