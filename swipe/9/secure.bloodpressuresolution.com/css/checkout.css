@@ -1,0 +1,83 @@
+
+.noticeFix			{ position:fixed; top:0px; z-index:996; width:100%;  text-align:center;  }
+.alert				{ display:none; font-size:110%}
+
+ 
+#header {
+    border-bottom: 1px solid #ececec;
+    position: relative;
+    z-index: 2;
+	padding-bottom:5px;
+	margin-bottom:1%;
+}
+
+.main_logo	{ max-width:200px; }
+
+.colorBar {
+    text-align: center;
+    border-bottom: 8px solid #003d60; 
+    width: 100%;
+	margin-bottom:5px
+}
+
+.blue	{color:#31708f; }
+.larger	{ font-size:120%;}
+.page-header	{ margin:0px; padding:0px; margin-bottom:2%; text-transform:uppercase; color:#959595}
+.page-header img { position:relative; top:-8px;}
+.colTitle		{ text-transform:uppercase; background:#ececec; padding:3px 5px; margin:10px 0px 5px; }
+.ccImage		{ margin-top:-5px;}
+
+.trustBar h2	{ margin:0; padding:0; margin-top:10px;}
+.trustBar h3 	{ margin:0; padding:0;}
+.trustBar h4 	{ margin:0; padding:0;}
+
+.help-block		{ font-size:70%;}
+.pointer 		{ cursor:pointer;}
+.shippingDetails	{ display:none}
+
+tr.discount, tr.tax 	{ display:none;}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px ) { 
+	.AddressCol	{ padding-right:30px; }
+	.CardCol	{ padding-right:30px; padding-left:30px;  border-left: 1px solid #ececec; border-right: 1px solid #ececec;}
+	.ReviewCol	{ padding-left:30px;} 
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	
+}
+
+
+.fa-spin-custom, .glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}

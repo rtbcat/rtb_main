@@ -1,0 +1,12 @@
+.colorBar {
+   display:none;
+}
+
+#header {
+	border-color: #e7e7e7; 
+	background-color:#D9BCBD;
+	background-image: linear-gradient(to bottom, #fff 0, #f8f8f8 100%);
+    background-repeat: repeat-x;
+}
+
+.main_logo	{ max-width:300px; }

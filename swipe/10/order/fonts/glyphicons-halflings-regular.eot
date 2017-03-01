@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Application Error</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+</head>
+
+<body>
+    <h1>Please telephone us to complete your order </h1>
+<p>Dear Reader, </p>
+<p><strong>To complete your order, please call 1-888-501-2598 </strong>. </p>
+<p>We are having a temporary technical problem. Rather than have you wait while our technical team fixes it, my customer service representatives are ready now to help you complete your order. </p>
+<p>I am sorry that this occurred, and I assure you that we are working to resolve the problem. </p>
+<p>Please call now, and we can help you right away: 1-888-501-2598. </p>
+<p>Thank you. </p>
+<p>Sincerely </p>
+<p><strong>Pat Goodman </strong><br>
+  Customer Service Director </p>
+    <div id="errorId">Error Id: OFFER NOT FOUND</div>
+</body>
+</html>
+

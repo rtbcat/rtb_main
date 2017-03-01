@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xml:lang="en">
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>3 steps to your free credit reports - Annual Credit Report.com.</title>
+		
+
+
+		<link type="text/css" href="/css/main.css" rel="stylesheet">
+		<link type="text/css" href="/css/jquery.bxslider.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+		
+		<script type="text/javascript" src="/js/ui.js"></script>
+		
+
+		<script type="text/javascript" src="/js/functions.js"></script>
+       	<script type="text/javascript" src="/js/jQuery.browser.mobile.js"></script>
+        <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
+      
+                 
+    </head>
+    <body>
+        <a name="top" id="top"></a>
+        <div class="skip"><a href="#mainContent">Skip to main content</a></div>
+		<div id="container">
+	        
+
+
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<header role="banner">
+   <h1 role="presentation"> <img src="/images/logo.png" alt="Annual Credit Report.com The only source for your free credit reports. Authorized by Federal law"></h1>
+    <div id="navBar" class="globalMenu" role="navigation" aria-label="main">
+    <ul>
+      <li><a href="/index.action">Home</a></li>
+      <li><a href="/yourRights.action">All about credit reports</a></li>
+      <li class="selected"><a href="/requestReport/landingPage.action">Request yours now!</a></li>
+      <li><a href="/reviewYourReport.action">What to look for</a></li>
+      <li><a href="/protectYourIdentity.action">Protect your identity</a></li>
+      <li><a href="/generalQuestions.action">Frequently asked questions</a></li>
+      <li><a href="/contactUs.action">Contact us</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>                
+</header>
+		<a name="mainContent" id="mainContent" tabindex="-1"></a>
+        <div class="pageContent" role="main">
+            <h1 class="marginLeft40"><span class="important">3 steps </span>to your free credit reports</h1>
+			
+			<ol id="nav">
+				<li>
+					<div id="step1"><span class="indicator1"></span><p>Fill out<br> a form</p></div>
+					
+					<span class="stepSpan">Fill out one form to request one, two, or three credit reports</span>
+					
+				</li>
+				<li>
+					<div id="step2">
+					<span class="indicator2"></span><p>Pick the reports<br>you want</p></div>
+					
+					<span class="stepSpan">Request your credit reports from Equifax, Experian or TransUnion.</span>
+					
+				</li>
+				<li class="repeat">
+					<div id="repeatIndicator">
+						<span class="leftArrow"></span>
+						<span class="indicatorText">You repeat this step<br>for each credit report</span>
+						<div class="clear"></div>
+					</div>
+					<div id="step3"><span class="indicator3"></span><p>Request and Review<br>your reports online</p></div>
+					<span class="stepSpan">
+						Before you get your credit reports, you will answer a few more questions. These questions are meant to be hard. You may even need your records to answer them. They are used to ensure that nobody but you can get your credit information.<br><br>
+						If you can, print your credit reports so you can look at them later.
+					</span>
+				</li>
+				<div class="clear"></div>
+			</ol>
+			<h2 class="subheading containerSubHeading">Your free annual credit report does not include credit scores</h2>
+            <span class="blockSpan">Monitoring your credit reports regularly is an important part of being in control of your finances.  Learn more about why monitoring matters, identity theft and ways to improve your credit score on AnnualCreditReport.com</span>
+            <br>
+			<ul class="noListStyle">				
+            	<li><span class="blockSpan"><a href="/reviewYourReport.action">What to look for</a></span></li>
+			</ul>
+            
+
+			<span class="centerBlock"><a class="primaryActionButton primaryIE" id="orderReport" href="/requestReport/requestForm.action">Request your credit reports</a></span>
+
+			<div class="clear"></div>
+		</div>
+        </div>
+       	
+
+
+
+<div class="footer" role="contentinfo">
+<div id="footerContentWrapper">
+  <div id="footerLeft">
+    <ul>
+      <li><a href="/aboutThisSite.action">About this site</a></li>
+      
+      <li><a href="/privacy.action">U.S. Privacy</a></li>
+      <li><a href="/security.action">U.S. Security</a></li>
+      
+      <li><a href="/termsOfUse.action">Terms of use</a></li>
+    </ul>
+    <div class="clear"></div>
+    <p id="copyright">Copyright &copy; 2017 Central Source, LLC</p>
+  </div>
+  <div id="footerRight">
+    <p>Secure Transaction: For your protection,  this website is secured with the highest level of SSL Certificate encryption.</p>
+    <div id="verisign">
+	<script language="javascript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+    </body>
+</html>

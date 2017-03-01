@@ -1,0 +1,260 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700';
+.buy_box {
+	font-family: 'Roboto', sans-serif;	
+	font-size: 14px;
+	font-weight: 400;
+}
+.banners {
+	margin: 20px auto;
+	padding: 0;
+	display: block;
+	width: 100%;
+	height: 240px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAUCAYAAABI+4ecAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACtJREFUeNpiPHToUAMDFLAA8R+cnF/EcX4ic34QJ0Mkh0ijiXQo3HMAAQYAEhAVmBVwbu0AAAAASUVORK5CYII=) repeat-x #fff;
+	background-position: 0 40px;
+	box-shadow: 0 0 10px #666;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	cursor: pointer;
+	display: table;
+	position: relative;
+	border: 2px solid transparent;
+	font-family: 'Roboto', sans-serif;		
+}
+.banners:hover {
+	border: 2px solid #ffa700;
+	background: url(../images/new/bg_activ2.jpg) repeat;
+}
+
+.banners:hover .banners_right {
+	background: rgba(255,255,255,0.3);
+}
+.banners:hover .banners_left .box_info .sub_box p, .banners:hover .banners_left h4 {
+	color: #fff;
+}
+.banners:hover .banners_left h4 span {
+	color: #ff0;
+}
+.banners:hover .banners_right button {
+    border-bottom: 1px solid #690000;
+    box-shadow: inset 0 1px 0 0 #ff5524;
+    background-color: #e73818;
+    background-image: linear-gradient(180deg,#e73818 0,#af0600 50%,#910000 0,#980000);
+}
+.banners:hover .banners_right .origial_price {
+	color: #16415a;
+}
+.banners:hover .banners_right .price {
+	color: #042049;
+}
+.banners_left {
+	width: 70%;
+	vertical-align: top;
+	float: left;
+}
+.banners_right {
+    width: 30%;
+    display: table-cell;
+    position: relative;
+    height: 242px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAUCAYAAABI+4ecAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACtJREFUeNpiPHToUAMDFLAA8R+cnF/EcX4ic34QJ0Mkh0ijiXQo3HMAAQYAEhAVmBVwbu0AAAAASUVORK5CYII=) repeat-x #ecf6d2;
+    background-position: 0 40px;
+    text-align: center;
+    vertical-align: top;
+	float: left;	
+}
+.banners_left h4 {
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 400;
+    padding-left: 18px;
+	text-transform: uppercase;
+}
+.banners_left h4 span {
+	color: #dc4125;
+	font-weight: 700;
+}
+.banners_left .product {
+	width: 76%;
+	float: left;
+	margin-left: 3%;
+}
+.banners_left .product img {
+	display: block;
+	margin: 10px auto 0;
+}
+.banners_left .box_info {
+	position: relative;
+}
+.banners_left .box_info .amounts {
+    display: table;
+    width: 105px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    margin: 0;
+}
+.banners_left .box_info .amounts div {
+    padding: 2px 0;
+    display: table-cell;
+    background: #f4fbfe;
+    width: 100%;
+    border-left: 1px solid #e4f4fb;
+    border-right: 1px solid #e4f4fb;
+    border-top: 1px solid #e4f4fb;
+    color: #2885ad;
+    text-align: center;
+    line-height: 100%;
+	float: right;
+}
+.banners_left .box_info .amounts .percentage1 {
+	border-top: 5px solid #9fda0e;
+}
+.banners_left .box_info .amounts .percentage2 {
+	border-top: 5px solid #ff5c3e;
+}
+.banners_left .box_info .amounts .percentage3 {
+	border-top: 5px solid #fee600;
+}
+.banners_left .box_info .amounts strong {
+	display: block;
+	font-size: 28px;
+	font-weight: 900;
+	line-height: 28px;
+}
+.banners_left .box_info .amounts span {
+	font-size: 11px;
+	line-height: 80%;
+	font-weight: 300;
+	padding: 10px 5px 0;
+	display: inline-block;
+	color: #000;
+}
+.banners_left .box_info .amounts .spacer {
+    background: none;
+    border: none;
+    width: 2px;
+	height: 0;
+}
+.banners_right .shipping {
+	position: relative;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	border: none;
+	display: block;
+	background: #fedc00;
+	height: 45px;
+	padding-top: 5px;
+	font-weight: 900;
+}
+.banners_right .shipping:after {
+	content: '';
+	display: block;
+	background: url(../images/new/shipping.png) no-repeat top center;
+	width: 30px;
+	height: 12px;
+	position: absolute;
+	top: 44px;
+	left: 50%;
+	z-index: 9;	
+	transform: translate(-50%, 0%); 
+	-ms-transform: translate(-50%, 0); 
+	-webkit-transform: translate(-50%, 0);	
+}
+.banners_right .shipping_clear {
+	height: 45px;
+	background: #fedc00;	
+}
+.banners_right .shipping:before {
+	content: "";
+	position: absolute;
+	background: url(../images/new/moto.png) no-repeat;
+	width: 32px;
+	height: 25px;
+	display: block;
+	top: 8px;
+	left: 18px;
+	z-index: 10;
+}
+.banners_right .shipping span {
+	font-size: 15px;
+	text-transform: uppercase;
+	display: block;
+	color: #012c6c;
+	width: 100%;
+	text-align: center;
+	line-height: 24px;
+	position: absolute;
+	top: 12px;
+	z-index: 10;
+}
+.banners_right .origial_price {
+	font-size: 16px;
+	line-height: 25px;
+	text-align: center;
+	position: relative;
+	color: #7c992e;
+	font-weight: 400;
+}
+.banners_right .save {
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	position: relative;
+	color: #00398d;
+	font-weight: 700;	
+}
+.banners_right .price {
+	text-align: center;
+	color: #00398d;
+	font-size: 48px;
+	font-family: Roboto Condensed,Open Sans Condensed,Arial,sans-serif;
+	text-shadow: 1px 1px 1px #fff;
+	line-height: 100%;
+	font-weight: 700;
+	margin: 15px 0 10px;
+}
+.banners_right .price span {
+	font-size: 14px;
+	line-height: 100%;
+	line-height: 14px;
+	display: block;
+	font-weight: 400;
+	margin-bottom: 10px;
+	font-family: Roboto,Open Sans,Arial,sans-serif;
+}
+.banners_right button {
+	background-color: #69a101;
+	background-image: linear-gradient(180deg,#69a101 0,#316f00 50%,#135600 0,#1a5b00);
+	box-shadow: inset 0 1px 0 0 #8ebe0d;
+	border-bottom: 1px solid #020;
+	font-weight: 600;
+	color: #fff;
+	border-radius: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	border: none;
+	width: 80%;
+	left: 34px;
+	top: 165px;
+	padding: 0;
+	margin: 10px;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 10px 0;
+}
+@media only screen and (max-width: 768px){
+	.banners_right .shipping span { text-align: right; padding-right: 10px; }
+}
+@media only screen and (max-width: 640px){
+	.banners_right .shipping span { text-align: center; padding: 0; }
+	.banners_left, .banners_right { width: 100%; float: none; display: block; height: auto; min-height: 245px; }
+}
+@media only screen and (max-width: 480px){
+	.banners_left { min-height: 310px; }
+	.banners_left .product { width: 100%; float: none; margin: 0; }
+	.banners_left .box_info .amounts { width: 98%; }
+	.banners_left .box_info .amounts div { width: 33%; min-height: 58px; float: none; }
+}

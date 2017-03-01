@@ -1,0 +1,603 @@
+@charset "UTF-8";
+
+html,
+body {
+	color: #23292f;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#comparisonsContainer {
+	min-height: 100%;
+	position: relative;
+}
+
+#comparisonsHeader,
+#comparisonsContent {
+	max-width: 1280px;
+}
+
+#comparisonsFooter .container-fluid {
+	max-width: 1280px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #116696;
+}
+
+.footnote {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 9px;
+}
+
+blockquote {
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #ddd;
+	border-left: 5px solid #116696;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	color: #000;
+	margin-bottom: 30px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 25px;
+}
+
+blockquote a {
+	font-weight: bold;
+}
+
+blockquote strong {
+	color: #116696;
+}
+
+button {
+	background-color: #7dc049;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	outline: none;
+	padding: 8px 25px;
+}
+button:hover {
+	background: #9bd96b;
+}
+
+a {
+	color: #116696;
+	cursor: pointer;
+}
+a:focus,
+a:hover {
+	color: #7dc049;
+	text-decoration: none;
+}
+
+/*------------------- HEADER -------------------*/
+
+#comparisonsHeader {
+	font-size: 14px;
+	height: 80px;
+	letter-spacing: -0.03em;
+}
+
+#comparisonsHeader .comparisonsBrand {
+	background-image: url('../images/logo.png');
+}
+
+.comparisonsNavbar {
+	border: none;
+	background-color: transparent;
+}
+
+.comparisonsNavbar .navbar-collapse {
+	border: none;
+}
+
+#comparisonsHeader .nav > li > a {
+	color: #116696;
+	margin: 38px 0 0;
+	padding: 0 0 0 12px;
+}
+#comparisonsHeader .nav > li > a:focus,
+#comparisonsHeader .nav > li > a:hover {
+	color: #7dc049;
+}
+
+.navSocial {
+	cursor: pointer;
+	height: 20px;
+	position: absolute;
+	width: 20px;
+	z-index: 100;
+}
+
+.navFacebook {
+	background-image: url('../images/nav_facebook.png');
+	right: 33px;
+	top: 13px;
+}
+
+.navGoogle {
+	background-image: url('../images/nav_google.png');
+	right: 10px;
+	top: 13px;
+}
+
+.comparisonsNavbar #navCollapse .navOn {
+	color: #7dc049;
+}
+
+.advertorialNote {
+	color: #9ba2a7;
+	font-size: 11px;
+	left: 50%;
+	letter-spacing: 0.25em;
+	margin-left: -100px;
+	position: absolute;
+	width: 200px;
+	text-align: center;
+	top: 2px;
+	z-index: 100;
+}
+
+/*------------------- CONTENT -------------------*/
+
+#comparisonsContent {
+	padding-bottom: 300px;
+}
+
+#mainColumn {
+	vertical-align: top;
+}
+
+#rightColumn {
+	padding: 0 10px;
+	vertical-align: top;
+	width: 320px;
+}
+
+/*------------------- FOOTER -------------------*/
+
+#comparisonsFooter {
+	background-color: #eaeced;
+	bottom: 0;
+	font-size: 13px;
+	height: 250px;
+	padding-top: 50px;
+	position: absolute;
+	width: 100%;
+}
+
+#comparisonsFooter .logo {
+	background-image: url("../images/logo.png");
+	background-size: 150px 28px;
+	height: 28px;
+	margin-bottom: 3px;
+	margin-top: -8px;
+	width: 150px;
+}
+
+/*------------------- TOP STORIES -------------------*/
+
+.topStory {
+	color: #fff;
+	line-height: 1.75em;
+	position: relative;
+}
+.topStory:hover {
+	color: #cbe6b6;
+	filter: brightness(110%);
+	-webkit-filter: brightness(110%);
+}
+
+.topStoryGradient {
+	background: rgba(0,0,0,0);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 3%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 85%, rgba(0,0,0,0.75) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(3%, rgba(0,0,0,0)), color-stop(40%, rgba(0,0,0,0)), color-stop(85%, rgba(0,0,0,0.75)), color-stop(100%, rgba(0,0,0,0.75)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 3%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 85%, rgba(0,0,0,0.75) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 3%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 85%, rgba(0,0,0,0.75) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 3%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 85%, rgba(0,0,0,0.75) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 3%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 85%, rgba(0,0,0,0.75) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+
+.topStoryText1,
+.topStoryText2 {
+	margin: 0 20px;
+	position: absolute;
+	z-index: 200;
+}
+
+.topStoryText1 {
+	bottom: 25px;
+}
+
+.topStoryText2 {
+	bottom: 15px;
+}
+
+/*------------------- ARTICLE CONTENT -------------------*/
+
+.articleContent {
+	line-height: 1.75em;
+	margin-bottom: 40px;
+	width: calc(100% - 320px);
+}
+
+.articleContent h1 {
+	font-size: 44px;
+	margin-top: 10px;
+}
+
+.articleContent a {
+	color: #7dc049;
+}
+
+.articleContent a:focus,
+.articleContent a:hover {
+	color: #116696;
+}
+
+.reference {
+	color: #9ba2a7;
+	font-size: 15px;
+	line-height: 1.35em;
+	margin-bottom: 10px;
+}
+
+.articleContent ol {
+	counter-reset: item;
+}
+
+.articleContent ol li {
+	display: block;
+	padding-left: 35px;
+    text-indent: -38px;
+}
+
+.articleContent ol li:before {
+	background-color: #116696;
+	border-radius: 50%; 
+	content: counter(item) "";
+	counter-increment: item;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 0.5em;
+	margin-left: 0.2em;
+	padding: 0.325em 0.75em;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+
+.articleContent ul {
+	margin-top: 15px;
+}
+
+.articleContent ul li {
+    background: url('../images/iconCheck.png') no-repeat left top;
+	background-position: 0 5px;
+	line-height: 1.35em;
+	list-style: none;
+	padding: 6px 0 0.75em 30px
+}
+
+.imgArticle {
+	margin-bottom: 20px;
+}
+
+.ctaTap {
+	margin: 20px 0 60px -10px;
+	max-width: 450px;
+}
+
+.ctaTap button {
+	background-color: #116696;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 5px 0;
+	padding: 5px 0;
+	width: 100%;
+}
+
+.ctaTap button:focus,
+.ctaTap button:hover {
+	background-color: #7dc049;
+}
+
+/*------------------- SECTIONS -------------------*/
+
+.section {
+	font-size: 15px; 
+	margin-bottom: 20px;
+}
+
+.sectionHeader {
+	background-color: #eaeced;
+	font-size: 13px; 
+	font-weight: 900;
+	letter-spacing: 0.15em;
+	line-height: 1em;
+	padding: 7px 5px;
+}
+
+.sectionLink {
+	border-top: 1px solid #d5d8db;
+	line-height:  1.35em;
+	padding: 5px;
+}
+
+.sectionLink a {
+	color: #23292f;
+}
+.sectionLink a:focus,
+.sectionLink a:hover {
+	color: #7dc049;
+}
+
+.sectionTopWays .sectionLink a {
+	color: #116696;
+	font-size: 13px;
+	font-weight: 900;
+}
+.sectionTopWays a:focus,
+.sectionTopWays a:hover {
+	color: #7dc049;
+}
+
+/*------------------- AD UNITS -------------------*/
+
+.adUnit .sectionHeader {
+	margin-bottom: 10px;
+}
+
+.adUnit a {
+	color: #23292f;
+}
+.adUnit a:focus,
+.adUnit a:hover {
+	color: #7dc049;
+}
+
+.adUnit1 img,
+.adUnit3 img {
+	margin-bottom: 5px;
+}
+
+.adUnit1 {
+	font-size: 24px;
+	line-height: 1.2em;
+}
+
+.adUnit3 {
+	font-size: 15px;
+	line-height:  1.35em;
+}
+
+.adUnit300 {
+	width: 300px;
+}
+
+.sponsored {
+	color: #d5d8db;
+	font-size: 12px;
+}
+
+#shareThis {
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----- Extra Small -----*/
+@media(max-width: 767px){
+		
+	#comparisonsHeader {
+		font-size: 15px;
+		height: 70px;
+	}
+	
+	#comparisonsHeader .comparisonsBrand {
+		background-size: 200px 38px;
+		height: 38px;
+		margin-top: 12px;
+		padding: 0;
+		width: 200px;
+	}
+	
+	button.navbar-toggle {
+		margin-top: 15px;
+	}
+	
+	#comparisonsHeader .nav > li > a {
+		margin: 20px 0 0;
+	}
+
+	.mobileNavSocial {
+		bottom: 0;
+		height: 20px;
+		position: absolute;
+		width: 20px;
+	}
+	
+	.mobileNavFacebook {
+		background-image: url('../images/nav_facebook.png');
+		left: 12px;
+	}
+	
+	.mobileNavGoogle {
+		background-image: url('../images/nav_google.png');
+		left: 35px;
+	}
+	
+	.topStoryText1,
+	.topStoryText2 {
+		font-size: 18px;
+	}
+	
+	.adUnit3 {
+		margin-bottom: 10px;
+	}
+	
+	.articleContent {
+		width: 100%;
+	}
+	
+	.articleContent h1 {
+		font-size: 36px;
+	}
+	
+	
+}
+
+/*----- Small -----*/
+@media(min-width: 768px) and (max-width: 991px){
+	
+	#comparisonsHeader {
+		font-size: 15px;
+	}
+	
+	#comparisonsHeader .comparisonsBrand {
+		height: 47px;
+		margin-top: 12px;
+		margin-left: 0;
+		padding: 0;
+		width: 250px;
+	}
+	
+	button.navbar-toggle {
+		margin: 22px 0 0;
+	}
+	
+	#comparisonsHeader .nav > li > a {
+		margin: 15px 0 0;
+		padding: 0;
+	}
+		
+	.mobileNavSocial {
+		bottom: 0;
+		height: 20px;
+		position: absolute;
+		width: 20px;
+	}
+	
+	.mobileNavFacebook {
+		background-image: url('../images/nav_facebook.png');
+		left: 0px;
+	}
+	
+	.mobileNavGoogle {
+		background-image: url('../images/nav_google.png');
+		left: 23px;
+	}
+		
+	.topStoryText1,
+	.topStoryText2 {
+		font-size: 24px;
+	}
+	
+	.navFacebook,
+	.navGoogle {
+		top: 35px;
+	}
+
+	
+	/*--The following overwrites Bootstrap default and displays mobile nav for both XS and SM--*/
+		.navbar-header {
+			float: none;
+		}
+		.navbar-left,.navbar-right {
+			float: none !important;
+		}
+		.navbar-toggle {
+			display: block;
+		}
+		.navbar-collapse {
+			border-top: 1px solid transparent;
+			box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+		}
+		.navbar-fixed-top {
+			top: 0;
+			border-width: 0 0 1px;
+		}
+		.navbar-collapse.collapse {
+			display: none!important;
+		}
+		.navbar-nav {
+			float: none!important;
+			margin-top: 7.5px;
+		}
+		.navbar-nav>li {
+			float: none;
+		}
+		.collapse.in{
+			display:block !important;
+		}
+	
+}
+
+/*----- Medium -----*/
+@media(min-width: 992px) and (max-width: 1199px){
+		
+	#comparisonsHeader .comparisonsBrand {
+		height: 47px;
+		margin-top: 12px;
+		margin-left: 0;
+		padding: 0;
+		width: 250px;
+	}
+	
+	.topStoryText1 {
+		font-size: 28px;
+	}
+	
+	.topStoryText2 {
+		font-size: 21px;
+	}
+	
+}
+
+/*----- Large -----*/
+@media(min-width: 1200px){
+	
+	#comparisonsHeader {
+		font-size: 15px;
+	}
+	
+	#comparisonsHeader .comparisonsBrand {
+		height: 47px;
+		margin-top: 12px;
+		margin-left: 0;
+		padding: 0;
+		width: 250px;
+	}
+	
+	.topStoryText1 {
+		font-size: 32px;
+	}
+	
+	.topStoryText2 {
+		font-size: 24px;
+	}
+	
+}

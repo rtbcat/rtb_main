@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<!--[if gt IE 9]><!--><html xml:lang="en" lang="en"><!--<![endif]-->
+<head>
+    <script type="text/javascript" src="js/ua-parser.min.js"></script>
+<script type="text/javascript">
+    var redirectAvailable = true;
+    function addCookie(name, value) {
+        var d = new Date();
+        d.setTime(d.getTime()+60*60*24*365*1000);
+        var expires = d;
+        value = encodeURIComponent(value);
+        var updatedCookie = name + "=" + value;
+            updatedCookie += "; path=/; expires=" + expires+"; domain=.purecolodetox.com";
+        document.cookie = updatedCookie;
+    }
+    var getParameters=location.search
+        , softRedirect = false
+        , hardRedirectToMobile = false
+    ;
+    if (getParameters !== '') {
+        getParameters.slice(1).split('&').forEach(function (parameter) {
+            var paramArray = parameter.split('=');
+            addCookie(paramArray[0], paramArray[1]);
+        });
+        softRedirect = true;
+    }
+    if (location.pathname === '/' && !!JSON.parse(redirectAvailable)) {
+        var parser = new UAParser()
+            , device = parser.getResult().device.type
+        if (device === 'mobile' || device === 'tablet') {
+            hardRedirectToMobile = true;
+        }
+    }
+    if (hardRedirectToMobile === true) {
+        document.location = location.origin + '/m';
+    }
+    else if (softRedirect === true) {
+        history.replaceState('', '', location.origin + location.pathname);
+    }
+</script>
+
+<meta charset="utf-8">
+<title>Rejuvenate Your Body with The Best Colon Cleanse | PureColoDetox.com</title>
+<meta name="description" content="Get a free trial of the natural colon cleanse, Pure Colon Detox and experience results immediately.">
+<meta name="keywords" content="detox, colón cleanse, body cleanse, full body cleanse, cleanse and detox, colon detox cleanse, how to cleanse your body, body detox cleanse, body detox, detox cleanse weight loss, cleanse for weight loss, natural body cleanse, natural detox cleanse, natural colon cleansing, cleanse colon naturally, best colon cleanse for weight loss, best cleanse for weight loss, best body cleanse, best weight loss cleanse, herbal cleanse, detox pills">
+<meta name="robots" content="INDEX,FOLLOW">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/i_apple_57x57.png" sizes="57x57">
+<link rel="apple-touch-icon" href="images/i_apple_72x72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="images/i_apple_114x114.png" sizes="114x114">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient { filter: none; }
+</style>
+
+<![endif]-->
+<script type="text/javascript">
+    var RegisterCustomerUrl = 'https://purecolodetox.com/checkout/customer/register/';
+    var RedirectToCheckoutUrl = 'https://purecolodetox.com/checkout/';
+    var getFormKeyUrl = 'https://purecolodetox.com/checkout/customer/environment/';
+    var ProductName = 'Pure Colon Detox'
+    var countriesInfo = {"AU":{"code":"AU","name":"Australia","states":{"485":{"code":"NSW","name":"New South Wales"},"486":{"code":"NT","name":"Northern Territory"},"487":{"code":"QLD","name":"Queensland"},"488":{"code":"SA","name":"South Australia"},"489":{"code":"TAS","name":"Tasmania"},"490":{"code":"VIC","name":"Victoria"},"491":{"code":"WA","name":"Western Australia"}}},"BE":{"code":"BE","name":"Belgium","states":[]},"CA":{"code":"CA","name":"Canada","states":{"66":{"code":"AB","name":"Alberta"},"67":{"code":"BC","name":"British Columbia"},"68":{"code":"MB","name":"Manitoba"},"70":{"code":"NB","name":"New Brunswick"},"69":{"code":"NL","name":"Newfoundland and Labrador"},"72":{"code":"NT","name":"Northwest Territories"},"71":{"code":"NS","name":"Nova Scotia"},"73":{"code":"NU","name":"Nunavut"},"74":{"code":"ON","name":"Ontario"},"75":{"code":"PE","name":"Prince Edward Island"},"76":{"code":"QC","name":"Quebec"},"77":{"code":"SK","name":"Saskatchewan"},"78":{"code":"YT","name":"Yukon Territory"}}},"CH":{"code":"CH","name":"Switzerland","states":{"104":{"code":"AG","name":"Aargau"},"106":{"code":"AR","name":"Appenzell Ausserrhoden"},"105":{"code":"AI","name":"Appenzell Innerrhoden"},"108":{"code":"BL","name":"Basel-Landschaft"},"109":{"code":"BS","name":"Basel-Stadt"},"107":{"code":"BE","name":"Bern"},"110":{"code":"FR","name":"Freiburg"},"111":{"code":"GE","name":"Genf"},"112":{"code":"GL","name":"Glarus"},"113":{"code":"GR","name":"Graub\u00fcnden"},"114":{"code":"JU","name":"Jura"},"115":{"code":"LU","name":"Luzern"},"116":{"code":"NE","name":"Neuenburg"},"117":{"code":"NW","name":"Nidwalden"},"118":{"code":"OW","name":"Obwalden"},"120":{"code":"SH","name":"Schaffhausen"},"122":{"code":"SZ","name":"Schwyz"},"121":{"code":"SO","name":"Solothurn"},"119":{"code":"SG","name":"St. Gallen"},"124":{"code":"TI","name":"Tessin"},"123":{"code":"TG","name":"Thurgau"},"125":{"code":"UR","name":"Uri"},"126":{"code":"VD","name":"Waadt"},"127":{"code":"VS","name":"Wallis"},"128":{"code":"ZG","name":"Zug"},"129":{"code":"ZH","name":"Z\u00fcrich"}}},"DE":{"code":"DE","name":"Germany","states":{"80":{"code":"BAW","name":"Baden-W\u00fcrttemberg"},"81":{"code":"BAY","name":"Bayern"},"82":{"code":"BER","name":"Berlin"},"83":{"code":"BRG","name":"Brandenburg"},"84":{"code":"BRE","name":"Bremen"},"85":{"code":"HAM","name":"Hamburg"},"86":{"code":"HES","name":"Hessen"},"87":{"code":"MEC","name":"Mecklenburg-Vorpommern"},"79":{"code":"NDS","name":"Niedersachsen"},"88":{"code":"NRW","name":"Nordrhein-Westfalen"},"89":{"code":"RHE","name":"Rheinland-Pfalz"},"90":{"code":"SAR","name":"Saarland"},"91":{"code":"SAS","name":"Sachsen"},"92":{"code":"SAC","name":"Sachsen-Anhalt"},"93":{"code":"SCN","name":"Schleswig-Holstein"},"94":{"code":"THE","name":"Th\u00fcringen"}}},"DK":{"code":"DK","name":"Denmark","states":[]},"FI":{"code":"FI","name":"Finland","states":{"339":{"code":"Ahvenanmaa","name":"Ahvenanmaa"},"333":{"code":"Etel\u00e4-Karjala","name":"Etel\u00e4-Karjala"},"326":{"code":"Etel\u00e4-Pohjanmaa","name":"Etel\u00e4-Pohjanmaa"},"325":{"code":"Etel\u00e4-Savo","name":"Etel\u00e4-Savo"},"337":{"code":"It\u00e4-Uusimaa","name":"It\u00e4-Uusimaa"},"322":{"code":"Kainuu","name":"Kainuu"},"335":{"code":"Kanta-H\u00e4me","name":"Kanta-H\u00e4me"},"330":{"code":"Keski-Pohjanmaa","name":"Keski-Pohjanmaa"},"331":{"code":"Keski-Suomi","name":"Keski-Suomi"},"338":{"code":"Kymenlaakso","name":"Kymenlaakso"},"320":{"code":"Lappi","name":"Lappi"},"334":{"code":"P\u00e4ij\u00e4t-H\u00e4me","name":"P\u00e4ij\u00e4t-H\u00e4me"},"328":{"code":"Pirkanmaa","name":"Pirkanmaa"},"327":{"code":"Pohjanmaa","name":"Pohjanmaa"},"323":{"code":"Pohjois-Karjala","name":"Pohjois-Karjala"},"321":{"code":"Pohjois-Pohjanmaa","name":"Pohjois-Pohjanmaa"},"324":{"code":"Pohjois-Savo","name":"Pohjois-Savo"},"329":{"code":"Satakunta","name":"Satakunta"},"336":{"code":"Uusimaa","name":"Uusimaa"},"332":{"code":"Varsinais-Suomi","name":"Varsinais-Suomi"}}},"FR":{"code":"FR","name":"France","states":{"182":{"code":"1","name":"Ain"},"183":{"code":"2","name":"Aisne"},"184":{"code":"3","name":"Allier"},"185":{"code":"4","name":"Alpes-de-Haute-Provence"},"187":{"code":"6","name":"Alpes-Maritimes"},"188":{"code":"7","name":"Ard\u00e8che"},"189":{"code":"8","name":"Ardennes"},"190":{"code":"9","name":"Ari\u00e8ge"},"191":{"code":"10","name":"Aube"},"192":{"code":"11","name":"Aude"},"193":{"code":"12","name":"Aveyron"},"249":{"code":"67","name":"Bas-Rhin"},"194":{"code":"13","name":"Bouches-du-Rh\u00f4ne"},"195":{"code":"14","name":"Calvados"},"196":{"code":"15","name":"Cantal"},"197":{"code":"16","name":"Charente"},"198":{"code":"17","name":"Charente-Maritime"},"199":{"code":"18","name":"Cher"},"200":{"code":"19","name":"Corr\u00e8ze"},"201":{"code":"2A","name":"Corse-du-Sud"},"203":{"code":"21","name":"C\u00f4te-d'Or"},"204":{"code":"22","name":"C\u00f4tes-d'Armor"},"205":{"code":"23","name":"Creuse"},"261":{"code":"79","name":"Deux-S\u00e8vres"},"206":{"code":"24","name":"Dordogne"},"207":{"code":"25","name":"Doubs"},"208":{"code":"26","name":"Dr\u00f4me"},"273":{"code":"91","name":"Essonne"},"209":{"code":"27","name":"Eure"},"210":{"code":"28","name":"Eure-et-Loir"},"211":{"code":"29","name":"Finist\u00e8re"},"212":{"code":"30","name":"Gard"},"214":{"code":"32","name":"Gers"},"215":{"code":"33","name":"Gironde"},"250":{"code":"68","name":"Haut-Rhin"},"202":{"code":"2B","name":"Haute-Corse"},"213":{"code":"31","name":"Haute-Garonne"},"225":{"code":"43","name":"Haute-Loire"},"234":{"code":"52","name":"Haute-Marne"},"252":{"code":"70","name":"Haute-Sa\u00f4ne"},"256":{"code":"74","name":"Haute-Savoie"},"269":{"code":"87","name":"Haute-Vienne"},"186":{"code":"5","name":"Hautes-Alpes"},"247":{"code":"65","name":"Hautes-Pyr\u00e9n\u00e9es"},"274":{"code":"92","name":"Hauts-de-Seine"},"216":{"code":"34","name":"H\u00e9rault"},"217":{"code":"35","name":"Ille-et-Vilaine"},"218":{"code":"36","name":"Indre"},"219":{"code":"37","name":"Indre-et-Loire"},"220":{"code":"38","name":"Is\u00e8re"},"221":{"code":"39","name":"Jura"},"222":{"code":"40","name":"Landes"},"223":{"code":"41","name":"Loir-et-Cher"},"224":{"code":"42","name":"Loire"},"226":{"code":"44","name":"Loire-Atlantique"},"227":{"code":"45","name":"Loiret"},"228":{"code":"46","name":"Lot"},"229":{"code":"47","name":"Lot-et-Garonne"},"230":{"code":"48","name":"Loz\u00e8re"},"231":{"code":"49","name":"Maine-et-Loire"},"232":{"code":"50","name":"Manche"},"233":{"code":"51","name":"Marne"},"235":{"code":"53","name":"Mayenne"},"236":{"code":"54","name":"Meurthe-et-Moselle"},"237":{"code":"55","name":"Meuse"},"238":{"code":"56","name":"Morbihan"},"239":{"code":"57","name":"Moselle"},"240":{"code":"58","name":"Ni\u00e8vre"},"241":{"code":"59","name":"Nord"},"242":{"code":"60","name":"Oise"},"243":{"code":"61","name":"Orne"},"257":{"code":"75","name":"Paris"},"244":{"code":"62","name":"Pas-de-Calais"},"245":{"code":"63","name":"Puy-de-D\u00f4me"},"246":{"code":"64","name":"Pyr\u00e9n\u00e9es-Atlantiques"},"248":{"code":"66","name":"Pyr\u00e9n\u00e9es-Orientales"},"251":{"code":"69","name":"Rh\u00f4ne"},"253":{"code":"71","name":"Sa\u00f4ne-et-Loire"},"254":{"code":"72","name":"Sarthe"},"255":{"code":"73","name":"Savoie"},"259":{"code":"77","name":"Seine-et-Marne"},"258":{"code":"76","name":"Seine-Maritime"},"275":{"code":"93","name":"Seine-Saint-Denis"},"262":{"code":"80","name":"Somme"},"263":{"code":"81","name":"Tarn"},"264":{"code":"82","name":"Tarn-et-Garonne"},"272":{"code":"90","name":"Territoire-de-Belfort"},"277":{"code":"95","name":"Val-d'Oise"},"276":{"code":"94","name":"Val-de-Marne"},"265":{"code":"83","name":"Var"},"266":{"code":"84","name":"Vaucluse"},"267":{"code":"85","name":"Vend\u00e9e"},"268":{"code":"86","name":"Vienne"},"270":{"code":"88","name":"Vosges"},"271":{"code":"89","name":"Yonne"},"260":{"code":"78","name":"Yvelines"}}},"GB":{"code":"GB","name":"United Kingdom","states":[]},"IE":{"code":"IE","name":"Ireland","states":[]},"NO":{"code":"NO","name":"Norway","states":[]},"NZ":{"code":"NZ","name":"New Zealand","states":[]},"SE":{"code":"SE","name":"Sweden","states":[]},"US":{"code":"US","name":"United States","states":{"1":{"code":"AL","name":"Alabama"},"4":{"code":"AZ","name":"Arizona"},"5":{"code":"AR","name":"Arkansas"},"12":{"code":"CA","name":"California"},"13":{"code":"CO","name":"Colorado"},"14":{"code":"CT","name":"Connecticut"},"15":{"code":"DE","name":"Delaware"},"18":{"code":"FL","name":"Florida"},"19":{"code":"GA","name":"Georgia"},"22":{"code":"ID","name":"Idaho"},"23":{"code":"IL","name":"Illinois"},"24":{"code":"IN","name":"Indiana"},"25":{"code":"IA","name":"Iowa"},"26":{"code":"KS","name":"Kansas"},"27":{"code":"KY","name":"Kentucky"},"28":{"code":"LA","name":"Louisiana"},"29":{"code":"ME","name":"Maine"},"31":{"code":"MD","name":"Maryland"},"32":{"code":"MA","name":"Massachusetts"},"33":{"code":"MI","name":"Michigan"},"34":{"code":"MN","name":"Minnesota"},"35":{"code":"MS","name":"Mississippi"},"36":{"code":"MO","name":"Missouri"},"37":{"code":"MT","name":"Montana"},"38":{"code":"NE","name":"Nebraska"},"39":{"code":"NV","name":"Nevada"},"40":{"code":"NH","name":"New Hampshire"},"41":{"code":"NJ","name":"New Jersey"},"42":{"code":"NM","name":"New Mexico"},"43":{"code":"NY","name":"New York"},"44":{"code":"NC","name":"North Carolina"},"45":{"code":"ND","name":"North Dakota"},"47":{"code":"OH","name":"Ohio"},"48":{"code":"OK","name":"Oklahoma"},"49":{"code":"OR","name":"Oregon"},"51":{"code":"PA","name":"Pennsylvania"},"53":{"code":"RI","name":"Rhode Island"},"54":{"code":"SC","name":"South Carolina"},"55":{"code":"SD","name":"South Dakota"},"56":{"code":"TN","name":"Tennessee"},"57":{"code":"TX","name":"Texas"},"58":{"code":"UT","name":"Utah"},"59":{"code":"VT","name":"Vermont"},"61":{"code":"VA","name":"Virginia"},"62":{"code":"WA","name":"Washington"},"63":{"code":"WV","name":"West Virginia"},"64":{"code":"WI","name":"Wisconsin"},"65":{"code":"WY","name":"Wyoming"}},"selected":true}};
+    var subscriptionActivatedErrorMessage = 'This email has already been used. Please use another one.';
+    var newCheckoutTranslations = {"total":"total:","ccn":"Credit Card Number","exp_date":"expiration date","month":"Month","jan":"01 - January","feb":"02 - February","mar":"03 - March","apr":"04 - April","may":"05 - May","jun":"06 - June","jul":"07 - July","aug":"08 - August","sep":"09 - September","oct":"10 - October","nov":"11 - November","dec":"12 - December","year":"Year","cvv_c":"CVV Code","f_name":"First name","l_name":"Last name","email":"Email","tel":"Telephone","street":"Street Address","city":"City","state":"State\/Province","zip":"Zip\/Postal Code","select_default":"Please Select","supply":"1 Month Supply","free_trial_title":"Free Trial Terms: ","auto_refill_title":"About Our Auto Refill Plan","discount_applied":"discount applied!","claim_block":"claim your free trial block","change_currency":"Change Currency","shipping_notification_receive_fail":"SHIPPING NOTIFICATION!!! (ERROR)","shipping_notification_change_fail":"SHIPPING NOTIFICATION!!! (PLEASE FINISH REGISTRATION)","shipping_info":"Your shipment is estimated to arrive by","free":"free","gift":"gift","we_accept":"We accept:","please_register_shipping":"Please fill in all fields in the shipping form to see which shipping options are available for your order","close":"Close","oops":"Oops!","oops_text_1":"Something went wrong while processing your order.","oops_text_2":"Please contact our customer support team for assistance, thank you.","oops_text_3":"Something went wrong. The content can't be loaded.","oops_text_4":"Please close this window and try again.","data_attr_country":"Please select your country","data_attr_firstname":"Please enter a valid first name","data_attr_lastname":"Please enter your Last name","data_attr_email_address":"Please enter a valid email address","data_attr_telephone":"Please enter minimum 7 digits, numbers only","data_attr_street_1":"Please enter your Street Address","data_attr_city":"Please enter your City","data_attr_zip":"Please enter your Zip\/Postal Code","data_attr_region_id":"Please enter the state\/province","placing_order_loader_text":"Please wait, processing your order...","ccNumberError":"Credit card number does not match credit card type","ccExpMonthError":"Please select your card's expiration date","ccExpYearError":"Please select your card's expiration date","ccCidError":"Please enter a valid credit card verification number","summary_package_selected":"Package Selected:","summary_subtotal":"Subtotal:","summary_total":"Total:","summary_retail":"Retail price:","summary_you_save":"You save:","summary_shipping_type":"Shipping type:","footer_terms":"Terms","footer_privacy":"Privacy","footer_contact_us":"Contact Us","gift_title":"Exclusive Free Gift: ","payment_form_checkbox_error_text":"You must accept the terms of the subscription program","close_popup_checkbox_error_text":"You must accept the terms of the subscription program"};
+    var Checkout = {"id":"39","code":"pcd_main","title":"PCD Main","created_at":"2016-07-25 13:42:44","updated_at":"2017-02-28 10:15:55","active":"1","desktop":{"type":"desktop","body_block":{"image":{"file":"39\/desktop\/body_block\/image\/pcd_ftco_com_d_body_2.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/body_block\/image\/pcd_ftco_com_d_body_2.jpg","height":500},"retina_image":{"file":"39\/desktop\/body_block\/retina_image\/pcd_ftco_com_d_body_2x_2.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/body_block\/retina_image\/pcd_ftco_com_d_body_2x_2.jpg","height":1000},"gradient":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/body_block\/retina_image\/pcd_ftco_com_d_body_2x_2.jpg","height":1000},"push_like_block":{"text":"Most recent purchase\r\nof this product:\r\n<span>less than 1 minute ago<\/span>","image":{"file":"39\/desktop\/push_like_block\/image\/pcd_ftco_com_d_pushlike_1.png","alt":"Pure Colon Detox","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/push_like_block\/image\/pcd_ftco_com_d_pushlike_1.png","height":130},"retina_image":{"file":"39\/desktop\/push_like_block\/retina_image\/pcd_ftco_com_d_pushlike_2x_1.png","alt":"Pure Colon Detox","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/push_like_block\/retina_image\/pcd_ftco_com_d_pushlike_2x_1.png","height":260},"gradient":{"background_color":"rgba(238, 250, 254, 1)","color1":"rgba(24, 112, 164, 1)","color2":"rgba(6, 71, 110, 1)","transparent":false,"enabled":false},"border":{"color":"rgba(1, 171, 228, 1)","type":"solid","radius":"10","width":"2","shadow":"0","top":"1","right":"1","bottom":"1","left":"1"}},"product_box_block":{"name1":"Pure Colon Detox","name2":"","description":"Slim down while flushing toxins from your body","one_month_supply":true,"gift":{"name":"credit card","enabled":false,"image":{"file":"default\/gift.svg","alt":"gift","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/gift.svg","height":null},"retina_image":{"file":"default\/gift.svg","alt":"Retina gift","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/gift.svg","height":null}},"image":{"file":"39\/desktop\/product_box_block\/image\/pcd_ftco_com_d_productbox_2.jpg","alt":"Pure Colon Detox","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/product_box_block\/image\/pcd_ftco_com_d_productbox_2.jpg","height":180},"retina_image":{"file":"39\/desktop\/product_box_block\/retina_image\/pcd_ftco_com_d_productbox_2x_2.jpg","alt":"Pure Colon Detox","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/product_box_block\/retina_image\/pcd_ftco_com_d_productbox_2x_2.jpg","height":360}},"products_list_block":{"multiplier_for_retail_prices":1.2,"box_shadow":{"blur_radius":"10","enabled":false,"color":"#000"},"products":[]},"discount_block":{"padding_top":"","padding_right":"10","padding_bottom":"10","padding_left":"10","background_image":{"file":"39\/desktop\/discount_block\/background_image\/pcd_ftco_com_d_discount_2.jpg","alt":"discount","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/discount_block\/background_image\/pcd_ftco_com_d_discount_2.jpg","height":140},"background_retina_image":{"file":"39\/desktop\/discount_block\/background_retina_image\/pcd_ftco_com_d_discount_2x_2.jpg","alt":"discount","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/discount_block\/background_retina_image\/pcd_ftco_com_d_discount_2x_2.jpg","height":280}},"shipping_block":{"shipping_text":"Shipping","active_text":{"color":"rgba(126, 125, 132, 1)","shadow":"false"},"non_active_text":{"color":"#454545","shadow":"false"},"total_text":{"color":"rgba(250, 89, 61, 1)","shadow":"false"},"old_price_text":{"color":"rgba(126, 125, 132, 1)","shadow":"false"},"active_border":{"color":"rgba(1, 171, 228, 1)","type":"solid","radius":"4","width":"1","shadow":"false","top":"true","right":"true","bottom":"true","left":"true"},"active_background":{"background_color":"rgba(238, 250, 254, 1)","color1":"","color2":"","transparent":false,"enabled":true},"bullet_color":{"file":"39\/desktop\/shipping_block\/bullet_color\/pcd_bullet_72_3.png","alt":"Shipping color","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/shipping_block\/bullet_color\/pcd_bullet_72_3.png","height":50},"bullet_retina_color":{"file":"39\/desktop\/shipping_block\/bullet_retina_color\/pcd_bullet_144_3.png","alt":"Shipping retina color","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/shipping_block\/bullet_retina_color\/pcd_bullet_144_3.png","height":96}},"shipment_details_block":{"enabled":false,"eta_data_style":{"color":"rgba(6, 71, 110, 1)","shadow":""}},"claim_your_free_trial_block":{"step_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step2_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step3_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"image":{"file":"39\/desktop\/claim_your_free_trial_block\/image\/pcd_ftco_com_d_claim_2.jpg","alt":"Claim your free trial bottle today","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/claim_your_free_trial_block\/image\/pcd_ftco_com_d_claim_2.jpg","height":50},"retina_image":{"file":"39\/desktop\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_d_claim_2x_2.jpg","alt":"Claim your free trial bottle today","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_d_claim_2x_2.jpg","height":100},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_d_claim_2x_2.jpg","height":100},"arrow_block":{"position":"1","unregistered_position":"1","enabled":true,"image":{"file":"39\/desktop\/arrow_block\/image\/pcd_arrow_.gif","alt":"Arrow image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/arrow_block\/image\/pcd_arrow_.gif","height":90},"retina_image":{"file":"39\/desktop\/arrow_block\/retina_image\/pcd_arrow_2x.gif","alt":"Arrow retina image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/arrow_block\/retina_image\/pcd_arrow_2x.gif","height":180}},"free_trial_terms_block":{"position":"2","unregistered_position":"2","enabled":true,"text":"<p>By claiming your free trial bottle you agree to our <a href=\\\"#modal-terms\\\" class=\\\"popup-link\\\">Terms<\/a> and after your 15 calendar day trial period has ended, you will be enrolled in our subscription program and charged $69.00 plus shipping for every monthly refill of Pure Colon Detox. You can cancel anytime by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Please note, your order may be processed in various international currencies and not the currency displayed during checkout. This may cause currency exchange rate differences.<\/p>","free_trial_text":"<p>By claiming your free trial bottle you agree to our <a href=\"#modal-terms\" class=\"popup-link\">Terms<\/a> and after your 15 calendar day trial period has ended, you will be enrolled in our <b>subscription program<\/b> and charged <b>$69.00<\/b> plus shipping for every monthly refill of Pure Colon Detox. You can cancel anytime by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Please note, your order may be processed in various international currencies and not the currency displayed during checkout. This may cause currency exchange rate differences.<\/p>","swft_text":"<p>Auto refill is a simple, convenient way to automatically receive your favorite products you use every day \u2013 so you never have to worry about running out!<\/p><p>By purchasing our sampler package, you agree to a convenient 30-day delivery of (1) ____________ bottle of _____________, automatically billed to your credit card and shipped to you without you having to lift a finger!<\/p><p>You may adjust your next delivery date or change the time between each shipment to receive more or less frequently than every 30 days by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Cancel anytime! No risk \u2013 you may choose to end the Auto Refill plan at any time without penalty. To cancel this subscription, call us anytime 24\/7.<\/p>"},"seals_block":{"position":"3","unregistered_position":"3","enabled":true,"simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false,"image":{"file":"39\/desktop\/seals_block\/image\/pcd_ftco_com_d_seals_2.jpg","alt":"Seals image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/seals_block\/image\/pcd_ftco_com_d_seals_2.jpg","height":90},"retina_image":{"file":"39\/desktop\/seals_block\/retina_image\/pcd_ftco_com_d_seals_2x_2.jpg","alt":"Seals retina image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/seals_block\/retina_image\/pcd_ftco_com_d_seals_2x_2.jpg","height":180}},"final_step_block":{"border_width":"","text_line1":"","text_line2":"","gradient":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border":{"color":"","type":"","radius":"","width":"","shadow":"","top":"","right":"","bottom":"","left":""},"enabled":false,"background_image":{"file":"39\/desktop\/final_step_block\/background_image\/pcd_ftco_com_d_finalstep.png","alt":"form-header-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/final_step_block\/background_image\/pcd_ftco_com_d_finalstep.png","height":95},"background_retina_image":{"file":"39\/desktop\/final_step_block\/background_retina_image\/pcd_ftco_com_d_finalstep_2x.png","alt":"Retina form-header-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/final_step_block\/background_retina_image\/pcd_ftco_com_d_finalstep_2x.png","height":190}},"element_validation":{"background_validated_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_validated_color":{"color":"rgba(94, 205, 115, 1)","type":"solid","radius":"0","width":"1","shadow":"","top":"1","right":"1","bottom":"1","left":"1"},"border_active_color":{"color":"rgba(37, 152, 252, 1)","type":"solid","radius":"0","width":"1","shadow":"0","top":"1","right":"1","bottom":"1","left":"1"},"border_inactive_color":{"color":"rgba(126, 125, 132, 1)","type":"solid","radius":"0","width":"1","shadow":"0","top":"1","right":"1","bottom":"1","left":"1"},"status_image":{"success_image":{"file":"39\/desktop\/element_validation\/status_image\/success_image\/diet_ic_.svg","alt":"Status image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/element_validation\/status_image\/success_image\/diet_ic_.svg","height":null},"error_image":{"file":"39\/desktop\/element_validation\/status_image\/error_image\/diet_ic_error.svg","alt":"Error image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/element_validation\/status_image\/error_image\/diet_ic_error.svg","height":null}},"background_error_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_error_color":{"color":"rgba(242, 85, 50, 1)","type":"solid","radius":"0","width":"1","shadow":"","top":"1","right":"1","bottom":"1","left":"1"}},"agreement_block":{"terms_checked":false,"terms_text":"I confirm that I am over 18 years of age and that I agree to participate in the <a href=\"#modal-terms\" class=\"popup-link\">Subscription Program<\/a>","footer_enabled":true,"footer_text":"We will never share your information","image":{"position":"","unregistered_position":"","enabled":true,"simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false,"image":{"file":"39\/desktop\/agreement_block\/image\/image\/ftco_security_icons_com_2.svg","alt":"form-footer-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/agreement_block\/image\/image\/ftco_security_icons_com_2.svg","height":null},"retina_image":{"file":"39\/desktop\/agreement_block\/image\/retina_image\/ftco_security_icons_com_2.svg","alt":"Retina form-footer-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/agreement_block\/image\/retina_image\/ftco_security_icons_com_2.svg","height":null}},"enabled":true,"simple_enabled":false,"free_trial_enabled":true,"swft_enabled":false},"info_block":{"border_type":"","image":{"file":"39\/desktop\/info_block\/image\/se_ftco_com_d_info_2.jpg","alt":"info","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/info_block\/image\/se_ftco_com_d_info_2.jpg","height":70},"retina_image":{"file":"39\/desktop\/info_block\/retina_image\/se_ftco_com_d_info_2x_2.jpg","alt":"Retina info","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/info_block\/retina_image\/se_ftco_com_d_info_2x_2.jpg","height":140},"text":"","text_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_color":{"color":"","type":"","radius":"","width":"","shadow":"","top":"","right":"","bottom":"","left":""},"show_popup":true},"cta_button_block":{"button_text":"Rush My Order","button_class":"product-body"},"currency_switcher_block":{"enabled":true,"color":"#252726"},"cta_banner_block":{"image":{"file":"39\/desktop\/cta_banner_block\/image\/pcd_ftco_com_d_ctabanner_1.jpg","alt":"cta banner","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/cta_banner_block\/image\/pcd_ftco_com_d_ctabanner_1.jpg","height":130},"retina_image":{"file":"39\/desktop\/cta_banner_block\/retina_image\/pcd_ftco_com_d_ctabanner_2x_1.jpg","alt":"Retina cta banner","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/cta_banner_block\/retina_image\/pcd_ftco_com_d_ctabanner_2x_1.jpg","height":260},"enabled":true,"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/cta_banner_block\/retina_image\/pcd_ftco_com_d_ctabanner_2x_1.jpg","height":260},"unhover_pop_up_block":{"unhover_click":"applyShippingDiscount","agreement_line":{"text_color":"#000","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"file":"39\/desktop\/unhover_pop_up_block\/image\/pcd_ftco_com_d_unhoverpopup_1.jpg","alt":"close_popup","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/unhover_pop_up_block\/image\/pcd_ftco_com_d_unhoverpopup_1.jpg","height":390},"retina_image":{"file":"39\/desktop\/unhover_pop_up_block\/retina_image\/pcd_ftco_com_d_unhoverpopup_2x_1.jpg","alt":"close_popup","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/unhover_pop_up_block\/retina_image\/pcd_ftco_com_d_unhoverpopup_2x_1.jpg","height":780},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/unhover_pop_up_block\/retina_image\/pcd_ftco_com_d_unhoverpopup_2x_1.jpg","height":780},"unhover_pop_up_two_block":{"unhover_click":"showNextUnhoverPopUp","agreement_line":{"text_color":"#000","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"file":"default\/desktop\/D_UnhoverPopUp75.png","alt":"unhover_pop_up","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_UnhoverPopUp75.png","height":390},"retina_image":{"file":"default\/desktop\/D_UnhoverPopUp75_2x.png","alt":"unhover_pop_up","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_UnhoverPopUp75_2x.png","height":780},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_UnhoverPopUp75_2x.png","height":780},"unhover_pop_up_three_block":{"unhover_click":"applyShippingDiscount","agreement_line":{"text_color":"#000","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"file":"default\/desktop\/D_UnhoverPopUp75.png","alt":"unhover_pop_up","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_UnhoverPopUp75.png","height":390},"retina_image":{"file":"default\/desktop\/D_UnhoverPopUp75_2x.png","alt":"unhover_pop_up","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_UnhoverPopUp75_2x.png","height":780},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_UnhoverPopUp75_2x.png","height":780},"cvv_tooltip_block":{"image":{"file":"default\/cvv_tooltip.svg","alt":"FTCO_cvv_tooltip","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/cvv_tooltip.svg","height":null},"retina_image":{"file":"default\/cvv_tooltip.svg","alt":"Retina FTCO_cvv_tooltip","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/cvv_tooltip.svg","height":null}},"steps_image_block":{"image":{"file":"39\/desktop\/steps_image_block\/image\/pcd_ftco_com_d_stepsimage_2.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/steps_image_block\/image\/pcd_ftco_com_d_stepsimage_2.jpg","height":70},"retina_image":{"file":"39\/desktop\/steps_image_block\/retina_image\/pcd_ftco_com_d_stepsimage_2x_2.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/steps_image_block\/retina_image\/pcd_ftco_com_d_stepsimage_2x_2.jpg","height":140},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/desktop\/steps_image_block\/retina_image\/pcd_ftco_com_d_stepsimage_2x_2.jpg","height":140},"credit_cards_for_registered_block":{"image":{"file":"default\/credit_cards.svg","alt":"wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"retina_image":{"file":"default\/credit_cards.svg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"border":{"color":"rgba(69, 69, 69, 1)","type":"solid","radius":"0","width":"1","shadow":"false","top":"false","right":"false","bottom":"true","left":"false"}},"credit_cards_for_not_registered_block":{"image":{"file":"default\/credit_cards.svg","alt":"wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"retina_image":{"file":"default\/credit_cards.svg","alt":"Retina wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"border":{"color":"rgba(69, 69, 69, 1)","type":"solid","radius":"0","width":"1","shadow":"false","top":"true","right":"false","bottom":"false","left":"false"}},"terms_and_conditions_block":{"position":"5","unregistered_position":"","enabled":true,"text":"<a href='#modal-terms' class='popup-link'>Terms & Conditions<\/a>","simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false},"discount_ribbon_block":{"step_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step2_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step3_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step4_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"enabled":false,"image":{"alt":"","url":null,"height":null},"simple_enabled":true,"free_trial_enabled":true,"swft_enabled":true},"spinner_block":{"image":{"alt":"","url":null,"height":null}},"footer_block":{"links":{"terms_enabled":false,"privacy_enabled":false,"contact_us_enabled":false},"enabled":false}},"tablet":{"type":"tablet","body_block":{"image":{"file":"39\/tablet\/body_block\/image\/pcd_ftco_com_mi_stepsimage_1.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/body_block\/image\/pcd_ftco_com_mi_stepsimage_1.jpg","height":115},"retina_image":{"file":"39\/tablet\/body_block\/retina_image\/pcd_ftco_com_mi_stepsimage_2x_1.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/body_block\/retina_image\/pcd_ftco_com_mi_stepsimage_2x_1.jpg","height":230},"gradient":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/body_block\/retina_image\/pcd_ftco_com_mi_stepsimage_2x_1.jpg","height":230},"push_like_block":{"text":"Most recent purchase\r\nof this product:\r\nless than 1 minute ago","image":{"file":"minipopup.png","alt":"minipopup product","url":null,"height":null},"retina_image":{"file":"minipopup.png","alt":"Retina minipopup product image","url":null,"height":null},"gradient":{"background_color":"#fbfaf4","color1":"#fff","color2":"#000","transparent":true,"enabled":true},"border":{"color":"#d9bb52","type":"solid","radius":"0","width":"1","shadow":"true","top":"true","right":"true","bottom":"true","left":"true"}},"product_box_block":{"name1":"Pure Colon Detox","name2":"","description":"Slim down while flushing toxins from your body","one_month_supply":true,"gift":{"name":"credit card","enabled":false,"image":{"file":"default\/gift.svg","alt":"gift","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/gift.svg","height":null},"retina_image":{"file":"default\/gift.svg","alt":"Retina gift","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/gift.svg","height":null}},"image":{"file":"product.png","alt":"product image","url":null,"height":null},"retina_image":{"file":"product.png","alt":"Retina product image","url":null,"height":null}},"products_list_block":{"multiplier_for_retail_prices":1.2,"box_shadow":{"blur_radius":"10","enabled":false,"color":"#000"},"products":[]},"discount_block":{"padding_top":"","padding_right":"","padding_bottom":"","padding_left":"","background_image":{"file":"39\/tablet\/discount_block\/background_image\/pcd_ftco_com_mi_discount_1.jpg","alt":"discount_bg","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/discount_block\/background_image\/pcd_ftco_com_mi_discount_1.jpg","height":40},"background_retina_image":{"file":"39\/tablet\/discount_block\/background_retina_image\/pcd_ftco_com_mi_discount_2x_1.jpg","alt":"Retina discount_bg","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/discount_block\/background_retina_image\/pcd_ftco_com_mi_discount_2x_1.jpg","height":80}},"shipping_block":{"shipping_text":"Shipping","active_text":{"color":"rgba(126, 125, 132, 1)","shadow":"false"},"non_active_text":{"color":"rgba(69, 69, 69, 1)","shadow":"false"},"total_text":{"color":"rgba(250, 89, 61, 1)","shadow":"false"},"old_price_text":{"color":"rgba(126, 125, 132, 1)","shadow":"false"},"active_border":{"color":"rgba(1, 171, 228, 1)","type":"solid","radius":"4","width":"1","shadow":"false","top":"true","right":"true","bottom":"true","left":"true"},"active_background":{"background_color":"rgba(238, 250, 254, 1)","color1":"","color2":"","transparent":false,"enabled":false},"bullet_color":{"file":"39\/tablet\/shipping_block\/bullet_color\/pcd_bullet_72_2.png","alt":"Shipping color","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/shipping_block\/bullet_color\/pcd_bullet_72_2.png","height":50},"bullet_retina_color":{"file":"39\/tablet\/shipping_block\/bullet_retina_color\/pcd_bullet_144_2.png","alt":"Shipping retina color","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/shipping_block\/bullet_retina_color\/pcd_bullet_144_2.png","height":96}},"shipment_details_block":{"enabled":false,"eta_data_style":{"color":"rgba(6, 71, 110, 1)","shadow":""}},"claim_your_free_trial_block":{"step_image":{"image":{"file":"default\/tablet\/Mi_Claim.png","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim.png","height":40},"retina_image":{"file":"default\/tablet\/Mi_Claim_2x.png","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim_2x.png","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim_2x.png","height":80},"step2_image":{"image":{"file":"default\/tablet\/Mi_Claim.png","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim.png","height":40},"retina_image":{"file":"default\/tablet\/Mi_Claim_2x.png","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim_2x.png","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim_2x.png","height":80},"step3_image":{"image":{"file":"default\/tablet\/Mi_Claim.png","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim.png","height":40},"retina_image":{"file":"default\/tablet\/Mi_Claim_2x.png","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim_2x.png","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/tablet\/Mi_Claim_2x.png","height":80},"image":{"file":"39\/tablet\/claim_your_free_trial_block\/image\/pcd_ftco_com_mi_claim_1.jpg","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/claim_your_free_trial_block\/image\/pcd_ftco_com_mi_claim_1.jpg","height":40},"retina_image":{"file":"39\/tablet\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_mi_claim_2x_1.jpg","alt":"Claim your free trial","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_mi_claim_2x_1.jpg","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_mi_claim_2x_1.jpg","height":80},"arrow_block":{"position":"","unregistered_position":"21","enabled":true,"image":{"file":"default\/no-image.svg","alt":"Arrow image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"retina_image":{"file":"default\/no-image.svg","alt":"Arrow retina image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null}},"free_trial_terms_block":{"position":"","unregistered_position":"17","enabled":true,"text":"<p>By claiming your free trial bottle you agree to our <a href=\\\"#modal-terms\\\" class=\\\"popup-link\\\">Terms<\/a> and after your 15 calendar day trial period has ended, you will be enrolled in our subscription program and charged $69.00 plus shipping for every monthly refill of Pure Colon Detox. You can cancel anytime by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Please note, your order may be processed in various international currencies and not the currency displayed during checkout. This may cause currency exchange rate differences.<\/p>","free_trial_text":"<p>By claiming your free trial bottle you agree to our <a href=\"#modal-terms\" class=\"popup-link\">Terms<\/a> and after your 15 calendar day trial period has ended, you will be enrolled in our <b>subscription program<\/b> and charged <b>$69.00<\/b> plus shipping for every monthly refill of Pure Colon Detox. You can cancel anytime by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Please note, your order may be processed in various international currencies and not the currency displayed during checkout. This may cause currency exchange rate differences.<\/p>","swft_text":"<p>Auto refill is a simple, convenient way to automatically receive your favorite products you use every day \u2013 so you never have to worry about running out!<\/p><p>By purchasing our sampler package, you agree to a convenient 30-day delivery of (1) ____________ bottle of _____________, automatically billed to your credit card and shipped to you without you having to lift a finger!<\/p><p>You may adjust your next delivery date or change the time between each shipment to receive more or less frequently than every 30 days by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Cancel anytime! No risk \u2013 you may choose to end the Auto Refill plan at any time without penalty. To cancel this subscription, call us anytime 24\/7.<\/p>"},"seals_block":{"position":"3","unregistered_position":"21","enabled":true,"simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false,"image":{"file":"default\/no-image.svg","alt":"Seals image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"retina_image":{"file":"default\/no-image.svg","alt":"Seals retina image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null}},"final_step_block":{"border_width":"","text_line1":"","text_line2":"","gradient":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border":{"color":"","type":"","radius":"","width":"","shadow":"","top":"","right":"","bottom":"","left":""},"enabled":false,"background_image":{"file":"39\/tablet\/final_step_block\/background_image\/pcd_ftco_com_mi_finalstep_1.jpg","alt":"form-header-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/final_step_block\/background_image\/pcd_ftco_com_mi_finalstep_1.jpg","height":40},"background_retina_image":{"file":"39\/tablet\/final_step_block\/background_retina_image\/pcd_ftco_com_mi_finalstep_2x_1.jpg","alt":"Retina form-header-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/final_step_block\/background_retina_image\/pcd_ftco_com_mi_finalstep_2x_1.jpg","height":80}},"element_validation":{"background_validated_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_validated_color":{"color":"rgba(94, 205, 115, 1)","type":"solid","radius":"0","width":"1","shadow":"","top":"1","right":"1","bottom":"1","left":"1"},"border_active_color":{"color":"rgba(37, 152, 252, 1)","type":"solid","radius":"0","width":"1","shadow":"0","top":"1","right":"1","bottom":"1","left":"1"},"border_inactive_color":{"color":"rgba(126, 125, 132, 1)","type":"solid","radius":"0","width":"1","shadow":"0","top":"1","right":"1","bottom":"1","left":"1"},"status_image":{"success_image":{"file":"39\/tablet\/element_validation\/status_image\/success_image\/diet_ic_.svg","alt":"Status image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/element_validation\/status_image\/success_image\/diet_ic_.svg","height":null},"error_image":{"file":"39\/tablet\/element_validation\/status_image\/error_image\/diet_ic_error.svg","alt":"Error image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/element_validation\/status_image\/error_image\/diet_ic_error.svg","height":null}},"background_error_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_error_color":{"color":"rgba(242, 85, 50, 1)","type":"solid","radius":"0","width":"1","shadow":"","top":"1","right":"1","bottom":"1","left":"1"}},"agreement_block":{"terms_checked":false,"terms_text":"I confirm that I am over 18 years of age and that I agree to participate in the <a href=\"#modal-terms\" class=\"popup-link\">Subscription Program<\/a>","footer_enabled":true,"footer_text":"We will never share your information","image":{"position":"","unregistered_position":"","enabled":true,"simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false,"image":{"file":"39\/tablet\/agreement_block\/image\/image\/ftco_security_icons_com_1.svg","alt":"form-footer-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/agreement_block\/image\/image\/ftco_security_icons_com_1.svg","height":null},"retina_image":{"file":"39\/tablet\/agreement_block\/image\/retina_image\/ftco_security_icons_com_1.svg","alt":"Retina form-footer-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/tablet\/agreement_block\/image\/retina_image\/ftco_security_icons_com_1.svg","height":null}},"enabled":true,"simple_enabled":false,"free_trial_enabled":true,"swft_enabled":false},"info_block":{"border_type":"","image":{"file":"default\/no-image.svg","alt":"info","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"retina_image":{"file":"default\/no-image.svg","alt":"Retina info","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"text":"","text_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_color":{"color":"","type":"","radius":"","width":"","shadow":"","top":"","right":"","bottom":"","left":""},"show_popup":true},"cta_button_block":{"button_text":"Rush My Order","button_class":"product-body"},"currency_switcher_block":{"enabled":true,"color":"#252726"},"cta_banner_block":{"image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"retina_image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"enabled":false,"url":null,"height":null},"unhover_pop_up_block":{"unhover_click":"","agreement_line":{"text_color":"","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"alt":"","url":null,"height":null},"retina_image":{"alt":"","url":null,"height":null},"url":null,"height":null},"unhover_pop_up_two_block":{"unhover_click":"","agreement_line":{"text_color":"","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"alt":"","url":null,"height":null},"retina_image":{"alt":"","url":null,"height":null},"url":null,"height":null},"unhover_pop_up_three_block":{"unhover_click":"","agreement_line":{"text_color":"","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"alt":"","url":null,"height":null},"retina_image":{"alt":"","url":null,"height":null},"url":null,"height":null},"cvv_tooltip_block":{"image":{"file":"default\/cvv_tooltip.svg","alt":"FTCO_cvv_tooltip","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/cvv_tooltip.svg","height":null},"retina_image":{"file":"default\/cvv_tooltip.svg","alt":"Retina FTCO_cvv_tooltip","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/cvv_tooltip.svg","height":null}},"steps_image_block":{"image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"retina_image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"url":null,"height":null},"credit_cards_for_registered_block":{"image":{"file":"default\/credit_cards.svg","alt":"wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"retina_image":{"file":"default\/credit_cards.svg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"border":{"color":"","type":"","radius":"","width":"","shadow":"false","top":"false","right":"false","bottom":"true","left":"false"}},"credit_cards_for_not_registered_block":{"image":{"file":"default\/credit_cards.svg","alt":"wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"retina_image":{"file":"default\/credit_cards.svg","alt":"Retina wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"border":{"color":"","type":"","radius":"","width":"","shadow":"false","top":"true","right":"false","bottom":"false","left":"false"}},"terms_and_conditions_block":{"position":"15","unregistered_position":"","enabled":true,"text":"O, what a world of vile ill-favoured faults, Looks handsome in three hundred pounds a year! [<a href='http:\/\/www.william-shakespeare.info\/william-shakespeare-poems.htm'>William Shakespeare<\/a>]","simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false},"discount_ribbon_block":{"step_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step2_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step3_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step4_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"enabled":false,"image":{"alt":"","url":null,"height":null},"simple_enabled":true,"free_trial_enabled":true,"swft_enabled":true},"spinner_block":{"image":{"alt":"","url":null,"height":null}},"footer_block":{"links":{"terms_enabled":false,"privacy_enabled":false,"contact_us_enabled":false},"enabled":false}},"mobile":{"type":"mobile","body_block":{"image":{"file":"39\/mobile\/body_block\/image\/pcd_ftco_com_mo_stepsimage_1.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/body_block\/image\/pcd_ftco_com_mo_stepsimage_1.jpg","height":115},"retina_image":{"file":"39\/mobile\/body_block\/retina_image\/pcd_ftco_com_mo_stepsimage_2x_1.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/body_block\/retina_image\/pcd_ftco_com_mo_stepsimage_2x_1.jpg","height":230},"gradient":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/body_block\/retina_image\/pcd_ftco_com_mo_stepsimage_2x_1.jpg","height":230},"push_like_block":{"text":"Most recent purchase\r\nof this product:\r\nless than 1 minute ago","image":{"file":"minipopup.png","alt":"minipopup product","url":null,"height":null},"retina_image":{"file":"minipopup.png","alt":"Retina minipopup product image","url":null,"height":null},"gradient":{"background_color":"#fbfaf4","color1":"#fff","color2":"#000","transparent":true,"enabled":true},"border":{"color":"#d9bb52","type":"solid","radius":"0","width":"1","shadow":"true","top":"true","right":"true","bottom":"true","left":"true"}},"product_box_block":{"name1":"Pure Colon Detox","name2":"","description":"Slim down while flushing toxins from your body","one_month_supply":true,"gift":{"name":"credit card","enabled":false,"image":{"file":"default\/gift.svg","alt":"gift","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/gift.svg","height":null},"retina_image":{"file":"default\/gift.svg","alt":"Retina gift","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/gift.svg","height":null}},"image":{"file":"product.png","alt":"product image","url":null,"height":null},"retina_image":{"file":"product.png","alt":"Retina product image","url":null,"height":null}},"products_list_block":{"multiplier_for_retail_prices":1.2,"box_shadow":{"blur_radius":"10","enabled":false,"color":"#000"},"products":[]},"discount_block":{"padding_top":"","padding_right":"","padding_bottom":"","padding_left":"","background_image":{"file":"39\/mobile\/discount_block\/background_image\/pcd_ftco_com_mo_discount_1.jpg","alt":"discount_bg","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/discount_block\/background_image\/pcd_ftco_com_mo_discount_1.jpg","height":40},"background_retina_image":{"file":"39\/mobile\/discount_block\/background_retina_image\/pcd_ftco_com_mo_discount_2x_1.jpg","alt":"Retina discount_bg","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/discount_block\/background_retina_image\/pcd_ftco_com_mo_discount_2x_1.jpg","height":80}},"shipping_block":{"shipping_text":"Shipping","active_text":{"color":"rgba(126, 125, 132, 1)","shadow":"false"},"non_active_text":{"color":"#454545","shadow":"false"},"total_text":{"color":"rgba(250, 89, 61, 1)","shadow":"false"},"old_price_text":{"color":"rgba(126, 125, 132, 1)","shadow":"false"},"active_border":{"color":"rgba(1, 171, 228, 1)","type":"solid","radius":"4","width":"1","shadow":"false","top":"true","right":"true","bottom":"true","left":"true"},"active_background":{"background_color":"rgba(238, 250, 254, 1)","color1":"","color2":"","transparent":false,"enabled":false},"bullet_color":{"file":"39\/mobile\/shipping_block\/bullet_color\/pcd_bullet_72_2.png","alt":"Shipping color","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/shipping_block\/bullet_color\/pcd_bullet_72_2.png","height":50},"bullet_retina_color":{"file":"39\/mobile\/shipping_block\/bullet_retina_color\/pcd_bullet_144_2.png","alt":"Shipping retina color","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/shipping_block\/bullet_retina_color\/pcd_bullet_144_2.png","height":96}},"shipment_details_block":{"enabled":false,"eta_data_style":{"color":"rgba(6, 71, 110, 1)","shadow":""}},"claim_your_free_trial_block":{"step_image":{"image":{"file":"default\/mobile\/Mo_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim.png","height":40},"retina_image":{"file":"default\/mobile\/Mo_Claim_2x.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim_2x.png","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim_2x.png","height":80},"step2_image":{"image":{"file":"default\/mobile\/Mo_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim.png","height":40},"retina_image":{"file":"default\/mobile\/Mo_Claim_2x.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim_2x.png","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim_2x.png","height":80},"step3_image":{"image":{"file":"default\/mobile\/Mo_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim.png","height":40},"retina_image":{"file":"default\/mobile\/Mo_Claim_2x.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim_2x.png","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/mobile\/Mo_Claim_2x.png","height":80},"image":{"file":"39\/mobile\/claim_your_free_trial_block\/image\/pcd_ftco_com_mo_claim.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/claim_your_free_trial_block\/image\/pcd_ftco_com_mo_claim.jpg","height":40},"retina_image":{"file":"39\/mobile\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_mo_claim_2x.jpg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_mo_claim_2x.jpg","height":80},"url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/claim_your_free_trial_block\/retina_image\/pcd_ftco_com_mo_claim_2x.jpg","height":80},"arrow_block":{"position":"","unregistered_position":"24","enabled":true,"image":{"file":"default\/no-image.svg","alt":"Arrow image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"retina_image":{"file":"default\/no-image.svg","alt":"Arrow retina image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null}},"free_trial_terms_block":{"position":"","unregistered_position":"17","enabled":true,"text":"<p>By claiming your free trial bottle you agree to our <a href=\\\"#modal-terms\\\" class=\\\"popup-link\\\">Terms<\/a> and after your 15 calendar day trial period has ended, you will be enrolled in our subscription program and charged $69.00 plus shipping for every monthly refill of Pure Colon Detox. You can cancel anytime by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Please note, your order may be processed in various international currencies and not the currency displayed during checkout. This may cause currency exchange rate differences.<\/p>","free_trial_text":"<p>By claiming your free trial bottle you agree to our <a href=\"#modal-terms\" class=\"popup-link\">Terms<\/a> and after your 15 calendar day trial period has ended, you will be enrolled in our <b>subscription program<\/b> and charged <b>$69.00<\/b> plus shipping for every monthly refill of Pure Colon Detox. You can cancel anytime by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Please note, your order may be processed in various international currencies and not the currency displayed during checkout. This may cause currency exchange rate differences.<\/p>","swft_text":"<p>Auto refill is a simple, convenient way to automatically receive your favorite products you use every day \u2013 so you never have to worry about running out!<\/p><p>By purchasing our sampler package, you agree to a convenient 30-day delivery of (1) $69.00  bottle of Pure Colon Detox, automatically billed to your credit card and shipped to you without you having to lift a finger!<\/p><p>You may adjust your next delivery date or change the time between each shipment to receive more or less frequently than every 30 days by calling Toll-Free <a href=\"tel:1-888-221-2554\">1-888-221-2554<\/a> | Int\u2019l <a href=\"tel:1-646-688-0457\">1-646-688-0457<\/a>.<\/p><p>Cancel anytime! No risk \u2013 you may choose to end the Auto Refill plan at any time without penalty. To cancel this subscription, call us anytime 24\/7.<\/p>"},"seals_block":{"position":"","unregistered_position":"34","enabled":true,"simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false,"image":{"file":"default\/no-image.svg","alt":"Seals image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"retina_image":{"file":"default\/no-image.svg","alt":"Seals retina image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null}},"final_step_block":{"border_width":"","text_line1":"","text_line2":"","gradient":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border":{"color":"","type":"","radius":"","width":"","shadow":"","top":"","right":"","bottom":"","left":""},"enabled":false,"background_image":{"file":"39\/mobile\/final_step_block\/background_image\/pcd_ftco_com_mo_finalstep_1.jpg","alt":"form-header-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/final_step_block\/background_image\/pcd_ftco_com_mo_finalstep_1.jpg","height":40},"background_retina_image":{"file":"39\/mobile\/final_step_block\/background_retina_image\/pcd_ftco_com_mo_finalstep_2x_1.jpg","alt":"Retina form-header-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/final_step_block\/background_retina_image\/pcd_ftco_com_mo_finalstep_2x_1.jpg","height":80}},"element_validation":{"background_validated_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_validated_color":{"color":"rgba(94, 205, 115, 1)","type":"solid","radius":"0","width":"1","shadow":"","top":"1","right":"1","bottom":"1","left":"1"},"border_active_color":{"color":"rgba(37, 152, 252, 1)","type":"solid","radius":"0","width":"1","shadow":"0","top":"1","right":"1","bottom":"1","left":"1"},"border_inactive_color":{"color":"rgba(126, 125, 132, 1)","type":"solid","radius":"0","width":"1","shadow":"0","top":"1","right":"1","bottom":"1","left":"1"},"status_image":{"success_image":{"file":"39\/mobile\/element_validation\/status_image\/success_image\/diet_ic_.svg","alt":"Status image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/element_validation\/status_image\/success_image\/diet_ic_.svg","height":null},"error_image":{"file":"39\/mobile\/element_validation\/status_image\/error_image\/diet_ic_error.svg","alt":"Error image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/element_validation\/status_image\/error_image\/diet_ic_error.svg","height":null}},"background_error_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_error_color":{"color":"rgba(242, 85, 50, 1)","type":"solid","radius":"0","width":"1","shadow":"","top":"1","right":"1","bottom":"1","left":"1"}},"agreement_block":{"terms_checked":false,"terms_text":"I confirm that I am over 18 years of age and that I agree to participate in the <a href=\"#modal-terms\" class=\"popup-link\">Subscription Program<\/a>","footer_enabled":true,"footer_text":"We will never share your information","image":{"position":"","unregistered_position":"","enabled":true,"simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false,"image":{"file":"39\/mobile\/agreement_block\/image\/image\/ftco_security_icons_com_1.svg","alt":"form-footer-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/agreement_block\/image\/image\/ftco_security_icons_com_1.svg","height":null},"retina_image":{"file":"39\/mobile\/agreement_block\/image\/retina_image\/ftco_security_icons_com_1.svg","alt":"Retina form-footer-image","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/39\/mobile\/agreement_block\/image\/retina_image\/ftco_security_icons_com_1.svg","height":null}},"enabled":true,"simple_enabled":false,"free_trial_enabled":true,"swft_enabled":false},"info_block":{"border_type":"","image":{"file":"default\/no-image.svg","alt":"info","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"retina_image":{"file":"default\/no-image.svg","alt":"Retina info","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/no-image.svg","height":null},"text":"","text_color":{"background_color":"","color1":"","color2":"","transparent":true,"enabled":true},"border_color":{"color":"","type":"","radius":"","width":"","shadow":"","top":"","right":"","bottom":"","left":""},"show_popup":true},"cta_button_block":{"button_text":"Rush My Order","button_class":"product-body"},"currency_switcher_block":{"enabled":true,"color":"#252726"},"cta_banner_block":{"image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"retina_image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"enabled":false,"url":null,"height":null},"unhover_pop_up_block":{"unhover_click":"","agreement_line":{"text_color":"","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"alt":"","url":null,"height":null},"retina_image":{"alt":"","url":null,"height":null},"url":null,"height":null},"unhover_pop_up_two_block":{"unhover_click":"","agreement_line":{"text_color":"","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"alt":"","url":null,"height":null},"retina_image":{"alt":"","url":null,"height":null},"url":null,"height":null},"unhover_pop_up_three_block":{"unhover_click":"","agreement_line":{"text_color":"","checkbox_enabled":false,"checkbox_selected":false,"enabled":false,"text":""},"image":{"alt":"","url":null,"height":null},"retina_image":{"alt":"","url":null,"height":null},"url":null,"height":null},"cvv_tooltip_block":{"image":{"file":"default\/cvv_tooltip.svg","alt":"FTCO_cvv_tooltip","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/cvv_tooltip.svg","height":null},"retina_image":{"file":"default\/cvv_tooltip.svg","alt":"Retina FTCO_cvv_tooltip","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/cvv_tooltip.svg","height":null}},"steps_image_block":{"image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"retina_image":{"file":"o-lo-lo.jpg","alt":"","url":null,"height":null},"url":null,"height":null},"credit_cards_for_registered_block":{"image":{"file":"default\/credit_cards.svg","alt":"wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"retina_image":{"file":"default\/credit_cards.svg","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"border":{"color":"","type":"","radius":"","width":"","shadow":"false","top":"false","right":"false","bottom":"true","left":"false"}},"credit_cards_for_not_registered_block":{"image":{"file":"default\/credit_cards.svg","alt":"wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"retina_image":{"file":"default\/credit_cards.svg","alt":"Retina wl_cards_footer","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/credit_cards.svg","height":null},"border":{"color":"","type":"","radius":"","width":"","shadow":"false","top":"true","right":"false","bottom":"false","left":"false"}},"terms_and_conditions_block":{"position":"25","unregistered_position":"","enabled":true,"text":"O, what a world of vile ill-favoured faults, Looks handsome in three hundred pounds a year! [<a href='http:\/\/www.william-shakespeare.info\/william-shakespeare-poems.htm'>William Shakespeare<\/a>]","simple_enabled":false,"free_trial_enabled":false,"swft_enabled":false},"discount_ribbon_block":{"step_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step2_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step3_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"step4_image":{"image":{"file":"default\/desktop\/D_Claim.png","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/D_Claim.png","height":50},"retina_image":{"file":"default\/desktop\/","alt":"","url":"https:\/\/purecolodetox.com\/media\/bpcheckout\/default\/desktop\/","height":null},"url":null,"height":null},"enabled":false,"image":{"alt":"","url":null,"height":null},"simple_enabled":true,"free_trial_enabled":true,"swft_enabled":true},"spinner_block":{"image":{"alt":"","url":null,"height":null}},"footer_block":{"links":{"terms_enabled":false,"privacy_enabled":false,"contact_us_enabled":false},"enabled":false}}};
+    var availableShippingMethodsUrl = 'https://purecolodetox.com/checkout/shipping/getAvailableShippingMethods/';
+</script>
+
+    <script>
+        var agreementUrl                = 'https://purecolodetox.com/checkout/agreement/get/';
+        var cmsPageUrl                  = 'https://purecolodetox.com/bpcms/page/get/';
+//        var agreements                  = //;
+        var currentAgreementId          = 7;
+    </script>
+<link rel="stylesheet" type="text/css" href="css/mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="css/m-app.min.css" media="all">
+<script type="text/javascript" src="js/prototype.min.js"></script>
+<script type="text/javascript" src="js/validation.min.js"></script>
+<script type="text/javascript" src="js/effects.min.js"></script>
+<script type="text/javascript" src="js/js.min.js"></script>
+<script type="text/javascript" src="js/form.min.js"></script>
+<script type="text/javascript" src="js/translate.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/detect.min.js"></script>
+<script type="text/javascript" src="js/simulate.prototype.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="js/captcha.min.js"></script>
+<script type="text/javascript" src="js/spin.min.js"></script>
+<script type="text/javascript" src="js/mixpanel.min.js"></script>
+<script type="text/javascript" src="js/commons.bundle.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/script.min.js"></script>
+<script type="text/javascript" src="js/scroll-to.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollsection.min.js"></script>
+<script type="text/javascript" src="js/m-app.min.js"></script>
+<script type="text/javascript" src="js/sticky-btn.min.js"></script>
+<script type="text/javascript" src="js/ccard.min.js" async></script>
+<script type="text/javascript" src="js/menu.min.js" async></script>
+<script type="text/javascript" src="js/cookies.min.js" async></script>
+<script type="text/javascript" src="js/validation-tooltip.min.js" async></script>
+<script type="text/javascript" src="js/jquery.validate.min.js" async></script>
+<script type="text/javascript" src="js/jquery.bez.min.js" async></script>
+<script type="text/javascript" src="js/jquery.transform.min.js" async></script>
+<script type="text/javascript" src="js/bind-polyfill.min.js" async></script>
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js" async></script>
+<script type="text/javascript" src="js/styledSelectBox.min.js" async></script>
+<script type="text/javascript" src="js/html5.min.js" async></script>
+<script type="text/javascript" src="js/mCustomScrollbar.min.js" async></script>
+<script type="text/javascript" src="js/uni_mixpanel.min.js" async></script>
+<script type="text/javascript" src="js/landing.bundle.min.js" async></script>
+<script type="text/javascript" src="js/g-app.min.js" async></script>
+<script type="text/javascript" src="js/forms.min.js" async></script>
+<link rel="stylesheet" type="text/css" href="css/css_1.css">
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<link rel="stylesheet" type="text/css" href="css/css_2.css">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="//purecolodetox.com/js/lib_css/mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="//purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/css/m-app.css" media="all" />
+<script type="text/javascript" src="//purecolodetox.com/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/prototype/validation.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/scriptaculous/effects.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/varien/js.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/varien/form.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/mage/translate.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/detect.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/simulate.prototype.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/jquery.placeholder.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/mage/captcha.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/mixpanel/mixpanel.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/react/build/commons.bundle.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/default/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/js/script.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/default/js/scroll-to.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/default/js/jquery.scrollsection.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/default/js/m-app.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/default/js/sticky-btn.js"></script>
+<script type="text/javascript" src="//purecolodetox.com/js/lib/ccard.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/varien/menu.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/mage/cookies.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/bp_all/validation-tooltip.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/bind-polyfill.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/styledSelectBox.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/html5.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/mCustomScrollbar.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/skin_lib/uni_mixpanel.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/js/react/build/landing.bundle.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/default/js/g-app.js" async></script>
+<script type="text/javascript" src="//purecolodetox.com/skin/frontend/landingbuilder2/default/js/forms.js" async></script>
+<![endif]-->
+<script type="text/javascript">
+    product_name = 'PureColonDetox';
+</script>            <!-- BEGIN GOOGLE UNIVERSAL ANALYTICS CODE -->
+        <script type="text/javascript">
+            //<![CDATA[
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            
+setTimeout(function () {
+    ga('create', 'UA-49521092-5', 'auto');
+    
+    ga('set', 'forceSSL', true);
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+}, 500);
+                        
+
+
+        jQuery( document ).ready(function() {
+        
+jQuery('#bottom-unsubscribe-event').on('click', function() {
+            ga('send', 'pageview', '/unsubscribe/');
+        });
+jQuery('#play').on('click', function() {
+              ga('send', 'pageview',  '/play-video');
+        });
+jQuery('#close_video').on('click', function() {
+          ga('send', 'pageview',  '/close-video');
+        });
+jQuery('#how_works .item_1 a').on('click', function() {
+            ga('send',  'pageview',  {
+            'page':  '/source-1',
+            'title':  'Activates The Fat Burning Messenger Source'
+            });
+        });
+jQuery('#how_works .item_2 a').on('click', function() {
+            ga('send',  'pageview',  {
+            'page':  '/source-2',
+            'title':  'Breaks Down Stubborn Fat Tissue'
+            });
+        });
+jQuery('#how_works .item_3 a').on('click', function() {
+              ga('send',  'pageview',  {
+                'page':  '/source-3',
+                'title':  'Preserves & Builds Lean Muscle'
+              });
+        });
+jQuery('#how_works .item_4 a').on('click', function() {
+              ga('send',  'pageview',  {
+                'page':  '/source-4',
+                'title':  'Prevents Future Fat Formation'
+              });
+        });
+jQuery('#how-works-child-read-more-1').on('click', function() {
+            ga('send',  'pageview',  {
+            'page':  '/read-more-1',
+            'title':  'Read More Activates The Fat Burning Messenger Source'
+            });
+        });
+jQuery('#how-works-child-read-more-2').on('click', function() {
+            ga('send',  'pageview',  {
+            'page':  '/read-more-2',
+            'title':  'Read More Breaks Down Stubborn Fat Tissue'
+            });
+        });
+jQuery('#how-works-child-read-more-3').on('click', function() {
+            ga('send',  'pageview',  {
+            'page':  '/read-more-3',
+            'title':  'Read More Preserves & Builds Lean Muscle'
+            });
+        });
+jQuery('#how-works-child-read-more-4').on('click', function() {
+            ga('send',  'pageview',  {
+            'page':  '/read-more-4',
+            'title':  'Read More Prevents Future Fat Formation'
+            });
+        });
+
+            if (jQuery.cookie('transaction_id')) {
+                var dimensionValue1 = jQuery.cookie('transaction_id');
+                ga('set', 'dimension1', dimensionValue1);
+                if(jQuery.cookie('affiliate_id')) {
+                    var dimensionValue2 = jQuery.cookie('affiliate_id');
+                    ga('set', 'dimension2', dimensionValue2);
+                }
+            } else if (jQuery.cookie('aid')) {
+                var dimensionValue2 = jQuery.cookie('aid');
+                ga('set', 'dimension2', dimensionValue2);
+
+                if(jQuery.cookie('tid')) {
+                    var dimensionValue1 = jQuery.cookie('affiliate_id');
+                    ga('set', 'dimension1', dimensionValue1);
+                }
+            }
+        
+jQuery('#btn-phone-popup, .popup-link-phones').on('click', function() {
+            ga('send',  'pageview',  {
+            'page':  '/call-us-button'
+            });
+        });
+
+        });
+        
+            //]]>
+        </script>
+        <!-- END GOOGLE UNIVERSAL ANALYTICS CODE -->
+            <!-- BEGIN Hotjar CODE -->
+
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:165901,hjsv:5};
+
+                        a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+            
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- END Hotjar CODE -->
+
+<script type="text/javascript">if (mixpanel) { mixpanel.init('pgtbo0enwcpqz65sk5a4xp6pn7uxcsod'); }
+if (mixpanel) { mixpanel.set_config({track_links_timeout: 1000}); }
+</script><script type="text/javascript">//<![CDATA[
+        var Translator = new Translate([]);
+        //]]></script></head>
+<body class=" bp-website-mobile-index-index isDevice  new-checkout-landing ">
+
+
+<header class=" b-header   lazy  w-bg js-sticky-start-block" id="" style="" data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/header/bg.jpg" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/header\/bg-m.jpg&quot;,&quot;width&quot;:780,&quot;height&quot;:426},&quot;mobile_retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/header\/bg-m-2x.jpg&quot;,&quot;width&quot;:1560,&quot;height&quot;:852},&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/header\/bg-2x.jpg&quot;,&quot;width&quot;:1916,&quot;height&quot;:980},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/header\/bg.jpg&quot;,&quot;width&quot;:958,&quot;height&quot;:490}}">
+
+<div class="l-grid">
+        
+        
+<div class=" b-header__content " id="" style="" data-path="header/header-content/content">
+
+
+
+<h1 class=" b-header__maintitle has-shadow" id="" style="" data-path="header/header-content/header-maintitle/title">
+    Rejuvenate <span>Your Body</span></h1>
+
+<div class=" b-header__subtitle " id="" style="" data-path="header/header-content/header-subtitle/content">
+
+
+<p>with <span>PURE COLON DETOX</span></p>
+</div>
+
+<ul class=" b-header__list " id="" style="" data-path="header/header-content/header-list/content">
+
+
+
+<li class=" b-header__item b-header__item--flushes " id="" style="">
+
+<h4 data-path="header/header-content/header-list/header-item-flushes/title">
+Flushes Body of Toxins</h4>
+</li>
+
+<li class=" b-header__item b-header__item--kick " id="" style="">
+
+<h4 data-path="header/header-content/header-list/header-item-kick/title">
+Kick-Starts Weight-loss</h4>
+</li>
+
+<li class=" b-header__item b-header__item--relieves " id="" style="">
+
+<h4 data-path="header/header-content/header-list/header-item-relieves/title">
+Relieves Constipation</h4>
+</li>
+
+<li class=" b-header__item b-header__item--increases " id="" style="">
+
+<h4 data-path="header/header-content/header-list/header-item-increases/title">
+Increases Energy Levels</h4>
+</li>
+
+</ul>
+
+</div>
+
+<div class=" b-header__btn-wrapp " id="" style="" data-path="header/header-btn-wrapp/content">
+
+
+
+<div class=" b-header__limited " id="" style="" data-path="header/header-btn-wrapp/header-limited/content">
+
+
+<b>Limited Time Offer</b> – Only While Supplies Last!
+</div>
+
+<a class=" b-header__btn btn popup-link product-body-m hasevent" id="" style="" href="#modal-form-block" data-mixpanel="Home CTA1 clicked">
+
+
+    
+            <span>
+        <span data-path="header/header-btn-wrapp/header-btn/title">
+        Rush my order        </span>
+        </span>
+        
+
+</a>
+
+</div>
+    
+    </div>
+
+</header>
+
+
+<section class=" b-form-block " id="section-form-block" style="">
+
+<div class="l-grid">
+        
+        
+<div class=" b-form " id="content-form" style="" data-path="form-block/form/content">
+
+
+    <div class="modal zoom-anim-dialog" id="modal-form-block">
+      <div class="modal-head">
+        <img class="modal-logo replace-2x" src="images/logo-popup.png">
+      </div>
+      <div class="modal-content">
+        <div class="modal-scroll">
+            <div class="b-form">
+                <div class="account-create">
+    </div>
+<script type="text/javascript">
+
+    var BPLandingForm = Class.create();
+    BPLandingForm.prototype = new VarienForm();
+
+    BPLandingForm.prototype.initialize = function (formId, firstFieldFocus) {
+        VarienForm.prototype.initialize.bind(this)(formId, firstFieldFocus);
+        var me = this;
+
+        // Disable validation
+        me.form.observe('submit', function(ev) {
+            me.submit();
+            ev.stop();
+        });
+    };
+
+    if (document.getElementById('form-validate') !== null ) {
+        var bpLandingForm = new BPLandingForm('form-validate');
+    }
+
+</script>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div class=" b-form__trustsails " id="content-form_trustsails" style="" data-path="form-block/form/form-trustsails/content">
+
+
+
+</div>
+
+</div>
+    
+    </div>
+
+</section>
+
+
+<section class=" b-section-1   lazy  w-bg " id="" style="" data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-1/bg.jpg" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-1\/bg-m.jpg&quot;,&quot;width&quot;:780,&quot;height&quot;:393},&quot;mobile_retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-1\/bg-m-2x.jpg&quot;,&quot;width&quot;:1560,&quot;height&quot;:786},&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-1\/bg-2x.jpg&quot;,&quot;width&quot;:1920,&quot;height&quot;:730},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-1\/bg.jpg&quot;,&quot;width&quot;:960,&quot;height&quot;:365}}">
+
+<div class="l-grid">
+        
+        
+<header class=" b-section-1__header " id="" style="" data-path="section-1/section-1-header/content">
+
+
+
+<h2 class=" b-section-1__title " id="" style="" data-path="section-1/section-1-header/section-1-title/title">
+    Why Does It Have Scientists<br class="tablet-br"> &amp; Media Buzzing?</h2>
+
+</header>
+
+<div class=" b-section-1__content " id="" style="" data-path="section-1/section-1-content/content">
+
+
+<p>Colon cleansing is a <strong>proven tactic</strong> in rejuvenating the body and flushing built up wastes from the colon.</p><p>The strategic combination of <strong>ginger, aloe vera, and cayenne</strong> has been clinically proven to speed up weight loss.</p>
+<div class=" b-section-1__tip " id="" style="" data-path="section-1/section-1-content/section-1-tip/content">
+
+
+
+<div class=" b-section-1__tipblock   lazy  w-bg " id="" style="" data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-1/tooltip.png" data-image-array="{&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-1\/tooltip-2x.png&quot;,&quot;width&quot;:616,&quot;height&quot;:236},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-1\/tooltip.png&quot;,&quot;width&quot;:308,&quot;height&quot;:118}}" data-path="section-1/section-1-content/section-1-tip/section-1-tipblock/content">
+
+
+Did you know the average person may have between <strong>10-25 pounds of unprocessed waste</strong> within their digestive system?<br><strong>Flush your system now!</strong>
+</div>
+
+</div>
+
+</div>
+    
+    </div>
+
+</section>
+
+
+<section class=" b-section-2   lazy  w-bg " id="" style="" data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-2/bg.jpg" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-2\/bg-m.jpg&quot;,&quot;width&quot;:780,&quot;height&quot;:410},&quot;mobile_retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-2\/bg-m-2x.jpg&quot;,&quot;width&quot;:1560,&quot;height&quot;:820},&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-2\/bg-2x.jpg&quot;,&quot;width&quot;:1920,&quot;height&quot;:770},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-2\/bg.jpg&quot;,&quot;width&quot;:960,&quot;height&quot;:385}}">
+
+    
+        
+<header class=" b-section-2__header " id="" style="" data-path="section-2/section-2-header/content">
+
+
+
+<h2 class=" b-section-2__title " id="" style="" data-path="section-2/section-2-header/section-2-title/title">
+    How Does It Work?</h2>
+
+</header>
+
+<div class=" b-section-2__content l-grid" id="" style="" data-path="section-2/section-2-content/content">
+
+
+
+<ul class=" b-section-2__list " id="" style="" data-path="section-2/section-2-content/section-2-list/content">
+
+
+
+<li class=" b-section-2__item b-section-2__item--flush has-shadow" id="" style="">
+
+<h4 data-path="section-2/section-2-content/section-2-list/section-2-item-flush/title">
+Flush Your Body of Toxins</h4>
+<p data-path="section-2/section-2-content/section-2-list/section-2-item-flush/content">
+<strong>Pure Colon Detox</strong> is the best cleanse for weight loss as it works to rid your body of toxins and waste. You finally can lose those extra pounds!</p>
+</li>
+
+<li class=" b-section-2__item b-section-2__item--rejuvenate has-shadow" id="" style="">
+
+<h4 data-path="section-2/section-2-content/section-2-list/section-2-item-rejuvenate/title">
+Rejuvenate Your<br>Digestive System</h4>
+<p data-path="section-2/section-2-content/section-2-list/section-2-item-rejuvenate/content">
+Not only will <strong>Pure Colon Detox</strong> help you to lose inches around your waist, you will experience a burst of natural energy and a clearer mind.</p>
+</li>
+
+</ul>
+
+</div>
+
+<div class=" b-fixed-block js-fixed-block" id="" style="" data-path="section-2/fixed-block/content">
+
+
+
+<a class=" b-btn btn product-body-m popup-link hasevent" id="" style="" href="#modal-form-block" data-mixpanel="Home CTA2 clicked">
+
+
+    
+            <span>
+        <span data-path="section-2/fixed-block/btn/title">
+        Rush my order        </span>
+        </span>
+        
+
+</a>
+
+</div>
+    
+    
+</section>
+
+
+<section class=" b-section-3 " id="" style="">
+
+<div class="l-grid">
+                <img class=" lazy " data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-3/img.png" style="" data-image-array="{&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-3\/img-2x.png&quot;,&quot;width&quot;:84,&quot;height&quot;:506},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-3\/img.png&quot;,&quot;width&quot;:42,&quot;height&quot;:253}}">
+    
+        
+<header class=" b-section-3__header " id="" style="" data-path="section-3/section-3-header/content">
+
+
+
+<h2 class=" b-section-3__title has-shadow" id="" style="" data-path="section-3/section-3-header/section-3-title/title">
+    Why <b>Pure Colon Detox</b> is<br class="visible-mobile"> The <b>Most Popular Choice</b><br class="visible-mobile"> by Men & Women Worldwide</h2>
+
+</header>
+
+<div class=" b-section-3__content " id="" style="" data-path="section-3/section-3-content/content">
+
+
+
+<ul class=" b-section-3__list " id="" style="" data-path="section-3/section-3-content/section-3-list/content">
+
+
+
+<li class=" b-section-3__item b-section-3__item--flushes " id="" style="">
+
+<h4 data-path="section-3/section-3-content/section-3-list/section-3-item-flushes/title">
+Flushes Toxins from The Body</h4>
+</li>
+
+<li class=" b-section-3__item b-section-3__item--resets " id="" style="">
+
+<h4 data-path="section-3/section-3-content/section-3-list/section-3-item-resets/title">
+Resets the Digestive System</h4>
+</li>
+
+<li class=" b-section-3__item b-section-3__item--relieves " id="" style="">
+
+<h4 data-path="section-3/section-3-content/section-3-list/section-3-item-relieves/title">
+Relieves Constipation & Bloating</h4>
+</li>
+
+<li class=" b-section-3__item b-section-3__item--accelerates " id="" style="">
+
+<h4 data-path="section-3/section-3-content/section-3-list/section-3-item-accelerates/title">
+Accelerates Weight Loss</h4>
+</li>
+
+<li class=" b-section-3__item b-section-3__item--increases " id="" style="">
+
+<h4 data-path="section-3/section-3-content/section-3-list/section-3-item-increases/title">
+Increases Energy Levels</h4>
+</li>
+
+</ul>
+
+<div class=" b-section-3__tip " id="" style="" data-path="section-3/section-3-content/section-3-tip/content">
+
+
+
+<div class=" b-section-3__tipblock   lazy  w-bg " id="" style="" data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-3/tooltip-2.png" data-image-array="{&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-3\/tooltip-2-2x.png&quot;,&quot;width&quot;:802,&quot;height&quot;:232},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-3\/tooltip-2.png&quot;,&quot;width&quot;:401,&quot;height&quot;:116}}" data-path="section-3/section-3-content/section-3-tip/section-3-tipblock/content">
+
+
+All Ingredients found in<br class="mobile-br"> <strong>Pure Colon Detox</strong> are<br class="mobile-br"> <strong>100% natural</strong> and clinically proven to cleanse the body.
+</div>
+
+</div>
+
+</div>
+    
+    </div>
+
+</section>
+
+
+<section class=" b-section-4   lazy  w-bg " id="" style="" data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-4/bg.jpg" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/bg-m.jpg&quot;,&quot;width&quot;:780,&quot;height&quot;:400},&quot;mobile_retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/bg-m-2x.jpg&quot;,&quot;width&quot;:1560,&quot;height&quot;:800},&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/bg-2x.jpg&quot;,&quot;width&quot;:1920,&quot;height&quot;:1120},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/bg.jpg&quot;,&quot;width&quot;:960,&quot;height&quot;:560}}">
+
+<div class="l-grid">
+        
+        
+<header class=" b-section-4__header " id="" style="" data-path="section-4/section-4-header/content">
+
+
+
+<h2 class=" b-section-4__title " id="" style="" data-path="section-4/section-4-header/section-4-title/title">
+    Real People, Real Results</h2>
+
+</header>
+
+<div class=" b-section-4__content " id="" style="" data-path="section-4/section-4-content/content">
+
+
+
+<ul class=" b-section-4__list " id="" style="" data-path="section-4/section-4-content/section-4-list/content">
+
+
+
+<li class=" b-section-4__item-first " id="" style="">
+
+    <img class=" lazy " data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-4/adriana.jpg" style="" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/adriana-m.jpg&quot;,&quot;width&quot;:148,&quot;height&quot;:128},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/adriana.jpg&quot;,&quot;width&quot;:221,&quot;height&quot;:190}}">
+<h4 data-path="section-4/section-4-content/section-4-list/section-4-item-first/title">
+Adriana, Wyoming</h4>
+<p data-path="section-4/section-4-content/section-4-list/section-4-item-first/content">
+<b>Lost 25 pounds!</b></p>
+</li>
+
+<li class=" b-section-4__item-second " id="" style="">
+
+    <img class=" lazy " data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-4/wayne.jpg" style="" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/wayne-m.jpg&quot;,&quot;width&quot;:148,&quot;height&quot;:128},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/wayne.jpg&quot;,&quot;width&quot;:221,&quot;height&quot;:190}}">
+<h4 data-path="section-4/section-4-content/section-4-list/section-4-item-second/title">
+Wayne, Michigan</h4>
+<p data-path="section-4/section-4-content/section-4-list/section-4-item-second/content">
+<b>Lost 15 pounds!</b></p>
+</li>
+
+<li class=" b-section-4__item-third " id="" style="">
+
+    <img class=" lazy " data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-4/kailey.jpg" style="" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/kailey-m.jpg&quot;,&quot;width&quot;:148,&quot;height&quot;:128},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/kailey.jpg&quot;,&quot;width&quot;:221,&quot;height&quot;:190}}">
+<h4 data-path="section-4/section-4-content/section-4-list/section-4-item-third/title">
+Kailey, New York</h4>
+<p data-path="section-4/section-4-content/section-4-list/section-4-item-third/content">
+<b>Lost 33 pounds!</b></p>
+</li>
+
+<li class=" b-section-4__item-fourth " id="" style="">
+
+    <img class=" lazy " data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-4/juliet.jpg" style="" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/juliet-m.jpg&quot;,&quot;width&quot;:148,&quot;height&quot;:128},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-4\/juliet.jpg&quot;,&quot;width&quot;:221,&quot;height&quot;:190}}">
+<h4 data-path="section-4/section-4-content/section-4-list/section-4-item-fourth/title">
+Juliet, San Diego</h4>
+<p data-path="section-4/section-4-content/section-4-list/section-4-item-fourth/content">
+<b>Lost 40 pounds!</b></p>
+</li>
+
+</ul>
+
+</div>
+    
+    </div>
+
+</section>
+
+
+<section class=" b-section-5   lazy  w-bg js-sticky-last-block" id="" style="" data-original="https://purecolodetox.com/skin/frontend/landingbuilder2/purecolondetox/images/sections/device/section-5/bg.jpg" data-image-array="{&quot;mobile&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-5\/bg-m.jpg&quot;,&quot;width&quot;:780,&quot;height&quot;:403},&quot;mobile_retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-5\/bg-m-2x.jpg&quot;,&quot;width&quot;:1560,&quot;height&quot;:807},&quot;retina&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-5\/bg-2x.jpg&quot;,&quot;width&quot;:1920,&quot;height&quot;:1023},&quot;original&quot;:{&quot;path&quot;:&quot;https:\/\/purecolodetox.com\/skin\/frontend\/landingbuilder2\/purecolondetox\/images\/sections\/device\/section-5\/bg.jpg&quot;,&quot;width&quot;:960,&quot;height&quot;:511}}">
+
+<div class="l-grid">
+        
+        
+<header class=" b-section-5__header " id="" style="" data-path="section-5/section-5-header/content">
+
+
+
+<h2 class=" b-section-5__title has-shadow" id="" style="" data-path="section-5/section-5-header/section-5-title/title">
+    <strong>Detoxify Your Body</strong> and Feel Like Yourself Again!</h2>
+
+</header>
+
+<div class=" b-section-5__content " id="" style="" data-path="section-5/section-5-content/content">
+
+
+
+<button class=" b-section-5__button btn popup-link product-body-m hasevent" id="" style="" href="#modal-form-block" data-mixpanel="Home CTA5 clicked">
+
+
+    
+            <span>
+        <span data-path="section-5/section-5-content/section-5-button/title">
+        Rush My Order        </span>
+        </span>
+        
+
+</button>
+
+</div>
+    
+    </div>
+
+</section>
+
+
+<footer class=" b-footer " id="" style="">
+
+<div class="l-grid">
+        
+        
+<nav class=" b-footer__content " id="" style="" data-path="footer/footer-content/content">
+
+
+
+<ul class=" b-footer__list b-footer__list--short " id="" style="" data-path="footer/footer-content/footer-list-short/content">
+
+
+
+<li class=" b-footer__item js_remove-divider" id="" style="" data-path="footer/footer-content/footer-list-short/footer-item/title">
+
+
+<a class=" b-footer__link popup-link hasevent" id="" style="" href="#modal-terms" data-mixpanel="Bottom menu terms clicked" data-path="footer/footer-content/footer-list-short/footer-item/footer-link/content">
+
+
+Terms
+</a>
+</li>
+
+<li class=" b-footer__item js_remove-divider" id="" style="" data-path="footer/footer-content/footer-list-short/footer-item/title">
+
+
+<a class=" b-footer__link popup-link hasevent" id="" style="" href="#modal-policy" data-mixpanel="Bottom menu privacy clicked" data-path="footer/footer-content/footer-list-short/footer-item/footer-link/content">
+
+
+Privacy
+</a>
+</li>
+
+<li class=" b-footer__item js_remove-divider" id="" style="" data-path="footer/footer-content/footer-list-short/footer-item/title">
+
+
+<a class=" b-footer__link  hasevent" id="" style="" target="_blank" href="/contacts/" data-mixpanel="Bottom menu contact clicked" data-path="footer/footer-content/footer-list-short/footer-item/footer-link/content">
+
+
+Contact us
+</a>
+</li>
+
+<li class=" b-footer__item js_remove-divider" id="" style="" data-path="footer/footer-content/footer-list-short/footer-item/title">
+
+
+<a class=" b-footer__link b-footer__link--affiliates  hasredirect" id="" style="" target="_blank" href="http://lifestyle.unsubscribe-4-52.com/unsub/unsub.form?id=58f89cd15d8b5f9c5e5ded041bd32e5c8d1a45a15d96ba2b716542947f5e8a17" data-mixpanel-redirect="Bottom menu unsubscribe clicked" data-path="footer/footer-content/footer-list-short/footer-item/footer-link-affiliates/content">
+
+
+Unsubscribe
+</a>
+</li>
+
+</ul>
+
+</nav>
+    
+    </div>
+
+</footer>
+
+
+<section class="l-disclaimer b-disclaimer " id="section-disclaimer" style="">
+
+<div class="l-grid">
+        
+        
+<div class=" b-disclaimer__content " id="content-disclaimer_content" style="" data-path="disclaimer/disclaimer-content/content">
+
+
+
+            
+                 <p>These statements have not been evaluated by the Food and Drug Administration or any government agency. This product is not intended to diagnose, treat, cure, or prevent disease. As individuals differ, so will results.</p>
+<p class="footer-tel">Toll-Free <a href="tel:1-888-221-2554">1-888-221-2554</a> | Int’l <a href="tel:1-646-688-0457">1-646-688-0457</a></p>
+             
+        
+</div>
+
+<div class=" b-disclaimer__visaplace " id="content-disclaimer_visaplace" style="" data-path="disclaimer/disclaimer-visaplace/content">
+
+
+
+</div>
+
+<p class=" b-disclaimer__copy " id="content-disclaimer_copy" style="" data-path="disclaimer/disclaimer-copy/content">
+
+
+&copy; Pure Colon Detox. All rights reserved
+</p>
+    
+    </div>
+
+</section>
+
+<div class=" b-mixpanel__page  trackpage" id="" style="" data-mixpanel-page="Landing Page Open" data-path="content-container/mixpanel-page/content">
+
+
+
+</div>
+            
+            <div class="landing-discount-overlay">
+                <a href="#" class="landing-discount-popup"><img src="images/PCD_FTCO_COM_D_UnhoverPopUp_50-2x.jpg" alt=""></a>
+             </div>
+            
+
+            <div class="modal zoom-anim-dialog" id="modal-about">
+            <div class="modal-head">
+                <img class="modal-logo replace-2x" src="images/logo-popup.png">
+            </div>
+            <div class="title">
+                <h2>About Pure Colon Detox</h2>
+                <a class="toggle" href="#">Expand All</a>
+            </div>
+            <div class="modal-content">
+                <div class="modal-scroll">
+                    <p>Pure Colon Detox offers a natural colon cleanse in the form of capsules that, once digested, cleans your body from the inside and lets your body absorb detoxifying ingredients through your colon (large intestine).</p>
+<p>And now you can treat your body to a refreshing, rejuvenating cleansing routine on a daily basis thanks to the Pure Colon Detox pills. Made up from natural detoxifying ingredients such as Fennel Seed, Licorice Root, Buckthorn (known for bowel disorders treatment), and more, Pure Colon Detox&rsquo;s daily serving will leave your body purer and more energized.</p>
+<p>If you want to make sure you maintain a healthy body that is clean from toxins for the long-term, be sure to join our Auto-Refill Program which allows you to enjoy automatic monthly Pure Colon Detox 60-capsule orders and shipments!</p>
+<h2>How to join the Pure Colon Detox Auto-Refill Program</h2>
+<p>Want to become a member? All that&rsquo;s needed is to claim your free trial bottle and that&rsquo;s it! Once you receive an email confirmation from us you will have a trial period of 15 calendar days to decide if Pure Colon Detox is right for you.</p>
+<p>Want to keep getting a 60-capsule bottle every month? Then no action on your part is required. If you do not <a href="/contacts" target="_blank">contact us</a> during the trial period we will see it as your legal consent to become an active member in our Pure Colon Detox Auto-Refill Program.</p>
+<p>Don&rsquo;t want to enroll in the Auto-Refill Program? Then please be sure to cancel and return your free trial bottle within your trial period and we will make sure you do not proceed to become a member of the Auto-Refill Program. For more information, please visit our <a class="popup-link" href="#modal-faq">Frequently Asked Questions page.</a></p>                </div>
+            </div>
+            <div class="modal-foot">
+                <button title="Close (Esc)" type="button" class="mfp-close-2"><span>Close</span></button>
+            </div>
+        </div>
+            <div class="modal zoom-anim-dialog" id="modal-faq">
+            <div class="modal-head">
+                <img class="modal-logo replace-2x" src="images/logo-popup.png">
+            </div>
+            <div class="title">
+                <h2>Frequently Asked Questions</h2>
+                <a class="toggle" href="#">Expand All</a>
+            </div>
+            <div class="modal-content">
+                <div class="modal-scroll">
+                    <p><a class="toggle" href="#">Expand All</a></p>
+<h3>GENERAL</h3>
+<p><a class="toggle-question" href="#">What is Pure Colon Detox and why should I use it?</a></p>
+<div class="toggle-box">
+<p>Pure Colon Detox is an orally-administered capsule based formula. When taken on a regular basis, Pure Colon Detox offers a colon (large intestine) cleansing effect whereby your body is cleaned from toxins that have been accumulating in your body for years and years.</p>
+<p>Once digested, the Pure Colon Detox formula (made from natural active extracts such as Fennel Seed, Licorice Root, Rhubarb and Aloe Vera) reaches your large intestine. There it passes through while dissolving unhealthy bacteria and food residues. As your body flushes everything out, you will get rid of those built-up toxins. The good thing is that while Pure Colon Detox cleans your body from the inside, it enriches your body and skin with beneficial agents and relieves bloating and constipation.</p>
+</div>
+<p><a class="toggle-question" href="#">Is it safe to use?</a></p>
+<div class="toggle-box">
+<p>Yes! The natural based formula of Pure Colon Detox is safe to take on a daily basis. In fact, the recommended dose is 2 capsules per day.</p>
+</div>
+<p><a class="toggle-question" href="#">How does taking Pure Colon Detox compare to other colon cleansing techniques?</a></p>
+<div class="toggle-box">
+<p>Many people advocate colonic irrigation, where fluids are forced into your colon through your rectum and then flush out. Needless to say, this is not a pleasant experience, and there are no conclusive studies that show that this, indeed is the best way to detoxify your colon and body. The human body is not meant to undergo such aggressive treatments. Pure Colon Detox works the natural way - taking it orally and letting it go through your body as food and fluids usually do. Why put yourself through unnatural experiences if the same result is achieved in a more pleasant way?</p>
+</div>
+<p><a class="toggle-question" href="#">How do you take Pure Colon Detox?</a></p>
+<div class="toggle-box">
+<p>The recommended dose is 2 capsules per day. Each bottle of Pure Colon Detox offers a full month's supply (60 capsules). It is recommended that you take each capsule with a full glass of water, and drink plenty of fluids throughout the day. For best results, it is recommended that you take a daily dose on a long-term basis. This way it ensures your body remains clean and free of bloating and constipation for as long as you take it.</p>
+</div>
+<h3>FREE TRIAL &amp; SUBSCRIPTION ORDERS</h3>
+<p><a class="toggle-question" href="#">What is it made of?</a></p>
+<div class="toggle-box">
+<p>Each Pure Colon Detox capsule offers 1800mg of proprietary formula made up of natural ingredients: Fennel Seed, Cascara Sagrada, Ginger, Goldenseal, Pumpkin Seed, Buckthorn Root, Licorice Root, Rhubarb, Citrus Pectin, Acidophilus, Acai, Cape Aloe, Bentonite Clay, Aloe Vera, Cayenne Pepper, Senna, Oat Bran, Prune Juice and Flax Seed Oil.</p>
+</div>
+<p><a class="toggle-question" href="#">What is the Auto-Refill Program?</a></p>
+<div class="toggle-box">
+<p>The Auto-Refill Program is the easiest way for you to receive a regular monthly supply of Pure Colon Detox. Since the best results are achieved when it is taken on a continual, long-term basis, the Auto-Refill Program guarantees that you receive a new 60-capsule bottle by the time the one you have at home runs out.</p>
+</div>
+<p><a class="toggle-question" href="#">How does it work?</a></p>
+<div class="toggle-box">
+<p>Once your Pure Colon Detox free trial order is confirmed (you will receive an email from us), you will have 15 calendar days to decide if it's right for you (i.e. Trial Period). During this trial period you will be able to decide if you want to enroll in the Pure Colon Detox Auto-Refill Program, or if you want to return the free bottle.</p>
+<p>If you do not contact us during the trial period, we will regard it as your consent to enroll in the Auto-Refill Program. This means we will charge you as follows:</p>
+<p>15 calendar days following the date of your free trial order's confirmation we will charge you the amount of block type="bpwebsite/variables_product_price" (the retroactive payment of the trial bottle)</p>
+<p>30 calendar days after the date of your free trial order's confirmation we will charge you the amount of block type="bpwebsite/variables_product_price" plus shipping and send you a 60-capsule bottle of Pure Colon Detox. This will essentially be your first auto-refill order. Every 30 calendar days after we will charge you the same amount as described above and ship it to your address.</p>
+<p>For the Auto-Refill Program orders we will use the shipping address and payment method you provided at the time you claimed your free Pure Colon Detox bottle. We will also regard your free trial order's selected shipping method as the primary shipping method for all subsequent Auto-Refill orders.</p>
+<p>Your payment may be processed in various international currencies and not the currency displayed during checkout. This may cause currency exchange rate differences and you should check your credit card statement to view the charge in the actual currency.</p>
+</div>
+<p><a class="toggle-question" href="#">What happens if I want to stop my auto-refill membership?</a></p>
+<div class="toggle-box">
+<p>If you do not wish to be a member of our Auto-Refill Program, please contact us before the end of your Trial Period (i.e. 15 calendar days following the date of your free trial order's confirmation date). This way you will not see any additional charges except for the shipping fees of your free trial bottle.</p>
+<p>If you would like to cancel your membership in the Auto-Refill Program and your Trial period has already ended, please <a href="/contacts'">contact us</a> with an explicit request to cancel your membership. We will cancel any future Pure Colon Detox charges and shipments associated with your account, but we will be unable to refund any charges made up until your cancellation request date.</p>
+</div>
+<h3>SHIPPING &amp; DELIVERY</h3>
+<p><a class="toggle-question" href="#">What shipping methods are available?</a></p>
+<div class="toggle-box">
+<p>You may select any of the following shipping methods for your Pure Colon Detox free trial and/or auto-refill orders:</p>
+<ul>
+<li>USPS First Class Mail (3-6 business days) for $5.00 USD</li>
+<li>USPS Priority Mail (5-9 business days) for $5.00 USD</li>
+<li>Royal Mail (3-6 business days) for $5.00 USD</li>
+</ul>
+</div>
+<p>Have a question not listed here? <a href="/contacts'">Contact us</a> and we'd be happy to answer any questions you may have.</p>                </div>
+            </div>
+            <div class="modal-foot">
+                <button title="Close (Esc)" type="button" class="mfp-close-2"><span>Close</span></button>
+            </div>
+        </div>
+            <div class="modal zoom-anim-dialog" id="modal-policy">
+            <div class="modal-head">
+                <img class="modal-logo replace-2x" src="images/logo-popup.png">
+            </div>
+            <div class="title">
+                <h2>Privacy Policy</h2>
+                <a class="toggle" href="#">Expand All</a>
+            </div>
+            <div class="modal-content">
+                <div class="modal-scroll">
+                    <h2>In using this website you are deemed to have read and agreed to the following terms and conditions:</h2>
+<p>The following terminology applies to&nbsp;these Terms and Conditions, Privacy Statement and Disclaimer Notice and any or all Agreements:&nbsp;"Client", &ldquo;You&rdquo; and &ldquo;Your&rdquo; refers to you, the person accessing this website and accepting the Company&rsquo;s terms and conditions. &ldquo;Pure Colon Detox,&rdquo; "The Company", &ldquo;Ourselves&rdquo;, &ldquo;We&rdquo; and "Us", refers to our Company. &ldquo;Party&rdquo;, &ldquo;Parties&rdquo;, or &ldquo;Us&rdquo;, refers to both the Client and ourselves, or either the Client or ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the&nbsp;most appropriate manner, whether by formal meetings of a fixed duration, or any other means, for the express purpose of meeting the Client&rsquo;s needs in respect of provision of the Company&rsquo;s stated services/products, in accordance with and subject to, prevailing English Law. Any use of the above terminology or other words in the singular, plural, capitalisation and/or&nbsp;he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+<h2>Privacy Statement</h2>
+<p>Pure Colon Detox is committed to protecting your privacy. Authorized employees within the company on a need to know basis only use any information collected from individual customers. We constantly review our systems and data to ensure the best possible service to our customers.</p>
+<h2>Confidentiality</h2>
+<p>Any information concerning the Client and their respective Client Records may be passed to third parties. However, Client records are regarded as confidential and therefore will not be divulged to any third party. Clients have the right to request sight of, and copies of any and all Client Records we keep, on the proviso that we are given reasonable notice of such a request. Clients are requested to retain copies of any literature issued in relation to the provision of our services. Where appropriate, we shall issue Client&rsquo;s with appropriate written information, handouts or copies of records as part of an agreed contract, for the benefit of both parties.</p>
+<p><strong>We will not sell, share, or rent your personal information to any third party or use your e-mail address for unsolicited mail. Any emails sent by this Company will only be in connection with the provision of agreed services and products.</strong></p>
+<h2>Disclaimer</h2>
+<h2>Exclusions and Limitations</h2>
+<p>The information on this web site is provided on an "as is" basis. To the fullest extent permitted by law, this Company:</p>
+<ul>
+<li>excludes all representations and warranties relating to this website and its contents or which is or may be provided by any affiliates or any other third party, including in relation to any inaccuracies or omissions in this website and/or the Company&rsquo;s literature; and</li>
+<li>excludes all liability for damages arising out of or in connection with your use of this website. This includes, without limitation, direct loss, loss of business or profits (whether or not the loss of such profits was foreseeable, arose in the normal course of things or you have advised this Company of the possibility of such potential loss), damage caused to your computer, computer software, systems and programs and the data thereon or any other direct or indirect, consequential and incidental damages.</li>
+</ul>
+<p>This Company does not however exclude liability for death or personal injury caused by its negligence. The above exclusions and limitations apply only to the extent permitted by law. None of your statutory rights as a consumer are affected.</p>
+<h2>Log Files</h2>
+<p>We use IP addresses to analyse trends, administer the site, track user&rsquo;s movement, and gather broad demographic information for aggregate use. IP addresses are not linked to personally identifiable information. Additionally, for systems administration, detecting usage patterns and troubleshooting purposes, our web servers automatically log standard access information including browser type, access times/open mail, URL requested, and referral URL. This information is not shared with third parties and is used only within this Company on a need-to-know basis. Any individually identifiable information related to this data will never be used in any way different to that stated above without your explicit permission.</p>
+<h2>Cookies</h2>
+<p>Like most interactive web sites this Company&rsquo;s website uses cookies to enable us to retrieve user details for each visit. Cookies are used in some areas of our site to enable the functionality of this area and ease of use for those people visiting. Some of our affiliate partners may also use cookies.</p>
+<h2>Links to this website</h2>
+<p>You may not create a link to any page of this website without our prior written consent. If you do create a link to a page of this website you do so at your own risk and the exclusions and limitations set out above will apply to your use of this website by linking to it.</p>
+<h2>Links from this website</h2>
+<p>We do not monitor or review the content of other party&rsquo;s websites which are linked to from this website. Opinions expressed or material appearing on such websites are not necessarily shared or endorsed by us and should not be regarded as the publisher of such opinions or material. Please be aware that we are not responsible for the privacy practices, or content, of these sites. We encourage our users to be aware when they leave our site &amp; to read the privacy statements of these sites. You should evaluate the security and trustworthiness of any other site connected to this site or accessed through this site yourself, before disclosing any personal information to them. This Company will not accept any responsibility for any loss or damage in whatever manner, howsoever caused, resulting from your disclosure to third parties of personal information.</p>
+<h2>Copyright Notice</h2>
+<p>Copyright and other relevant intellectual property rights exists on all text relating to the Company&rsquo;s services and the full content of this website.</p>
+<h2>Communication</h2>
+<p>We have several different e-mail addresses for different queries. These, &amp; other contact information, can be found on our <a href="/contacts" target="_blank">Contact Us</a> link on our website.</p>
+<h2>General</h2>
+<p>By accessing this website you consent to these terms and conditions. If any of these terms are deemed invalid or unenforceable for any reason (including, but not limited to the exclusions and limitations set out above), then the invalid or unenforceable provision will be severed from these terms and the remaining terms will continue to apply. Failure of the Company to enforce any of the provisions set out in these Terms and Conditions, or failure to exercise any option to terminate, shall not be construed as waiver of such provisions and shall not affect the validity of these Terms and Conditions or of any Agreement or any part thereof, or the right thereafter to enforce each and every provision. These Terms and Conditions shall not be amended, modified, varied or supplemented except in writing and signed by duly authorised representatives of the Company.</p>
+<h2>Notification of Changes</h2>
+<p>The Company reserves the right to change these conditions from time to time as it sees fit and your continued use of the site will signify your acceptance of any adjustment to these terms. If there are any changes to our privacy policy, we will announce that these changes have been made on our home page and on other key pages on our site. If there are any changes in how we use our site customers&rsquo; Personally Identifiable Information, notification by e-mail or postal mail will be made to those affected by this change. Any changes to our privacy policy will be posted on our web site 30 days prior to these changes taking place. You are therefore advised to re-read this statement on a regular basis</p>
+<p class="privacy-padding"><strong>These terms and conditions form part of the Agreement between the Client and ourselves. Your accessing of this website and/or undertaking of a booking or Agreement indicates your understanding, agreement to and acceptance, of the Disclaimer Notice and the full Terms and Conditions contained herein. Your statutory Consumer Rights are unaffected.</strong></p>                </div>
+            </div>
+            <div class="modal-foot">
+                <button title="Close (Esc)" type="button" class="mfp-close-2"><span>Close</span></button>
+            </div>
+        </div>
+            <div class="modal zoom-anim-dialog" id="modal-shipping">
+            <div class="modal-head">
+                <img class="modal-logo replace-2x" src="images/logo-popup.png">
+            </div>
+            <div class="title">
+                <h2>Shipping</h2>
+                <a class="toggle" href="#">Expand All</a>
+            </div>
+            <div class="modal-content">
+                <div class="modal-scroll">
+                    <p>You may select any of the following shipping methods for your Pure Colon Detox free trial and/or auto-refill orders:</p>
+<ul>
+<li>USPS First Class Mail (3-6 business days) for $5.00 USD</li>
+<li>USPS Priority Mail (5-9 business days) for $5.00 USD</li>
+<li>Royal Mail (3-6 business days) for $5.00 USD</li>
+</ul>
+<p>Shipping times and fees may change from time to time. We are not liable for any delays in deliveries due to national or religious holidays or climate conditions.</p>
+<p>In the event that your shipment failed to arrive, we will be happy to reship your order. Please contact us in case you have any issues or questions regarding shipping.</p>
+<h2>Returns</h2>
+<p>If you would like to cancel your free trial order and return the bottle, feel free to do so during your Trial Period (i.e. 15 calendar days from the date of your free trial order&rsquo;s confirmation date). Please note that we are unable to refund shipping fees.</p>
+<p>In case your trial period has ended and your cancellation or return request was made after you have enrolled in the Pure Colon Detox Auto-Refill Program, we will be happy to cancel any future charges and shipments associated with your account. However, we will be unable to issue a retroactive refund for previous auto-refill orders. For more information on the Auto-Refill Program, please visit our <a class="popup-link" href="#modal-faq">Frequently Asked Questions page.</a></p>                </div>
+            </div>
+            <div class="modal-foot">
+                <button title="Close (Esc)" type="button" class="mfp-close-2"><span>Close</span></button>
+            </div>
+        </div>
+    
+
+
+
+
+
+<script type="text/javascript">
+(function() {
+    window._pa = window._pa || {};
+        // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+    // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+    // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.marinsm.com/serve/57682aeff4d1dd5d9a0000ec.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+    })();
+</script>
+<div class="modal zoom-anim-dialog" id="modal-terms">
+    <div class="title">
+        <h2>
+                                                                <strong>Terms & Conditions</strong> <br>Pure Colon Detox - Free Trial and Auto-Refill Program                                    </h2>
+    </div>
+
+    <div class="modal-content">
+        <div class="modal-scroll">
+            
+                <div class="aw-onestepcheckout-review-terms-description-container">
+                                            <p>Terms and Conditions of Supply  Pure Colon Detox</p>        <p>            THESE TERMS AND CONDITIONS (“TERMS”) AND THE TERMS CONTAINED WITHIN THE WEB SITE DISCLAIMER APPLY TO YOUR USE OF THIS WEB SITE AND ANY PURCHASE YOU MAKE. YOU WILL NEED TO CONFIRM THAT YOU HAVE READ AND UNDERSTOOD THESE TERMS AND CONDITIONS AND OUR DISCLAIMER IN ORDER TO PROCEED WITH YOUR FREE TRIAL/ORDER AND TO MAKE A PURCHASE.            <br>YOU WILL BE ABLE TO PRINT OFF A COPY OF THESE TERMS AND CONDITIONS – WE RECOMMEND THAT YOU DO THIS AND KEEP A COPY FOR YOUR FUTURE REFERENCE.        </p>        <p>YOU WILL ALSO NEED TO CONFIRM THAT YOU CONSENT TO OUR PROCESSING OF YOUR PERSONAL DATA IN ORDER TO PROCEED WITH A PURCHASE. PLEASE READ THE TERMS AND CONDITIONS WHICH DEAL WITH OUR USE OF YOUR PERSONAL DATA CAREFULLY BEFORE SUBMITTING YOUR ORDER.</p>        <p>IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS BELOW AND/OR OUR PROCESSING OF YOUR PERSONAL DATA IN ACCORDANCE WITH THESE TERMS AND CONDITIONS PLEASE DO NOT PLACE ANY ORDER WITH US.</p>        <p>            Definitions            <br>In these Terms, the following words have the following meanings unless the context otherwise requires:        </p>        <table>            <tr>                <td class="left-col">“Contract”</td>                <td>means any contract between You and Us incorporating these Terms for the supply of Products and Services;</td>            </tr>            <tr>                <td class="left-col">“Director”</td>                <td>means Pure Colon Detox.;</td>            </tr>            <tr>                <td class="left-col">“Liability”</td>                <td>means liability for any and all damages, claims, proceedings, actions, awards, expenses, costs and any other losses and/or liabilities;</td>            </tr>            <tr>                <td class="left-col">“Products”</td>                <td>means any and all products ordered from Us by You;</td>            </tr>            <tr>                <td class="left-col">“We, Us, Our”</td>                <td>means Pure Colon Detox.</td>            </tr>            <tr>                <td class="left-col">“Web Site”</td>                <td>means http://www.PureColoDetox.com</td>            </tr>            <tr>                <td class="left-col">“Services,” “Product”</td>                <td>means any and all services ordered from Us by You and includes any product free trials and/or auto-refill orders which may be offered by Us</td>            </tr>            <tr>                <td class="left-col">“You, Your, Yourself”</td>                <td>means the person whose order for Products and/or Services is accepted by Us.</td>            </tr>        </table>        <p>            <strong>1. About Us</strong>            PureColoDetox.com is owned and operated by Pure Colon Detox        </p>        <p>            <strong>2. About You</strong>            By claiming your free trial through this Web Site You warrant that You are at least 18 years old and capable of entering into binding contracts. You further warrant that you understand and agree to be bound by these Terms.        </p>        <p>            <strong>3. Terms and Conditions</strong>            3.1 These Terms govern the supply of Products and Services to You.            <br>3.2 It is Your responsibility to ensure that Your use of the Web Site and the purchase of the Products and/or Services is legal in the country in which You are resident and/or in which You are viewing this Web Site.        </p>        <p>            <strong>4. Basis of Contract</strong>            4.1 These Terms and any document or disclaimer referred to in them represent the entire agreement between You and Us in relation to the supply of any Products and/or Services via the Web Site.            <br>4.2 These Terms supersede all previous terms and conditions, prior agreements, representations, understandings or arrangements and shall replace any terms and conditions previously available on this Web Site or notified to You. You acknowledge that in entering into a Contract with Us You have not relied upon any representation, undertaking or promise previously given or implied from anything said in negotiations or otherwise prior to such Contract save as is expressly set out in these Terms.            <br>4.3 Our employees, sub-contractors and/or agents are not authorized to make any representations or warranties concerning the Products, Services (including without limitation any product auto-refill offerings) and/or the Web Site unless confirmed by a Director in writing.            <br>4.4 No oral representations or warranties shall bind Us unless given by a Director.            <br>4.5 We have the right to modify, vary or amend these Terms from time to time. No variation to these Terms shall be binding on Us unless agreed in writing between You and a Director in advance of Your order.            <br>4.6 We reserve the right to change and modify these Terms without notice. You will be subject to the terms and conditions in force at the time that You order Products and/or Services from Us. However, the provision of our on-going Services such as any auto-refills offered will be subject to the updated terms and conditions in place from time to time and accordingly, it is Your responsibility to read and review these Terms from time to time so that You are fully aware of any changes. Your free trial and/or purchase of Products and/or Services and/or continued use of the Web Site and/or, where applicable, Your continued membership of the Web Site or part thereof shall be deemed to be Your acceptance of any modification or variation which has been made.            <br>4.7 Unless otherwise agreed in writing by Us, Services will be provided for a minimum period of 6 months from acceptance of Your free trial and/or order for the same. Following expiry of that period, We may by notice in writing to You at any time terminate the provision of such Services.        </p>        <p>            <strong>5. Orders and Contracts</strong>            5.1 You may claim your free Pure Colon Detox trial and/or place orders for Products and/or Services either via the Web Site or by telephone. If You wish to place Your order by telephone, please call (US) 1-646-688-0457. Calls to this worldwide number will be charged at standard international rates.            <br>5.2 We have the right to refuse to accept any orders placed for Products and/or Services. Your order for Products and/or Services constitutes an offer to Us to buy those Products and/or Services and shall only form a binding Contract when We send Our order confirmation to You by e-mail.            <br>5.3 You shall be responsible for the accuracy of Your order and for giving Us any and all information necessary for Us to perform the Contract. When You input Your details via the Web Site, You are responsible for ensuring that all information You give Us is correct. Our ordering process on the Web Site will provide You with instructions on how to correct any input errors.            <br>5.4 Due to the fact that we will endeavor to deliver Your Products to You very quickly, You have a period of 24 hours from confirmation of Your order to correct any errors in Your order by calling 1-646-688-0457.            <br>5.5 Products are subject to availability. If We are unable to supply You with the Products due to the fact that they are out of stock, We will inform You as soon as possible. You will be given the option of (i) waiting until the Products are in stock when We will perform the Contract; or (ii) cancelling Your affected order and obtaining a full refund (if We have already received payment from You).            <br>5.6 We try to ensure that all details contained within the Web Site are as accurate as possible. On the rare occasion that there is an error, We will advise You as soon as possible and it will be corrected.            <br>5.7 Please note that any details and/or specifications for the Products and/or Services produced by Us (including any photographs of the Products) are intended as a guide only to give a general approximation.            <br>5.8 We keep copies of all orders We receive and accept for a period of 6 years from the date of the order. This enables Us to process orders effectively, maintain high levels of customer service and deal with quality issues should they arise.            <br>5.9 We will have Special Offers on Our Website from time to time, which, in the event of any dispute regarding the Rules, conduct, results and all other matters relating to these matters, the decision will be left to the management of Our Website. No correspondence, beyond reason, or discussion shall be entered into relating to any disputes.        </p>        <p>            <strong>6. Free Trial and Auto-Refill Program Terms</strong>            6.1 Pure Colon Detox offers via its website(s) and/or phone a single instance free trial of one (1) bottle of up to 60 capsules of the formula. At the time of claiming the free trial – the effective date of free trial submission online and/or on the phone, You will be asked to provide payment information, in addition to your shipping address and personal details. This is in order to cover the shipping and handling fees of the free bottle, and to ensure You receive it in a timely manner. From the date of You having received a confirmation from Us that your free trial bottle order has been confirmed (via confirmation email), You will have up to 15 calendar days to decide if the Product is right for you (hereinafter: “Trial Period”). During the Trial Period, any requests for cancellation will be addressed and fulfilled. If You do not contact us to cancel and/or edit and/or change Your free trial during the Trial Period, and more than 15 calendar days have passed since the confirmation date of the free trial, we will regard it as Your legal consent to become a member of and participate in the Pure Colon Detox Auto-Refill Program, and you will be charged as follows:            <br>a. 15 calendar days after your free trial order, we will charge you for the amount equivalent of one 60-capsule bottle 1 X <span class="price">$69.00</span>. This amount constitutes the retroactive charge for the trial bottle.            <br>b. 30 calendar days following the confirmation date of your free trial bottle, we will charge You the amount of one (1) 60-capsule Pure Colon Detox formula bottle for <span class="price">$69.00</span> plus shipping and will ship it to the provided address at the time You claimed Your free trial, using the payment method you provided at the time of claiming Your free trial. Every 30 calendar days after that we will re-charge and reship to you one 60-capsule bottle of Pure Colon Detox as described here in this clause (hereinafter: “The Auto-Refill Program”).            <br>To become a member (where this Service is offered) You need to fill out Your details on-line and/or on the phone, and claim Your free trial by either clicking the Submit & Claim My Free Trial button online or by verbally accepting the free trial over the phone. This will constitute Your application to the Auto-Refill Program.         </p>        <p>            <strong>7. Products</strong>            Any Products purchased are for Your personal use only. The Products cannot be resold and cannot be given to any third party.        </p>        <p>            <strong>8. Cancellation</strong>            8.1 Where applicable, You may cancel Your order in accordance with Your rights under the respective consumer protection laws of your country. The mechanism for cancelling Your Contract in this way is set out below.            <br>8.2 You have a Trial Period of 15 calendar days from claiming Your Pure Colon Detox free trial or in which you may have the right to cancel Your order and any future product subscription. Unless You notify Us during the trial period of Your desire to cancel the order or offer, We will regard this as Your consent to be a member of Our Subscription Program. You may cancel Your order by calling Us at 1-646-688-0457 (international) or 1-888-221-2554 (toll-free) and We will cancel your free trial as well as any future Product subscriptions, excluding your initial payment for shipping and handling of your free trial. To satisfy your cancellation request, you will have to return the Product to Us at Your expense to Our address which We will provide when You apply to cancel your order.  <br>8.3 After cancelling Your Contract We will not be able to refund the shipping and handling fees of the free trial order. Any cancellations requests made past the Trial Period will not be entitled to a money refund. IT IS YOUR RESPONSIBILITY TO DECIDE IF Pure Colon Detox IS RIGHT FOR YOU, AND MAKE ANY CANCELLATION REQUESTS IF YOU SO DESIRE, EXCLUSIVELY DURING THE TRIAL PERIOD, BY CALLING US AT 1-646-688-0457 OR 1-888-221-2554.             <br>8.4 We shall have no Liability to You in respect of any cancelled orders other than the return of any payment You may have made before cancellation. This does not affect Your statutory rights.        </p>        <p>            <strong>9. Delivery</strong>            9.1 Dates for delivery are estimates only and are not guaranteed. Shipping methods, delivery times and fees listed on the site may change from time to time. Time is not of the essence in relation to such dates. They are also subject to any matter beyond Our reasonable control including without limitation those events set out in paragraph 16.3.            <br>9.2 As a general rule, We will dispatch the Products to You on the same day as We accept Your order (subject to the Products being in stock) or the next working day if Your order is placed outside of our normal working hours. We charge for delivery and packaging. These delivery prices are detailed on the Web Site and are subject to change, depending on Your address, time of year, religious and/or national holidays, etc. Should free delivery be withdrawn We will notify You of the costs of delivery at the time you place Your order and You may cancel Your order at this stage should You not wish to proceed.            <br>9.3 Where Products are to be delivered in installments, each delivery shall constitute a separate and distinct contract and failure by Us to deliver, or any claim by You in respect of, any installment shall not entitle You to repudiate and/or terminate any Contract as a whole.            <br>9.4 Notwithstanding Your rights of cancellation set out at paragraph 8 above You have no right to reject Products and have no right to rescind for late delivery unless the due date for delivery or any subsequent date which has been notified to You has passed.            <br>9.5 We shall not be required to fulfill orders for Products in the sequence in which they are placed.            <br>9.6 In most cases, orders will be delivered to You by special delivery, requiring a signature to confirm receipt. It is Your responsibility to ensure that there is someone at the delivery address to sign for the Products when delivered. Alternatively, it is Your responsibility to collect the Products from any postal collection depot and/or arrange an alternative delivery date if You are unavailable to sign for the Products.            <br>9.7 We are not responsible for the Products and their safe delivery after they have left Our possession. If You have any issues regarding non-delivery, late delivery and/or damage to the Products during transit, You must take this up with the carrier. We will provide You with their details on request.        </p>        <p>            <strong>10. Prices and payment</strong>            10.1 The price for Products and Services shall be as shown on the Web Site at the date of Our acceptance of Your order.            <br>10.2 Prices for the Products do not include delivery charges which You will be charged for in addition and these are clearly displayed on the Web Site. Whilst We do offer a free delivery service in some circumstances, We reserve the right to remove this option at any time and where this is the case We will notify You of the charges to be applied at the time You place Your order.            <br>10.3 Unless otherwise stated, all prices are in USD and inclusive of VAT or other similar sales tax. You are able to select a different currency at the checkout and can view the charges in this selected currency. Customers may be charged Import Duties on shipments of Pure Colon Detox. These are charged by local Customs and are beyond our control. Any Import Duties are the responsibility of the customer.            <br>10.4 Whilst We try to ensure that all prices on the Web Site are accurate, errors may occur and prices may vary. Your payment may be processed in various international currencies and not the currency displayed during checkout. You may experience currency exchange rate differences due to it being an international charge, and should check your credit card statement to view the charge in the actual currency. Due to exchange rate differences, the price of shipping may even exceed the stated shipping amount on the website. If you have any questions or concerns about this, please call us Toll-Free 1-888-221-2554 or Int’l 1-646-688-0457. If You do not agree to the price, do not proceed further with Your free trial or order. If We discover an error in the price of Products or Services You have ordered We will inform You as soon as possible and give You the option of either re-confirming Your order at the correct price or cancelling it. If We are unable to contact You, Your order will be cancelled. If You cancel an order due to an error in price and We have already received payment for the affected Products or Services, You will receive a full refund.            <br>10.5 You will be informed in writing by Us of any increases in prices for Products or Services which may have occurred between You joining the Auto-Refill Program and any following time period. You may cancel without any Liability any order in relation to which the price is increased, however, we cannot guarantee a full refund in such a case, particularly if we had advised you in advance of the price change (via email or telephone).            <br>10.6 Payment is due at the time You place Your free trial or order:            <br>10.6.1 If you are ordering online via the Web Site, We use a third party to take Your payment by debit or credit card. When You proceed to checkout and place Your order, We will take Your personal details and card details and pass them to Our chosen credit card merchant. The credit card merchant will check and store Your data in order to process Your payment details. We have imposed obligations on our credit card merchant to protect the security and safety of Your data. In respect of each credit or debit card transaction, We strongly advise that you print off and retain a copy of the card transaction in an accessible place for future reference;            <br>10.6.2 If You are placing orders by fax, when completing the order form please complete details of Your debit/credit card as requested on the form. Please note that fax is not a secure method of communication and We accept no liability for any loss and/or damage that You may suffer as a result of faxing Your credit/ debit card details to Us. As with online payments, Your card details and data will be passed to Our credit card merchant in order to process payment;            <br>10.6.3 If You are placing Your order by telephone, We will ask for Your credit/debit card details in order to take payment. As with online payments, Your card details and data will be passed to Our credit card merchant in order to process payment;            <br>10.7 We will not accept Your order and the Contract will not be concluded until such time as We receive confirmation from Our credit card merchant that Your payment has been authorized and/or We have received payment in full in cleared funds.            <br>10.8 If for any reason payment in full is not made, We may withhold or suspend delivery of Products or, as the case may be, Services.        </p>        <p>            <strong>11. Property and risk</strong>            Risk in the Products shall pass to You at the time of delivery. Delivery shall be deemed to occur at the time when the Products are passed to Our nominated carriers.        </p>        <p>            <strong>12. Faulty Goods</strong>            12.1 If You discover that a Product is faulty, You must notify Us of the defect within 7 days of the date of delivery or within a reasonable period of time of discovery (if the defect was not readily apparent).            <br>12.2 We may ask You to return the faulty Products to Us for inspection before We send You a replacement. If the Products are faulty, We will replace the faulty Product at no additional cost to You and refund any reasonable costs You may have incurred in returning the faulty Product to Us.        </p>        <p>            <strong>13. Guarantee</strong>            13.1 We are confident that You will be satisfied with the Products You have ordered. As a result, and without prejudice to Your rights under paragraphs 8 and 12, if You are not satisfied that the Products have produced any of the specified results, We will refund the price You have paid for the Products provided that:            <br>13.1.1 You use the Products fully in accordance with Our instructions (either as set out on the Web Site and/or sent with the Products);            <br>13.1.2 You have requested a cancellation within the designated Trial Period;            <br>13.1.3 You provide Us with any and all information We ask for on the Web Site in order to qualify for a refund;            <br>13.1.4 You return the Product to Us (for non-meditational products) at Your expense to Our address which We will provide when You apply for a refund.            <br>13.2 To claim Your refund under this guarantee, please call us Toll-Free 1-888-221-2554 | Int’l 1-646-688-0457. Any claim must be submitted within 15 calendar days of Your claim of the free trial of the Products. By requesting a cancellation You warrant that You have used the Product as directed by Our instructions and for the minimum period.            <br>13.3 Please be aware that the Product works differently for different users. Differences in metabolism and lifestyle can affect the time required to achieve results. You may not experience immediate results.            <br>13.4 If You fail to comply with the conditions at 13.1 and the procedure outlined at 13.2 above We will not be obliged to refund Your purchase. If We refuse to refund Your purchase We will, at Your cost, return any unused Product to You providing that You clearly request it when speaking with one of our customer representatives.       </p>        <p>            <strong>14. Data Protection</strong>            14.1 When You use Our Web Site, You will be asked to provide certain personal information such as Your contact details, credit/debit cards or other payment details. We will store the data You provide to Us on computers or otherwise. Data will be held in the US where the Web Site is hosted. The purposes for which Your personal data will be processed are set out below. Please indicate Your consent to the processing of Your personal data for these purposes by ticking the relevant box at the end of these Terms.            <br>14.2 We will comply with the requirements of all data protection legislation in force. In particular, You may request a copy of any personal data We hold about You upon written application. Please note that We reserve the right to charge the current statutory fee for providing You with such information.            <br>14.3 We will process Your personal data in an ethical manner. It will be used for the following purposes:            <br>14.3.1 to process Your order;            <br>14.3.2 where applicable, to administer Your membership of the Web Site;            <br>14.3.3 to administer Our Web Site services which may involve sharing information with Our services providers;            <br>14.3.4 to administer Our business;            <br>14.3.5 for assessment and analysis (e.g. market, customer, product analysis) to enable Us to review, develop and improve the services which We offer and to enable Us to provide You with relevant information through Our marketing information;            <br>14.3.6 to notify You by email or telephone of any Products that We think may be of interest to You unless You inform Us that You do not wish to receive such information.            <br>14.4 We may also disclose Your information to anyone to whom We transfer or may transfer Our business and/or Our rights and duties under the Contract with You or to the police or any other regulatory or government authority where We are legally required to do so.            <br>14.5 We may share Our database(s) of customers with selected third parties.            <br>14.6 If You do not wish Us to notify You by post of any additional products or services that We think may be of interest to You, please call us.           <br>14.7 We try to ensure that all data we hold about our customers is up to date and correct. Therefore, if any of your personal details change, please let Us know by calling us. When ordering online, We will provide a clear process for You to correct any input errors.     </p>        <p>            <strong>15. Liability</strong>            15.1 We shall have no Liability to You for any loss of profit, business, revenue or income, loss of anticipated savings, lost data, damage to goodwill, business interruption, economic and/or other loss which, at the time You entered in to this Contract was not a reasonably foreseeable consequence of Us breaching these terms and conditions, for example, if You and/or We could not have contemplated such losses before or when we entered into a Contract.            <br>15.2 Nothing in these Terms shall limit or exclude Our Liability for death or personal injury due to Our negligence, fraud and/or any of Your statutory rights which may not be excluded or limited by law due to You acting as a consumer and/or due to any applicable law. Any provision which would be void under any consumer protection legislation or other legislation shall, to that extent, have no force or effect.            <br>15.3 We do not guarantee that the Web Site will be compatible with Your PC and We accept no Liability for any corruption and/or loss of data held on Your PC, or any Liability for any other loss or damage of any kind caused to Your PC resulting from use of the Web Site.        </p>        <p>            <strong>16. General</strong>            16.1 No waiver by Us of any breach of any Contract by You and/or the failure by Us to exercise any rights or remedies to which We are entitled shall be considered as a waiver of any subsequent breach of the same provision or other provision or of Our rights or remedies and shall not relieve You from compliance with such obligations.            <br>16.2 If any provision of these Terms is held by any competent authority to be invalid or unenforceable in whole or in part the validity of the other provisions of these terms and conditions and the remainder of the affected provision shall be unaffected and shall remain in full force and effect.            <br>16.3 We shall have no Liability to You for any delay in performance to the extent that such delay is due to any event outside Our reasonable control including acts of God, denial of service attacks, internet disruption, non-performance by suppliers or subcontractors, war, flood, fire, labor disputes, sub-contractor delays, strikes, lock outs, riots, civil commotion, malicious damage, explosion, governmental action and any other similar events. If We are affected by any such event then time for performance shall be extended for a period equal to the period that such event or events delayed such performance.            <br>16.4 All third party rights are excluded and no third party shall have any right to enforce a Contract. Any rights of a third party to enforce this Contract may be varied and/or extinguished by agreement between the parties.            <br>16.5 Notwithstanding Your rights set out above, if You are unhappy with any aspects of the Services and/or Products that We have provided to You or have any queries or comments regarding these, please contact Us by calling 1-646-688-0457.       </p>        <p>            <strong>17. Legal Disclaimer</strong>            Statements made by Company have not been evaluated by the food and drug administration. The FDA does not evaluate or test herbs. These products are not intended to diagnose, treat, cure or prevent any illness or disease. Consult with your physician for diagnosis or treatment. Use herbs as per instructions and always watch for any allergic reactions.            <br>The information presented on this site is not presented with the intention of diagnosing any disease or condition or prescribing any treatment. It is offered as information only, for use in the maintenance and promotion of good health in cooperation with a licensed medical practitioner.            <br>In the event that any individual should use the information presented on this website without a licensed medical practitioner`s approval, that individual will be diagnosing for him or herself.            <br>No responsibility is assumed by the author, publisher or distributors of this information should the information be used in place of a licensed medical practitioner`s services. No guarantees of any kind are made for the performance or effectiveness of the preparations mentioned on this website. Furthermore, this information is based solely on the traditional and historic use of a given herb, or on clinical trials that are generally not recognized by any US government agency or medical organization.            <br>This information has not been evaluated by the US Food and Drug Administration, nor has it gone through the rigorous double-blind studies required before a particular product can be deemed truly beneficial or potentially dangerous and prescribed in the treatment of any condition or disease.            <br><strong>Herbal Safety Guidelines</strong>            Before using an herb you are unfamiliar with, find out its medicinal properties. Research it thoroughly and/or consult with an appropriately qualified practitioner or expert. If you are taking prescription drugs, or have a medical condition check with an appropriately qualified practitioner before using herbs medicinally. Herbs have shown overwhelming evidence that they work. Just because a small amount works well does NOT mean that more is better. As individuals we all have different constitutions, sensitivities, allergic reactions and possible health conditions. The following are merely guidelines. They include herbs offered on our websites. This list does not help with administering information on possible interactions and contraindications with prescription medicine. This needs to be discussed with your physician.            <br>Should I check with my doctor or healthcare provider before using a supplement?            <br>This is a good idea, especially for certain population groups. Dietary supplements may not be risk-free under certain circumstances. If you are pregnant, nursing a baby, or have a chronic medical condition, such as, diabetes, hypertension or heart disease, be sure to consult your doctor or pharmacist before purchasing or taking any supplement. While vitamin and mineral supplements are widely used and generally considered safe, you may wish to check with your doctor or pharmacist before taking these or any other dietary supplements. If you plan to use a dietary supplement in place of drugs or in combination with any drug, tell your health care provider first. Many supplements contain active ingredients that have strong biological effects and their safety is not always assured in all users. If you have certain health conditions and take these products, you may be placing yourself at risk.            <br>Some supplements may interact with prescription and over-the-counter medicines.            <br>Taking a combination of supplements or using these products together with medications (whether prescription or OTC drugs) could under certain circumstances produce adverse effects. Be alert to advisories about these products, whether taken alone or in combination. For example: Coumadin (a prescription medicine), ginkgo biloba (an herbal supplement), aspirin (an OTC drug) and vitamin E (a vitamin supplement) can each thin the blood, and taking any of these products together can increase the potential for internal bleeding.            <br>Some supplements can have unwanted effects during surgery.            <br>It is important to fully inform your doctor about the vitamins, minerals, herbals or any other supplements you are taking, especially before elective surgery. You may be asked to stop taking these products at least 2-3 weeks ahead of the procedure to avoid potentially dangerous supplement/drug interactions -- such as changes in heart rate, blood pressure and increased bleeding - that could adversely affect the outcome of your surgery.            <br>Not to be used during pregnancy, or if you are nursing:            <br>Alkanet, Aloe, Angelica, Anise, Anise Star, Arnica, Ashwaganda, Barley Grass, Barberry, Basil, Bitter Melon, Black Cohosh, Bladderwrack, Blessed Thistle, Blood Root, Blue Cohosh, Blue Flag, Blue Vervain, Borage, Buckthorn, California Poppy, Cascara Sagrada, Catnip, Celandine, Celery, Chervil, Cinnamon, Club Moss, Comfrey, Coltsfoot, Cubeb, Dong Quai, Elecampane, Ephedra, False Unicorn, Fenugreek, Feverfew, Ginger, Golden Seal, Gravel, Guarana, Gymnema, Horehound, Horsetail, Hyssop, Juniper, Lemongrass, Licorice, Lobelia, Lovage, Lungwort, Mace, Motherwort, Mugwort, Muira Puama, Myrrh, Neem, Oregon Grape, Osha, Parsley, Pennyroyal, Pleurisy, Prickly Ash, Red Clover, Rhodiola, Rosemary, Rue, Sage, Sassafras, Sarsaparilla, Senna, Shepherds Purse, Spikenard, Turkey Rhubarb, Turmeric, Uva Ursi, Vitex, Watercress, White Sage, Wormwood, Yarrow            <br>Not for persons with history of kidney stones, liver disorders, renal dysfunction or inflammation.             <br>Cubeb, Essiac, Horsetail, Hydrangea, Juniper Berries, Kava Kava, Parsley Root, Pennyroyal, Sheep Sorrel, Shepherds Purse, Suma, Sumac, Uva Ursi, Yellowdock, Yohimbe            <br>Not recommended for person currently taking blood thinning medications:            <br>Alfalfa, Angelica, Cramp Bark, Cubeb, Dong Quai, Ginkgo, Meadowsweet, Red Clover, Sarsaparilla, Yohimbe            <br>Not for persons with stomach inflammation/ulcers serious digestion and/or liver problems. May cause gastrointestinal upset:             <br>Black Haw, Blue Flag, Chaparral, Club Moss, Crampbark, Devils Claw, Eucalyptus, Elecampane, Essiac, Gentian, Ginger, Licorice, Lobelia, Parsley Root, Pleurisy, Pygeum, Solomans Seal, Tribulus, Turmeric, Yohimbe            <br>Not for long-term use:            <br>Bilberry Leaf, Black Walnut, Blessed thistle, Borage, Cascara Sagrada, Comfrey, Coltsfoot, Chaparral, Elecampane, Ephedra, Flax, Horsetail, Gentian, Goldenseal, Guarana, Juniper berries, Licorice, Lobelia, Lungwort, Mullein, Nettle Root, Rhubarb, Sage, Sassafras, Sarsaparilla, Senna, Sheep Sorrel, Wild Cherry, Wormwood, Uva Ursi, Yohimbe            <br>Seek advice from a health practitioner before use if you have/may have had kidney or liver disease. Discontinue use if nausea, fever, fatigue or jaundice (dark urine, yellow discoloration of eyes) should occur        </p>        <p>            <strong>18. Suggested Use of Pure Colon Detox supplement</strong>            Each bottle contains 60 capsules, which constitute a one month’s supply. Suggested use: take 2 capsules per day, preferably after lunch. Take each capsule with a glass of water.</p>                                    </div>
+                    </div>
+    </div>
+    <div class="modal-foot">
+        <button title="Close (Esc)" type="button" class="mfp-close-2"><span>Close</span></button>
+    </div>
+</div><div class="google-analytics"><!-- Google Code for Remarketing Tag 
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 965487930;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/965487930/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript> --></div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+
+
+
+
+
+.fpg-wrapper {
+width: 100%;
+padding-bottom: 10px;
+}
+
+
+
+.fpg-page {
+}
+
+
+
+ul.fpg-row {
+height: 63px;
+<!--padding-left: 97px;-->
+position: relative;
+left: -12px;
+padding-bottom: 15px;
+}
+
+ul.fpg-row.fpg-last-row {
+//padding-bottom: 0px;
+}
+
+
+
+li.fpg-item {
+height: 65px;
+width: 100%;
+}
+
+
+
+li.fpg-item.fpg-first-col {
+width: 95px;
+margin-left: -95px;
+}
+
+li.fpg-item.fpg-last-col {
+width: 0%
+}
+
+
+
+.fpg-item-wrapper {
+height: 65px;
+width: 95px;
+
+border-top: solid 1px #525252;
+border-bottom: solid 1px #000000;
+border-right: solid 1px #000000;
+border-left: solid 1px #525252;
+
+padding: 0px;
+}
+
+img.fpg-image {
+height: 65px;
+width: 95px;
+
+}
+
+
+
+.fpg-text {
+width: 167px;
+height: 61px;
+position: absolute;
+left: 115px;;
+top: 0;
+background-color: #FFFFFF;
+border-top: solid 0px #000000;
+border-bottom: solid 0px #000000;
+border-right: solid 0px #000000;
+border-left: solid 0px #;
+}
+
+
+
+h3.fpg-title
+{
+  position: relative;
+  font-size: 10pt;
+  line-height: 1.5em;
+  padding-left: 3px;
+  font-weight: normal;
+  color: #16387C;
+}
+
+h3.fpg-title:hover
+{
+  text-decoration: underline;
+}
+
+p.fpg-excerpt, p.fpg-excerpt a:link, p.fpg-excerpt a:visited, p.fpg-excerpt a:active {
+color: #FFFFFF;
+font-family: Arial, Veranda, sans-serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 10px;
+}
+
+
+p.fpg-author, p.fpg-author a:link, p.fpg-author a:visited, p.fpg-author a:active {
+color: #FFFFFF;
+font-family: Arial, Veranda, sans-serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+font-size: 8px;
+line-height: 8px;
+}
+
+
+p.fpg-date, p.fpg-date a:link, p.fpg-date a:visited, p.fpg-date a:active {
+color: #FFFFFF;
+font-family: Arial, Veranda, sans-serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+font-size: 8px;
+line-height: 8px;
+float: left;
+}
+
+
+.fpg-arrow-left, 
+.fpg-arrow-right {
+
+}
+
+.fpg-arrow-pip {
+width: 30px;
+
+}
+
+ul.fpg-row li.fpg-item .fpg-item-wrapper a 
+{
+float: left;
+}
+
+
+

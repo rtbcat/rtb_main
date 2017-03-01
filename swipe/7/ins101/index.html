@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html data-placeholder-live="false">
+<head>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b067134aff","applicationID":"36413647,544012","transactionName":"cQleFUpcDQlXRU5SDFwSVQ9MHAgLQQZRAA==","queueTime":0,"applicationTime":71,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ZxlZnJ/1MNcMcKJNBziX3OF1c8GzpDRRQdAYuEIIqLxA+RJVnpsusJHJ5DHC25bQrFcy5N1LfjOH1L57Jk4u/w==">
+<meta content="noindex" name="robots">
+<!--[if IE]>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<![endif]-->
+<meta content="auto.everquote.com is a free service that helps consumers compare prices on auto insurance, home insurance, and life insurance plans as well as mortgage rates for new home purchase and loan refinancing in their area. Get quotes for auto, home and life insurance coverage, mortgage loans for purchase and refinancing and find your lowest rate today!" name="description">
+
+<title>Proven Advice To Save You Money On Your Car Insurance Bill</title>
+<link rel="stylesheet" media="screen" href="../evq/assets/static/content/styles-e030fe3ef2fff662cb2328a8242453d8a706b6792263401944e0c6ba466761ef.css">
+
+
+
+<!--[if lt IE 9]>
+<script src="http://cdn.everquote.com/evq/assets/static/html5shiv-9e07e1dd43f748c7160cd00552976c91b874e4cc86bfc912f4af1595acd45fc4.js"></script>
+<![endif]-->
+</head>
+<body class="empty-page-with-theme" data-controller="content">
+<div class="container">
+<div id="NavBar" style="display: none;">
+<a class="NavBarLink" href="../landings/index.html">HOME</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../stateinfo/index.html">STATE INSURANCE</a>
+<span class="NavBarSeparator">|</span>
+INSURANCE DEFINITIONS
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../tips/index.html">INSURANCE TIPS</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../faq/index.html">FAQ</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../privacy/index.html">PRIVACY POLICY</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../feedbacks/index.html">CONTACT US</a>
+</div>
+
+<style>
+  #MainMiddle {
+      width: 100%;
+  }
+  
+  #zipwindow {
+      background-image: url(../evq/assets/static/common/zipwindow-45e3ce3e269f646201b9977c59ea32c3b922ee0c87568d09fa923d120a9e0c79.jpg);
+      float: right;
+      height: 101px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      position: relative;
+      width: 296px;
+  }
+  
+  #landing_zip_code {
+      border-style: none;
+      font-size: 12px;
+      font-weight: bold;
+      left: 17px;
+      position: relative;
+      top: 55px;
+      width: 100px;
+  }
+  
+  #minizip_headline {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 6px 10px;
+      position: absolute;
+  }
+  
+  #minisubmit {
+      height: 33px;
+      left: 135px;
+      position: absolute;
+      top: 53px;
+      width: 149px;
+  }
+</style>
+<div id="zipwindow">
+<div id="minizip_headline">
+Get Auto Insurance Quotes
+</div>
+<form data-form-type="landing" data-form-popunder="true" data-popunder-timeout="1000" class="new_landing" id="new_landing" action="/landings" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"><input type="hidden" name="authenticity_token" value="Yv7cXtRKDoPrWAlkPXymskLs/W2YoK7o3OQx8nsPrRNFHpeX1SQQ5HbhTxj4n6e+D868SPZP5Ioa4JcxH0krUA=="><input name="landing_form_check" type="hidden" value="true">
+<input value="8000" maxlength="5" tabindex="1" size="5" type="text" name="landing[zip_code]" id="landing_zip_code">
+<input type="hidden" name="mini_zip_submit" id="mini_zip_submit" value="true">
+<input id="minisubmit" src="../evq/assets/static/common/nothing-04a99a6e3d7afd2bebec2715e42a27de703f86646703a62938930eca1a38f80d.png" tabindex="2" type="image" value="Submit">
+</form></div>
+
+<h1>Auto Insurance Definitions</h1>
+<ul>
+<li><a href="#0">Liability Coverage</a></li>
+<li><a href="#1">Collision Coverage</a></li>
+<li><a href="#2">Comprehensive Coverage</a></li>
+<li><a href="#3">Personal Injury Protection (PIP)</a></li>
+<li><a href="#4">Medical Coverage</a></li>
+<li><a href="#5">Uninsured/Underinsured Motorist Coverage</a></li>
+<li><a href="#6">Gap Coverage</a></li>
+<li><a href="#7">Rental Reimbursement Coverage</a></li>
+<li><a href="#8">Towing and Roadside Assistance</a></li>
+<li><a href="#9">No Fault Auto Insurance</a></li>
+<li><a href="#10">Pay-As-You-Drive Auto Insurance</a></li>
+<li><a href="#11">SR-22 Filing</a></li>
+</ul>
+<a name="0"></a>
+<h3>Liability Coverage</h3>
+<p></p><p>Liability coverage provides an insured driver protection for bodily injury or property damage for which they are deemed responsible. An example of property damage would be where an insured driver runs over a neighbor's mailbox. In this case, the liability coverage would pay for the damage to the mailbox. An example of bodily injury would be where an insured driver causes physical harm to a third party and the driver is deemed responsible for the injury. 49 of 50 states have requirements for a minimum level of liability coverage and penalize drivers who are not in compliance. </p><p></p>
+<a name="1"></a>
+<h3>Collision Coverage</h3>
+<p></p><p>Collision coverage covers loss that occurs when the insured auto strikes another object or vehicle in the event of an accident. This includes all vehicles, as well as objects such as telephone poles, guardrails or lampposts. Collision coverage is not required by the state, unlike Liability insurance, but is highly recommended for most drivers. If a car is leased or financed, the lender or lessor will likely require collision coverage. An exception to this recommendation is if you have an older car, and the cost of repairing or replacing it would cost more than the car is worth. Collision coverage is subject to a deductible. </p><p></p>
+<a name="2"></a>
+<h3>Comprehensive Coverage</h3>
+<p></p><p>Comprehensive coverage covers losses in the case of theft, natural disaster or any other damage to your vehicle not caused by collision. Comprehensive coverage is not required by the state, unlike Liability insurance, but is highly recommended for most drivers. If a car is leased or financed, the lender or lessor will likely require comprehensive coverage. An exception to this recommendation is if you have an older car, and the cost of repairing or replacing it would cost more than the car is worth. Comprehensive coverage is subject to a deductible. </p><p></p>
+<a name="3"></a>
+<h3>Personal Injury Protection (PIP)</h3>
+<p></p><p>Personal Injury Protection (PIP) coverage covers medical expenses, and, in some cases, lost wages and other damages for the policyholder and any passengers injured in the vehicle as a result of an accident. People with good medical and disability policies may not need the maximum PIP coverage and may elect to purchase the minimum required by the state. Some states allow drivers to waive PIP coverage entirely. </p><p></p>
+<a name="4"></a>
+<h3>Medical Coverage</h3>
+<p></p><p>Medical coverage is included as part of Personal Injury Protection (PIP) and covers costs of medical expenses, hospital visits and health-related costs for the policyholder and any passengers in the vehicle that result in the event of an accident. People with good medical and disability policies may elect to purchase the minimum required amount of medical coverage by the state. Some states allow drivers to waive medical coverage entirely.</p><p></p>
+<a name="5"></a>
+<h3>Uninsured/Underinsured Motorist Coverage</h3>
+<p></p><p>Uninsured/Underinsured Motorist Coverage is designed to provide protection for the insured if he/she is involved in an accident in which an uninsured driver is at fault. This includes drivers who do not carry insurance, drivers whose insurance does not meet the state's minimum financial responsibility laws, drivers whose insurance companies are insolvent, and hit-and-run drivers who cannot be identified. In these cases, the insurance company would pay the insured medical bills, then would try to recoup expenses from the at fault party. This coverage is very important, yet often overlooked. It is estimated that 1 out of 3 drivers don't carry insurance in some areas, and this number goes up during a recession. 21 states currently require UM/UIM coverage, and these limits are usually the same as the liability limits. In states that do not require UM/UIM coverage, insurance companies are often required to issue such coverage unless rejected explicitly in writing. </p><p></p>
+<a name="6"></a>
+<h3>Gap Coverage</h3>
+<p></p><p>Gap coverage is insurance purchased for a new vehicle that will pay the difference between the actual value of the vehicle and the amount left on the car loan if the vehicle is totaled. The value of a car sharply declines immediately after purchase, which means there is a period of time in which the amount owed on the car loan is greater than the value of the car. This is called upside-down or negative equity. If the vehicle is totaled during this time, the owner could still owe thousands of dollars more on the loan than the reimbursable value of the car. There are cases where Gap insurance may not always pay off the full loan value and the driver may be left with some payments. This could be caused by unpaid delinquent payments due at the time of loss, payment deferrals or extensions (skips), refinancing of the vehicle after purchasing the policy or late fees and other administrative fees. It is important for a consumer to be aware that they may still owe payment even though they purchased Gap insurance. </p><p></p>
+<a name="7"></a>
+<h3>Rental Reimbursement Coverage</h3>
+<p></p><p>Rental Reimbursement coverage covers the cost of a rental car when your vehicle is being repaired as the result of a covered claim, or if it is stolen. This coverage will reimburse you for transportation expenses up to the limits specified in the policy. This coverage will not pay for a rental car if your car breaks down or is in the shop for regular maintenance. Rental Reimbursement insurance is recommended for drivers who absolutely need access to transportation at their convenience. It is not recommended for drivers who have access to a backup vehicle or can wait for repairs to be finished. It is important for a driver to discuss their needs with their agent before deciding whether or not to purchase Rental Reimbursement coverage.</p><p></p>
+<a name="8"></a>
+<h3>Towing and Roadside Assistance</h3>
+<p></p><p>Towing and roadside assistance coverage pays the costs of services due to breakdowns. This would pay for a driver to have their car towed if it gets stuck as well as having it towed to the nearest point of service, including the costs for services provided to get the car running again. These services could include tire changes, gasoline delivery, and oil or parts changes. The coverage only reimburses the costs of labor, not the costs for parts. The coverage is usually subject to a total specified limit on costs covered, depending on where you purchase insurance. Towing and roadside assistance is recommended for drivers who do not already have a membership to a comparable roadside assistance company, which provides similar services. It is important to discuss the options with your insurance agent to decide if Towing and roadside assistance coverage is right for you.  </p><p></p>
+<a name="9"></a>
+<h3>No Fault Auto Insurance</h3>
+<p></p><p>No-Fault auto insurance is a term used to describe a state's auto insurance program that allows drivers to recover losses from their insurance company, regardless of who was at fault for an accident. The purpose of no-fault insurance is to attempt to lower premium costs by avoiding expensive litigation over causes of accidents, while providing quick payments for injuries. With no-fault insurance, each insurance company pays the damages of its own policyholders, regardless of who was at fault for the accident. Fault is determined, however, and the driver-at-fault's insurance company will charge that party a higher insurance premium as they are now higher risk. In no-fault states, motorists can still sue each other, but there's a higher threshold that injured parties must reach before they sue, the injury must be very severe or costly. The current states with no-fault insurance laws are Florida, Hawaii, Kansas, Kentucky, Massachusetts, Michigan, Minnesota, New Jersey, New York, North Dakota, Pennsylvania and Utah. </p><p></p>
+<a name="10"></a>
+<h3>Pay-As-You-Drive Auto Insurance</h3>
+<p></p><p>Pay-as-you-drive auto insurance, also called usage based insurance, is a type of auto insurance where the price is dependent on the number of miles driven. For many, this is a cost-effective alternative because the less they drive; the more they save vs. a standard policy. To participate, you will be required to either report your odometer readings or install a GPS or wireless monitoring system in your car. If a policyholder does not drive a lot or plans on cutting down the amount of driving they do, pay-as-you-drive policies can be a great cost-cutting alternative.</p><p></p>
+<a name="11"></a>
+<h3>SR-22 Filing</h3>
+<p></p><p>An SR-22 is a form filed by your insurance company to the state DMV as proof that you've purchased liability insurance to protect others in case of an accident while driving. The SR-22 filing is often required to reinstate someone's driving privileges following an uninsured car accident, DUI or other serious traffic-related offense. If a driver wants to reinstate their license but does not own a vehicle, the state may require the driver to provide proof of a non-owner SR-22 policy. If the SR-22 expires or is cancelled, the insurance company is required to issue an SR-26 form, certifying the cancellation of the policy. </p><p></p>
+
+</div>
+
+
+
+
+
+<div class="Pixelsaurus">
+<input type="hidden" name="pixel_path" id="pixel_path" value="/pixels?current_page=Landing&amp;previous_page=&amp;zip_code=">
+<iframe id="pixel_frame" src="" style="height:0;width:0;visibility:hidden;"></iframe>
+</div>
+<div data-ultrawave-app-name="lynx" data-ultrawave-endpoint="https://ultrawave.everquote.com/prod/records" data-ultrawave-stream-name="ultrawave-prod" data-ultrawave-token="53915870dfe50134c4060a8944010ec6" id="ultrawave">
+<script src="../evq/assets/static/ultrawave-b2859f1d622aa08556438fbc0aea9ee56b19790f8e4765c6479c0afdbb622c9e.js"></script>
+</div>
+
+
+
+
+</body>
+</html>

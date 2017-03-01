@@ -1,0 +1,294 @@
+/*
+* Adapted from Skeleton V1.2, Copyright 2011, Dave Gamache, www.getskeleton.com
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+/* #Basic Styles
+================================================== */
+	body {
+		margin:0px;
+		padding:0px;
+		background: #fff;
+		font: 1em Georgia, 'Times New Roman', Times, serif;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+ }
+ .headline {
+	 font-size:2.5em;
+ }
+ .subhead {
+	 font-size:1.5em;
+ }
+
+.dropshadow { text-shadow: 2px 4px 3px rgba(0,0,0,0.2);}
+
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		}
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	
+	p { margin: 0 0 20px 0; }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px;  }
+	p.small { font-size: 80%; line-height: 27px;  }
+	
+	.noIndent { text-indent:0; }
+
+	em { font-style: italic; }
+	strong { font-weight: bold; }
+	small { font-size: 80%; }
+
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+	.deck { padding:0 8%; font-size:18px; font-family:Georgia, "Times New Roman", Times, serif;}
+
+
+	/* COLORS */
+	.red {color: #A4303A;}
+	.brightRed {color: red;}
+	.green {color: #05593C;}
+	.tan {color: #C4B596;}
+	.blue {color: #092c90;}
+	.brightBlue {color: blue;}
+	.grayBlue{color:#124558;}
+	.darkRed{color:#C00;}
+
+	/* background colors */
+	.blueFadeToWhite { background:#FFF url(../images/515_bg.png) repeat-x; }
+
+	/* #Links
+	================================================== */
+	a, a:visited { text-decoration: underline; outline: 0; }
+	a:hover, a:focus { color:#06F; }
+	p a, p a:visited { line-height: inherit; }
+
+	/* LISTS */
+	ul {margin: 10px 25px 10px 55px; padding: 0px;}
+	ol {margin: 10px 25px 10px 55px; padding: 0px;}
+	li {margin: 0px 0px 16px 0px;}
+	
+	ul.check-green li {list-style: none; background: url(../images/check-green.png) top left no-repeat; padding-left: 40px; min-height: 27px; padding-top: 6px;}
+	ul.arrow-red li {list-style: none; background: url(../images/arrow-red.png) no-repeat; background-position:0% 10%; padding-left: 40px; min-height: 27px; padding-top: 6px;}
+	
+
+
+/* #Images
+================================================== */
+	img { max-width: 100%; height: auto; }
+
+/* #Misc
+================================================== */
+	.remove-bottom { margin-bottom: 0 !important; }
+	.half-bottom { margin-bottom: 10px !important; }
+	.add-bottom { margin-bottom: 20px !important; }
+
+
+/* #Base
+================================================== */
+
+    .container { width: 650px; margin: 0 auto; padding: 15px 25px; border:#999 1px solid; background-color:#FFFFFF; }
+
+	.mobileRight { float:right; }
+	.mobileLeft { float:left; }
+	.mobileCenter { text-align:center; }
+	.mobileDisplay { display:none; }
+	.mobileHide {  }
+	
+	.linebreak { display:block; }
+
+	.video { position: relative; padding-bottom: 40%; height: 0; overflow: hidden; margin-left:25px;}
+	
+	h1 { font-size: 46px; line-height: 54px; margin-bottom: 14px;}
+	h2 { font-size: 35px; line-height: 40px; margin-bottom: 20px; }
+	h3 { font-size: 28px; line-height: 34px; margin-bottom: 20px; }
+	h4 { font-size: 21px; line-height: 30px; margin-bottom: 20px; }
+	h5 { font-size: 18px; line-height: 22px; margin-bottom: 20px; }
+	
+	.rightVideo { width:232px; float:right; }
+	.sidebar { background-color:#F60; color:#FFF; width:230px; float:right; padding:10px; margin:10px; font-size:.9em; }
+	.middlebar { background-color:#dee0ec; padding:15px; margin:30px 40px; font-size:1.1em; }
+	.middlebar p { line-height:130%; padding:0 35px; }
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .container { width: 700px; }
+        .linebreak { display:inline; }
+        .alpha.omega { margin-left: 0; margin-right: 0; }
+		
+		.video { position: relative; padding-bottom: 48%; height: 0; overflow: hidden; }
+		.video iframe, .video object, .video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		
+		.sidebar { background-color:#F60; color:#FFF; width:230px; float:right; padding:10px; margin:10px; font-size:.9em; }
+		.middlebar { background-color:#dee0ec; padding:10px; margin:10px; font-size:1.1em; }
+		.middlebar p { line-height:130%; padding:0 35px; }
+    }
+
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 480px) {
+        .container { width: 90%; background:#FFF; }
+		.linebreak { display:inline; }
+		h1 { font-size: 30px; line-height: 40px; margin-bottom: 14px;}
+		
+		.topContainer { width:320px; max-width:90%; padding:15px; margin:auto; }
+		
+		.topImage { display:none; }
+		
+		.mobileRight { float:none; }
+		.mobileLeft { float:none; }
+		.mobileCenter { text-align:center; }
+		
+		.video { position: relative; padding-bottom: 56%; height: 0; overflow: hidden; }
+		.video iframe, .video object, .video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		
+		.sidebar { background-color:#F60; color:#FFF;float:none; width:90%; padding:10px; margin:10px; font-size:.9em; }
+		.middlebar { background-color:#dee0ec; padding:10px; margin:10px; font-size:1.1em; }
+		.middlebar p { line-height:130%; padding:0 5px; }
+		
+		.mobileDisplay {  display:block; }
+		.mobileHide { display:none; }
+    }
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .container { width: 90%; background:#FFF; }
+		.linebreak { display:inline; }
+		h1 { font-size: 35px; line-height: 40px; margin-bottom: 14px;}
+		
+		.topContainer { width:480px; max-width:90%; padding:15px; margin:auto; background-image: url(../images/515_bg.png); background-repeat: repeat-x; }
+		
+		.topImage { display:none; }
+		
+		.mobileRight { float:none; }
+		.mobileLeft { float:none; }
+		.mobileCenter { text-align:center; }
+		.video { position: relative; padding-bottom: 56%; height: 0; overflow: hidden; }
+	.video iframe, .video object, .video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+		
+		.sidebar { background-color:#F60; color:#FFF; width:90%; float:none; padding:10px; margin:10px; font-size:.9em; }
+		.middlebar { background-color:#dee0ec; padding:10px; margin:10px; font-size:1.1em; }
+		.middlebar p { line-height:130%; padding:0 5px; }
+		
+		.mobileDisplay {  display:block; }
+		.mobileHide { display:none; }
+		
+    }
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

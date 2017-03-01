@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xml:lang="en">
+ <head>
+        <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+        <meta charset="utf-8">
+		<title>Your rights to your free annual credit reports - Annual Credit Report.com.</title>
+		<meta name="description">
+		<meta name="format-detection" content="telephone=no">
+		<link type="text/css" href="/css/cssreset-min.css" rel="stylesheet">
+		
+
+
+		<link type="text/css" href="/css/main.css" rel="stylesheet">
+		<link type="text/css" href="/css/jquery.bxslider.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+		
+		<script type="text/javascript" src="/js/ui.js"></script>
+		
+
+		<script type="text/javascript" src="/js/functions.js"></script>
+       	<script type="text/javascript" src="/js/jQuery.browser.mobile.js"></script>
+        <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
+      
+      
+	</head>
+	<body>
+		<a name="top" id="top"></a>
+        <div class="skip"><a href="#mainContent">Skip to main content</a></div>
+		<div id="container">
+	        
+
+
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<header role="banner">
+   <h1 role="presentation"> <img src="/images/logo.png" alt="Annual Credit Report.com The only source for your free credit reports. Authorized by Federal law"></h1>
+    <div id="navBar" class="globalMenu" role="navigation" aria-label="main">
+    <ul>
+      <li><a href="/index.action">Home</a></li>
+      <li class="selected"><a href="/yourRights.action">All about credit reports</a></li>
+      <li class="requestCTA"><a href="/requestReport/landingPage.action">Request yours now!</a></li>
+      <li><a href="/reviewYourReport.action">What to look for</a></li>
+      <li><a href="/protectYourIdentity.action">Protect your identity</a></li>
+      <li><a href="/generalQuestions.action">Frequently asked questions</a></li>
+      <li><a href="/contactUs.action">Contact us</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>                
+</header>		
+			<div class="pageContent">
+				<div class="leftNav" role="navigation" aria-label="Your Rights">
+						<div class="pullmenu">
+ <ul data-menu-name="main"> 
+  <li class="selected"> <a href="/yourRights.action"> <img src="/images/navArrowSelected.png" alt="">&nbsp; Your rights to your credit reports </a> </li> 
+  <li> <a href="/whatIsCreditReport.action"> <img src="/images/navArrow.png" alt="">&nbsp; What is a credit report? </a> </li> 
+  <li> <a href="/gettingReports.action"> <img src="/images/navArrow.png" alt="">&nbsp; Getting your Credit Reports </a> </li> 
+  <li> <a href="/requestingReportsInSpecialSituations.action"> <img src="/images/navArrow.png" alt="">&nbsp; Requesting reports in special situations </a> </li> 
+ </ul>
+</div>
+				</div>
+            <div class="rightContent" role="main">
+            	<a id="mainContent" name="mainContent" tabindex="-1"></a>
+               <div>
+ <h1>All about credit reports</h1>
+ <h2>Your rights to your free annual credit reports</h2>
+ <p>Federal law requires each of the three nationwide consumer credit reporting companies - Equifax, Experian and TransUnion - to give you a free credit report every 12 months if you ask for it. They also make it easy to accomplish many credit-related tasks right from your computer.</p>
+ <ul class="imgRow">
+  <li><img alt="Equifax" src="/images/logos/equifax.png"></li> 
+  <li><img alt="Experian" src="/images/logos/experian.png"></li> 
+  <li><img alt="TransUnion" src="/images/logos/transunion.png"></li>
+ </ul>
+ <div class="clear">
+  &nbsp;
+ </div>
+ <p>The Federal Trade Commission and the Consumer Financial Protection Bureau sites contain extensive information about credit reports, your rights, and the laws that guarantee these rights. You can learn more about your free reports at the <a href="http://www.consumer.ftc.gov/articles/0155-free-credit-reports" target="_blank">Federal Trade Commission's website</a> and the <a href="http://www.consumerfinance.gov/askcfpb/search?selected_facets=category_exact:credit-reporting" target="_blank">Consumer Financial Protection Bureau's website.</a></p>
+</div>
+               <ul id="prevNextList"> 
+ <li><a class="disabledLink"><span class="prevLinkDisabled"></span>Previous<span class="visually-hidden">(disabled)</span></a></li> 
+ <li><a href="/whatIsCreditReport.action">Next<span class="nextLink"></span></a></li>
+</ul>
+			</div>
+			<div class="clear"></div>
+			</div>
+			</div>
+			
+
+
+
+<div class="footer" role="contentinfo">
+<div id="footerContentWrapper">
+  <div id="footerLeft">
+    <ul>
+      <li><a href="/aboutThisSite.action">About this site</a></li>
+      
+      <li><a href="/privacy.action">U.S. Privacy</a></li>
+      <li><a href="/security.action">U.S. Security</a></li>
+      
+      <li><a href="/termsOfUse.action">Terms of use</a></li>
+    </ul>
+    <div class="clear"></div>
+    <p id="copyright">Copyright &copy; 2017 Central Source, LLC</p>
+  </div>
+  <div id="footerRight">
+    <p>Secure Transaction: For your protection,  this website is secured with the highest level of SSL Certificate encryption.</p>
+    <div id="verisign">
+	<script language="javascript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+	</body>
+</html>

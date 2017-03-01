@@ -1,0 +1,39 @@
+<style>
+	body {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+	}
+	.form-control {
+		height: 29px;
+		padding: 6px px;
+		font-size: 14px;
+		line-height: 1;
+		vertical-align: middle;
+	}
+	label {
+		display: inline-block;
+		margin-bottom: 5px;
+		font-weight: normal;
+		width: 100%;
+		color: #000;
+	}
+	.label {
+		display: inline-block;
+		margin-bottom: 5px;
+		font-weight: bold;
+		color: #000;
+	}
+	.form-group {
+		margin-bottom: 5px;
+	}
+	select.input-sm {
+		height: 29px;
+		line-height: 1;
+	}
+	input {
+		margin: 2;
+	}
+	.container {
+		padding-right: 25px;
+	}
+</style>

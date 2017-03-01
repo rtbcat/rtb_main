@@ -1,0 +1,98 @@
+﻿body #main {
+    font-family: 'Libre Baskerville', Georgia, "Times New Roman", Times, serif;
+}
+
+body #main h1,
+body #main h2 {
+    font-family: 'Libre Baskerville', Georgia, "Times New Roman", Times, serif;
+}
+
+body .RAStyleHome h2,
+body #sidebar {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+body h1.article-headline {
+    display: none;
+}
+
+body #content {
+    font-size: 13px;
+}
+
+body .articleImage 
+{
+	display: none;
+}
+
+body .howitworks {
+    box-sizing: border-box;
+    background-color: #eef8fe;
+    padding: 16px 0;
+    font-size: 0;
+}
+
+body .hiw-copy {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 441px;
+    vertical-align: top;
+    padding: 0 4%;
+    font-size: 13px;
+}
+
+body .hiw-copy p {
+    margin: 0 0 1.375em;
+}
+
+body .hiw-copy .hiw-headline {
+    margin: 0 0 0.4em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+body .hiw-copy .hiw-subhead {
+    margin: 0 0 0.125em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+body .hiw-copy .hiw-subhead:nth-child(4) 
+{
+	margin-bottom: 1.375em;
+}
+
+body .hiw-sidebar {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 189px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+body .hiw-sidebar .hiw-cta {
+    background-color: #008cd2;
+    padding: 1em 1.25em;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-weight: 300;
+}
+
+body .hiw-sidebar .hiw-cta a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    line-height: 1.3;
+}
+
+body #content .hiw-sidebar .hiw-cta a {
+    color: #fff;
+}
+
+body #toolbar,
+body #content .cta_link {
+    font-family: Arial, Helvetica, sans-serif;
+}

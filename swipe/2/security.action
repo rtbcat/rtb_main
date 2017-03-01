@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xml:lang="en">
+ <head>
+        <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+        <meta charset="utf-8">
+		<title>About this site - Security - Annual Credit Report.com.</title>
+		<meta name="description">
+		<meta name="format-detection" content="telephone=no">
+		<link type="text/css" href="/css/cssreset-min.css" rel="stylesheet">
+		
+
+
+		<link type="text/css" href="/css/main.css" rel="stylesheet">
+		<link type="text/css" href="/css/jquery.bxslider.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.bxslider.js"></script>
+		
+		<script type="text/javascript" src="/js/ui.js"></script>
+		
+
+		<script type="text/javascript" src="/js/functions.js"></script>
+       	<script type="text/javascript" src="/js/jQuery.browser.mobile.js"></script>
+        <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
+      
+      
+	</head>
+	<body>
+		<a name="top" id="top"></a>
+        <div class="skip"><a href="#mainContent">Skip to main content</a></div>
+		<div id="container">
+	        
+
+
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<header role="banner">
+   <h1 role="presentation"> <img src="/images/logo.png" alt="Annual Credit Report.com The only source for your free credit reports. Authorized by Federal law"></h1>
+    <div id="navBar" class="globalMenu" role="navigation" aria-label="main">
+    <ul>
+      <li><a href="/index.action">Home</a></li>
+      <li><a href="/yourRights.action">All about credit reports</a></li>
+      <li class="requestCTA"><a href="/requestReport/landingPage.action">Request yours now!</a></li>
+      <li><a href="/reviewYourReport.action">What to look for</a></li>
+      <li><a href="/protectYourIdentity.action">Protect your identity</a></li>
+      <li><a href="/generalQuestions.action">Frequently asked questions</a></li>
+      <li class="selected"><a href="/contactUs.action">Contact us</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>                
+</header>		
+			<div class="pageContent">
+				<div class="leftNav" role="navigation" aria-label="Contact us">
+						<div class="pullmenu">
+ <ul data-menu-name="main"> 
+  <li> <a href="/contactUs.action"> <img src="/images/navArrow.png" alt="">&nbsp; Contact Us Form </a> </li> 
+  <li> <a href="/aboutThisSite.action"> <img src="/images/navArrow.png" alt="">&nbsp; About this site </a> </li> 
+  <li> <a href="/suspectPhishing.action"> <img src="/images/navArrow.png" alt="">&nbsp; Suspected phishing </a> </li> 
+  <li> <a href="/policies.action"> <img src="/images/navArrow.png" alt="">&nbsp; Policies </a> </li> 
+  <li class="selected"> <a href="/security.action"> <img src="/images/navArrowSelected.png" alt="">&nbsp; Security </a> </li> 
+  <li> <a href="/privacy.action"> <img src="/images/navArrow.png" alt="">&nbsp; Privacy </a> </li> 
+  <li> <a href="/termsOfUse.action"> <img src="/images/navArrow.png" alt="">&nbsp; Terms of use </a> </li> 
+ </ul>
+</div>
+				</div>
+            <div class="rightContent" role="main">
+            	<a id="mainContent" name="mainContent" tabindex="-1"></a>
+               <div>
+ <h1>About this site</h1>
+ <h2>United States Security</h2>
+ <p>We know how important it is for your online transactions to be secure. We safeguard the privacy of the information you give us when you fill out our forms online. We encrypt the information to protect it while you are filling out the form, and also when we send the information to any of the nationwide consumer credit reporting companies. We use physical, electronic, and procedural safeguards to protect your personal information.</p>
+</div>
+               <ul id="prevNextList"> 
+ <li><a href="/policies.action"><span class="prevLink"></span>Previous</a></li> 
+ <li><a href="/privacy.action">Next<span class="nextLink"></span></a></li>
+</ul>
+			</div>
+			<div class="clear"></div>
+			</div>
+			</div>
+			
+
+
+
+<div class="footer" role="contentinfo">
+<div id="footerContentWrapper">
+  <div id="footerLeft">
+    <ul>
+      <li><a href="/aboutThisSite.action">About this site</a></li>
+      
+      <li><a href="/privacy.action">U.S. Privacy</a></li>
+      <li><a href="/security.action">U.S. Security</a></li>
+      
+      <li><a href="/termsOfUse.action">Terms of use</a></li>
+    </ul>
+    <div class="clear"></div>
+    <p id="copyright">Copyright &copy; 2017 Central Source, LLC</p>
+  </div>
+  <div id="footerRight">
+    <p>Secure Transaction: For your protection,  this website is secured with the highest level of SSL Certificate encryption.</p>
+    <div id="verisign">
+	<script language="javascript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+	</body>
+</html>

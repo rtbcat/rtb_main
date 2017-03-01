@@ -1,0 +1,917 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <title>Page Not Found - CreditCards.com</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="Robots" content="ALL">
+    <meta name="revisit-after" content="10 days">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="author" content="CreditCards.com">
+    <meta name="robots" content="noodp">
+    <meta name="copyright" content="Copyright 2017 CreditCards.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="../css/css_1.css" rel="stylesheet" type="text/css">
+    <link href="../css/all_1.css" rel="stylesheet" type="text/css">	<!-- Adobe DTM header script -->
+	<script src="../js/satelliteLib-fcf71619842e307bd53e216ed8bffec25e01d628.js"></script>
+
+
+    <link href="../css/cc-home.css" rel="stylesheet">
+</head>
+
+<body>
+<a id="Page-Top"></a>
+<div id="header-block" class="navbar navbar-default navbar-fixed-top">
+<div class="container" id="top-logo-search">
+	<div class="row">
+		<div class="col-sm-8 col-md-8"><a href="/" class="logo-brand"><img src="logo.png" width="243" height="43" alt="CreditCards.com"></a></div>
+		<div class="col-sm-12 col-sm-offset-3 col-md-12 col-md-offset-3">
+							<a href="" class="header-search" data-toggle="modal" data-target="#myModal"><img src="search.png" width="26" height="25" alt="Search CreditCards.com"></a>
+						<a class="sign-up" href="https://my.creditcards.com?qls=MCC_NAVSIGNU.080315CRED" target="_blank">
+				<img src="signup.png" width="90" alt="Sign Up">
+			</a>
+			<a class="sign-in" href="https://my.creditcards.com/sign-in?qls=MCC_DNAVSGNI.080315CRED" target="_blank">
+				<img src="signin.png" width="90" alt="Sign In">
+			</a>
+		</div>
+		<div class="col-sm-1 col-md-1"></div>
+	</div>
+</div>
+
+<div class="navbar yamm navbar-main">
+<div class="container">
+<div class="navbar-header">
+	<button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+	<!--<a href="#" class="navbar-brand">Creditcards.com</a>-->
+	<div class="cc-res-logohldr"><a href="/" class="cc-res-logo"> </a></div>
+</div>
+<div id="navbar-collapse-1" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<!-- LOW RATES & FEES -->
+<li class="dropdown yamm-fw">
+	<a href="#" data-toggle="dropdown" class="dropdown-toggle">LOW RATES &amp; FEES</a>
+	<ul class="dropdown-menu">
+		<li>
+			<!-- Content container to add padding -->
+			<div class="yamm-content">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Low Rates</h4>
+							<li><a href="/balance-transfer.php">Balance Transfers </a></li>
+							<li><a href="/0-apr-credit-cards.php">0% APR</a></li>
+							<li><a href="/low-interest.php">Low Interest</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>No Fees</h4>
+							<li><a href="/no-annual-fee.php">No Annual Fee</a></li>
+							<li><a href="/no-foreign-transaction-fee.php">No Foreign Transaction Fee</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Tools</h4>
+							<li><a href="https://my.creditcards.com/?qls=MCC_LRFTPNAV.091515CRED" target="_blank">Get your free Credit Score</a></li>
+							<li><a href="/calculators/airlines-or-low-interest.php">Airlines or Low Interest Calculator</a></li>
+							<li><a href="/calculators/cash-back-or-low-interest.php">Cash Back or Low Interest Calculator</a></li>
+							<li><a href="/calculators/payoff.php">Payoff Calculator</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div class="nav-adunit-hldr">
+							<a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank"><img src="cardmatch_thumb_12829.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</li>
+<!-- TRAVEL & REWARDS -->
+<li class="dropdown yamm-fw sidebar">
+	<a href="#" data-toggle="dropdown" class="dropdown-toggle">TRAVEL &amp; REWARDS</a>
+	<ul class="dropdown-menu">
+		<li>
+			<div class="yamm-content">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Cards for Travel</h4>
+							<li><a href="/airline-miles.php">Travel &amp; Airlines</a></li>
+							<li><a href="/hotel-cards.php">Hotels</a></li>
+							<li><a href="/no-foreign-transaction-fee.php">No Foreign Transaction Fee</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Earn Rewards</h4>
+							<li><a href="/reward.php">Rewards</a></li>
+							<li><a href="/cash-back.php">Cash Back</a></li>
+							<li><a href="/points-rewards.php">Points</a></li>
+							<li><a href="/gas-cards.php">Gas Cards &amp; Auto Rewards</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Tools</h4>
+							<li><a target="_blank" href="https://walletup.creditcards.com/app?utm_source=ccrd&utm_medium=referral&utm_content=home_body&utm_campaign=walletup">Max Rewards with WalletUp&reg;</a></li>
+							<li><a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank">Better offers with CardMatch&#8482;</a></li>
+                            <li><a href="https://www.creditcards.com/mobile/wallet/">Pay with the Right Card with Wallet</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div class="nav-adunit-hldr">
+							<a href="https://walletup.creditcards.com/app?utm_source=ccrd&amp;utm_medium=referral&amp;utm_content=topnav-travel&amp;utm_campaign=walletup" target="_blank"><img src="wallet-up-thumb_12830.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</li>
+<!-- TOP OFFERS -->
+<li class="dropdown sidebar">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">TOP OFFERS</a>
+	<ul class="dropdown-menu">
+		<li>
+			<div class="yamm-content">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<li><a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank">Better Offers with CardMatch&#8482;</a></li>
+							<li><a href="/top-credit-cards.php">Top Offers for February 2017 </a></li>
+							<li><a href="/limited-time-offers.php">Limited Time Offers</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+							</li>
+<!-- CREDIT QUALITY -->
+<li class="dropdown yamm-fw sidebar">
+	<a href="#" data-toggle="dropdown" class="dropdown-toggle">CREDIT QUALITY</a>
+	<ul class="dropdown-menu">
+		<li>
+			<div class="yamm-content">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Credit Type</h4>
+							<li><a href="/excellent-credit.php">Excellent Credit</a></li>
+							<li><a href="/good-credit.php">Good Credit</a></li>
+							<li><a href="/fair-credit.php">Fair Credit</a></li>
+							<li><a href="/bad-credit.php">Bad Credit</a></li>
+							<li><a href="/no-credit-history.php">Limited or No Credit History</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Other Options</h4>
+							<li><a href="/prepaid.php">Prepaid &amp; Debit Cards</a></li>
+							<li><a href="/secured-credit-cards.php">Secured Credit Cards</a></li>
+							<li><a href="/personal-loans.php">Personal Loans</a></li>
+							<li><a href="/small-business-loans.php">Small Business Loans</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Tools</h4>
+							<li><a href="https://my.creditcards.com/?qls=MCC_CDQTPNAV.091515CRED" target="_blank">Get your free Credit Score</a></li>
+							<li><a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank">Offers Matched to your Credit</a></li>
+                            <li><a href="https://www.creditcards.com/mobile/score-report/">Your Credit Score &amp; Report on the Go</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+				        <div class="nav-adunit-hldr">
+				            <a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank"><img src="cardmatch_thumb_12829.png"></a>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</li>
+<!-- CARD TYPE -->
+<li class="dropdown yamm-fw sidebar"><a href="#" data-toggle="dropdown" class="dropdown-toggle">CARD TYPE</a>
+	<ul class="dropdown-menu">
+		<li>
+			<div class="yamm-content">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Search by Type of Card</h4>
+							<li><a href="/business.php">Cards for Business</a></li>
+							<li><a href="/college-students.php">Cards for Students</a></li>
+							<li><a href="/prepaid.php">Prepaid & Debit Cards</a></li>
+							<li><a href="/secured-credit-cards.php">Secured Credit Cards</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Search by Network or Bank</h4>
+							<li><a href="/Mastercard.php">MasterCard</a></li>
+							<li><a href="/Visa.php">Visa</a></li>
+							<li><a href="/American-Express.php">American Express</a></li>
+							<li><a href="/Discover.php">Discover</a></li>
+							<li><a href="/wells-fargo.php">Wells Fargo</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4 class="mobile-hide">&nbsp;</h4>
+							<li><a href="/Bank-of-America.php">Bank of America</a></li>
+							<li><a href="/Capital-One.php">Capital One</a></li>
+							<li><a href="/Citi.php">Citi</a></li>
+							<li><a href="/Chase.php">Chase</a></li>
+							<li><a href="/barclaycard.php">Barclaycard</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div class="nav-adunit-hldr">
+							<a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank"><img src="cardmatch_thumb_12829.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</li>
+<!-- NEWS & ADVICE -->
+<li class="dropdown yamm-fw sidebar"><a href="#" data-toggle="dropdown" class="dropdown-toggle">NEWS & ADVICE</a>
+	<ul class="dropdown-menu">
+		<li>
+			<div class="yamm-content">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>News Articles</h4>
+							<li><a href="/credit-card-news.php">Latest News</a></li>
+							<li><a href="/credit-card-news">News Archive</a></li>
+							<li><a href="/credit-card-news/help">Basics & Help</a></li>
+							<li><a href="/reviews">Credit Card Reviews</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Additional Resources</h4>
+							<li><a target="_blank" href="http://blogs.creditcards.com">Taking Charge&#8482; Blog</a></li>
+							<li><a target="_blank" href="http://video.creditcards.com/">Latest Videos</a></li>
+							<li><a href="/glossary">Glossary of Credit Card Terms</a></li>
+							<li><a href="/privacy-security-suite">PrivacyWise&#8482;</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Connect with us</h4>
+							<li><a href="/rss-feed-credit-card-news-headlines.php">Subscribe: RSS News Feeds</a></li>
+							<li><a href="/newsletter.php">Subscribe: email Newsletter</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div class="nav-adunit-hldr">
+							<a href="https://my.creditcards.com/?qls=MCC_GLBDDNAA.091115CRED" target="_blank">
+								<img class="hidden-sm" src="nav-dropdown-mycccom.png" alt="My Credit Cards">
+								<!-- for tablet landscape mode -->
+								<img class="hidden-xs hidden-md hidden-lg" src="nav-dropdown-mycccom-tab.png" alt="My Credit Cards">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</li>
+<!-- FREE INTERACTIVE TOOLS -->
+<li class="dropdown yamm-fw sidebar" id="link-remove">
+	<a href="#" data-toggle="dropdown" class="dropdown-toggle">FREE INTERACTIVE TOOLS</a>
+	<ul class="dropdown-menu">
+		<li>
+			<div class="yamm-content">
+				<div class="row">
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Tools</h4>
+							<li><a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank">Offers Matched for You</a></li>
+							<li><a target="_blank" href="https://walletup.creditcards.com/app?utm_source=ccrd&utm_medium=referral&utm_content=left_nav&utm_campaign=walletup">WalletUp&reg; Card Finder</a></li>
+							<li><a target="_blank" href="https://my.creditcards.com/?qls=MCC_GLBDPDWN.091115CRED">Get your free Credit Score</a></li>
+                            <li><a href="https://www.creditcards.com/mobile/">Mobile Apps</a></li>
+							<li><a href="/calculators">Calculators</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Card Offers</h4>
+							<li><a href="/top-credit-cards.php">Top Offers</a></li>
+							<li><a href="/best-credit-cards.php">Best Credit Cards</a></li>
+							<li><a href="/credit-card-comparison-tools.php">Credit Card Comparison Tools</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list-unstyled">
+							<h4>Guides</h4>
+							<li><a href="/privacy-security-suite">PrivacyWise&#8482;</a></li>
+							<li><a href="/glossary">Credit Card Terms Glossary</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<div class="nav-adunit-hldr">
+							<a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank"><img src="cardmatch_thumb_12829.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</li>
+	<li class="dropdown yamm-fw sidebar only-mobile">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color: #F39D48"><i class="fa fa-check"></i> MY.CREDITCARDS.COM</a>
+		<ul class="dropdown-menu">
+			<li>
+				<div class="yamm-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<ul class="list-unstyled">
+								<li><a href="https://my.creditcards.com/sign-in?qls=MCC_MOBHAMSI.080315CRED" target="_blank">Sign In</a></li>
+								<li><a href="https://my.creditcards.com?qls=MCC_MOBHAMSU.080315CRED" target="_blank">Sign Up</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Main Content -->
+<div class="other-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24"> <br>
+                <h1>Looking for something at CreditCards.com?</h1>
+                <p>The page you tried was not found. You may have used an outdated link or may have typed the address (URL) incorrectly. <br>
+                    However, you might find what you're looking for below:</p>
+                <br>
+            </div>
+            <div class="col-xs-18 col-sm-18 col-md-18">
+                <div class="row">
+                    <div class="col-xs-24 col-sm-12 col-md-6">
+                        <div class="panel panel-simple">
+                            <div class="panel-heading"><i class="fa fa-credit-card fa-lg" style="color:#156abd;"></i> Card Types</div>
+                            <div class="panel-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="/balance-transfer.php">Balance Transfer</a></li>
+                                    <li><a href="/cash-back.php">Cash Back</a></li>
+                                    <li><a href="/airline-miles.php">Travel & Airlines</a></li>
+                                    <li><a href="/no-annual-fee.php">No Annual Fee</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-sm-12 col-md-6">
+                        <div class="panel panel-simple">
+                            <div class="panel-heading"><i class="fa fa-tachometer fa-lg" style="color:#156abd;"></i> Credit Quality</div>
+                            <div class="panel-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="/excellent-credit.php">Excellent</a></li>
+                                    <li><a href="/good-credit.php">Good</a></li>
+                                    <li><a href="/fair-credit.php">Fair</a></li>
+                                    <li><a href="/bad-credit.php">Bad</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-sm-12 col-md-6">
+                        <div class="panel panel-simple">
+                            <div class="panel-heading"><i class="fa fa-thumbs-up fa-lg" style="color:#156abd;"></i> Cards Offers</div>
+                            <div class="panel-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="/top-credit-cards.php">Top Offers</a></li>
+                                    <li><a href="/limited-time-offers.php">Limited Time Offers</a></li>
+                                    <li><a href="/best-credit-cards.php">Best Credit Cards</a></li>
+                                    <li><a href="/reward.php">Rewards Cards</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-sm-12 col-md-6">
+                        <div class="panel panel-simple">
+                            <div class="panel-heading"><i class="fa fa-wrench fa-lg" style="color:#156abd;"></i> Tools</div>
+                            <div class="panel-body">
+                                <ul class="list-unstyled">
+                                    <li><a href="/credit-card-tools/">Browse more tools</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-24 col-sm-24 col-md-6">
+                <div class="panel panel-blue">
+                    <div class="panel-heading">We&apos;re Here to Help You</div>
+                    <div class="panel-body">
+                        <!-- ////////Content Goes Here////////// -->
+                        <div class="list-group"> <a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" class="list-group-item list-group-item-blue"> <i class="fa fa-angle-right fa-lg pull-right" style=" padding-top:5px;"></i>
+                                <div class="list-group-item-heading">Better Offers via CardMatch&#8482; </div>
+                                <p class="list-group-item-text">See offers matched with your credit profile.</p>
+                            </a> </div>
+                        <div class="list-group"> <a target="_blank" href="https://walletup.creditcards.com/app?utm_source=ccrd&utm_medium=referral&utm_content=home_about&utm_campaign=walletup" class="list-group-item list-group-item-blue"> <i class="fa fa-angle-right fa-lg pull-right" style=" padding-top:5px;"></i>
+                                <div class="list-group-item-heading">Max Rewards with WalletUp&reg; </div>
+                                <p class="list-group-item-text">Maximize your rewards, cash back, and points earnings.</p>
+                            </a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+<!-- End of #other-block -->
+<!-- End of Main Content -->
+
+<img src="../sb.php" border="0" width="1" height="1" style="display: none;">
+<!-- Site Footer Content Block-->
+<div class="footer-block">
+    <div class="container">
+
+        <div class="row row-border">
+            <div class="col-md-4">
+                <div class="footer-secure">
+                    <a href="/SSL-Security.php"><img src="404-footer-security-lock.png" width="132" height="50" class="img-responsive"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-site-links-mobile"> <span class="footer-title-link"><a href="/">Home</a></span>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy.php">Privacy Policy</a></li>
+                        <li><a href="/privacy.php">California Privacy Rights</a></li>
+                        <li><a href="/privacy.php#choices"><img src="ac-white.png" class="ad-choice-img" alt="Ad Choices Image"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-site-links"> <span class="footer-title-link"><a href="/">Home</a></span>
+                    <ul class="list-unstyled">
+                        <li><a href="/SSL-Security.php">Site Security</a></li>
+                        <li><a href="/privacy.php">Privacy Policy</a></li>
+                        <li><a href="/privacy.php">California Privacy Rights</a></li>
+                        <li><a href="/privacy.php#choices"><img src="ac-white.png" class="ad-choice-img" alt="Ad Choices Image"></a></li>
+                        <li><a href="/site-map.php">Site Map</a></li>
+                        <li><a href="/credit-card-news/credit-cards-faqs-applying-online-1268.php">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-site-links"> <span class="footer-title-link"><a href="/about-us.php">About Us</a></span>
+                    <ul class="list-unstyled">
+                        <li><a href="/about-us.php">Overview</a></li>
+                        <li><a href="/about-us/leadership-team.php">Leadership Team</a></li>
+                        <li><a href="/about-us/media-center.php">Media Center</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-site-links"> <span class="footer-title-link"><a href="/contact.php">Contact Us</a></span>
+                    <ul class="list-unstyled">
+                        <li><a href="/customer-support-department.php">Customer Support</a></li>
+                        <li><a href="http://www.bankratecreditcards.com" target="_blank">Partnership Opportunities</a></li>
+                        <li><a href="/business-development.php">Business Development</a></li>
+                        <li><a href="/public-relations.php">Media Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+        <div class="footer-site-links"> <span class="footer-title-link">Related Sites</span>
+                    <ul class="list-unstyled">
+                        <li><a target="_blank" href="https://my.creditcards.com/?qls=MCC_GLBLFTTL.091115CRED">My.CreditCards.com</a></li>
+                        <li><a href="http://blogs.creditcards.com/" target="_blank">Credit Card Blogs</a></li>
+                        <li><a href="https://walletup.creditcards.com/app?utm_source=ccrd&amp;utm_medium=referral&amp;utm_content=footer&amp;utm_campaign=walletup" target="_blank">WalletUp&reg;</a></li>
+	                    <li><a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank">CardMatch&#8482;</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+        <div class="footer-site-links"> <span class="footer-title-link">International Sites</span>
+                    <ul class="list-unstyled">
+                        <li><a href="http://www.tarjetasdecredito.com/" target="_blank">Tarjetas de Credito</a></li>
+                        <li><a href="http://uk.creditcards.com/" target="_blank">UK Credit Cards</a></li>
+                        <li><a href="http://canada.creditcards.com/" target="_blank">Canadian Credit Cards</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-border">
+            <div class="col-md-12">
+                <div class="footer-copyright">
+                    Copyright 2017 CreditCards.com. All Rights Reserved.<br>
+                    <a href="/terms.php">Terms of Use</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="footer-social-icons">
+                    <ul class="list-inline">
+                        <li>Stay connected with CreditCards.com</li>
+                        <li><a href="http://www.facebook.com/CreditCards.com" target="_blank"><img src="social_fb.png" width="32" height="32"></a></li>
+                        <li><a target="_blank" href="https://twitter.com/CreditCardsCom"><img src="social_tw.png" width="32" height="32"></a></li>
+                        <li><a target="_blank" href="http://www.youtube.com/creditcardstv"><img src="social_youtube.png" width="32" height="32"></a></li>
+                        <li><a target="_blank" href="https://plus.google.com/110595907088556510376?prsrc=3"><img src="social_google+.png" width="32" height="32"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-24">
+                <div class="footer-disclosure">
+                    <div class="disclosure-image"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Search Modal -->
+    <div class="modal-search fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-search-dialog modal-search-lg">
+        <div class="modal-search-content">
+            <div class="modal-search-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle" style="color:#fff;"></i></button>
+                <h4 class="modal-search-title" id="myModalLabel"><img src="logo.png" width="243" height="43" alt="CreditCards.com"></h4>
+            </div>
+            <div class="modal-search-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="search-input-hldr">
+                            <form class="form-inline ui-front" role="form" id="modal-search-form" action="/search.php">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" name="query" id="modal-search-text" placeholder="Search CreditCards.com ..." style="width:600px;">
+                                </div>
+                                <button type="submit" class="btn btn-success"><i class="
+                                fa fa-search fa-2x"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="panel panel-simple">
+                                <div class="panel-heading"><i class="fa fa-credit-card fa-lg" style="color:#156abd;"></i> Card Types</div>
+                                <div class="panel-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="/balance-transfer.php">Balance Transfer</a></li>
+                                        <li><a href="/cash-back.php">Cash Back</a></li>
+                                        <li><a href="/airline-miles.php">Travel & Airlines</a></li>
+                                        <li><a href="/no-annual-fee.php">No Annual Fee</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="panel panel-simple">
+                                <div class="panel-heading"><i class="fa fa-tachometer fa-lg" style="color:#156abd;"></i> Credit Quality</div>
+                                <div class="panel-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="/excellent-credit.php">Excellent</a></li>
+                                        <li><a href="/good-credit.php">Good</a></li>
+                                        <li><a href="/fair-credit.php">Fair</a></li>
+                                        <li><a href="/bad-credit.php">Bad</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="panel panel-simple">
+                                <div class="panel-heading"><i class="fa fa-thumbs-up fa-lg" style="color:#156abd;"></i> Card Offers</div>
+                                <div class="panel-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="/top-credit-cards.php">Top Offers</a></li>
+                                        <li><a href="/limited-time-offers.php">Limited Time Offers</a></li>
+                                        <li><a href="/best-credit-cards.php">Best Credit Cards</a></li>
+                                        <li><a href="/reward.php">Rewards Cards</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="panel panel-simple">
+                                <div class="panel-heading"><i class="fa fa-wrench fa-lg" style="color:#156abd;"></i> Tools</div>
+                                <div class="panel-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="https://app.creditcards.com/cardmatch/?aid=4e5c9998&bid=aeff6c16dec5a044&cid=1005" target="_blank">CardMatch&#8482;</a></li>
+                                        <li><a target="_blank" href="https://walletup.creditcards.com/app?utm_source=ccrd&utm_medium=referral&utm_content=left_nav&utm_campaign=walletup">WalletUp&reg; Card Finder</a></li>
+                                        <li><a href="https://my.creditcards.com/" target="_blank">Free Credit Score</a></li>
+                                        <li><a href="/credit-card-tools/">Browse more tools</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-search-footer">
+        </div>
+    </div>
+</div>
+
+
+<!-- Card Match Tooltip Modal -->
+<div class="modal-tooltip fade" id="myModalTooltip" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-tooltip-dialog modal-tooltip-sm">
+        <div class="modal-tooltip-content">
+            <div class="modal-tooltip-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle"></i></button>
+                <h4 class="modal-tooltip-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-tooltip-body">
+                <p><span class="green-text"><strong>CARDMATCH&#8482;</strong></span> is a free, secure service that <em><strong>will not</strong></em> affect your credit score. Simply provide your basic information, and view offers that match your credit profile within seconds.</p>
+
+            </div>
+        </div>
+        <div class="modal-tooltip-footer">
+        </div>
+    </div>
+</div>
+
+
+<!-- Advertiser Disclosure Modal -->
+<div class="modal-adverdis fade" id="myModalDisclosure" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-adverdis-dialog modal-adverdis-sm">
+        <div class="modal-adverdis-content">
+            <div class="modal-adverdis-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle"></i></button>
+                <h4 class="modal-adverdis-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-adverdis-body">
+
+                <div class="disclosure-popup-image"></div>
+
+            </div>
+        </div>
+        <div class="modal-adverdis-footer">
+        </div>
+    </div>
+</div>
+
+
+
+	<!--<script src="/javascript/jquery/jquery.autocomplete.min.js"></script>-->
+	<script type="text/javascript" src="../js/all.js"></script>
+	<!--[if lte IE 8]>
+
+	<script type="text/javascript" src="/javascript/respond.src.js"></script>
+	<![endif]-->
+
+	<script>
+
+		// Compensating for browsers without matchMedia
+		// function. Specifically IE9 and below.
+		if (typeof window.matchMedia != 'function') {
+			window.matchMedia = function (query) {
+				return (window.innerWidth > 800);
+			}
+		}
+
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+			// disable nav click activation on desktop / tablet
+			var $navItems = $('.navbar-nav > li.dropdown > a.dropdown-toggle');
+			var $navMenus = $('.navbar-nav > li.dropdown > ul.dropdown-menu');
+			if(!isMobile) {
+				$navItems.removeAttr('data-toggle');
+				// toggle nav background on hover
+				$('.navbar-nav > li.dropdown > ul.dropdown-menu').hover(function () {
+					var $menu = $(this);
+					var $menuLabel = $menu.parent().find('a.dropdown-toggle');
+					$menuLabel.css('backgroundColor', '#124563');
+					$menu.addClass('menu-hovered');
+				}, function() {
+					var $menu = $(this);
+					$menu.removeClass('menu-hovered');
+					$menu.hide();
+					var $menuLabel = $menu.parent().find('a.dropdown-toggle');
+					var menuItemHovered = $menuLabel.hasClass('menu-item-hovered');
+					if (!menuItemHovered) {
+						$(this).parent().find('a.dropdown-toggle').css('backgroundColor', '#0c4e77');
+					}
+				});
+				// keep nav background on hover
+				$('.navbar-nav > li.dropdown').hover(function (){
+					var $menuLabel = $(this).find('a.dropdown-toggle');
+					var $menu = $(this).find('ul.dropdown-menu');
+					$menu.show();
+					$menuLabel.css('backgroundColor', '#124563');
+					$menuLabel.addClass('menu-item-hovered');
+				}, function() {
+					var $menuLabel = $(this).find('a.dropdown-toggle');
+					var $menu = $(this).find('ul.dropdown-menu');
+					$menuLabel.removeClass('menu-item-hovered');
+					var menuHovered = $menu.hasClass('menu-hovered');
+					if (!menuHovered) {
+						$menu.hide();
+						$menuLabel.css('backgroundColor', '#0c4e77');
+					}
+				});
+				// toggle nav click menu activation with viewport size change
+				$(window).resize(function() {
+					var mobileView = $(window).width() < 768;
+					if (mobileView) {
+						$navItems.attr('data-toggle', 'dropdown');
+					} else {
+						if (!isMobile) {
+							$navItems.removeAttr('data-toggle');
+							$navMenus.hide();
+						}
+					}
+				});
+			}
+
+			$('body').on('click', '[href^=collapse]', function (e) {
+				e.preventDefault()
+			});
+
+			// on ipad, if user clicks on anything but a link or another menu item, the menu will close
+			var isiPad = navigator.userAgent.match(/iPad/i) != null;
+			$('*').on('click', function (e) {
+				if(isiPad && $(!e.target).closest('a').length){
+					e.preventDefault();
+				}
+			});
+
+			// smooth scrolling to page anchors with consideration
+			// for sticky header on desktop and mobile
+				$("a[href^='#']").each(function(index, element) {
+
+				if ($(element).attr("href").length > 2) {
+
+					var name = $(this).attr('href').replace(/\#/g, '');
+
+					try {
+						var anchor = $('a[id=' + name + ']');
+
+						if (anchor.length > 0) {
+							$(element).click(function(event) {
+
+								event.preventDefault();
+
+								// desktop
+								if (window.innerWidth > 800) {
+									$('html,body').animate({scrollTop: anchor.offset().top  - 122},'slow');
+								}
+								else { // mobile
+									$('html,body').animate({scrollTop: anchor.offset().top},'slow');
+								}
+
+							});
+						}
+					}
+					catch (err) {
+					}
+				}
+
+			});
+
+			// ensure all img tracking pixels do not have space on page
+			$('body > img').each(function(index, element){
+
+				if ($(element).width() === 1 || $(element).height() === 1) {
+					$(element)
+						.width(0)
+						.height(0)
+						.css('height', '0px')
+						.css('width', '0px')
+						.css('display', 'none')
+						.css('border', 'solid transparent 0px');
+				}
+
+			});
+
+			//Function for all bootstrap tooltips sitewide.
+			$('[data-toggle="tooltip"]').tooltip();
+
+		});
+
+	</script>
+
+
+	
+	<!--FA#0044199-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1072253289;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+var google_conversion_format = 3;
+/* ]]> */
+</script>
+
+<div style="display: none;">
+	<script type="text/javascript" src="../js/conversion.js"> </script>
+</div>
+
+<noscript>
+	<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="../1072253289">
+	</div>
+</noscript>
+
+<script>
+
+//if you click on the placeholder, you get a red highlight
+$('#placeholder').on('click', function(){
+    $('.form-control-hero').addClass('has-error');
+});
+$('#placeholder-mobile').on('click', function(){
+    $('.form-control-hero-mobile').addClass('has-error');
+});
+
+// remove the placeholder button if you change the dropdown 
+$(function(){
+	$('.form-control-hero').change(function(){
+		if($(this).val() == "-- Select a Card Category --"){
+   			$("#placeholder").show();
+			$("#hero_btn").hide();
+		} else {
+			$("#hero_btn").show();
+			$("#placeholder").hide();
+			$('.form-control-hero').removeClass('has-error');
+		}
+	});
+});
+// for mobile
+$(function(){
+	$('.form-control-hero-mobile').change(function(){
+		if($(this).val() == "Select a Category"){
+   			$("#placeholder-mobile").show();
+			$("#hero_btn_mobile").hide();
+		} else {
+			$("#hero_btn_mobile").show();
+			$("#placeholder-mobile").hide();
+			$('.form-control-hero-mobile').removeClass('has-error');
+		}
+	});
+});
+
+// This makes sure the dropdown is reset if the user hits the back button
+$(window).load(function () {
+    $("select").each(function () {
+        $(this).val($(this).find('option[selected]').val());
+    });
+})
+
+$(document).ready(function(){
+	var boxes = $('.res-schumer-box');
+
+	if(boxes.length < 2)
+		return null;
+
+	if ($(boxes[boxes.length-1]).find('.res-offer-left a').text().trim() == $(boxes[boxes.length-2]).find('.res-offer-left a').text().trim()){
+		$(boxes[boxes.length-1]).remove();
+	}
+});
+
+</script>
+
+<!-- Adobe DTM data layer -->
+<script>
+	var dtmAnalyticsData = {
+		pageName: "tools:error",
+		channel: "tools",
+		affiliateId: "4e5c9998",
+		productId: "",
+		pageId: "1005",
+		keywordId: "",
+		bannerId: "aeff6c16dec5a044",
+		exitPageId: "12",
+		purchaseId: "",
+		campaignId: "",
+		cardPosition: "",
+		authorName: $('a[rel=author]').text(),
+		categoryId: "",
+		testCampaignName: null,
+		testVariationId: null,
+		testVariationName: null,
+		// Third Party Tracking Pixel Data
+		sendLRCCCId: "1",
+		smileyTId: "",
+		merchants: ""
+	};
+</script>
+<!-- Adobe DTM footer script -->
+<script>_satellite.pageBottom();</script>
+</body>
+</html>

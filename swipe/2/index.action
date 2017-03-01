@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xml:lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Annual Credit Report.com - Home Page</title>
+		<meta name="description">                
+		<link type="text/css" href="css/cssreset-min.css" rel="stylesheet">            
+		
+
+
+		<link type="text/css" href="css/main_1.css" rel="stylesheet">
+		<link type="text/css" href="css/jquery.bxslider.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		
+		<script type="text/javascript" src="js/ui.js"></script>
+		
+
+		<script type="text/javascript" src="js/functions.js"></script>
+       	<script type="text/javascript" src="js/jQuery.browser.mobile.js"></script>
+        <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+      
+       
+       	<script>
+        $(function(){
+        	var ua = navigator.userAgent;
+            var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
+       
+			if(jQuery.browser.mobile||isiPad){
+				$('.pageContentModal').leanModal({ top : 50, overlay : 0.1,closeButton:'.modal_closer'}).trigger('click');
+			}
+
+        });
+        </script>                       
+	</head>
+	<body>
+		<script>
+			document.cookie = "testing=cookies_enabled; path=/";
+			if(document.cookie.indexOf("testing=cookies_enabled") < 0)
+			{
+				window.location="/noCookie.action";
+			}
+		</script>
+		<a name="top" id="top"></a>
+        <div class="skip"><a href="#mainContent">Skip to main content</a></div>
+		<div id="container">
+		
+	        
+
+
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<header role="banner">
+   <h1 role="presentation"> <img src="images/logo.png" alt="Annual Credit Report.com The only source for your free credit reports. Authorized by Federal law"></h1>
+    <div id="navBar" class="globalMenu" role="navigation" aria-label="main">
+    <ul>
+      <li class="selected"><a href="index.action">Home</a></li>
+      <li><a href="yourRights.action">All about credit reports</a></li>
+      <li class="requestCTA"><a href="landingPage.action">Request yours now!</a></li>
+      <li><a href="reviewYourReport.action">What to look for</a></li>
+      <li><a href="protectYourIdentity.action">Protect your identity</a></li>
+      <li><a href="generalQuestions.action">Frequently asked questions</a></li>
+      <li><a href="contactUs.action">Contact us</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>                
+</header>
+        	
+			<a name="mainContent" id="mainContent" tabindex="-1"></a>
+			<div class="pageContent marginTop5" role="main">
+				<ul class="bxslider">
+				  	<li class="topBanner" id="bannerDefault">
+						<div>
+							<h2>Spot identity theft early. Review your credit reports.</h2>
+							<p>Suspicious activity or accounts you don't recognize can be signs of identity theft. Review your credit reports to catch problems early.</p><br>
+							<span nav="/protectYourIdentity.action" class="secondaryActionButton secondaryActionButtonSlider secondaryIE"><a href="protectYourIdentity.action" class="sliderLink">Learn more about Identity Theft</a></span>
+						</div>
+						<img src="images/banner1.png" alt="">
+						<div class="clear"></div>
+					</li>
+				  	<li class="topBanner">
+						<div class="smallerMargin">
+							<h2>You've found your dream house. Are your credit reports ready?</h2>
+							
+							<p>People with good credit should check their credit reports too. Regular checks ensure the information stays accurate. Your good credit will be ready when you need it.</p>
+							<span nav="/reviewYourReport.action" class="secondaryActionButton secondaryActionButtonSlider"><a href="reviewYourReport.action" class="sliderLink">Learn what to look for</a></span>
+						</div>
+						<img src="images/banner2.png" alt="">
+						<div class="clear"></div>
+					</li>
+				  	<li class="topBanner">
+						<div>
+							<h2>Don't be fooled by look-alikes.</h2>
+							<p>Lots of sites promise credit reports for free. AnnualCreditReport.com is the only official site explicitly directed by Federal law to provide them.</p><br>
+							<span nav="/aboutThisSite.action" class="secondaryActionButton secondaryActionButtonSlider"><a href="aboutThisSite.action" class="sliderLink">About AnnualCreditReport.com</a></span>
+						</div>
+						<img src="images/banner3.png" alt="">
+						<div class="clear"></div>
+					</li>
+					<li class="topBanner">
+						<div>
+							<h2>There's more to the game than a score. </h2>
+							
+							<p>How you play changes your score. Details such as how much credit you have, how much you owe, and how often you pay affect your credit scores. Do you know what else does?</p><br>
+							<span nav="/whatIsCreditReport.action" style="" class="secondaryActionButton secondaryActionButtonSlider secondaryIE"><a href="whatIsCreditReport.action" class="sliderLink">What affects your credit score?</a></span>
+						</div>
+						<img src="images/banner4.png" alt="">
+						<div class="clear"></div>
+					</li>
+						
+					<li class="topBanner">
+						<div>
+							<h2>One of these things is not like the others.</h2>
+							<p>You may think you have one credit report and one credit score. But you really have several, and they may differ. You should check all three reports regularly.</p><br>
+							<span nav="/requestReport/landingPage.action" class="secondaryActionButton secondaryActionButtonSlider"><a href="landingPage.action" class="sliderLink">Request your free credit reports</a></span>
+						</div>
+						<img src="images/banner5.png" alt="">
+						<div class="clear"></div>
+					</li>
+				</ul>
+				<div class="fullWidth">
+					<div class="wd30">
+						<h2>Your credit reports matter.</h2>
+						<ul>
+							<li>Credit reports may affect your mortgage rates, credit card approvals, apartment requests, or even your job application.</li>
+							<li>Reviewing credit reports helps you catch signs of identity theft early.</li>
+						</ul>
+						<a href="landingPage.action" class="primaryActionButton primaryIE">Request your free credit reports</a>
+                                          
+					</div>
+					<div class="wd35">
+						<h2>FREE Credit Reports. Federal law allows you to: </h2>
+						<ul>
+							<li>Get a free copy of your credit report every 12 months from each credit reporting company.</li>
+							<li>Ensure that the information on all of your credit reports is correct and up to date.</li>
+						</ul>
+					</div>
+					<div class="wd25">
+						<h2 class="caps">Brought to you by</h2>
+						<ul class="noListStyle">
+						
+							<li><img src="images/transunion.png" alt="TransUnion"></li>
+						
+							<li><img src="images/equifax.png" alt="Equifax"></li>
+						
+							<li><img src="images/experian.png" alt="Experian"></li>
+						
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>			
+		</div>
+        
+
+
+
+<div class="footer" role="contentinfo">
+<div id="footerContentWrapper">
+  <div id="footerLeft">
+    <ul>
+      <li><a href="aboutThisSite.action">About this site</a></li>
+      
+      <li><a href="privacy.action">U.S. Privacy</a></li>
+      <li><a href="security.action">U.S. Security</a></li>
+      
+      <li><a href="termsOfUse.action">Terms of use</a></li>
+    </ul>
+    <div class="clear"></div>
+    <p id="copyright">Copyright &copy; 2017 Central Source, LLC</p>
+  </div>
+  <div id="footerRight">
+    <p>Secure Transaction: For your protection,  this website is secured with the highest level of SSL Certificate encryption.</p>
+    <div id="verisign">
+	<script language="javascript" type="text/javascript" src="js/si.js"></script>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+		<div class="pageContentModal" href="#warningModal" id="getWarning">
+		</div>
+		<div id="warningModal" class="warningModal" role="dialog" aria-label="Mobile user warning">
+           	<button class="modal_closer modal_close" href="#"></button>
+           	<span id="warningMessage">
+				<span id="warningImage"><img src="images/warning.png" alt=""></span>
+            	<span id="warningHeading"><h2>Please note</h2></span>
+            	<h2>Are you using a cell phone or tablet to reach AnnualCreditReport.com?</h2>
+            	<p>Although this website is very secure, the wireless network that you are using to get to the site 
+                may not be. If you use your mobile device, your personal information, including your Social 
+                Security Number, may be at risk.</p>
+            	<p>We recommend that you use a regular computer to get your credit reports.</p>
+			</span>
+			<span id="warningContinue"><button class="primaryActionButton modal_closer">I want to continue anyway</button></span>
+			<span id="logoWarningPopup"><img src="images/logo.png" alt="Annual Credit Report.com The only source for your free credit reports. Authorized by Federal law"></span>	
+       	</div>
+	</body>
+</html>

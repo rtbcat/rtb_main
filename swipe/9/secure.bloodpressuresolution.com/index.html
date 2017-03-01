@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Secure Checkout</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/checkout.css" rel="stylesheet">
+    <link href="css/bps.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  
+ 
+  
+  <style>
+	.coupon { display:none; }  </style>
+    
+    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        heap.load("4105104573");
+  </script>
+    
+
+  
+    <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	 
+	
+		  ga('create', 'UA-58496902-10', 'auto', {'allowLinker': true} );
+	  //ga('require', 'linker');
+	 // ga('linker:autoLink', ['smartbloodsugar.com'] );
+		
+	ga('require', 'displayfeatures');
+	
+	<!-- store funnel id -->
+		
+	<!-- store ip address -->
+	ga('set', 'dimension3', '130.105.77.74');
+	
+	<!-- store tid -->
+		
+	ga('send', 'pageview', {
+	  'page': '/v/checkout/',
+	  'title': '/'
+	});
+</script>
+</head>
+
+  <body>
+  	<div class="noticeFix ">
+    <div class="alert alert-warning notice shadow">
+        <!--ajax--><img src="https://cdn.primalhealthcrm.com/images/ajax-loader-3.gif" alt="loading" />
+        <small> <b>Validating...</b></small>
+    </div>
+    <div class="alert alert-danger error shadow cursor" onClick="hideDiv('.error')"><!--ajax--></div>
+    <div class="data"><!--ajax--></div>
+</div>  
+<script>
+jQuery('.error').bind("DOMSubtreeModified",function(){
+	theerr = jQuery(this).html(); 
+	thepage = jQuery(location).attr('href');
+	console.log("There");
+	if(theerr){
+		console.log("Here");
+		if (typeof tid === 'undefined') { tid="primallabs"; }
+		if (typeof cid === 'undefined') { cid="99"; }		
+		if (typeof Ip === 'undefined') { Ip="0.0.0.0"; }	
+		heap.track('Error', {'Error_Message': theerr, 'Error_Page': thepage, 'Post_Data': "tid:"+tid+" - cid:"+cid+" - Ip:130.105.77.74"});
+	}
+});
+</script>
+  	
+	 <div id="header">
+    <div class="colorBar"></div>
+    <div class="container">
+        <img src="https://cdn.primalhealthcrm.com/images/logo_bps.png" class="img-responsive main_logo"  />
+    </div>
+</div>   
+    
+    <div class="container">
+    	
+    	<br>
+    	<h1 class="page-header"><img src="images/favicon.ico" style="max-width:40px"/>Secure Checkout</h1>
+		<p>Simply fill in your information below. The credit card fields will work after you enter you address and credit card number. Once you've made sure everything is correct, click the button below that says "Yes, Place My Order". 
+        You will be redirected to a final page confirming you've successfully placed your order, and you'll also receive an email from us confirming that your order went through.
+        </p><br>
+        
+        <form autocomplete="on" method="post" action="https://primalhealthcrm.com">
+        	
+            <input type="hidden" name="ProductTotal" id="ProductTotal" value="0" />
+            <input type="hidden" name="FinalTax" id="FinalTax" value="0" />
+            <input type="hidden" name="FinalShipping" id="FinalShipping" value="0" />
+            <input type="hidden" name="FinalDiscount" id="FinalDiscount" value="0" />
+            <input type="hidden" name="Checkout" id="Checkout" value="" />
+			<input type="hidden" name="HERE" id="HERE" value="donkey" />
+            
+            
+            <div class="row">
+                <div class="col-md-4 AddressCol row-height">
+                <div class="inside">
+                    <h4 class="colTitle img-rounded"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Billing Information</h4>
+                    <div class="row">
+                    	<div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="FirstName">First Name</label>
+                                <input type="text" class="form-control" id="FirstName" placeholder="First Name"  value="">
+                            </div>
+                        </div><!-- /.col-md-6-->
+                        
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" class="form-control" id="LastName" placeholder="Last Name" value="">
+                            </div>
+                        </div><!-- /.col-md-6-->
+                        
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="text" class="form-control" id="Email" placeholder="Email"  value="">
+                            </div>
+                        </div><!-- /.col-md-6-->
+                        
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="Phone">Telephone</label>
+                                <input type="text" class="form-control" id="Phone" placeholder="Phone" value="">
+                            </div>
+                        </div><!-- /.col-md-6-->
+                    </div><!-- /.row -->
+                    
+                    
+                    
+                    <div class="form-group">
+                        <label for="BillingStreet1">Address</label>
+                        <input type="text" class="form-control" id="BillingStreet1" placeholder="Street Address Line 1"  value="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="BillingStreet2" style="display:none">Address</label>
+                        <input type="text" class="form-control" id="BillingStreet2" placeholder="Optional Address Line 2" value="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="BillingCity">City / Town</label>
+                        <input type="text" class="form-control" id="BillingCity" placeholder="City" value="" >
+                    </div>
+                    
+                    <div class="row">
+                    	<div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="BillingState">State</label>
+                                <input type="text" class="form-control" id="BillingState" placeholder="State" value="" >
+                            </div>
+                        </div><!-- /.col-md-6-->
+                        
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="BillingZip">Postcode</label>
+                                <input type="text" class="form-control" id="BillingZip" placeholder="Zip Code" value="">
+                            </div>
+                        </div><!-- /.col-md-6-->
+                    </div><!-- /.row -->
+                    
+                    <div class="form-group">
+                        <label for="BillingCountry">Country</label>
+                        <select class="form-control" class="form-control" id="BillingCountry" onChange="figureShipping()">
+                           <option value="United States">United States</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antigua">Antigua</option>
+<option value="Argentina">Argentina</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Barbados">Barbados</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Brazil">Brazil</option>
+<option value="Canada">Canada</option>
+<option value="Chile">Chile</option>
+<option value="Columbia">Columbia</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Denmark">Denmark</option>
+<option value="Egypt">Egypt</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Ireland">Ireland</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Malta">Malta</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Mexico">Mexico</option>
+<option value="Monaco">Monaco</option>
+<option value="Netherlands">Netherlands</option>
+<option value="New Zealand">New Zealand</option>
+<!--<option value="Nigeria">Nigeria</option>-->
+<option value="Norway">Norway</option>
+<option value="Philippines">Philippines</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="San Marino">San Marino</option>
+<option value="South Africa">South Africa</option>
+<option value="Spain">Spain</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="UAE">UAE</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Vatican">Vatican</option>
+
+
+                        </select>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <label>
+                        	<input type="checkbox" id="sameShipping" name="sameShipping" checked onClick="changeShipping()"> Ship to the same address
+                        </label>
+                    </div>
+                    
+                    
+                    <div class="shippingDetails">
+                    	<br>
+                        <h4 class="colTitle img-rounded"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Shipping Information</h4>
+                       
+                        <div class="form-group">
+                            <label for="ShippingStreet1">Address</label>
+                            <input type="text" class="form-control" id="ShippingStreet1" placeholder="Street Address Line 1" value="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="BillingStreet2" style="display:none">Address</label>
+                            <input type="text" class="form-control" id="ShippingStreet2" placeholder="Optional Address Line 2" value="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ShippingCity">City / Town</label>
+                            <input type="text" class="form-control" id="ShippingCity" placeholder="City" value="">
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="ShippingState">State</label>
+                                    <input type="text" class="form-control" id="ShippingState" placeholder="State" value="">
+                                </div>
+                            </div><!-- /.col-md-6--> 
+                            
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="ShippingZip">Postcode</label>
+                                    <input type="text" class="form-control" id="ShippingZip" placeholder="Zip Code" value="">
+                                </div>
+                            </div><!-- /.col-md-6-->
+                        </div><!-- /.row -->
+                        
+                        <div class="form-group">
+                            <label for="ShippingCountry">Country</label>
+                            <select class="form-control" class="form-control" id="ShippingCountry" onChange="figureShipping()">
+                               <option value="United States">United States</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antigua">Antigua</option>
+<option value="Argentina">Argentina</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Barbados">Barbados</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Brazil">Brazil</option>
+<option value="Canada">Canada</option>
+<option value="Chile">Chile</option>
+<option value="Columbia">Columbia</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Denmark">Denmark</option>
+<option value="Egypt">Egypt</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Ireland">Ireland</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Malta">Malta</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Mexico">Mexico</option>
+<option value="Monaco">Monaco</option>
+<option value="Netherlands">Netherlands</option>
+<option value="New Zealand">New Zealand</option>
+<!--<option value="Nigeria">Nigeria</option>-->
+<option value="Norway">Norway</option>
+<option value="Philippines">Philippines</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="San Marino">San Marino</option>
+<option value="South Africa">South Africa</option>
+<option value="Spain">Spain</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="UAE">UAE</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Vatican">Vatican</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                    
+                  <button type="button" class="btn btn-warning btn-sm  btn-block" onclick="validateAddress()">Validate Address</button>
+                </div> 
+                </div><!-- /.col-md-4-->
+                
+               
+                
+                <div class="col-md-4 CardCol row-height">
+                <div class="inside" >
+                	<img src="https://cdn.primalhealthcrm.com/images/visa.png" class="img-responsive pull-right ccImage"  style="max-width:90px;"/>
+                    <h4 class="colTitle img-rounded"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Payment Method</h4>
+                    
+                    
+                    <div class="form-group">
+                        <label for="cardNumber">Credit Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" name="cardNumber"  
+                        	autocompletetype="cc-number" placeholder="4646 4646 4646 4646" >
+                        <p class="help-block">The 16 digits on the front of your card.</p>
+                    </div>
+                    
+                    <div class="row">
+                    	<div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="expMonth">Exp. Month</label>
+                                <select class="form-control" class="form-control" id="expMonth" autocompletetype="cc-exp-month" disabled>
+                           		<option value="01">01 - January</option>
+<option value="02">02 - Feburary</option>
+<option value="03">03 - March</option>
+<option value="04">04 - April</option>
+<option value="05">05 - May</option>
+<option value="06">06 - June</option>
+<option value="07">07 - July</option>
+<option value="08">08 - August</option>
+<option value="09">09 - September</option>
+<option value="10">10 - October</option>
+<option value="11">11 - November</option>
+<option value="12">12 - December</option>                        		</select>
+                                <p class="help-block">The month your card expires.</p>
+                            </div>
+                        </div><!-- /.col-md-6-->
+                        
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="expYear">Exp. Year</label>
+                                <select class="form-control" class="form-control" id="expYear" autocompletetype="cc-exp-year" disabled>
+                           		<option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option>                                </select>
+                                <p class="help-block">The year your card expires.</p>
+                            </div>
+                        </div><!-- /.col-md-6-->
+                        
+                         <div class="col-xs-8">
+                            <div class="form-group">
+                                <label for="ccCode"><span class="glyphicon glyphicon-info-sign pointer" aria-hidden="true" onClick="openModal('checkout_hints.php?w=cvc')"> </span> CV Code</label>
+                                <input type="password" class="form-control" name="ccCode" id="cc-code" placeholder="123" autocompletetype="cc-code" style="max-width:60px" disabled>
+                                <p class="help-block">The 3 digits displayed on the back of your card. AMEX has 4 numbers on the front.</p>
+                            </div>
+                        </div><!-- /.col-md-4-->
+                    </div><!-- /.row -->
+                </div>
+                </div><!-- /.col-md-4-->
+           
+                
+                <div class="col-md-4 ReviewCol row-height">
+                <div class="inside">
+                    <h4 class="colTitle img-rounded"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Review Order</h4>
+                    
+                    <p class="text-center">You have not selected any products for purchase, this page is disabled.</p>                    
+                    
+                    <table width="100%" border="0" class="table">
+                        <tbody>
+                        	<tr>
+                                <td>Subtotal</td>
+                                <td align="right">$0</td>
+                            </tr>
+                            <tr class="tax">
+                                <td><span class="glyphicon glyphicon-info-sign pointer" aria-hidden="true" onClick="openModal('checkout_hints.php?w=tax')"></span> Tax</td>
+                                <td align="right">$<span id="TaxValue">0</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="glyphicon glyphicon-info-sign pointer" aria-hidden="true" onClick="openModal('checkout_hints.php?w=shipping')"> </span> Shipping &amp; Handling</td>
+                                <td align="right"><span id="ShippingValue">$0.00</span></td>
+                            </tr>
+                            <tr class="discount">
+                                <td><span class="glyphicon glyphicon-info-sign pointer" aria-hidden="true" onClick="openModal('checkout_hints.php?w=discount')"> </span> Discount</td>
+                                <td align="right">$<span id="DiscountValue">0.00</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Grand Total</b></td>
+                                <td align="right"><b>$<span id="TotalValue">0</span></b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <button type="button" class="btn btn-success btn-lg btn-block" id="ValidateButton" onClick="orderProcess()" >Yes, Place My Order</button>
+                
+                	<hr />
+                    
+                    <div class="coupon well form-inline text-center" style="padding:10px;">
+                        <div class="form-group">
+                            <span class="glyphicon glyphicon-info-sign pointer" aria-hidden="true" onClick="openModal('checkout_hints.php?w=coupon')"> </span>
+                            <input type="text" class="form-control" name="CouponCode" id="CouponCode" placeholder="Coupon Code">
+                            <button type="button" class="btn btn-default" id="CouponButton" onClick="applyCoupon()" >Apply Code</button>
+                        </div>
+                     </div><!-- /.form-inline --> 
+                       
+                </div><!-- /.inside -->
+                </div><!-- /.col-md-4-->
+                <div class="clearfix visible-xs-block"></div>
+            </div><!-- /.row -->
+		</form>
+
+        <form method="post" id="redirectForm" name="redirectForm" action="" style="display:none">
+            <input type="hidden" name="rContactId" id="rContactId" value="" />
+            <input type="hidden" name="rOrderId" id="rOrderId" value="" />
+            <input type="hidden" name="rSku" id="rSku" value="" />
+            <input type="hidden" name="rTotal" id="rTotal" value="" />
+            <input type="hidden" name="rTax" id="rTax" value="" />
+            <input type="hidden" name="rShipping" id="rShipping" value="" />
+            <input type="hidden" name="rState" id="rState" value="" />
+            <input type="hidden" name="rCountry" id="rCountry" value="" />
+            <input type="hidden" name="rDiscount" id="rDiscount" value="" />
+            <input type="hidden" name="rItems" id="rItems" value="" />
+        </form>
+
+
+        
+        <hr/> 
+            
+        <div class="row trustBar">
+	
+            <div class="col-md-5 text-center pointer" onClick="openModal('checkout_hints.php?w=refund')">
+            <img src="images/60DayMBG.png?2" alt="Money Back"  style="max-width:90px" />
+            <h4>60 Day Money Back Guarantee</h4>
+            <p style="color:#0d8eb9; font-size:80%; line-height:normal ">No questions asked, no hassles, no problems!</p>
+            
+        </div><!-- /.col-md-4-->
+        
+    <div class="col-md-3 text-center" style="padding-top:20px;">
+        <script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?code=5b1c975a6aa04a0fb6548310060e1cb8"></script>  
+        <h3>Secure Checkout</h4>
+        <p style="color:#0d8eb9; font-size:80%; line-height:normal ">You can trust us!</p>     	
+    </div><!-- /.col-md-4-->
+    
+    
+     <div class="col-md-4 text-center pointer" onClick="openModal('checkout_hints.php?w=office')">
+        <img src="images/store.png" alt="Our Location" style="max-width:60px;" />
+        <address class="">
+            <strong>Primal Health LP.</strong><br>
+            718 S Greenville Ave #100 &bull; Allen, TX 75002<br>
+            <abbr title="Phone">P:</abbr> 877-300-7849        </address>  
+        
+                
+    </div><!-- /.col-md-4-->
+    
+</div><!-- /.row -->        
+         
+        <hr/>
+        
+    </div><!-- /.container -->
+    
+    
+    <div id="Modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal --> 
+
+
+	<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+	jQuery.noConflict();
+	jQuery( document ).ready(function() {
+		
+		<!-- make the form columns the same size -->
+		matchHeight();
+		
+		<!-- turn off buy button on error -->
+		hideDiv('#ValidateButton');		
+		document.getElementById('BillingCountry').value = '';
+		document.getElementById('ShippingCountry').value = '';
+		
+		jQuery( "#cardNumber" ).click(function() {
+		  	checkAddress();
+		});
+		
+		jQuery( ".CardCol" ).click(function() {
+		  	checkAddress();
+		});
+	});
+	
+	function hideDiv(Div){
+		jQuery(Div).hide();
+	}
+	
+	/* COOKIES 
+	-------------------------------------- */
+	function createCookie(name, value, days){
+		jQuery('.ajax').load('/handlers/cookie_create.php?name='+name+'&value='+value+'&days='+days, function(response, status, xhr) {
+			console.log('cookie:'+status);
+		});
+	}
+	
+	
+	function createSession(name, value){
+		jQuery('.ajax').load('/handlers/session_create.php?name='+name+'&value='+value, function(response, status, xhr) {
+			console.log('session:'+status);
+		});
+	}
+	
+	
+	<!-- add a space to the card number -->
+	jQuery('#cardNumber').keyup(function (e) {
+			if(e.keyCode != 8){
+				//alert(e.keyCode)
+				  var cctlength = jQuery(this).val().length; // get character length
+			
+				  switch (cctlength) {
+					  case 4:
+						var cctVal = jQuery(this).val();
+						var cctNewVal = cctVal + ' ';
+						jQuery(this).val(cctNewVal);
+						break;
+					  case 9:
+						var cctVal = jQuery(this).val();
+						var cctNewVal = cctVal + ' ';
+						jQuery(this).val(cctNewVal);
+						break;
+					  case 14:
+						var cctVal = jQuery(this).val();
+						var cctNewVal = cctVal + ' ';
+						jQuery(this).val(cctNewVal);
+						break;
+					  default:
+						break;
+				}
+			}
+ 	 });
+	 
+	 function openModal(File){
+		 jQuery('.modal-content').load('/modals/'+File,function(response,status,xhr){		
+		 	jQuery('#Modal').modal('toggle')
+		 });
+	 	
+	 }
+	 
+	 function matchHeight(){
+	 	var width = jQuery( window ).width();
+		if( width > 500){
+			var heights = jQuery(".row-height").map(function() {
+				return jQuery(this).height();
+			}).get(),
+		
+			maxHeight = Math.max.apply(null, heights);
+		
+			jQuery(".row-height").height(maxHeight);
+		}
+	 }
+	 
+	 function changeShipping(){
+		jQuery('.row-height').css('height', 'auto');
+	 	//jQuery('.shippingDetails').toggle();
+		
+		
+		if(document.getElementById('sameShipping').checked) {
+    		jQuery(".shippingDetails").hide();
+		} else {
+    		jQuery(".shippingDetails").show();
+		}
+		
+		validated = false;
+		disableCard();
+		
+		matchHeight();
+	 }
+	 
+	
+
+	
+	 var validated = false;
+	 function checkAddress(){
+		 console.log('checkAddress');
+		 
+		if(validated == false){
+			var error = false;
+			var field = '';
+			
+			var BillingAddress = document.getElementById('BillingStreet1').value
+			var BillingCity = document.getElementById('BillingCity').value
+			var BillingState = document.getElementById('BillingState').value
+			var Billingzip = document.getElementById('BillingZip').value
+			
+			var ShippingAddress = document.getElementById('ShippingStreet1').value
+			var ShippingCity = document.getElementById('ShippingCity').value
+			var ShippingState = document.getElementById('ShippingState').value
+			var ShippingZip = document.getElementById('ShippingZip').value
+				
+			if(document.getElementById('sameShipping').checked) {
+				var what = 'Billing';
+			} else {
+				var what = 'Shipping';
+			}
+			 
+			
+			if(BillingAddress == ''){
+				error = true;
+				field = 'BillingStreet1';
+			} else 
+			if(BillingCity == ''){
+				error = true;
+				field = 'BillingCity';
+			} else 
+			if(BillingState == ''){
+				error = true;
+				field = 'BillingState';
+			} else 
+			if(Billingzip == ''){
+				error = true;
+				field = 'BillingZip';
+			}
+			
+			if(what == 'Shipping'){
+				if(ShippingAddress == ''){
+					error = true;
+					field = 'ShippingAddress';
+				} else 
+				if(ShippingCity == ''){
+					error = true;
+					field = 'ShippingCity';
+				} else 
+				if(ShippingState == ''){
+					error = true;
+					field = 'ShippingState';
+				} else 
+				if(ShippingZip == ''){
+					error = true;
+					field = 'ShippingZip';
+				}
+			}
+			
+			if(error == true){
+			
+				jQuery('.error').html('Please complete the billing info first, then click the orange validate Address button.');
+				jQuery('.error').show();
+				setTimeout(function() { jQuery('.error').slideUp(); }, 5000);
+			
+				//alert('');
+				jQuery( "#"+field).focus();
+			} else {
+				validateAddress()
+			}
+		} else {
+			addressDone();
+		}
+	 }
+	 
+	 var response = '';
+	 function validateAddress(){
+		 console.log(document.getElementById('sameShipping').checked);
+		 console.log('validateAddress');
+	 	
+		if(document.getElementById('sameShipping').checked) {
+    		var address = document.getElementById('BillingStreet1').value
+			var address2 = document.getElementById('BillingStreet2').value
+			var city = document.getElementById('BillingCity').value
+			var state = document.getElementById('BillingState').value
+			var zip = document.getElementById('BillingZip').value
+			var country = document.getElementById('BillingCountry').value
+			var what = 'Billing';
+		} else {
+    		var address = document.getElementById('ShippingStreet1').value
+			var address2 = document.getElementById('ShippingStreet2').value
+			var city = document.getElementById('ShippingCity').value
+			var state = document.getElementById('ShippingState').value
+			var zip = document.getElementById('ShippingZip').value
+			var country = document.getElementById('ShippingCountry').value
+			var what = 'Shipping';
+		}
+		
+		// only validate us
+		if (country == '')
+		{
+			jQuery('.error').html('You need to select a Country.');
+			jQuery('.error').show();
+			//setTimeout(function() { jQuery('.error').slideUp(); }, 5000);
+		}
+		else if(country == "US" || country == 'United States')
+		{
+			jQuery('.error').hide();
+			jQuery('.notice').html('One second while we validate your address');
+			jQuery('.notice').show();
+						
+						
+			jQuery.post( "/handlers/processor.php", { file: "secure.php", Action:"Validate", Address:address, Address2:address2, City:city, State:state, Zip:zip, Country:country, What:what })
+				.done(function( data ) {
+					//alert( "Data Loaded: " + data );
+					console.log(data);
+					
+					response = jQuery.parseJSON(data);
+					if(response.error == '1'){
+							
+						jQuery('.error').html(response.message);
+						jQuery('.error').show();
+						jQuery('.notice').hide();
+						
+						jQuery( "#"+response.focusId).focus();
+						
+						
+						validated = false;
+				
+					} else 
+					if(response.success == '1'){
+						
+						
+						
+						if(response.multiple == '1'){
+							// we have more then one address
+							// we need to open a popup and let them pick the correct address. 
+							openModal('address_pick.php')
+							var html = '<ol>';
+							
+							// loop through address and build something to check them
+							//console.log(response.addresses)
+							for (var key in response.addresses) {
+								//console.log(response.addresses[key]);
+								//console.log(response.addresses[key].Address);
+								
+								html += '<li onclick="setThisAddress(\''+key+'\')" style=" cursor:pointer" >';
+								html += response.addresses[key].Address+' ';
+								html += response.addresses[key].Address2+' ';
+								html += response.addresses[key].City+', ';
+								html += response.addresses[key].State+' ';
+								html += response.addresses[key].Zip;
+								html += '</li>';
+							}
+							
+							html += '</ol>';
+							
+							setTimeout(function() {  
+								jQuery('#AddressBox').html(html);
+							}, 1000);
+							
+						} else {
+													
+							// we only have one address
+							// lets correct the from based on what we found
+							if(document.getElementById('sameShipping').checked) {
+								document.getElementById('BillingStreet1').value = response.Address;
+								document.getElementById('BillingStreet2').value = response.Address2;
+								document.getElementById('BillingCity').value = response.City;
+								document.getElementById('BillingState').value = response.State;
+								document.getElementById('BillingZip').value = response.Zip;
+								
+							} else {
+								document.getElementById('ShippingStreet1').value = response.Address;
+								document.getElementById('ShippingStreet2').value = response.Address2;
+								document.getElementById('ShippingCity').value = response.City;
+								document.getElementById('ShippingState').value = response.State;
+								document.getElementById('ShippingZip').value = response.Zip;
+							}
+							
+							validated = true;
+							addressDone();
+							
+							jQuery('.notice').html('Address is validated, you can proceed');
+							setTimeout(function() {  
+								jQuery('.notice').hide();
+							}, 2000);
+						}
+					}
+					
+					
+					
+				}
+			);
+		}
+		else
+		{
+			validated = true;
+			addressDone();
+		}
+	
+	 }
+	 
+	 // used when they are presented with address options
+	 // they click the correct one and that click passes 
+	 // the array key here
+	 function setThisAddress(key){
+		if(document.getElementById('sameShipping').checked) {
+			document.getElementById('BillingStreet1').value = response.addresses[key].Address;
+			document.getElementById('BillingStreet2').value = response.addresses[key].Address2;
+			document.getElementById('BillingCity').value = response.addresses[key].City;
+			document.getElementById('BillingState').value = response.addresses[key].State;
+			document.getElementById('BillingZip').value = response.addresses[key].Zip;
+			
+		} else {
+			document.getElementById('ShippingStreet1').value = response.addresses[key].Address;
+			document.getElementById('ShippingStreet2').value = response.addresses[key].Address2;
+			document.getElementById('ShippingCity').value = response.addresses[key].City;
+			document.getElementById('ShippingState').value = response.addresses[key].State;
+			document.getElementById('ShippingZip').value = response.addresses[key].Zip;
+		}
+		
+		
+		jQuery('#Modal').modal('toggle');
+		
+		validated = true;
+		addressDone();
+		
+		
+		jQuery('.notice').html('Address is validated, you can proceed');
+		setTimeout(function() {  
+			jQuery('.notice').hide();
+		}, 2000);
+		
+		jQuery( "#cardNumber").focus();
+	 }
+	 
+
+	 function applyCoupon(){
+		console.log('apply coupon codes');
+		var CouponCode = document.getElementById('CouponCode').value.trim();
+		var ProductTotal = document.getElementById('ProductTotal').value;
+		var Email = document.getElementById('Email').value;
+		
+		console.log(ProductTotal);
+		
+		if(CouponCode != ''){
+			
+			jQuery.post( "/handlers/processor.php", { file: "secure.php", Action:"Coupon", CouponCode:CouponCode, ProductTotal:ProductTotal, Email:Email  })
+				.done(function( data ) {
+					//alert( "Data Loaded: " + data );
+					console.log(data);
+					
+					response = jQuery.parseJSON(data);
+					if(response.error == '1'){
+							
+						jQuery('.error').html(response.message);
+						jQuery('.error').show();
+						jQuery('.notice').hide();
+	
+					} else 
+					if(response.success == '1'){
+						
+						jQuery('.error').hide();
+						document.getElementById('FinalDiscount').value = response.Discount;
+						jQuery('#DiscountValue').html(response.Discount);
+						jQuery('tr.discount').show();
+						
+						figureTotal();	
+					
+					}
+				}
+			);
+			
+			
+		}
+		 
+	 	
+	 }
+	 
+	 function figureSalesTax(){
+		console.log('figure sale tax');
+		var ProductTotal = document.getElementById('ProductTotal').value * 1
+		var FinalShipping = document.getElementById('FinalShipping').value * 1;
+		var FinalDiscount = document.getElementById('FinalDiscount').value * 1;
+		
+		console.log(ProductTotal + FinalShipping) - FinalDiscount;
+		 
+		if(document.getElementById('BillingCountry').value == 'United States'){
+			if(document.getElementById('sameShipping').checked) {
+				var state = document.getElementById('BillingState').value;
+			} else {
+				var state = document.getElementById('ShippingState').value;
+			}
+			
+			state = state.toUpperCase();
+			
+			if(state == 'TX' ){ rate = 0.0825; } else 
+			{ rate = 0 }
+						
+			if(rate != 0){
+				var TaxValue = ((ProductTotal + FinalShipping) - FinalDiscount ) * rate;
+				//var TaxValue = (ProductTotal ) * rate;
+				TaxValue = TaxValue.toFixed(2);
+				
+				jQuery('#TaxValue').html(TaxValue);
+				jQuery('tr.tax').show();
+				
+				document.getElementById('FinalTax').value = TaxValue;
+				
+			}
+			
+		}
+		
+	 }
+	 
+	 // create a flag to make  figureTotal wait till shipping it done.
+	 // flag is set when shipping check starts and closed when the api responds
+	 var shippingRunning = false; 
+	 
+	 function figureShipping()
+	 {
+		console.log('figure shipping');
+		
+		 shippingRunning = true;
+		
+		// get shipping flag from php
+		var ShippingFlag = '';
+		console.log("ShippingFlag is " + ShippingFlag);
+		
+		if(document.getElementById('sameShipping').checked) {
+			var country = document.getElementById('BillingCountry').value;
+		} else {
+			var country = document.getElementById('ShippingCountry').value;
+		}
+		console.log("Country is " + country);
+		
+		// if shipping flag is set to charge look up shipping
+		if(ShippingFlag == '1')  // Changed $FigureShipping to 1 or 0, changed the first test to == '1', and took out test for ShippingFlag == '' here  8-22-2016
+		{
+			shippingAPiCall();		
+		} 
+		else 
+		{
+			// if shipping flag is set to flat rate, make sure its domestic
+			if(document.getElementById('BillingCountry').value == 'United States'){
+				var shippingCost = '0.00';
+				jQuery('#ShippingValue').html('$'+shippingCost);
+				document.getElementById('FinalShipping').value = shippingCost;
+				shippingRunning = false;
+				
+			} else {
+				// its international so we look up the cost.
+				shippingAPiCall();
+			}
+		
+		}
+	 }
+	 
+	 function addressDone(){
+		figureShipping();
+		figureSalesTax();
+		
+		enableCard();
+				
+		figureTotal();		
+	 
+	 }
+	 
+	 function figureTotal(){
+		if(!shippingRunning){
+			console.log('figure total');
+			 
+			var ProductTotal = document.getElementById('ProductTotal').value * 1;
+			var FinalTax = document.getElementById('FinalTax').value * 1;
+			var FinalShipping = document.getElementById('FinalShipping').value * 1;
+			var FinalDiscount = document.getElementById('FinalDiscount').value * 1;
+		 
+			var FinalTotal = (ProductTotal + FinalTax + FinalShipping) - FinalDiscount;
+			FinalTotal = FinalTotal.toFixed(2);
+			
+			jQuery('#TotalValue').html(FinalTotal);
+		} else {
+			console.log('check later');
+			setTimeout(function() {  figureTotal()  }, 300);
+		}
+	 }
+	 
+	 function enableCard(){
+		console.log('enable card');
+	 	jQuery("#cardNumber").prop('disabled', false);
+		jQuery("#expYear").prop('disabled', false);
+		jQuery("#expMonth").prop('disabled', false);
+		jQuery("#cc-code").prop('disabled', false);
+	 }
+	 
+	 function disableCard(){
+		console.log('disable card');
+	 	jQuery("#cardNumber").prop('disabled', true);
+		jQuery("#expYear").prop('disabled', true);
+		jQuery("#expMonth").prop('disabled', true);
+		jQuery("#cc-code").prop('disabled', true);
+	 }
+	 
+	 
+	 
+	 // there is more then one time we needed to call the api, 
+	 // therefore we pulled this code out so we only needed to write it once. 
+	 function shippingAPiCall(){
+	 	var TotalWeight = 0;
+		
+		console.log("TotalWeight is " + TotalWeight);
+		
+		if(document.getElementById('sameShipping').checked) {
+			var country = document.getElementById('BillingCountry').value;
+		} else {
+			var country = document.getElementById('ShippingCountry').value;
+		}
+		
+		console.log("Country is (2) " + country + ' and TotalWeight is ' + TotalWeight);
+		
+		jQuery.post( "/handlers/processor.php", { file: "secure.php", Action:'shipping', Weight:TotalWeight, country:country })
+				.done(function( data ) {
+					
+					console.log(data);
+					
+					response = jQuery.parseJSON(data);
+					if(response.error == '1'){
+							
+						jQuery('.error').html(response.message);
+						jQuery('.error').show();
+						jQuery('.notice').hide();
+				
+					} else 
+					if(response.success == '1'){
+						jQuery('#ShippingValue').html('$'+response.message);
+						document.getElementById('FinalShipping').value = response.message;
+						
+						shippingRunning = false;
+					}
+				}
+		);
+	 }
+	 
+	 
+	 var processing = false;
+	 function orderProcess(){
+		 
+		if(processing == false){
+			
+			jQuery('.error').hide();
+			jQuery('.notice').html('<span class="glyphicon glyphicon-cog glyphicon-spin"></span> Processing... (if this notice shows for more then a few minutes call 877-300-7849)');
+			jQuery('.notice').show();
+		
+			
+			
+			var order_error = false; 
+			var order_error_msg = '';
+			var focusDiv = '';
+			
+			// get all of the values in this form
+			var tid = '0';
+			var cid = '0';
+			var Var1 = '';
+			var Var2 = '';
+			var Var3 = '';
+			var MasterTid = '0';
+			
+			var FunnelId = '99';
+			var Shipping = '0';
+			var Rate = '0';
+			var NextUrl = '';
+			var PageUrl = '';
+			var Gateway = '';
+			var Domain = '';
+			var Checkout = '/';
+			var BrowserAgent = 'Mozilla%2F5.0+%28X11%3B+Linux+x86_64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F56.0.2924.87+Safari%2F537.36';
+			var Ip = '130.105.77.74';
+			
+			var ProductTotal = document.getElementById('ProductTotal').value;
+			var Products = 'null';
+			var FinalTax = document.getElementById('FinalTax').value;
+			var FinalShipping = document.getElementById('FinalShipping').value;
+			var FinalDiscount = document.getElementById('FinalDiscount').value;
+			
+			var FirstName = document.getElementById('FirstName').value;
+			var LastName = document.getElementById('LastName').value;
+			var Email = document.getElementById('Email').value;
+			var Phone = document.getElementById('Phone').value;
+			
+			var BillingStreet1 = document.getElementById('BillingStreet1').value;
+			var BillingStreet2 = document.getElementById('BillingStreet2').value;
+			var BillingCity = document.getElementById('BillingCity').value;
+			var BillingState = document.getElementById('BillingState').value;
+			var BillingZip = document.getElementById('BillingZip').value;
+			var BillingCountry = document.getElementById('BillingCountry').value;
+			
+			var ShippingStreet1 = document.getElementById('ShippingStreet1').value;
+			var ShippingStreet2 = document.getElementById('ShippingStreet2').value;
+			var ShippingCity = document.getElementById('ShippingCity').value;
+			var ShippingState = document.getElementById('ShippingState').value;
+			var ShippingZip = document.getElementById('ShippingZip').value;
+			var ShippingCountry = document.getElementById('ShippingCountry').value;
+			
+			var cardNumber = document.getElementById('cardNumber').value;
+			var expYear = document.getElementById('expYear').value;
+			var expMonth = document.getElementById('expMonth').value;
+			var cvCode = document.getElementById('cc-code').value;
+			var CouponCode = document.getElementById('CouponCode').value;
+			
+			// check name
+			if(FirstName == ''){
+				order_error = true;
+				order_error_msg += 'Enter your First Name<br>';
+				focusDiv = '#FirstName';
+			}
+			if(LastName == ''){
+				order_error = true;
+				order_error_msg += 'Enter your Last Name<br>';
+				focusDiv = '#LastName';
+			}
+			if(Email == ''){
+				order_error = true;
+				order_error_msg += 'Enter your Email<br>';
+				focusDiv = '#Email';
+			}
+			
+			var regex = /^([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)@([0-9a-zA-Z]([-_\\.]*[0-9a-zA-Z]+)*)[\\.]([a-zA-Z]{2,9})$/;
+			if(!regex.test(Email)){ 
+				order_error = true;
+				order_error_msg += 'Enter a valid Email<br>';
+				focusDiv = '#Email'; 
+			 } 
+	
+			Phone = Phone.replace(/[^\d]/g, '');
+			if(Phone == ''){
+				order_error = true;
+				order_error_msg += 'Enter your Phone<br>';
+				focusDiv = '#Phone';
+			}
+					 
+			if (BillingCountry == '')
+			{
+				order_error = true;
+				order_error_msg += 'Select your Country<br>';
+				focusDiv = '#BillingCountry';
+			}
+					 
+			// check address
+			console.log(validated)
+			if(validated == false){
+				order_error = true;
+				order_error_msg += 'You must complete and validate your address<br>';
+				focusDiv = '#BillingStreet1';
+			}
+			 
+			// check card number
+			cardNumber = cardNumber.replace(/[^\d]/g, '');
+			console.log(cardNumber);
+			if(!checkLuhn(cardNumber) || cardNumber == ''){
+				order_error = true;
+				order_error_msg += 'Your credit card number is incorrect <br>';
+				focusDiv = '#cardNumber';
+			}
+			 
+			// check there cv Code
+			if(cvCode == ''){
+				order_error = true;
+				order_error_msg += 'CV Code is required<br>';
+				focusDiv = '#cc-code';
+				
+			}
+			 
+			
+			 
+			 
+			if(!order_error){
+				console.log('processing');
+				processing = true; 
+			
+				setTimeout(function() {  OrderCheck();  }, 70000);
+				 
+				 jQuery.post( "/handlers/processor.php", { 
+							file: "secure_order.php", 
+							Action:'FE_Order',
+							tid:tid,
+							cid:cid, 
+							Var1:Var1,
+							Var2:Var2,
+							Var3:Var3,
+							MasterTid:MasterTid,
+							
+							FunnelId:FunnelId,
+							Shipping:Shipping,
+							NextUrl:NextUrl,
+							PageUrl:PageUrl,
+							Gateway:Gateway,
+							Domain:Domain,
+							Checkout:Checkout,
+							BrowserAgent:BrowserAgent,
+							Ip:Ip,
+							
+							ProductTotal:ProductTotal,
+							Products:Products,
+							FinalTax:FinalTax,
+							FinalShipping:FinalShipping,
+							FinalDiscount:FinalDiscount,
+							TaxRate:Rate,
+							
+							FirstName:FirstName,
+							LastName:LastName,
+							Email:Email,
+							Phone:Phone,
+							
+							BillingStreet1:BillingStreet1,
+							BillingStreet2:BillingStreet2,
+							BillingCity:BillingCity,
+							BillingState:BillingState,
+							BillingZip:BillingZip,
+							BillingCountry:BillingCountry,
+							
+							ShippingStreet1:ShippingStreet1,
+							ShippingStreet2:ShippingStreet2,
+							ShippingCity:ShippingCity,
+							ShippingState:ShippingState,
+							ShippingZip:ShippingZip,
+							ShippingCountry:ShippingCountry,
+							
+							cardNumber:cardNumber,
+							expYear:expYear,
+							expMonth:expMonth,
+							cvCode:cvCode,
+							CouponCode:CouponCode
+						})
+						.done(function( data ) {
+							
+							console.log(data);
+							//clearTimeout(checkoutTime); 
+							
+							response = jQuery.parseJSON(data);
+							if(response.error == '1'){
+								processing = false; 
+								OrderTrys = 0;
+									
+								jQuery('.error').html(response.message);
+								jQuery('.error').show();
+								jQuery('.notice').hide();
+						
+							} else 
+							if(response.success == '1'){
+								processing = false; 
+								
+								createSession('ContactId', response.ContactId);
+								createSession('OrderId', response.OrderId);	
+								
+								createCookie('ContactId', response.ContactId);
+								createCookie('OrderId', response.OrderId);	
+								
+								var next = response.NextUrl.replace("http:", "https:");
+								console.log(next);
+								document.getElementById('redirectForm').action = next;
+								document.getElementById('rContactId').value = response.ContactId;
+								document.getElementById('rOrderId').value = response.OrderId;
+								document.getElementById('rSku').value = response.Sku;
+								document.getElementById('rTotal').value = response.Total;
+								document.getElementById('rTax').value = response.Tax;
+								document.getElementById('rShipping').value = response.Shipping;
+								document.getElementById('rDiscount').value = response.Discount;
+								document.getElementById('rItems').value = response.Items;
+								
+								document.forms["redirectForm"].submit();
+								
+							}
+						}
+				);
+			} else {
+				
+				jQuery('.error').html(order_error_msg);
+				jQuery('.error').show();
+				jQuery('.notice').hide();
+				jQuery(focusDiv).focus();
+			}
+		} else {
+			console.log('wait');
+		}
+	 
+	}
+	
+	var OrderTrys = 0;
+	function  OrderCheck(){
+		processing = false; 
+		
+		OrderTrys++;
+		// we need to figure out what we want to have happen here. 
+		// we should probably clear the notice and let them try again. 
+		console.log('order did not complete');
+		
+		if(OrderTrys == 1){
+			jQuery('.error').html('There has been an error. Try clicking the Order Button again.');
+		}
+		
+		if(OrderTrys == 2){
+			jQuery('.error').html('Something is wrong.  You can try reloading this page, or call support (877-300-7849) Mon-Fri 8-5 CST ');
+			jQuery('#ValidateButton').hide();
+			// need to add the code to notify Gordon
+		}
+		
+		
+		jQuery('.error').show();
+		jQuery('.notice').hide();
+	}
+	 
+	function checkLuhn(input){
+		var sum = 0;
+		var numdigits = input.length;
+		var parity = numdigits % 2;
+		for(var i=0; i < numdigits; i++) {
+			var digit = parseInt(input.charAt(i))
+			if(i % 2 == parity) digit *= 2;
+			if(digit > 9) digit -= 9;
+			sum += digit;
+		}
+		return (sum % 10) == 0;
+	}
+	
+</script>    
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1756750577899435');
+fbq('track', 'PageView');
+fbq('track', 'AddToCart');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1756750577899435&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code --> 
+
+  </body>
+</html>
+
+<script>
+console.log('HTTP_ORIGIN = ');
+</script>

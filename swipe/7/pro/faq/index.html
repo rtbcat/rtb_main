@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html class="no-js" data-placeholder-live="false">
+<head>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b067134aff","applicationID":"36413647,544012","transactionName":"cQleFUpcDQlXRU5SDFwSVQ9MHBEXXRgHUBI=","queueTime":0,"applicationTime":58,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="SFxo+CtitEUJFaOGr2kq6lNdxolGULSC1hy8oRW0zU+pa9bCKAePbpM8mYpIstD75tVT4L0FcSXkanoBp2G7hA==">
+<link rel="icon" type="image/png" href="../../evq/assets/static/themes/everquote/favicon-973d76f8ac7d694aac53c6c8f09d05a631d158c51af2d1d30e41dc78891e1e0b.png">
+<!--[if IE]>
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn.everquote.com/evq/assets/static/themes/everquote/favicon-b601219e8b34b4867260ecf7633559847ebf000c41e30c88cd2fab390ae93d8c.ico" />
+<![endif]-->
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-60@2x-1046d53e6b22095804030ab1e166aae91cbd92f0895811fd536a1649be9144b3.png" rel="apple-touch-icon" sizes="120x120">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-60@3x-70ec6c495987bddeeb6b540b8cdb7db7ba0149ad61cbf229375f540c0815ce54.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-76-4eae2ef47fba71e4147bf6c94f1064042ccc1760af702cf8449e9510e2e3ea80.png" rel="apple-touch-icon" sizes="76x76">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-76@2x-449451d15d9468999d0918bc784078dbaa6e2d6a57343dcac969ce3424acbc5f.png" rel="apple-touch-icon" sizes="152x152">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-AppStore-e9770c22000b175f6593184bb89af682d9148a600ee06cb76ab3f83e6e43edd3.png" rel="apple-touch-icon" sizes="512x512">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-AppStore@2x-eba78f07ffc4b987123c6e5cc2d3a8b4c65c3703fbc05369a787d73094b7e542.png" rel="apple-touch-icon" sizes="1024x1024">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small-40-07ebf70b090a1efda7a462d13a90121cb89d48813201edeb2387be24a03de67b.png" rel="apple-touch-icon" sizes="40x40">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small-40@2x-6422427761b4784a3ac705c029a208c4a3732c08fa7b2eff8fc82201e1a795a9.png" rel="apple-touch-icon" sizes="80x80">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small-a0062d3a722435322484d15a9575c0bda129230392f4c60d00cf987d0de5af3b.png" rel="apple-touch-icon" sizes="29x29">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small@2x-ece44ac489cbdd5db7fdd7a43499871c5c3d15d50e13cf4102b79b525ff57e53.png" rel="apple-touch-icon" sizes="58x58">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small@3x-5df167615a38d11d10f37112ba0fb73d5342a517e640f6c21bd9a3a0fa3515e6.png" rel="apple-touch-icon" sizes="87x87">
+<meta content="EverQuote Pro" name="apple-mobile-web-app-title">
+<link href="https://www.everquote.com/pro/" rel="canonical">
+<link href="https://plus.google.com/100274746722797508122" rel="publisher">
+<meta content="EverQuote Pro - High Quality Auto Insurance Leads Delivered in Real-Time" name="description">
+<meta content="en_US" property="og:locale">
+<meta content="https://www.facebook.com/EverQuotePro" property="article:publisher">
+<meta content="EverQuote Pro - High Quality Auto Insurance Leads Delivered in Real-Time" property="og:description">
+<meta content="https://cdn.everquote.com/evq/assets/static/themes/everquote/icons/EverQuote-pro-og-9ac6ab1900d1eba0c575c5104f4fb7feedf0d07677ae1d8bc295dac8302a1745.jpg" property="og:image">
+<meta content="EverQuote Pro" property="og:site_name">
+<meta content="EverQuote - Free Car Insurance Quotes Online, Fast and Easy" property="og:title">
+<meta content="website" property="og:type">
+<meta content="https://www.everquote.com/pro/" property="og:url">
+<meta content="897108143682421" property="fb:app_id">
+<meta content="summary" name="twitter:card">
+<meta content="@EverQuotePro" name="twitter:creator">
+<meta content="EverQuote Pro - High Quality Auto Insurance Leads Delivered in Real-Time" name="twitter:description">
+<meta content="EverQuote Pro" name="twitter:domain">
+<meta content="https://cdn.everquote.com/evq/assets/static/themes/everquote/icons/EverQuote-pro-og-9ac6ab1900d1eba0c575c5104f4fb7feedf0d07677ae1d8bc295dac8302a1745.jpg" name="twitter:image:src">
+<meta content="@EverQuotePro" name="twitter:site">
+<meta content="EverQuote - Free Car Insurance Quotes Online, Fast and Easy" name="twitter:title">
+
+<script type="application/ld+json">
+{ "@context": "http://schema.org","@type": "WebSite","url": "https://www.everquote.com/","potentialAction": {"@type": "SearchAction","target": "https://www.everquote.com/?s={search_term}","query-input": "required name=search_term"}}
+</script>
+<!--[if IE]>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<![endif]-->
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" media="screen" href="../../css" data-norem="">
+
+<title>Fast, Free Auto Insurance Quotes</title>
+<script src="../../evq/assets/static/modernizr-b30327141934360d2cb253c755647f7cb29c7b0c7ce3ea206b3a9da56361b198.js"></script>
+<!--[if gte IE 9 | !IE]><!--><link rel="stylesheet" media="screen" href="../../evq/assets/static/themes/everquote/style-e68f3987afe577b6761035232d251775496c5519306217354bc4755416a442b6.css">
+<link rel="stylesheet" media="screen" href="../../evq/assets/static/themes/everquote/pro-style-d2f6bcbf6dd6c8a703f65c6fb2a99b8e86c1d81be9227c696ea78152ac2c2abb.css"><!-- <![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" media="screen" href="https://cdn.everquote.com/evq/assets/static/themes/everquote/ie9-9f2f9b50b86800b99409214a135110a4710cde837cefaf9be36fd563d3d75f77.css" />
+<![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51677951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" media="screen" href="https://cdn.everquote.com/evq/assets/static/themes/everquote/no-mq-d8d7c2ea979f28112a99be7d348090e4d0ab0b27e53c0121b8ba809a646983b6.css" />
+<link rel="stylesheet" media="screen" href="https://cdn.everquote.com/evq/assets/static/themes/everquote/pro-no-mq-30b739dd9c0278a49b9f8423ffe516f54b61ba713f7ebf591fbca0aa1ca16369.css" />
+<script src="https://cdn.everquote.com/evq/assets/static/html5shiv-9e07e1dd43f748c7160cd00552976c91b874e4cc86bfc912f4af1595acd45fc4.js"></script>
+<body class="eq-pro old-ie pro" data-controller="pro">
+<![endif]-->
+</head>
+<!--[if gte IE 9 | !IE]><!--><body class="eq-pro pro" data-controller="pro"><!-- <![endif]-->
+<header class="page-header">
+<div class="navbar-container">
+<nav class="navbar">
+<div class="row">
+<div class="columns">
+<h1><a class="pro-logo" href="../index.html">EverQuote</a></h1>
+<ul class="right pro-login">
+<li>
+<a class="button small" href="../../signin/index.html">
+Sign In
+</a>
+</li>
+<li>
+<a class="button small secondary" href="../../users/sign_up/index.html">
+Sign Up
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="sub-nav">
+<div class="row">
+<div class="columns">
+<ul>
+<li>
+<a href="../index.html">
+Home
+</a>
+</li>
+<li>
+<a href="../featured-agents/index.html">
+Success Stories
+</a>
+</li>
+<li>
+<a class="active" href="index.html">
+FAQ
+</a>
+</li>
+<li>
+<a href="../more_clients/index.html">
+Why EverQuote
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+
+
+</div>
+</header>
+<main>
+<div class="row">
+<div class="medium-9 columns">
+<div class="eq-pro">
+<div class="container faq">
+<h1 class="entry-title">
+Frequently Asked Questions
+</h1>
+<div class="row">
+<div class="medium-4 columns questions">
+<ol>
+<li>
+<a href="#1">Why are EverQuote insurance leads higher quality than other lead providers?</a>
+</li>
+<li>
+<a href="#2">How are EverQuote leads generated?</a>
+</li>
+<li>
+<a href="#3">Can I target specific prospective clients to match my business?</a>
+</li>
+<li>
+<a href="#4">What are EverQuote’s lead filters?</a>
+</li>
+<li>
+<a href="#5">Can I buy ‘exclusive’ leads?</a>
+</li>
+<li>
+<a href="#6">What is EverQuote’s price for leads?</a>
+</li>
+<li>
+<a href="#7">How do I receive EverQuote leads?</a>
+</li>
+<li>
+<a href="#8">Can more employees in my office receive lead notifications?</a>
+</li>
+<li>
+<a href="#9">What Lead Management and Rating Systems does EverQuote integrate with?</a>
+</li>
+<li>
+<a href="#10">Can I pause my account at any time?</a>
+</li>
+<li>
+<a href="#11">What is EverQuote’s cancellation policy?</a>
+</li>
+<li>
+<a href="#12">How will credit requests be handled?</a>
+</li>
+<li>
+<a href="#13">How are payments made?</a>
+</li>
+<li>
+<a href="#14">Can I make changes to my account settings after I sign up?</a>
+</li>
+<li>
+<a href="#15">How do I get started?</a>
+</li>
+<li>
+<a href="#16">Still have questions?</a>
+</li>
+</ol>
+</div>
+<div class="medium-8 columns questions answers">
+<ol>
+<li>
+<a class="question" name="1">Why are EverQuote insurance leads higher quality than other lead providers?</a>
+<div class="answer">
+<p>
+<strong>At EverQuote, quality is everything to us.</strong>
+We are dedicated to being the best lead provider – bar none.
+Here are just a few ways we exceed the competition:
+</p>
+<ul>
+<li>
+100% of our leads are generated from prospects coming to our auto
+insurance websites like <a href="../../index.html">www.EverQuote.com</a>,
+filling out 42 pieces of personal information and submitting a request
+for an insurance quote. Most providers purchase leads from other sources
+instead of finding high-intent clients.
+</li>
+<li>
+We limit distribution so that you never compete with more than 2 other
+agents – the absolute best in the industry. Competitors will often sell
+a lead to 8 different agents.
+</li>
+<li>
+We only deliver leads in real-time. This means that when you receive a
+lead from EverQuote, you can be assured that prospect requested a quote
+only seconds earlier. We never recycle or aggregate – period.
+</li>
+</ul>
+<p>
+As a result, agents report close rates two to three times their normal rate.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="2">How are EverQuote leads generated?</a>
+<div class="answer">
+<p>
+At EverQuote, we take pride in generating and qualifying all of our leads
+and never buy 3rd party leads. This means we know where the prospects came
+from, what type of auto insurance they are seeking, and most importantly,
+validate that they requested a quote and are actively seeking an auto
+insurance quote in your territory.
+</p>
+<p>
+<strong>How it Works:</strong>
+</p>
+<ol>
+<li>
+Prospective clients come to one of our auto insurance websites when
+searching online, through sources including major search engines
+(Google, Bing, Yahoo, etc).
+</li>
+<li>
+Each prospect is then required to provide 42 pieces of detailed
+information, including their driving history, status and insurance
+requirements. They must then explicitly confirm they are seeking an auto
+insurance quote.
+</li>
+<li>
+On completion, the prospect’s information is delivered in real-time to
+an agent targeting that type of client in that location.
+</li>
+</ol>
+<p>
+<a href="../../index.html">EverQuote.com</a>
+and
+<a href="../../index.html">USAutoInsuranceNow.com</a>
+are examples of our auto insurance websites. We encourage you to visit
+one of these sites in order to understand our unique consumer experience
+and rigorous filters we incorporate to validate the true intent of our leads.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="3">Can I target specific prospective clients to match my business?</a>
+<div class="answer">
+<p>
+<strong>Yes!</strong>
+Agents can target the exact clients they are looking for:
+</p>
+<ul>
+<li>Select the specific risk profiles you’d like to target</li>
+<li>Pinpoint your territory by zip codes</li>
+<li>Identify time of day and days of week to receive leads</li>
+<li>Set a daily lead cap based on your business goals</li>
+</ul>
+<p>
+Being able to customize these settings ensures that you stay in complete
+control of your budget and spend less time chasing leads and more time
+writing policies.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="4">What are EverQuote’s lead filters?</a>
+<div class="answer">
+<table>
+<caption>
+EverQuote offers the following four lead types:
+</caption>
+<thead>
+<tr>
+<th>Risk Filter</th>
+<th>Premium</th>
+<th>Preferred</th>
+<th>Standard</th>
+<th>Non-Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Drivers Age</strong>
+</td>
+<td>Age 25 or above</td>
+<td>25 or above</td>
+<td>20 or above</td>
+<td>Any Age</td>
+</tr>
+<tr>
+<td>
+<strong>Insurance Status</strong>
+</td>
+<td>Currently insured</td>
+<td>Currently insured</td>
+<td>May be insured</td>
+<td>May be insured</td>
+</tr>
+<tr>
+<td>
+<strong>Accidents</strong>
+</td>
+<td>No at-fault accidents</td>
+<td>No at-fault accidents</td>
+<td>No at-fault accidents</td>
+<td>May have multiple accidents</td>
+</tr>
+<tr>
+<td>
+<strong>Tickets</strong>
+</td>
+<td>up to 1 ticket</td>
+<td>up to 1 ticket</td>
+<td>up to 2 ticket</td>
+<td>May have multiple accidents</td>
+</tr>
+<tr>
+<td>
+<strong>DUI & SR-22</strong>
+</td>
+<td>No DUI or SR-22</td>
+<td>No DUI or SR-22</td>
+<td>No DUI or SR-22</td>
+<td>May have DUI or SR-22</td>
+</tr>
+<tr>
+<td>
+<strong>Homeowner Status</strong>
+</td>
+<td>Home Owner</td>
+<td>May be a Home Owner</td>
+<td>May be a Home Owner</td>
+<td>May be a Home Owner</td>
+</tr>
+<tr>
+<td>
+<strong>Credit Rating</strong>
+&mdash; self reported
+</td>
+<td>Excellent or Good</td>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li>
+<a class="question" name="5">Can I buy 'exclusive' leads?</a>
+<div class="answer">
+<p>
+<strong>Yes!</strong>
+An 'exclusive' lead is provided to only one agent, meaning you
+have no competition for that unique prospect. To receive exclusive
+leads you must also elect to receive shared leads (your account
+balance will reflect the purchase type of each lead you receive).
+Leads not purchased exclusively may be provided to a maximum of 3
+agents, the absolute lowest distribution in the industry.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="6">What is EverQuote’s price for leads?</a>
+<div class="answer">
+<p>
+Prices vary based on the lead type (risk profile), and your
+eligibility for participation in the various subsidy programs.
+</p>
+<p>
+For more detailed information on lead pricing, and the subsidy you
+may qualify for, please contact us:
+</p>
+<address>
+tel: 
+<strong>
+(844) 707-8800
+</strong>
+<br>
+email: 
+<a href="mailto:sales@everquote.com">sales@everquote.com</a>
+</address>
+
+</div>
+</li>
+<li>
+<a class="question" name="7">How do I receive EverQuote leads?</a>
+<div class="answer">
+<p>
+Our leads are delivered to you via email or to your lead
+management system. You choose.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="8">Can more employees in my office receive lead notifications?</a>
+<div class="answer">
+<p>
+<strong>Yes!</strong>
+You can add as many users to your account as you like. Simply go to
+<strong>
+Account > User Management
+</strong>
+to send an invitation to a new user. You can also update your
+user’s account setting here to give or restrict access to
+different features within your EverQuote Pro account.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="9">What Lead Management and Rating Systems does EverQuote integrate with?</a>
+<div class="answer">
+<p>
+We currently integrate with the following systems, and are always working to add more based on our agents' needs:
+<ul class="list-inside">
+<strong>CRM's</strong>
+<li>Apliant</li>
+<li>Blitz Lead</li>
+<li>Boberdoo</li>
+<li>Contactability</li>
+<li>DYL</li>
+<li>Imprezzio</li>
+<li>Lead Management Lab</li>
+<li>SpitFire</li>
+<li>Velocify</li>
+<li>Prospector Plus</li>
+<li>SIMS</li>
+</ul>
+<ul class="list-inside">
+<strong>Raters</strong>
+<li>Applied</li>
+<li>EZLynx</li>
+<li>FSC</li>
+<li>PL</li>
+<li>QuoteBurst</li>
+<li>TurboRater</li>
+</ul>
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="10">Can I pause my account at any time?</a>
+<div class="answer">
+<p>
+<strong>Yes!</strong>
+We give you the tools to manage your account how you see fit,
+so you remain in complete control of your budget. You can set
+specific hours of operation to ensure you receive leads only
+when you can work them. You can also pause your account and set
+a specific time for it to resume activity.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="11">What is EverQuote’s cancellation policy?</a>
+<div class="answer">
+<p>
+While we hope you will be a long-term partner, there is no
+minimum period or spend when you work with us. We let our
+quality speak for itself and over 90% of agents purchasing 50
+leads are still using EverQuote as a main source for new clients.
+</p>
+<p>
+In the unlikely event you decide to stop receiving our leads,
+you may cancel your account immediately – no questions asked.
+Your unused account balance will be fully refunded.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="12">How will credit requests be handled?</a>
+<div class="answer">
+<p>
+You can quickly process a credit request directly through our
+EverQuote Pro platform, up to 15 days after receiving a lead.
+</p>
+<p>
+The high quality of our leads means that our agents’ return
+rates are very low, averaging about 5.6%.
+</p>
+<p>
+We are also sensitive to the unique experiences of our agents
+and all requests over 10% will be reviewed by our quality
+team on a case-by-case basis, and responded to appropriately.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="13">How are payments made?</a>
+<div class="answer">
+<p>
+<strong>We believe that you should remain in control of your budget.</strong>
+EverQuote operates a ‘pay as you go’ system. Credit cards are
+charged a set amount entered by the agent at sign-up.
+</p>
+<p>
+When your account balance falls below $25, your credit card will
+be automatically charged for the amount you have specified.
+</p>
+<p>
+Should you choose to cancel your account, the remainder of your
+account balance will be fully refunded.
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="14">Can I make changes to my account settings after I sign up?</a>
+<div class="answer">
+<p>
+<strong>Yes!</strong>
+EverQuote Pro is designed to be easy to use and completely self-service.
+You can change your territories, lead types, lead cap, delivery
+settings, payment options and much more. Even though you have
+the ability to make these updates, our Account Managers are
+available to help and are specialized in selecting optimal
+settings based on your business needs. Call (844) 707-8800 and
+we’d be happy to help!
+</p>
+</div>
+</li>
+<li>
+<a class="question" name="15">How do I get started?</a>
+<div class="answer">
+<ol class="lower-alpha">
+<li>
+<strong>
+Sign up:
+</strong>
+<p>
+Go to 
+<a href="../../landing/index.html">pro.everquote.com</a>
+and set up your account. It takes about 5 minutes and is really easy!
+</p>
+</li>
+<li>
+<strong>
+Contact us:
+</strong>
+<p>
+Our experienced team of Account Managers work with captive
+and independent agents every day to walk them through the
+sign-up process and set their accounts up for success.
+We would be happy to provide you an estimate of lead volume
+available in your territory, and answer questions you may
+have about how agents grow their book of business with our support.
+<address>
+tel: 
+<strong>
+(844) 707-8800
+</strong>
+<br>
+email: 
+<a href="mailto:sales@everquote.com">sales@everquote.com</a>
+</address>
+
+</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<a class="question" name="16">Still have questions?</a>
+<div class="answer">
+<p>
+<strong>Please contact us directly!</strong>
+Whether you have questions about our leads, services or how more
+than 5,000 agents are using us to grow their business and reduce
+their “cost per acquisition,” our Account Managers are available
+to help!
+</p>
+<address>
+tel: 
+<strong>
+(844) 707-8800
+</strong>
+<br>
+email: 
+<a href="mailto:sales@everquote.com">sales@everquote.com</a>
+</address>
+
+</div>
+</li>
+</ol>
+<div class="pro-contact-me-form">
+<form class="pro-form" data-arrival-id="6c417450dfe501347b9312b52a671dc4" action="https://pro.everquote.com/contact_me?fact_id=17f9d7b1-f72b-479c-a210-b834e2ab37c8" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"><input type="hidden" name="authenticity_token" value="HN2MJdINaKc57reFjWPfzNDAuAn+hxFlimqqc/NdLqP96jIf0WhTjKPHjYlquCXdZUgtYAXS1MK4HGzTQYhYaA==">
+<h2 class="text-center">
+Interested in a Trial?
+</h2>
+<p class="text-center">
+Fill out the form below to have an Account Manager contact you, or reach us directly at <a href="tel:(844) 707-8800">(844) 707-8800</a>
+</p>
+<input type="hidden" name="lynx_form" id="lynx_form" value="true">
+<input type="hidden" name="prospect[cookie_id]" id="prospect_cookie_id" value="6c417450dfe501347b9312b52a671dc4">
+<input type="hidden" name="arrival_cookie_id" id="arrival_cookie_id" value="6c417450dfe501347b9312b52a671dc4">
+<div class="row">
+<div class="small-6 columns">
+<input placeholder="First Name" type="text" name="prospect[first_name]" id="prospect_first_name">
+</div>
+<div class="small-6 columns">
+<input placeholder="Last Name" type="text" name="prospect[last_name]" id="prospect_last_name">
+</div>
+</div>
+<div class="row">
+<div class="column"><input placeholder="Email Address" type="email" name="prospect[email]" id="prospect_email"></div>
+</div>
+<div class="row">
+<div class="column"><input class="masked" type="tel" placeholder="Phone Number" maxlength="12" data-mask="999-999-9999" size="12" name="prospect[phone]" id="prospect_phone"></div>
+</div>
+<div class="row">
+<div class="column">
+<button name="button" type="submit" class="pro-submit button">Contact Me
+</button></div>
+</div>
+</form>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="medium-3 columns show-for-medium-up pro-sidebar">
+<div class="pro-contact-me-form">
+<form class="pro-form" data-arrival-id="6c417450dfe501347b9312b52a671dc4" action="https://pro.everquote.com/contact_me?fact_id=17f9d7b1-f72b-479c-a210-b834e2ab37c8" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"><input type="hidden" name="authenticity_token" value="Syh9w/7BvV0tZkrG8aPNrm5mgzusRtVchTpie9yJQxKqH8P5/aSGdrdPcMoWeDe/2+4WUlcTEPu3TKTbblw12Q==">
+<h2 class="text-center">Interested in a Trial?</h2>
+<p class="text-center">Fill out the form below to have an Account Manager contact you.</p>
+<input type="hidden" name="lynx_form" id="lynx_form" value="true">
+<input type="hidden" name="prospect[cookie_id]" id="prospect_cookie_id" value="6c417450dfe501347b9312b52a671dc4">
+<input type="hidden" name="arrival_cookie_id" id="arrival_cookie_id" value="6c417450dfe501347b9312b52a671dc4">
+<input placeholder="First Name" type="text" name="prospect[first_name]" id="prospect_first_name">
+<input placeholder="Last Name" type="text" name="prospect[last_name]" id="prospect_last_name">
+<input placeholder="Email Address" type="email" name="prospect[email]" id="prospect_email">
+<input placeholder="Phone Number" type="tel" name="prospect[phone]" id="prospect_phone">
+<button name="button" type="submit" class="pro-submit button">Contact Me
+</button></form>
+
+</div>
+<div class="cta text-center">
+<h3>Have more questions? Contact us directly.</h3>
+<div class="account-manager-phone">(844) 707-8800</div>
+</div>
+
+
+</div>
+</div>
+</main>
+<footer class="everquote page-footer">
+<div class="social">
+<a class="fa fa-twitter fa-fw" target="_blank" href="../../EverQuoteInsure/index.html"><span class="hide-accessible">Twitter</span>
+</a><a class="fa fa-facebook fa-fw" target="_blank" href="../../unsupportedbrowser/index.html"><span class="hide-accessible">Facebook</span>
+</a><a class="fa fa-youtube-play fa-fw" target="_blank" href="../../user/EverQuote/index.html"><span class="hide-accessible">YouTube</span>
+</a><a class="fa fa-google-plus fa-fw" target="_blank" href="../../+EverQuote/index.html"><span class="hide-accessible">Google Plus</span>
+</a><a class="fa fa-pinterest fa-fw" target="_blank" href="../../everquote/index.html"><span class="hide-accessible">Pinterest</span>
+</a></div>
+<nav>
+<a href="../../news/index.html">News</a>
+<a href="../../faq/index.html">FAQ</a>
+<a href="../../auto-insurance/tips/index.html">Auto Insurance Tips</a>
+<a href="../../auto-insurance/terms-definitions/index.html">Terms &amp; Definitions</a>
+</nav>
+<nav>
+<a href="../../index.html">Home</a>
+<a href="../../about/index.html">About</a>
+<a href="../../terms/index.html">Terms of Use</a>
+<a href="../../privacy-policy/index.html">Privacy Policy</a>
+<a href="../../careers/index.html">Careers</a>
+<a href="../../contact/index.html">Contact</a>
+</nav>
+<div class="legal">
+<p class="text-center">Copyright &copy;2017 EverQuote, Inc.</p>
+
+</div>
+</footer>
+<div class="modal-container"></div><div class="Pixelsaurus"><input type="hidden" name="pixel_path" id="pixel-path" value="/pixels?current_page=Landing&amp;previous_page=&amp;zip_code="><iframe id="pixel-frame" src="" style="height:0;width:0;visibility:hidden;"></iframe></div><!--[if gte IE 9 | !IE]><!--><script src="../../ajax/libs/jquery/2.1.1/jquery.min.js"></script><!-- <![endif]-->
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<![endif]-->
+<script src="../../evq/assets/static/themes/everquote-c304e1867ec7e93d1a8513d47ba96e2fd44d1f02bfffb1b4149b27e5bbb99f8d.js"></script>
+
+<script src="../../evq/assets/static/modal-21e416451a89e3bfae56ffa9192fee632afbc89a5c7e7430db47cf02a6871792.js"></script>
+<script src="../../evq/assets/static/initFC-c9eaa2a0ed3edbbfb7ed5e9fc7df81adc9bd51ec042bfaeb86ad4881748c65bf.js"></script>
+
+</body>
+</html>

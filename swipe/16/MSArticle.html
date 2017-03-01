@@ -1,0 +1,681 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><script src="/faces/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript?rel=1487963822000" type="text/javascript"></script><script src="/jslibrary/1485897292000/sfdc/VFRemote.js" type="text/javascript"></script><script src="/jslibrary/1482273244000/ui-sfdc-javascript-impl/SfdcCore.js" type="text/javascript"></script><script src="/static/111213/js/picklist3.js" type="text/javascript"></script><script src="/jslibrary/1485897292000/sfdc/VFState.js" type="text/javascript"></script><script src="/resource/1444289991000/MindsparkAllResource/js/jquery.min.js" type="text/javascript"></script><script src="/resource/1444289991000/MindsparkAllResource/js/bootstrap.min.js" type="text/javascript"></script><script src="/resource/1441993833000/jQuery181/jquery/jquery-1.8.js" type="text/javascript"></script><script src="/resource/1441993833000/jQuery181/jquery/jquery-ui.js" type="text/javascript"></script><link class="user" href="/resource/1444289991000/MindsparkAllResource/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link class="user" href="/resource/1444289991000/MindsparkAllResource/css/fontGoogleApi.css" rel="stylesheet" type="text/css"><link class="user" href="/resource/1444289991000/MindsparkAllResource/css/style2.css" rel="stylesheet" type="text/css"><link class="user" href="/resource/1441993833000/jQuery181/jquery/jquery-ui.css" rel="stylesheet" type="text/css"><script type="text/javascript">
+Visualforce.remoting.Manager.add(new $VFRM.RemotingProviderImpl({"vf":{"vid":"0661a000001CkmB","xhr":false,"dev":false,"tst":false,"dbg":false,"tm":1488294729665,"ovrprm":false},"actions":{"AutoCompleteController":{"ms":[{"name":"getArticles","len":1,"ns":"","ver":34.0,"csrf":"VmpFPSxNakF4Tnkwd015MHdNMVF4TlRveE1qb3dPUzQyTmpWYSxaLW5wMXloNjlJdUxqbXBhMmh5VVNyLFkyUmtaR1l3"},{"name":"getProductNameforMS","len":1,"ns":"","ver":34.0,"csrf":"VmpFPSxNakF4Tnkwd015MHdNMVF4TlRveE1qb3dPUzQyTmpWYSxFZFFIQmZJMmZTZS14VFM5UWxzLWFhLFlXSXlNbVJs"},{"name":"getRecordsMindsparkProduct","len":2,"ns":"","ver":34.0,"csrf":"VmpFPSxNakF4Tnkwd015MHdNMVF4TlRveE1qb3dPUzQyTmpWYSx2ZVNNWGRrY3E4SXlpTUVpVklidlZKLE56RmhNR1Uy"},{"name":"getRecordsMindspark","len":2,"ns":"","ver":34.0,"csrf":"VmpFPSxNakF4Tnkwd015MHdNMVF4TlRveE1qb3dPUzQyTmpWYSwtdGpBd3dkeC1rT2xQek0zVWFHWV9iLE9USTVNakl4"},{"name":"getRecords","len":2,"ns":"","ver":34.0,"csrf":"VmpFPSxNakF4Tnkwd015MHdNMVF4TlRveE1qb3dPUzQyTmpWYSxkenV6ZTc2TTJuZzhsX3ZzWldFdkhDLE5qRXdNbUk0"}],"prm":0}},"service":"apexremote"}));
+</script></head><body>
+    <script>       
+    function likeFunction()
+    {
+        likebutton();
+    }
+    function dislikeFunction()
+    {
+        dislikebutton();  
+    }
+    </script>
+    <style>
+        /* This is for the full screen DIV */
+        .popupBackground {
+            /* Background color */
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+        
+            /* Dimensions */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 998;
+            position: fixed;
+            
+            /* Mouse */
+            cursor:wait;
+        }
+ 
+        /* This is for the message DIV */
+        .PopupPanel {
+            /* Background color
+            border: solid 2px blue;
+            background-color: white;
+            */
+            
+            /* Dimensions */
+            left: 50%;
+            width: 200px;
+            margin-left: -100px;
+            top: 50%;
+            height: 50px;
+            margin-top: -25px;
+            z-index: 999;
+            position: fixed;
+            
+            /* Mouse */
+            cursor:pointer;
+          
+        }
+        blockquote {border-left:0}
+        .underline{text-decoration:underline !important}
+        .galaxymap_con h2 {font-size:18px;}
+    </style>
+<form id="pageid:frm1" name="pageid:frm1" method="post" action="/MSArticle" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="pageid:frm1" value="pageid:frm1">
+<input id="pageid:frm1:hideVal" type="hidden" name="pageid:frm1:hideVal">
+        <head>
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT">
+
+            <meta charset="utf-8">
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+            
+            <link href="/resource/1444289991000/MindsparkAllResource/images/favicon.png" rel="icon" type="image/png"> 
+            <title>Mindspark</title>
+            
+            
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+            <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+           
+            
+            <link href="css/style2.css" rel="stylesheet" type="text/css">
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300,700,600" rel="stylesheet" type="text/css">   
+            
+          
+            
+            <style type="text/css">
+                #facebook_icon {margin-right:0;}
+                #right_more_contact_icon a {display: inline-block;height: 50px;}
+                #uninstall_main_con {padding: 20px 10% 10px;}
+                .img-center {margin:0 auto;}
+                #facebook_icon, #twitter_icon {cursor:pointer;}
+                #right_more_contact_icon a {display: inline-block;height: 50px;}
+                    #facebook_icon, #twitter_icon {cursor:pointer;}
+                    #uninstall_img img {min-width:100px;}
+                    #uninstall_heading {padding-left:15px;}
+                    .right_icons a {display:inline-block; min-height:80px;}
+                    #uninstall_main_con {border-left:1px solid #bfbfbf; border-right:1px solid #bfbfbf;}
+                    .top-main-heading {
+                        font-size: 42px;
+                        font-weight: 100;
+                        font-family: 'Open Sans', sans-serif;
+                        margin-top: 0;
+                    }
+                    #uninstall_sub_heading h4 {font-size:20px;font-style:normal;padding-top:0}
+                    #help_link_section {margin:0}
+                    @media (min-width:992px) {
+                        .right_icons {text-align:right;}
+                    }
+                    
+                    #cross_product {
+                        right: 10px;
+                        z-index: 999;
+                        width: 40px;
+                    }
+                    
+                    #popularfaq_con, #knownissue_con {padding:0}
+                    .search_box {margin-bottom:50px;}
+                    blockquote ul {padding-left:20px;}
+                    #uninstall_sub_heading {padding-left:15px}
+                    @media screen and (max-width: 767px) {
+                        h1.top-main-heading{
+                            margin-top:15px;
+                        }
+                    }
+                    
+                    #uninstall_sub_heading h4 a {color:#337ab7; font-size:20px; font-weight:600}
+
+                    
+            </style>
+            <script>
+                var artId ='';            
+                /*   
+                function dispSearchResult(){
+                   var searchVal = document.getElementById('search_bar').value;
+                   dispSearchResults(searchVal);
+                }
+                */
+            
+            
+                /*SK Sep9
+                function articleYesOrNo(articleId,title){
+                  //alert(articleId);
+                  document.getElementById('headingId').innerHTML=title;
+                  var identifier = 'clickFromTitle';
+                  artId = articleId;
+                  sendArticleId(articleId,identifier);      
+                }
+                
+                function YesOrNo(inputVal){
+                    var identifier = 'clickFromYesOrNo';
+                    sendArticleIdNew(artId,identifier,inputVal); 
+                    return false;
+                }
+                */
+            
+                function articlePopUp(articleId,titleid,summaryid)
+                {                    
+                    artId = articleId;
+                    var summary = document.getElementById(summaryid).innerHTML;
+                    var title = document.getElementById(titleid).innerHTML;
+                    document.getElementById('headingId').innerHTML = title;
+                    document.getElementById('sumryPanel').innerHTML = summary;
+                }
+                //This function followes the See more icon and redirects to the article detail page. 
+                function redirectToArticlePage(){
+                    window.open('/MSArticle?recid='+artId);
+                }
+            </script>
+             
+            <script>
+                function smallSearchbar()
+                {
+                    document.getElementById('search_bar').value = '';
+                }  
+                              
+                function bigSearchbar()
+                {
+                    document.getElementById('search_bar_small').value = '';
+                }
+            </script>  
+        </head>
+
+        <script type="text/javascript">        
+            var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+            // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+            var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+            var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+            // At least Safari 3+: "[object HTMLElementConstructor]"
+            var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
+            var isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
+
+            /*
+            var output = 'Detecting browsers by ducktyping:<hr>';
+            output += 'isFirefox: ' + isFirefox + '<br>';
+            output += 'isChrome: ' + isChrome + '<br>';
+            output += 'isSafari: ' + isSafari + '<br>';
+            output += 'isOpera: ' + isOpera + '<br>';
+            output += 'isIE: ' + isIE + '<br>';
+            */
+
+            if(isChrome){
+                //alert('>>>>>>isChrome ::' + isChrome );
+                document.getElementById('pageid:frm1:hideVal').value = 'Chrome';            
+            }
+
+            if(isFirefox){
+                //alert('>>>>>>isFirefox ::' + isFirefox );
+                document.getElementById('pageid:frm1:hideVal').value = 'FireFox';
+            }
+
+            if(isSafari){
+                //alert('>>>>>>isSafari::' + isSafari);
+                document.getElementById('pageid:frm1:hideVal').value = 'Safari';
+            }
+
+            if(isOpera){
+                //alert('>>>>>>isOpera ::' + isOpera );
+                document.getElementById('pageid:frm1:hideVal').value = 'Opera';
+            }
+
+            if(isIE){
+                //alert('>>>>>>isIE::' + isIE); 
+                document.getElementById('pageid:frm1:hideVal').value = 'IE';  
+            }             
+
+            function brType()
+            {
+                return  document.getElementById('pageid:frm1:hideVal').value;
+            }
+        </script>
+
+        <div class="container-fluid">
+            <div class="row">
+                <header>
+                    <div class="container" id="top_main_con">
+                        <div class="col-lg-3 col-md-3 col-sm-12" id="logo_con">
+                            <a href="/MindsparkSupport"><img src="/resource/1444289991000/MindsparkAllResource/images/mindspark_logo.png" class="img-responsive"></a>
+                        </div>
+    
+                        <div class="col-lg-7 col-md-7 col-sm-12" id="search_con">
+    
+                            
+                            <input id="search_bar_small" onkeypress="autoSearch(this.id,event)" placeholder="Search" type="text"> 
+                            <i class="fa fa-search" id="search_con_icon" onclick="dispSearchResult();" style="cursor:pointer;"></i>
+                           
+    
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-sm-12" id="media_icon">
+                            <a href="https://www.facebook.com/IAC-Applications-1684949231790436"><i class="fa fa-facebook-square" id="facebook_icon"></i></a>
+                            
+                        </div>
+                    </div>
+                </header><span id="pageid:frm1:statusSaveTrip"><span id="pageid:frm1:statusSaveTrip.start" style="display: none">      
+                      <div>
+                            <div class="popupBackground"></div>
+                            <div class="PopupPanel">
+                                <table border="0" height="100%" width="100%">
+                                    <tr>
+                                        <td align="center" style="color:black;"><b>Loading...</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="/img/loading.gif">
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div></span><span id="pageid:frm1:statusSaveTrip.stop"></span></span>
+                
+                
+                
+
+                         <div class="container" id="uninstall_main_con">
+                             <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <div class="col-sm-3"><img src="/resource/1444289991000/MindsparkAllResource/images/morehelp_img.png" class="img-responsive">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <h1 class="top-main-heading">Product Help</h1>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-lg-12" id="uninstall_sub_heading">
+                                                <h4><a href="/MSProducts">Product Help</a> <span>&gt; </span>
+                                                
+                                                 </h4>
+                                            </div>
+                                        </div>
+                                    </div><span id="pageid:frm1:uninstall_icon">
+                                    <div class="col-md-4 right_icons"><span id="pageid:frm1:j_id22"></span>              
+                                        <a href="/MSContactUs"><img src="/resource/1444289991000/MindsparkAllResource/images/contact_small.png" class="img-responsive">   
+                                        </a>
+                                    </div></span>
+                                </div>
+                            </div>
+                        </div>
+
+                <div class="container" id="mid_main_con">
+
+                    
+                    <div class="col-lg-12" id="bottom_main">
+                        
+                        <div class="col-lg-12" style="margin-bottom:100px;">
+
+                            <div class="row"><span id="pageid:frm1:outId"><span id="pageid:frm1:j_id35">
+                               <h1 style="font-weight:700; margin-bottom:25px;">Browser Homepage and New Tab Reset </h1><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">To reset your homepage back to your desired choice, please click on the link that correspond to your browser of choice:</span></span>
+<h3><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;"><b>INTERNET EXPLORER NEW TAB</b></span></span></h3>
+<span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">For instructions on removing the custom New Tab page in Internet Explorer, click here:<br><a href="http://support.mindspark.com/MSArticle?recid=kA31a000000Lxe6" target="_blank">http://support.mindspark.com/MSArticle?recid=kA31a000000Lxe6​</a></span></span>
+
+<hr><b><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">MOZILLA FIREFOX  NEW TAB</span></span></b><br><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">For instructions on removing the custom New Tab page in Mozilla Firefox, click here: </span></span><br><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;"><a href="http://support.mindspark.com/MSUninstall?bt=FireFox&recId=kA31a000000Lwt3" target="_blank">http://support.mindspark.com/MSUninstall?bt=FireFox&amp;recId=kA31a000000Lwt3</a></span></span><br> 
+<hr>
+<h3><b><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">GOOGLE CHROME NEW TAB</span></span></b></h3>
+<span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">For instructions on removing the custom New Tab page in Google Chrome, click here: <a href="http://support.mindspark.com/MSUninstall?bT=Chrome&recid=kA31a000000LwjS&prType=" target="_blank">http://support.mindspark.com/MSUninstall?bT=Chrome&amp;recid=kA31a000000LwjS&amp;prType=</a></span></span>
+
+<h3><b><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">SAFARI NEW TAB</span></span></b></h3>
+<span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">For instructions on removing the custom New Tab page in Safari, click here:<br><a href="http://support.mindspark.com/MSUninstall?bt=Safari&recId=kA31a000000Lwp7" target="_blank">http://support.mindspark.com/MSUninstall?bt=Safari&amp;recId=kA31a000000Lwp7</a></span></span><br> 
+<hr><span style="font-size: 12px;"><span style="font-family: tahoma,geneva,sans-serif;">And of course if you require further assistance our customer support team is happy to assist.  You can reach us by clicking the <a href="http://support.mindspark.com/MSContactUs" target="_blank"><b>Contact Us</b></a> button above.  </span></span>
+
+           
+                                <br></span></span><span id="pageid:frm1:searchdiv"></span>
+<script type="text/javascript" language="Javascript">function dpf(f) {var adp = f.adp;if (adp != null) {for (var i = 0;i < adp.length;i++) {adp[i].parentNode.removeChild(adp[i]);}}};function apf(f, pvp) {var adp = new Array();f.adp = adp;var ps = pvp.split(',');for (var i = 0,ii = 0;i < ps.length;i++,ii++) {var p = document.createElement("input");p.type = "hidden";p.name = ps[i];p.value = ps[i + 1];f.appendChild(p);adp[ii] = p;i += 1;}};function jsfcljs(f, pvp, t) {apf(f, pvp);var ft = f.target;if (t) {f.target = t;}f.submit();f.target = ft;dpf(f);};</script>
+<script>function dislikebutton() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["pageid:frm1"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['pageid:frm1'],'pageid:frm1:j_id56,pageid:frm1:j_id56','');}return false }</script><script>function likebutton() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["pageid:frm1"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['pageid:frm1'],'pageid:frm1:j_id57,pageid:frm1:j_id57','');}return false }</script><img src="/resource/1468269272000/likebutton" onclick="likeFunction()" width="35px"> &nbsp;&nbsp;<img src="/resource/1468269272000/dislikebutton" onclick="dislikeFunction()" width="35px">  
+                            
+                                                     
+                            
+                            
+                                   
+                        </div>  
+                    </div><span id="pageid:frm1:j_id66">
+<style>
+  #footer_maincon {padding-top:50px;}
+  #footer_maincon ul {
+    margin-left: 0;
+    margin-top: 0;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  #footer_maincon ul li {
+    float: none;
+    border-right: 1px solid #000;
+    font-size: 13px;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 0px 15px;
+    list-style: none;
+    display: inline-block;
+  }
+</style>
+  <div class="col-lg-12" id="footer_maincon">
+    <p>TM, &reg; + &copy; 2016 Mindspark Interactive Network, Inc. All rights reserved. An IAC Company</p>
+    <ul>
+        <li>
+            <a href="http://eula.mindspark.com/askpolicies/" target="_blank">Ask Search Toolbar Policies</a>
+        </li>
+        <li>
+            <a href="http://eula.mindspark.com/mwspolicies/" target="_blank">MyWebSearch Toolbar Policies</a>
+        </li>
+       
+        <li>
+            <a href="http://www.iacapps.com/about/" target="_blank">About IAC Applications</a>
+        </li>
+    </ul>
+    <div style="clear:both"></div>
+    <p>Mindspark Interactive Network, Inc. PO Box: 379, 79-81 Main Street, Yonkers, NY 10701</p>
+    <p>
+        <a href="mailto:customercare@help.mindspark.com">customercare@help.mindspark.com</a>
+    </p>
+</div></span>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div> 
+        </div>
+
+
+
+
+
+                 
+                    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="myModal" role="dialog">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-11 " id="share_pop_up_main">
+                            <div class="row">        
+                            
+                                
+                               
+
+
+
+
+                              
+                                <div class="col-lg-12" id="popup_heading">
+                                    <h1>Oops! We were wrong.</h1>
+                                </div>
+                                <div class="col-lg-1 close" data-dismiss="modal" id="cross_product">        
+                                    &times;        
+                                </div>
+                                <div class="col-lg-12" id="uninstall_heading_con">
+                                    <h2>Help us make the correct choices.</h2>
+                                    <p>What product are you using?</p><input id="pageid:frm1:prod_search" type="text" name="pageid:frm1:prod_search" onkeypress="autoSearchProduct(this.id)" placeholder="Search Product">
+                          
+                                <p>What browser are you using?</p><select id="pageid:frm1:selBrowserType" name="pageid:frm1:selBrowserType" size="1" onchange="A4J.AJAX.Submit('pageid:frm1',event,{'similarityGroupingId':'pageid:frm1:j_id76','parameters':{'pageid:frm1:j_id76':'pageid:frm1:j_id76'} ,'status':'pageid:frm1:statusSaveTrip'} )">	<option value="Select">--Select--</option>
+	<option value="FireFox_MSP">Firefox</option>
+	<option value="Chrome_MSP">Chrome</option>
+	<option value="Safari_MSP">Safari</option>
+	<option value="IE_MSP">Internet Explorer</option>
+</select>                    
+                             
+                                <h3>
+                                     <a href="#"> </a>                
+                               </h3>
+                        </div>
+                        <div class="col-lg-12" id="submit_con"><a id="pageid:frm1:submit_button" href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('pageid:frm1'),'pageid:frm1:submit_button,pageid:frm1:submit_button','');}return false" class="btn btn-success">Submit</a> 
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    
+                </div> 
+            </div><span id="pageid:frm1:modalPopUpPanelId">
+                                <div class="modal fade" id="myModalArticle" role="dialog">    
+                                    <div class="col-lg-5" id="share_pop_up_main">
+                                        <div class="row">
+                                        
+                                            <div class="col-lg-12" id="popup_heading">
+                                                <h1>
+                                                    FAQ
+                                                </h1>            
+                                            </div>                        
+                                            
+                                            
+                                            <div class="col-lg-12 close" data-dismiss="modal" id="cross_product"> 
+                                                    
+                                               &times;        
+                                            </div>
+                                            
+                                            <div class="col-lg-12" id="heading_con">            
+                                                <h2>
+                                                    <div id="headingId"></div>
+                                                </h2>            
+                                                
+                                                <p id="sumryPanel" style="margin-top: 5%;">                        
+                                                </p>
+                                                <h2 onclick="redirectToArticlePage()" style="text-align:right;cursor:pointer;float:right;display:inline-block">See more..</h2>
+                                                
+                                            </div>
+                                            
+                                            
+                                            
+                                            <div style="clear:both">
+                                            </div>
+                                            
+                                        </div>            
+                                    </div>                        
+                                </div></span><script id="pageid:frm1:j_id81" type="text/javascript">dispSearchResults=function(srchText1,srchText){A4J.AJAX.Submit('pageid:frm1',null,{'similarityGroupingId':'pageid:frm1:j_id81','parameters':{'srchText1':(typeof srchText1!='undefined'&&srchText1!=null)?srchText1:'','pageid:frm1:j_id81':'pageid:frm1:j_id81','srchText':(typeof srchText!='undefined'&&srchText!=null)?srchText:''} ,'status':'pageid:frm1:statusSaveTrip'} )};
+</script>
+
+
+               
+            <script>
+                function func1()
+                {
+                       web2Case22();
+                                       
+                }
+                window.onload = func1;
+            </script><script id="pageid:frm1:j_id85" type="text/javascript">web2Case22=function(){A4J.AJAX.Submit('pageid:frm1',null,{'similarityGroupingId':'pageid:frm1:j_id85','parameters':{'pageid:frm1:j_id85':'pageid:frm1:j_id85'} } )};
+</script>
+        
+        <style type="text/css">
+            .ui-autocomplete-loading { 
+                background: white url("/resource/1441994087000/ajaxLoad") right center no-repeat; 
+            }
+            .autocomplete{
+                border-color: #929292 #D5D5D5 #D5D5D5 #929292 !important;
+                border-style: solid;border-width: 1px !important;
+                height: 18px !important;
+                padding: 3px 10px;width: 534px !important;
+            }
+            .searchBtn{
+                background: #FDCE3E !important;
+                border: 1px solid #E5A716 !important;
+                color: #434343 !important;
+                height: 26px !important;
+                margin-left: 7px !important;
+                padding: 0 23px !important;
+                font-size: 15px !important; 
+                font-weight: bold !important;
+            }
+            
+            a:hover, a:focus {text-decoration:none;}
+        </style>
+
+        <script type="text/javascript">    
+               function getParameterByName(name) {
+                  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                      results = regex.exec(location.search);
+                  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+               }
+
+            var strCategory; 
+            var tname = getParameterByName('tName');  
+            if(tname)
+            {
+                strCategory = tname;
+            }
+            else
+            {
+               strCategory = document.getElementById('pageid:frm1:hideVal').value+'MSP'
+            }
+                         
+              function dispSearchResult(){
+                    var searchVal;
+                                  
+                   
+                       searchVal = document.getElementById('search_bar_small').value;    
+
+                   
+                   
+                  <!--**********************-->
+                  <!--*********************-->
+                    dispSearchResults(strCategory,searchVal);
+              }
+               
+
+              function autoSearchProduct(inputId) {
+                
+                //alert(inputId);
+                //Auto complete textbox component
+                var autoCompleteTextBoxId; 
+                
+                    autoCompleteTextBoxId = "input[id$='prod_search']";
+                
+             
+                 
+                //var autoCompleteTextBoxId = "input[id$='pageId:frmId:pb1:therepeat:"+ rowIndex +":autocomplete_textbox']";
+                var queryTerm;
+                //auto complete method              
+                j$(autoCompleteTextBoxId).autocomplete({               
+                    minLength: 2,
+                    source: function(request, response) {
+                                queryTerm = request.term;
+                                var sObjects;
+                                //alert('Inside Source');
+                                var searchText = j$(autoCompleteTextBoxId).val();
+                                AutoCompleteController.getProductNameforMS(searchText,function(result, event){
+                                    if(event.type == 'exception') {
+                                          alert('Exception ' +event.message);
+                                    } else {
+                                         sObjects = result;
+                                        //alert('Sobjects---' +sObjects);
+                                         response(sObjects);
+                                    }
+                                });
+                           },
+                    focus: function( event, ui ){
+                            //alert('Inside Focus');
+                            j$(autoCompleteTextBoxId).val( ui.item.Name );
+                            return false;
+                            },
+                    select: function( event, ui ){
+                                //alert('Inside Select');
+                                j$(autoCompleteTextBoxId).val( ui.item.Name );                                
+                                j$("input[id$='searchId']").val(ui.item.Id);
+                                return false;
+                            },
+                 })
+                 .data( "autocomplete" )._renderItem = function( ul, item ) {
+                    var entry = "<a>" + item.Name;
+                    j$.each("".split(",") , function(key, value) {
+                        //entry = entry + " <b>" + item.sObjectName +"</b>";
+                        entry = entry + " <b>";
+                        //alert(entry);
+                    });
+                    entry = entry + "</a>";
+                    entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+                    return j$( "<li></li>" )
+                        .data( "item.autocomplete", item )
+                        .append( entry )
+                        .appendTo( ul );
+                };
+              
+            } 
+
+         
+              //To remove conflictions of jquery
+              var j$ = jQuery.noConflict();            
+              
+              function autoSearch(inputId,ev) {
+                if (window.event && window.event.keyCode == 13 || ev.which == 13) {
+                    dispSearchResult();
+                } 
+                else { 
+              <!--******************-->
+                //Auto complete textbox component
+                var autoCompleteTextBoxId; 
+               
+
+                          
+                    autoCompleteTextBoxId = "input[id$='search_bar_small']";
+               
+             
+                 
+                //var autoCompleteTextBoxId = "input[id$='pageId:frmId:pb1:therepeat:"+ rowIndex +":autocomplete_textbox']";
+                var queryTerm;
+                //auto complete method              
+                j$(autoCompleteTextBoxId).autocomplete({               
+                    minLength: 2,
+                    source: function(request, response) {
+                                queryTerm = request.term;
+                                var sObjects;
+                                //alert('Inside Source');
+                                var searchText = j$(autoCompleteTextBoxId).val();
+                                AutoCompleteController.getRecordsMindsparkProduct(strCategory,searchText,function(result, event){
+                                    if(event.type == 'exception') {
+                                          alert('Exception ' +event.message);
+                                    } else {
+                                         sObjects = result;
+                                        //alert('Sobjects---' +sObjects);
+                                         response(sObjects);
+                                    }
+                                });
+                           },
+                    focus: function( event, ui ){
+                            //alert('Inside Focus');
+                            j$(autoCompleteTextBoxId).val( ui.item.Name );
+                            return false;
+                            },
+                    select: function( event, ui ){
+                                //alert('Inside Select');
+                                j$(autoCompleteTextBoxId).val( ui.item.Name );                                
+                                j$("input[id$='searchId']").val(ui.item.Id);
+                                return false;
+                            },
+                 })
+                 .data( "autocomplete" )._renderItem = function( ul, item ) {
+                    var entry = "<a>" + item.Name;
+                    j$.each("".split(",") , function(key, value) {
+                        //entry = entry + " <b>" + item.sObjectName +"</b>";
+                        entry = entry + " <b>";
+                        //alert(entry);
+                    });
+                    entry = entry + "</a>";
+                    entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+                    return j$( "<li></li>" )
+                        .data( "item.autocomplete", item )
+                        .append( entry )
+                        .appendTo( ul );
+                };
+              }
+            }            
+          </script><div id="pageid:frm1:j_id96"></div>
+</form><span id="ajax-view-state-page-container" style="display: none"><span id="ajax-view-state" style="display: none"><input type="hidden" id="com.salesforce.visualforce.ViewState" name="com.salesforce.visualforce.ViewState" value="i:AAAAWXsidCI6IjAwRDFhMDAwMDAwSm00eSIsInYiOiIwMDAwMDAwMDAwMDAwMDAiLCJhIjoidmZlbmNyeXB0aW9ua2V5IiwidSI6IjAwNTFhMDAwMDAwVGFuMyJ9QRVjhqcU2bjKGUL9XiYTxC1sQLMXRRHQ4a4wUQAAAVqFR1e4VfUdD71LCKVMKBDmVsq35nZFjRGk5akGnDaxOYEhzW/cgWUb9EGIM8VUUUCTgpoicKbAtsDPuJnHgy+dfTjLWyoAg8Wt0DCooJDTNMjJCfrlpkHAiTzweGxkKd5mXL0Q9pyHtKfLBuU608Ks5TlFMD2tv0flx4PY/dHAsvOn0rQxp9n4NS8qg/j5wbhcLqHd/LFPtaGrNWu0sdUyTFf5DAfCY5jcxFsZVgnEpcXuJVDUAiHW+X2PGcrhm4b0cczwoLFod2bTHhXQHBCBxTJhPo2OfjYTxxcFJc5mW+/3Mj2cLWCGYgDMlOxr1dGIVr1S0ZvgACg8Wvy3mDYM1TMqgNB8Vl6lsAeVJU0HHqhFk+MQdhBlgye2Iw7IgM8pLwQvp6YEaWcrZ2msWkQZ1BWt/rEWi7kW5eDKi3KqAbda9gd/Y5lne3ERPTjOxIUoiA4aD+TugXAFZqr/LIxiVvzWuKNedE1l8D1NVYEIRt4dhwI7eR3/IniVkNPCDy1HrYxXfVvX+Erke3MK7cQ/pK1vHy0RJM3haJJG8vZHwvD7Kc1aTex++aUBvO1VKbtimVHoNClLViqukvrw3+6o6XYYAN2JuR4pJlYKuNj1rxR9bZKK1/4fXL3WW9yr8w6ZpUeFgYxeQtRgHbIKkrT+dbY92UnfIeaYCBLQ1L6H5JYHTzcFggIWM+XtJxoMCSPwDkVxSnfR8lWV8kVz5YdUq9JHDScIFwS7rd0Q13gT6dlNwf1Ot6o8kshpaKtZrxBNtIcDFt95WxbwsSArUQ9YPDZh+d5qupkqEpkN2cp9DKPDtmOBUdxg2GFBW0V10I4cn7XKT/uKeBGQWm2/VzEdgefSwicCfSub8MMIr6jM98CmvnZ8QcHkKRDWi0v2mvAvcpfZxHq+CUWj7wTqtC6miwDd1SI929m/2i/hu0XPNBF4OFHOcJ7Dp5mheQpwofhh1CxQ4hqnbJCT7hzP63HlNWP26eeJiAag5/sJf0gKgeyWL73aeVt+fdCB0Hh559b/8nFb1tfBrPt+FYlk2wyHw/SXk/VbYZdg4rqy+zmU9XvqIeg3lVWgLat+zIyjqUI7/fZwrKTWx/SY1NUnELLDgHo2wq4tDWlWmoL/oP1gxMCzGmLnwliueVjODRlLGwx/Tmrbka8N5MqUiLtRSCJhAg9gzhO4te4+L4iDGzIRtaPXYNEAZn8mZ6Y2U02Slo8dPE5CvppJupWZ4xdtEPbvsIUl5g5UNTUJ6eCXzSX8vRIvRCUzqDpotSWHN4K23F5HnsiKG2gdRK2ffe9E8Pnp/hktpoO+ivwHWymz6F6opvd+F70dRvuhsPDbQRom0BsmbHUdBxMRpImS/wxLKHo0o78QfCeYZVwNyXYfECPFU61N+BEWUDXsPb/ikT3WmYCZ+hPc+p4NWYIgDaJ4GNyxboXFUGsaSRSuWtNWub4PTlVZ9yF8FFch8ilpqAb1CeVC5VAZAYxXcVbAMJiEUsenHP73n9u3rd2yjDkNaRIMifVnWEZuhUB3+76W53FhX7uBBBX213Wv0h+JXxtEC8unN6vDlTPyswQBzCifZ/d15gtrkatg0xMkBJrcBGOdXIy0P7e8zPoPxmSChgI/pGGHXLP+Oj1UROoRz4Dd55BNfX4//YIIaQR6LVUDGGFthFwryKlfkCkEz5oB5FbRpRSoXqqcCDtal0/5f1+H40y3k2xFQ+aXR5WIHZtkg8S5tUUIq0rSO44wX0R/JFsDRIWVKHq0+lkI0d6q3VrZjfqrrxToTTN7d3dihHZF4in6cE9tBE4eR1ILx8ULpyCzJJMoGhiTBKL6Sh8aJRjglU9Z7xTL4aizWUu5BnD7XbLqRCCKjKiMwkForgd75eKk15um1WoVqEFUO2DgsdFNHImJ1VQXDHfVXxl04k0WIki8uRrsUvMQLutDY0uVGOHaJMpbfij+CxvtYIywHbM6R7I8YY7pt5bc4GD2DogdadtXwGps2bvPedr5Qfw/lxybTpJezOjvp/mRn9+TiFQWctuWFBc3SOYUnrGMnm1eC4+9VjGQWRIOQXSrAmO4vav4ahcMKEg4YbM0bfBfT0AgCIrdY35BdzXQ6WpWjvmveUI7C8DRWqSUb2Wcvu+6QPUXYkgunCQs2rPMnGb2qvAKKtEXNnu3+VWf/D6jvJPxAfzwkYi9siQBAhmtJsPCUqTHaBorEbb0Dr4u7H9obd5MTcgopBg08mXrI2aC9l4DnZTK1eig/o/Xw9q4rWS1X2ZfN5ceOsqcvdIDWhTWGqWM6woNjS1YDu19R/ujI3dKkS8DT6riZrNBezeCcia6pXAeR3F0Q+dNFYhdVsbUp9DdnV/eLnh2OlXAjD+fS7rGWAw+sIPxoocBjIvDMoE2Nn7L+nQnU8uXAWzP5twHYE06sOagckFxwzfZnV2cie1cVkn959MBIVxsofJj/rGoYsaivFaEKEGyrAW7sY2TEn2rJeQVKq1VB7hjuc8vF94TWYMgqdMYiZbZ30hDRxbWbpBYMPUeqz/QpRuq/u/K2V6S2Pk3fiJl1v4bT0aQeDOb5f3mSO38LmRcxQ5JdApAcqeu2feJKHLOtvs+Ach1zFuEc1T7CJidnhHSnfwuFAnU0DxDIDIxSwWnlMPzLJDbZLgktpdVdbcIMdhbQhvQ9DtHXssh5QulD9hjnTNWRrb5J3nUhhY2RdCRGeJ3Ob+27Aspk8JD7o52ICvSmryQhKoZ+TMzbtTGhlfEqfiDDveFFOBqVFgzM/SH/iDK6g/HPxxOfUt64Do/W8O9LXo6uWijxIZFv584QFfm42R1r7vk8Rqg8BJVrOnKwjjmnIZKUCNxU7x2x/HFaxZ8lfGrWjlj4MQ6HXx6CljmoAUPKZjoh598R0Z0Yoouk8xvYgDC+GKqB/J/zq5ooijeVYpAJMKY9y7K46ML7rMBAKg6LWiPQG4Z4tkZNkR8VxlbeEqM3mM1lzwnzKqs0OBlVfo85qIj+AzlY92im1N9MPrLoXaN+NWZwjTKu1aVGO+sU9BTAnn2KPJLYt9JrIUppKiLqO+/dxNFlHloPIkukDLWfkQrGz+yIOTxxufX2WVOE8lZlJDnZr7LXXECdneMyjp/wKr78RCM0jQe9O9Ik3t7z/amSC84o0EFrjRtMzaE+381mQHctfHfkZGgx5tbE5OKSHVR34AiRNV8mXeGuACmxxPj1abuY/RO/8GWWsO5C+Z3OVtMWIFrVTtvKoigmzkvc5Yf3oKt60zUACllOIXEjOI11RD+diD19gnbJD4Jq6904v1sPNHF3RX/qb8ort2isSpR33X153YW0gUx+FPpp9UNpsqivFteQ78d615WlUolWKSTC6iIhimg3XLechJyWkTREAAV5XmuX9f8SKUFgP+EutPnqhupqXvCTyB467nCtmLC7fJYBeW+R6I8r99YUMMZDOzajBYR/aV2UiJ9oTUKKoXfaXfWWwDAVh4Xz0tkIukBAuV9Dc/5mBrQdG8/oAmfF9ZKwzJAlXa1CveSvIr1tUKqkfNt48sfxdLqljRX/IouIkxdHif2IbDYP//Irvf2H5FiXhjqAmQ60FicRqgrncHx8J29Rozbjm89J411LsrLoI2lGn52XK6MnV1OKrrGwbKMrDMgapvEWAbPza7d/0nGAWoUnSPzXACAwayL/jCilA2AQhVx8D9PmwBgREqxUo7gGw1zPfjaCoBh+0vh+m1fOVOyMWrTnz3kccacdsZI63cBJR8T8TWUaq3+xxC5MQM8T9cj4icaNzOVyo557H0/IWHwEzAHWGBsXH3CEIk1mFwllDhnAypipzMLm4I1L4rFqWRo4mtLlqH8ruuVpxUEhGHHRY7e1LhJ/kQHZrzPcLn1qoUhv1LqIfpAqMuxCW3FPfq++uQHQZ070+bsigYOVBd+YwPB4RH07O2KwVlg8lrxGq7AGyuG7hd+qDgn3t2uNdI3nyjDEMMx5fmdPSgrnAy8a2c8je/4IYdvg76FuqDtIwzCa7mumEzcdTSdVmcIc0iSLLqisIY6kzov/R8mEtjUfKlAS0qHOTexpDhEKcI9DEkptdIvoZsWKVLwBud5iog1SCQ0eqKnmthegGEjPCLxKObWD3dYeUfj7v3AfVK1kqQyWjvBO8/sSJN/IBsAcsw2vsL6AgOLZd8QO3WYowQqkzrcAcpIWy5zdYG4KAHCiMapMYq7puMRPfmPoDzx8oCrzxQ07bZqQ9aZf/IVyNkuYWQRTlaiw9htoMBlsN/wHdfzf1VQZKl/T78mIgaONDWdRcSMz7f4Asm6Si4y6Nx1znZPYVjlZ56N76e0R9a4DJp8pIE3rJSGfSgpFzwZdhNheS+onL9jfd6o449Qpv5TN/5IiLdlxQG5O7uO4tT0KKTRIJcZ08QrgurgUG0277NV1dHOnX9Yt3mxY1Ee7+kzkCGc8vONE56TyGHxyCEQU/YWbgrqGWpkgeB/0eZuNzjwAywez8WvQEDmrEVd6gqq/4n3wr3sROlmyKeH0zd4S2R59p9048rAyBuRo8j3fWHC9/yY36gMikXp8q1ObcDl+FXjJ+7LJ2C0Cxgmu6OdMc/vJ1vzPPbTZhG05hwYi2mYbWiBmUROI+R7HWXfcYr9PVfiyEQ/sS96R38n+9lUNPp3rWpzmw7wcNlr4u6VCGaEAmXWHB5Opg4ouIFrbCgt1rMZdS9rblx0rmDwrXsj355YhqzIh5o0TYG6olj4/1Nfv1kfDm92Rx9gksx1fga+LDn2mloqXzqyU43aW94taA1QP8Cs24TPSUWddpNFzHsXeW5cBtSeXwYW4xYxoWDD1dUo62WTP5Y+8U8a3Z2lR+UNmP+AB6H6VjDTIuWwuYe8YSgiBOA9btrC3MB/PA/5jgpuOu01b06/ZhZNj8YcxkKRkB2hW1ZBQwmwxrS91nd/2KTFILIPmGk53+kPWceSL5tlTqBn9sSvHSN0TDTEZ9pNJCz2Voy/7t1CW1Qvffx5YZO3/4gHw2vuC5Jj6wd2/vLGQvr9VhkHOGzLuNVo0g4R/4qmHS9aoB8k2cBUbRH1DaP9PhlBob4ERL+fJ+7hh/ewuVS+Es9vPtOdF4i4O9KQh/zBG9OXQ17TfK716Itbzi3kA6krUxRHJzy1Bs1Gj7o8fE7Te+B1H/PzkD/9ZvVKXJuQSFDxlmNTiyTL4aD1aWjLV4N6jDqNq2HwZ3RRdNSX78ifdU4sKAJUV7UO3XvCsb1KcArKgXH0ynU5yAKXBnJv/fqsOfvvG5cqlAfmOVr4Gxi4jPv2HvwLAhUC+ilhJolAp5QzViAmpr28gUuAwsZCN55LxrhOFU2xtMJHXYI139tOBNVTeJLQGMS44IGMAAcArhqm8DprH7/PO7xRJ3GLUjMbb2LnTvwc68IaRpQepYEHiqR5p2sYLv3UQG7GNT6v9nGRx7DMmfxIlLXpfIwEZXLHsae22DaXqBxTIF5Qu+gYr07a8iZzfVLY2YTGXDJPIJACoglcUHx5WgR6q7HdPcym+c5pF18GCODHbJMThMoGDlvo4W2synO6WZzWVBwTyWe4KnQXlqZjVtdB4sVOVSbGgUOFAmmbC5occNzM9uSxf4jP2aaoqCVM7LT087/AcI/jSYd3MGGUkyDbRh8ZTyr6xl0AkJm+0KHeO/32gQLp7fVOzJh8Y80H6gAjFWcAyMOxKY50/xgR5kySCK6PVYm47+Sr17BZ76totMhJ9KcCEgyDXUSIFz2udLDHk//slcJ2hRz4Pa6RlBGCYZsnrdhAhJhCc5eCEhWB704MadJRaqYbzGlk9cRtkbFMa1E11Cn+ZlhhfvRQuulP+iGn3XmqgtbCZlNkwimRW4iHI+tcjtQWWk7l119c3KQAbC4o0qL40riqx9lVOH/DmNMvL5frNCanw5RgGvGR9qbIXTjLf4LKOP+QYc85GVLfHY5m4PbdOIF5kZvBY/kqt3/Zf2ZgTgnDa6fuosoKgglkKQGwRf+4nbXt99eajoH5qL+vj17vm2/T1V1QivRd0e33FlmLfK/dpbtat0chg0+iyieZt9wIMvuVlm/CQiuEpnxXhRCGxT7cXB4PCTNfeBVqQkM5CFwa6lkmWjKUsrg8fzvx6mcdB3wUuGZPMBrIxqBnnB9Abi1+5bh/GfY2IVQJ2yihFJcxt9Y97yKAjzSBrzZJXV9PCAzd2gucp04keaSHjKJaTeUk7RXTo/nbr7qa/1ogk5PG0m3Go9uPq7RzdWbsD9b8gX8rf0rvVwebU3OQGkMIVS4e+jemSZPyT7HartgdtwVDdiUwChB4ijkUNSkS0wJubl2PxQQbrnFij8EiYbubgTIEBTENOuo6UpA2mPoyZ9oI2XYJiyVvsFOWeKoWx4sSx50EjZexDhFUocrnj6j1OS2pT1DLD7GebhDgbjRAWMQ1Vn81BOD6l+x03e4cb+FLDOn98EgDRGkxWRjQxm4ypRA8g2pjLXM2QeRWb2TXL2rbRaCddMlZDjpMBX7Uw2D3dfl2chJ7/FhUibzrAmOfOJqJDqeuqcFYX8P1xI6ttb1O609HI9j+sqYfQgmMMNgTiybfA6vH96zDI1J0Qw0+GPRuEMu3Vww8c5vRyQ3w9t5avoSnDczvCalenD/oUtIm1G3AwaSRJby6MW7DiqAScNlETcldBFPBV7eeuLFrLm/Gw66+/1/KrUqFfK7JyRBJBrPXb/vuuB+HAKwfpz2HaUBoGghH7iMscQCsDjh8OMgcNlmT9FvBrQnwilDgg5tFRGjGrvU1tug1bpL86xSpyZjLLiR4wbzubYW1RdXPsx8RssP/S/tRsr4dR7cMMkLP+U58LD99YqI+RBGUCdNOFawbHIYTR0s1mt7djZ8qNDAdi7YnMVQltpnq2f9q7/bXg3nOeqveu8t9qHIQ44xYq0AVZ5Twrds6FPNzd3AupaUl0QAtTLdXGkjb5f8WRF0j0iflYD34bAV8u4OFMNYhOwkbvlNiUIuwp4hX36GbHs+Rgr0VOZFLNRfw1x3WncPAur8stAQ16Bm3H0ryy680Z1R4ynXhTwtdERtI6i1f8qeE+oYqTT0n/9OHH4F7yiJXaHms1FmmsWGpKob5W6HZWyiibBBlWWvm3xjl111J/xZwS4/Bm7h/Cgn9KQvRo2Z8Yj4qhXD/+2InXJW6jtwAwkyyAzlwO0tf6kd3b9og9M03OA6PIektfZ9pOURJ6uieBuPesEWb78L7JomLL4oRZBd566fV1whjugE8xEusnny6yabHhNGAVUy/yo+FLw0myT8qCM1+VF8rfdMLFryVy8W/iA3XzF+cib0Sw/ZNSMTx70fxWV/GO4ZnRIUhJoy9dZ6l5Z+LfR8jAeKLLdLR4M+5jMPei8U0I4K+49Hn5uB8XlQwTwlXyHHYv89DivfFC67rf7d7GpklTAfrq3Z18vUhfY8uoGZkRJRQSlSHm7Yn/5wt8UkSnJjdqOhtVqj5zFdXPVc1IQlYwYnlXCPvcE+SWzs0q9/+Ay6cWFOYUkFW/hVK/8gfJQrWc6ukefqjW3gUiAypqROyZ3Qhdarfo1SZPG5iOIGJq9n/YWUicrd/8m2D2OLsIdWhZWDUMOAAPPymmdbdpD62yjIAm9O34WCAUT0L5cnCZuR+ox9YvdeeGS6AuHQfjZhrNBZoAz2Id1A5OIjYIiqfQH9VXIeBfAGC0WjgdwiBqFEaVg618UYlYsBsmKRCuGSvuE0s4t74NgZtzbtIObxVyFx8/m1CjF4wDu2CYMZ/9ydydSnZAGf56W7ZrYksE7xBRUtAym9XSREzdc6vnEpcMf66jGPVgQZYKPrZnApwcLVhR3ml3upmCBPPk5ee9vCsQpfNCslQnHCJY8dhOv0D+w0rvaf6rrsjTmmsOwUpZ9aFykqucMh1i0cc/k8rw197wYsBC5r8dlXpo66qy50lL3/wmvEuVLHTFp1FKS99AVOx4ImtQXhi8kBAeCgZEMaAwIXTypTubMge4cNguTrjbOe14IS5exD6CYiTFO9Q1GMhykNhAG2ipN99K4ljcCsmtJOJ08pxg1QFdOf3xYMX/f7hJcTuzvY5XdxYuaSZpCdF3e0+FyJ1CwKK4TwQlDTAKDAgKfvMpjkFyue9ZlT3DQCe9l5NDPapM+PwmCZcDd/UR75BomXu4w2uC5jeQu4I+/IRapK4Kst02a2FaNFzSqZI+8qoGhRZQs9yNPt0tErAw64S1msHlw7vYZybOjLi0cLRUOxoErKlNQe0WhQkdwfAJCeNr8uNvTNzm5Yt6RcjhyQKvzLsY6YzoPNHJyv9iLhX0pujiZM0NVJhuWBcxWfl31/V1YknUAw+6sVUpKvqjSkhSPOV2V+91mjO4e9udWFzK+0soogMJConb5hTob09X5ir7A+YqX2m8TMGv/4DX8Zg9LfrtMB+d8OZjdjP49RrJyOKlheOV97v7ZiBf/I49nWAIWKSrqWBWDb6F9QOCDdfjI/Vo/ZeRbou89ie7eCABDi0lxmXVDtIVDidk0QppIi2NseCQGz2diGVlaHjg+UMJ41i8u9LtbJEHOx1E6S6QMW7iqhA1MvW+eLYURSls7BzVJqxrcmjRG4ukDPBYr7iCjeWREmUTr6nOLYsnG6VbnZRnQpjFJjafHdeZyjip2et+di+f2ahsfexX49I8g6GCSHRDJnfL+O+hVfMSYZsWUb2WOHK1tJaCL95Byi2SSerzTCvQQoJnNZ8tpK+YL7cPq1l5cMb5q3WtNu6p6TsZrItHlmp6g4OUoXzDnBOAs3SVFjV4T6QyLlK8oshAKX+zsPbWvjK9J3h/rEvLmwsYIBgGJvh1vlWwu3phkpkliXAT/NF3u+Fqi6HeC/JTwcuHpKU1dQNpVcZIMtcYw3IxYLDKZA/t6wmUEkzmTY+c2oEZq6ABgQfaVHnCTUgZNhChIYoJI3q2i5eAvg/lCnbWbrret2wvY5S+qTkr6/A9PlxSA9Lb3IfH6FT9cW7gPXgjLDi43gppLQ1PZ5/mQ2oYM0YhIFfmOQbPpbKNxeQVNRACalH4vbZNFJJsUYY0mXzhD34T9/bO35OXpp5MB1Lj3cFyd8CXRmzntzRm35gBYyahUI6hfM0Sato04n6dmZJzLOJgOeKW3lQ+aSUpMomOfRzuieNJj75W+QWEXk3wQ8x42wsN1GeaDVOYrf46FY9zKE2ieRzC/590mcPpd1aB7oJ3Jqsmb4Cmm6+4gqVsj3fWKngEYv4npw0+KsFu2q8xZNhLojjA9Nl90AbzE9hYj/9se7eW2tbZ6b/WbPxw5aX/Z/IKoWNhSLBr1ngUu/T2/BjK2GbpT5e7DXiOUythc70exXi9n3kxmYnyP98Pwig8OfptYt2BT9BzSDfiyjo0rC4EswJhhCejXvkdjXrD2w88YN7kK70DGv16Kd1uh41HbcNYVYMcQw5rSL+moQWxeP0nSrzrxPjVUXjRwd/eoGq1cEPhum3SdZomexnqfmYDyHzLIckNEWpHtJgWHnUyYrOP8TElj3YgoNFYA8TKOt5kNEk9TqV5kwESZIP3Uod7q23i5koQ2CSP++An/ymbpHfiuQ37fDohMMec2/4QG6ijBapbX9eznASL9LM+v/Ojqh/sYxcVF65sKTN0xi9/7IBZJaI7grKCAd2DhYpCHcY1ZJXzOo+qFvKoOnbA53UHOlSc7giAQIEwaGb+1qhlsSNTb3KSNRGBs8kUQVj9z6lAMrY55jAcs/ZeJxzgRO/lYblJYOuIGtLpAA/Vhw/n+FsfKO9LCnLVWSY/1BEm7TL8Jdol9MzkKXmaEmuUUS/XqKKGhkGG1r3BCvzAm3sCqvnz2WU7mxeOMwr8QwOPCZ/WeKapvzyF2W4BF9Q6xdPv29heUk7YuU58E10gqqeYkUITbBGUlrvrPum+/2Wdz0UJwrOC+0geclmRwczzz2vgtV5abJKzXsx7idEVCsYV8pU6ddcDQS3F84wkxWoGHvttWuKHpdlxFVtEHcjCLjPOPe0eawvM4z7sUqwenWQjvT/dGJfjeE45wniK0HmxqWQmDojaZa4ovhU0VGjrGhuNm56VeNrFJmiq58cFouzYnVMhuC+sKmFcP3NshUWVx4391zAtDJelkKG1q6VRPCJgXbXeS94VxnPP7W310jZehTkrrf9brIUuntTxtiEAciJ2qg/0Occof1Y+1ThLYRdLC2Og6BWCpE9EalK1IU/fnG7Fa5+IAtnWZ34pCSI6aalLMM32XtV080Sj8QY6VCu1AKZM/iyPHhITcxraFu3u2IapNrAZKU/8azSnXHk501cK0Uq2vhudNP5kd7gvtLFMqH/ncnipx7Bn46c+u6BsYOdswRR8mAVIyXdeXk2l5GgC2tn0gnbU6elrcQ2SdARM5EuNiI6OPapngAdmrZ/PA+UkZY2+BuvMej0lacf1PgGa6XBdedDwIf7neKKZdygRfSmqlEeOcCcwL+92u5t26UXtemXs6UZHHgLyi3KfYRVTTLDPUiAv+oHjfDLodjCuTPB2zQzxJkSUSzWw3DupbbvOaWAHW5eqoaFEeNNTUDt0IPQIoEQIPiCMF6K6h6CcariQlKAnfcvF+BnrUFD93/CglXlugWUL83HBQMPPhKNQXXWzMz1pWraAGajs3N4I3cK1xCF3lFsMKG9bTTNJVrhhaGwQQmbnm0URZple3aw7Ka8EPGO12CmR8TBC0P2HyPjrlBW9slFUCqWw2Yz+4Z+4emU/xibb61nZ0HLj7AE9O9TdPhdXaL1b3TjmDsSPvoWrV5WU9ar9SKkOR2S0bFoSeL1Kowvcox6yv5zaWRZSaB5A91F9mQy5YrYK27QL2LeuWVhH+01lw2TKLsoB9xKYCw5OI1iDy/eNRJsBs9p5fGpHOaUy1URUfVHIK+8HuPTFky/exynTnXw4lV6lcG4/75vadD/YzSrvcFuwVn1l+mJ445ohCHC0wslzPG2MLv2M/Ax9TbbVZ9QgaWRHVDO65RVEysiDxrFntpGtjZX2B5E8EhnXLKllucjy3GmqRpICJ47GvjGXXk="><input type="hidden" id="com.salesforce.visualforce.ViewStateVersion" name="com.salesforce.visualforce.ViewStateVersion" value="201702241917020147"><input type="hidden" id="com.salesforce.visualforce.ViewStateMAC" name="com.salesforce.visualforce.ViewStateMAC" value="AGV5SnViMjVqWlNJNklrbzRXblZLZUc1MGNURjBTa2RMUWtWc05qRTFXa1pLUkhCU1pscFhaMkZhTWxCWVpuRmljSGQxUm1kY2RUQXdNMlFpTENKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUlzSW10cFpDSTZJbnRjSW5SY0lqcGNJakF3UkRGaE1EQXdNREF3U20wMGVWd2lMRndpZGx3aU9sd2lNREF3TURBd01EQXdNREF3TURBd1hDSXNYQ0poWENJNlhDSjJabk5wWjI1cGJtZHJaWGxjSWl4Y0luVmNJanBjSWpBd05URmhNREF3TURBd1ZHRnVNMXdpZlNJc0ltTnlhWFFpT2xzaWFXRjBJbDBzSW1saGRDSTZNVFE0T0RJNU5EY3lPVFkxT1N3aVpYaHdJam93ZlE9PS4uS3FOdVJtZno5eC1hN3FmTG5GTF9seEFZUDlBOXZ1RGRmZW9tN25uUnBncz0="></span></span><span id="pageid:j_id90"><span id="pageid:j_id90:j_id91:j_id92">
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+         document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script>
+    try {
+          var pageTracker = _gat._getTracker("UA-48886845-6");
+
+          pageTracker._setAllowLinker(true); 
+ pageTracker._setAllowHash(false);
+        pageTracker._trackPageview();
+     }
+     catch(err) {
+     }
+    </script></span></span><script type="text/javascript">Sfdc.onReady(function(){
+	SfdcApp && SfdcApp.Visualforce && SfdcApp.Visualforce.VSManager && SfdcApp.Visualforce.VSManager.vfPrepareForms(["pageid:frm1"]);
+
+});</script></body></html>

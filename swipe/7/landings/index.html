@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html data-placeholder-live="false">
+<head>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b067134aff","applicationID":"36413647,544012","transactionName":"cQleFUpcDQlXRU5dAlwCWQ9fQE4MXFMESQ==","queueTime":0,"applicationTime":107,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="+dkSmh1VoKdZql+tDJxDLZfPplJnNc/o7eFug1F891/eOVlTHDu+wMQTGdHJf0Ih2u3ndwnahYor5chANTpxHA==">
+<meta content="noindex" name="robots">
+<!--[if IE]>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://cdn.everquote.com/evq/assets/static/html5shiv-9e07e1dd43f748c7160cd00552976c91b874e4cc86bfc912f4af1595acd45fc4.js"></script>
+<![endif]-->
+<meta content="auto.everquote.com is a free service that helps consumers compare prices on auto insurance, home insurance, and life insurance plans as well as mortgage rates for new home purchase and loan refinancing in their area. Get quotes for auto, home and life insurance coverage, mortgage loans for purchase and refinancing and find your lowest rate today!" name="description">
+<title>Proven Advice To Save You Money On Your Car Insurance Bill</title>
+<link rel="stylesheet" media="screen" href="../evq/assets/static/landings/article_livesmarterdaily_v2/styles-b51c8afae1c6a13733b0a5106788b64aa3df3df464baac9346e1c949c76a8247.css">
+
+<title>Proven Advice To Save You Money On Your Car Insurance Bill</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<!--[if lt IE 9]>
+<script src="http://cdn.everquote.com/evq/assets/static/html5shiv-9e07e1dd43f748c7160cd00552976c91b874e4cc86bfc912f4af1595acd45fc4.js"></script>
+<link rel="stylesheet" media="screen" href="http://cdn.everquote.com/evq/assets/static/landings/article_livesmarterdaily_v2/less-than-ie9-a31826a28822e038ea002984d2a9f06e154e65546d41c4471508ecf3c26cca6c.css" />
+<![endif]-->
+<link data-norem="" href="../css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src='/respond.min.js'></script>
+<link href='http://cdn.everquote.com/evq/assets/static/respond-proxy-bd4aebae0edcac3120ee8a4f388687f73fc12f70e9ac1a62263d2b956d1243a5.html' id='respond-proxy' rel='respond-proxy'>
+<link href='/respond.proxy.gif' id='respond-redirect' rel='respond-redirect'>
+<script src='/respond.proxy.js'></script>
+<![endif]-->
+
+
+</head>
+<body class="" data-controller="landings">
+<div class="navbar-container">
+<nav class="generic navbar row">
+<h1>
+<a class="landing-logo" href="../index.html"><img src="../evq/assets/static/domains/auto.everquote.com/logo-4fc82202e08da8a5f7d15eb360d17c33e1cbd6ff91c95945a2db87163170e5cc.png" alt="Logo">
+</a></h1>
+<ul class="nav-links">
+<li class="dropdown"><a class="nav-link" href="../faq/index.html">Questions</a></li>
+<li class="dropdown"><a class="nav-link" href="../ins101/index.html">Auto Insurance Definitions</a></li>
+<li class="dropdown"><a class="nav-link" href="../tips/index.html">Auto Insurance Tips</a></li>
+</ul>
+<ul class="right nav-right">
+<li><a id="menu-dropdown" href="#">menu</a></li>
+</ul>
+</nav>
+
+</div>
+<main>
+<div class="row">
+<div class="medium-8 columns">
+<h1>
+  How 2 Math Grads are Disrupting the Auto Insurance Industry
+</h1>
+<h3 class="hide">Do not pay your next car insurance bill until you read this…</h3><hr>
+<div><a target="_blank" content="img:welcome-image" model="#&lt;PageComponent:0x007f69c0951538&gt;" href="../index.html"><img class="welcome-image" src="../adh-images/advertorial/welcome-images/MITGradImage.png" alt="Mitgradimage"></a></div><span class="date">Tuesday Feb 14, 2017</span>
+<h4>
+  <strong>Local</strong>
+  – Recent articles indicate that drivers are paying too much for car insurance.
+</h4>
+<p>Are you aware that you could receive a large discount just for using this new startup's service? In addition, if you are currently insured and live in a qualified ZIP code you may get an extremely high discount.</p><p>For a long time, there was no easy way to compare quotes from all of these huge car insurance companies. You had to check one site, then jump to another and enter all of your information all over again. Drivers were stuck doing all the work to save money. Now, all that is changing. Thanks to this new startup, <a target="_blank" model="#&lt;PageComponent:0x007f69c273b440&gt;" href="../index.html">EverQuote™</a>, the information you need to help you save can be found in one place. EverQuote™ is not an insurer, but a comparison shopping marketplace. Featured in the Inc. 5000 list as one of the fastest growing companies for 2016, it is not a question that customers are finding what they are looking for - lower quotes.</p>
+<p>
+  What exactly do you need to do? Here is
+  <strong>one easy rule</strong>
+  to follow.
+</p>
+
+<p>
+  You have to
+  <strong>compare quotes.</strong>
+  Don’t even consider buying car insurance without doing this first. 
+  After all the results we came across, we just couldn’t believe how many drivers have been overpaying.
+  And with free services like <a target="_blank" model="#&lt;PageComponent:0x007f69c0918d78&gt;" href="../index.html">EverQuote™</a>, comparing quotes today so that you aren’t accidentally costing yourself money is a breeze. 
+</p><div class="middle-image-container">
+  <a target="_blank" model="#&lt;PageComponent:0x007f69c89942b8&gt;" href="../index.html"><img class="middle-image" src="../adh-images/advertorial/middle-images/US+Old+Rate+New+Rate+Storm.png" alt="Us+old+rate+new+rate+storm"></a>
+</div>
+<br><p>Drivers don’t always realize that car insurance agents make money from your premiums. So, the higher your rate, the more money the agent receives. This system may make it difficult to determine if you are getting a fair price. Fortunately, a lot of smart drivers out there figured out just how to cut down their insurance bill by using free internet tools to get honest and fair quotes.</p>
+<p>
+  It’s really no wonder that with so many drivers saving money, services like these are gaining momentum.
+  EverQuote™ is an efficient source that tries to give consumers the lowest rates with tools you can trust. Just imagine what you could do with the money you save!
+</p><h4>Follow These Steps to Save Money with EverQuote™:</h4>
+<ol>
+  <li>Simply check your ZIP code below.</li>
+  <li>After you enter your ZIP code and some driver information, you can view all of your quotes from top-rated car insurance companies and agents local to you.</li>
+  <li>Put money back into your pocket!</li>
+</ol><div><a target="_blank" content="img:map-of-us" model="#&lt;PageComponent:0x007f69c367a0c8&gt;" href="../index.html"><img id="map" style="max-width: 500px;" src="../evq/assets/static/landings/article_livesmarterdaily_v2/bold_colours-804264d2dd920fac7beaed48525fe1b3282528f19662d990ad843c8874cfdaa0.jpg" alt="Bold colours"></a></div>
+<div class="enter-zip">
+<form class="new_landing" id="new_landing" action="https://everquote.com/landings" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"><input type="hidden" name="use_zip" id="use_zip" value="true">
+<input type="hidden" name="id" value="244">
+<input type="hidden" name="creativeid" value="146213210062">
+<input type="hidden" name="device" value="c">
+<input type="hidden" name="placement" value="www.newsmax.com">
+<input type="hidden" name="target" value="">
+<input type="hidden" name="dt" value="dup">
+<input type="hidden" name="jumppage_arrival_uuid" value="53915870dfe50134c4060a8944010ec6">
+<input type="hidden" name="clickedon" value="bottom-form">
+<div class="enter-zip-column">
+<label for="landing_zip_code">Enter ZIP code:</label>
+<input maxlength="5" tabindex="3" placeholder="ZIP code" pattern="[0-9]*" title="Five-Digit ZIP Code" size="5" type="text" value="8000" name="landing[zip_code]" id="landing_zip_code">
+<input type="hidden" name="landing[force_zip_code_validation]" id="landing_force_zip_code_validation" value="true">
+</div>
+<div class="enter-zip-column">
+<input alt="Enter zip button" type="image" src="../evq/assets/static/landings/article_livesmarterdaily_v2/enter-zip-button-99469199120312724eabd1c2516fcf9e3ee67f1e73a55decdb708f8b7c45a0b4.png" class="button" id="enter-zip-submit" tabindex="4">
+</div>
+</form>
+</div>
+<p class="copyright">© 2017 EverQuote™</p>
+</div>
+<div class="medium-4 columns">
+<div class="_auto everquote zip-submit">
+<div class="find-rates-near">
+<form class="new_landing" id="new_landing" action="https://everquote.com/landings" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"><input type="hidden" name="use_zip" id="use_zip" value="true">
+<input type="hidden" name="id" value="244">
+<input type="hidden" name="creativeid" value="146213210062">
+<input type="hidden" name="device" value="c">
+<input type="hidden" name="placement" value="www.newsmax.com">
+<input type="hidden" name="target" value="">
+<input type="hidden" name="dt" value="dup">
+<input type="hidden" name="jumppage_arrival_uuid" value="53915870dfe50134c4060a8944010ec6">
+<input type="hidden" name="clickedon" value="side-form">
+<div class="sidebar-zip-column">
+<label for="landing_zip_code">Find rates near:</label>
+<input maxlength="5" tabindex="1" placeholder="ZIP code" pattern="[0-9]*" title="Five-Digit ZIP Code" size="5" type="text" value="8000" name="landing[zip_code]" id="landing_zip_code">
+<input type="hidden" name="landing[force_zip_code_validation]" id="landing_force_zip_code_validation" value="true">
+</div>
+<div class="sidebar-zip-column">
+<button name="nav[save]" type="submit" class="button" tabindex="2">&gt;&gt;</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="generic page-footer">
+<a class="FooterLink footer-link " target="_new" href="../index.html">Home</a>
+|
+<a class="FooterLink footer-link " target="_new" href="../faq/index.html">FAQ</a>
+|
+<a class="FooterLink footer-link " target="_new" href="../about/index.html">About Us</a>
+|
+<a class="FooterLink footer-link " target="_new" href="../privacy/index.html">Privacy Policy</a>
+|
+<a class="FooterLink footer-link " target="_new" href="../terms/index.html">Terms of Use</a>
+|
+<a class="FooterLink footer-link " target="_new" href="../feedbacks/index.html">Contact Us</a>
+|
+<a class="FooterLink footer-link " target="_new" href="../sitemap/index.html">Site Map</a>
+
+<div class="legal">
+<p class="text-center">Copyright &copy;2017 EverQuote, Inc.</p>
+<div class="row disclaimer">
+<div class="column">
+Any testimonials on this page are real product reviews, but the images used to depict these consumers are used for dramatization purposes only. This website and the company that owns it is not responsible for any typographical or photographic errors. If you do not agree to our terms and policies, then please leave this site immediately. All trademarks, logos, and service marks (collectively the "Trademarks") displayed are registered and/or unregistered Trademarks of their respective owners. Contents of this website are copyrighted property of the reviewer and/or this website.
+</div>
+</div>
+
+</div>
+</footer>
+
+
+
+<div class="Pixelsaurus">
+<input type="hidden" name="pixel_path" id="pixel_path" value="/pixels?current_page=Landing&amp;previous_page=&amp;zip_code=">
+<iframe id="pixel_frame" src="" style="height:0;width:0;visibility:hidden;"></iframe>
+</div>
+
+<div data-ultrawave-app-name="lynx" data-ultrawave-endpoint="https://ultrawave.everquote.com/prod/records" data-ultrawave-stream-name="ultrawave-prod" data-ultrawave-token="53915870dfe50134c4060a8944010ec6" id="ultrawave">
+<script src="../evq/assets/static/ultrawave-b2859f1d622aa08556438fbc0aea9ee56b19790f8e4765c6479c0afdbb622c9e.js"></script>
+</div>
+
+
+<script src="../evq/assets/static/application-787da85f7531453c9ef7d796567d25c6ee45890598ded43114a13be0a72ebd1c.js"></script>
+<script src="../evq/assets/static/landing-93e7b214f172ba93996e141a5c217037ae0a5f85b5d833a705017f75497e16aa.js"></script>
+<script src="../evq/assets/static/modernizr-b30327141934360d2cb253c755647f7cb29c7b0c7ce3ea206b3a9da56361b198.js"></script>
+<!--[if lt IE 9]>
+<script src="http://cdn.everquote.com/evq/assets/static/rem-878395eefe8440273493234fe6fbf220383cbf5f959f54944b993166fdc249c6.js"></script>
+<![endif]-->
+<script src="../evq/assets/static/landings/eq_nav-de7a91f0291543fbdae5ce632a435dc889e3e51d6e648201ad188ab4373ff35b.js"></script>
+
+
+</body>
+</html>

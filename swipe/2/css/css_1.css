@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monda Regular'), local('Monda-Regular'), url(../fonts/WhvNfO27lzODDhoAPcYEXQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Monda';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Monda Bold'), local('Monda-Bold'), url(../fonts/h8Lv3ZYKAXAcwBhdctJLvvesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+}

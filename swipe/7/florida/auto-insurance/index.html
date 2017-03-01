@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html class="no-js" data-placeholder-live="false">
+<head>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b067134aff","applicationID":"36413647,544012","transactionName":"cQleFUpcDQlXRU5SDFwSVQ9MHAIKXEMEXxdtFlEGXUBOFlpYFg==","queueTime":0,"applicationTime":208,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="UbNVCFnJIXjkfobqRUGGG9hzFxH5mAScZ3vjn0z53hywhOsyWqwaU35XvOaimnwKbfuCeALNwTtVDSU//iyo1w==">
+<link rel="icon" type="image/png" href="../../evq/assets/static/themes/everquote/favicon-973d76f8ac7d694aac53c6c8f09d05a631d158c51af2d1d30e41dc78891e1e0b.png">
+<!--[if IE]>
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn.everquote.com/evq/assets/static/themes/everquote/favicon-b601219e8b34b4867260ecf7633559847ebf000c41e30c88cd2fab390ae93d8c.ico" />
+<![endif]-->
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-60@2x-1046d53e6b22095804030ab1e166aae91cbd92f0895811fd536a1649be9144b3.png" rel="apple-touch-icon" sizes="120x120">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-60@3x-70ec6c495987bddeeb6b540b8cdb7db7ba0149ad61cbf229375f540c0815ce54.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-76-4eae2ef47fba71e4147bf6c94f1064042ccc1760af702cf8449e9510e2e3ea80.png" rel="apple-touch-icon" sizes="76x76">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-76@2x-449451d15d9468999d0918bc784078dbaa6e2d6a57343dcac969ce3424acbc5f.png" rel="apple-touch-icon" sizes="152x152">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-AppStore-e9770c22000b175f6593184bb89af682d9148a600ee06cb76ab3f83e6e43edd3.png" rel="apple-touch-icon" sizes="512x512">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-AppStore@2x-eba78f07ffc4b987123c6e5cc2d3a8b4c65c3703fbc05369a787d73094b7e542.png" rel="apple-touch-icon" sizes="1024x1024">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small-40-07ebf70b090a1efda7a462d13a90121cb89d48813201edeb2387be24a03de67b.png" rel="apple-touch-icon" sizes="40x40">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small-40@2x-6422427761b4784a3ac705c029a208c4a3732c08fa7b2eff8fc82201e1a795a9.png" rel="apple-touch-icon" sizes="80x80">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small-a0062d3a722435322484d15a9575c0bda129230392f4c60d00cf987d0de5af3b.png" rel="apple-touch-icon" sizes="29x29">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small@2x-ece44ac489cbdd5db7fdd7a43499871c5c3d15d50e13cf4102b79b525ff57e53.png" rel="apple-touch-icon" sizes="58x58">
+<link href="../../evq/assets/static/themes/everquote/icons/EverQuote-Small@3x-5df167615a38d11d10f37112ba0fb73d5342a517e640f6c21bd9a3a0fa3515e6.png" rel="apple-touch-icon" sizes="87x87">
+<meta content="EverQuote" name="apple-mobile-web-app-title">
+<meta content="noodp,noydir" name="robots">
+<link href="https://www.everquote.com/florida/auto-insurance/" rel="canonical">
+<link href="https://plus.google.com/100274746722797508122" rel="publisher">
+<meta content="Florida auto Insurance guidelines, minimum liability coverage, uninsured/underinsured motorist coverage, penalties for driving without insurance, DUI laws." name="description">
+<meta content="en_US" property="og:locale">
+<meta content="https://www.facebook.com/EverQuote" property="article:publisher">
+<meta content="Florida auto Insurance guidelines, minimum liability coverage, uninsured/underinsured motorist coverage, penalties for driving without insurance, DUI laws." property="og:description">
+<meta content="https://cdn.everquote.com/evq/assets/static/themes/everquote/everquote-logo-open-graph-7d2450a46dd11a0683daf63cdba7a0758b20ced819ff158a4373f99f6e1e6f40.jpg" property="og:image">
+<meta content="EverQuote" property="og:site_name">
+<meta content="Florida Car Insurance Info, FL Auto Insurance Quotes" property="og:title">
+<meta content="article" property="og:type">
+<meta content="https://www.everquote.com/florida/auto-insurance/" property="og:url">
+<meta content="897108143682421" property="fb:app_id">
+<meta content="summary" name="twitter:card">
+<meta content="@EverQuoteInsure" name="twitter:creator">
+<meta content="Florida auto Insurance guidelines, minimum liability coverage, uninsured/underinsured motorist coverage, penalties for driving without insurance, DUI laws." name="twitter:description">
+<meta content="EverQuote" name="twitter:domain">
+<meta content="https://cdn.everquote.com/evq/assets/static/themes/everquote/everquote-logo-open-graph-7d2450a46dd11a0683daf63cdba7a0758b20ced819ff158a4373f99f6e1e6f40.jpg" name="twitter:image:src">
+<meta content="@EverQuoteInsure" name="twitter:site">
+<meta content="Florida Car Insurance Info, FL Auto Insurance Quotes" name="twitter:title">
+<meta content="2016-08-11T17:17:09Z" property="og:updated_time">
+<meta content="2016-08-11T17:17:09Z" property="article:modified_time">
+<meta content="2015-03-31T01:29:45Z" property="article:published_time">
+
+<!--[if IE]>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<![endif]-->
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" media="screen" href="../../css">
+
+<title>Florida Car Insurance Info, FL Auto Insurance Quotes</title>
+<script src="../../evq/assets/static/modernizr-b30327141934360d2cb253c755647f7cb29c7b0c7ce3ea206b3a9da56361b198.js"></script>
+<!--[if gte IE 9 | !IE]><!--><link rel="stylesheet" media="screen" href="../../evq/assets/static/themes/everquote/style-e68f3987afe577b6761035232d251775496c5519306217354bc4755416a442b6.css"><!-- <![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" media="screen" href="https://cdn.everquote.com/evq/assets/static/themes/everquote/ie9-9f2f9b50b86800b99409214a135110a4710cde837cefaf9be36fd563d3d75f77.css" />
+<![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51677951-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" media="screen" href="https://cdn.everquote.com/evq/assets/static/themes/everquote/no-mq-d8d7c2ea979f28112a99be7d348090e4d0ab0b27e53c0121b8ba809a646983b6.css" />
+<script src="https://cdn.everquote.com/evq/assets/static/html5shiv-9e07e1dd43f748c7160cd00552976c91b874e4cc86bfc912f4af1595acd45fc4.js"></script>
+<body class="eq-style old-ie content-pages" data-controller="content-pages">
+<![endif]-->
+</head>
+<!--[if gte IE 9 | !IE]><!--><body class="eq-style content-pages" data-controller="content-pages"><!-- <![endif]-->
+<header class="page-header">
+<div class="navbar-container">
+<nav class="everquote navbar row">
+<h1><a class="logo" href="../../index.html">EverQuote</a></h1>
+<ul class="nav-links">
+<li class="dropdown state-large">
+<div class="nav-link">Auto Insurance</div>
+<i class="fa fa-chevron-down toggle-dropdown"></i>
+<ul class="content state-ul">
+<li class="item state-li"><a trailing_slash="true" title="Alaska Auto Insurance" href="../../alaska/auto-insurance/index.html">Alaska</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Alabama Auto Insurance" href="../../alabama/auto-insurance/index.html">Alabama</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Arkansas Auto Insurance" href="../../arkansas/auto-insurance/index.html">Arkansas</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Arizona Auto Insurance" href="../../arizona/auto-insurance/index.html">Arizona</a></li>
+<li class="item state-li"><a trailing_slash="true" title="California Auto Insurance" href="../../california/auto-insurance/index.html">California</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Colorado Auto Insurance" href="../../colorado/auto-insurance/index.html">Colorado</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Connecticut Auto Insurance" href="../../connecticut/auto-insurance/index.html">Connecticut</a></li>
+<li class="item state-li"><a trailing_slash="true" title="District of Columbia Auto Insurance" href="../../district-of-columbia/auto-insurance/index.html">District of Columbia</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Delaware Auto Insurance" href="../../delaware/auto-insurance/index.html">Delaware</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Florida Auto Insurance" href="index.html">Florida</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Georgia Auto Insurance" href="../../georgia/auto-insurance/index.html">Georgia</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Hawaii Auto Insurance" href="../../hawaii/auto-insurance/index.html">Hawaii</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Iowa Auto Insurance" href="../../iowa/auto-insurance/index.html">Iowa</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Idaho Auto Insurance" href="../../idaho/auto-insurance/index.html">Idaho</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Illinois Auto Insurance" href="../../illinois/auto-insurance/index.html">Illinois</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Indiana Auto Insurance" href="../../indiana/auto-insurance/index.html">Indiana</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Kansas Auto Insurance" href="../../kansas/auto-insurance/index.html">Kansas</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Kentucky Auto Insurance" href="../../kentucky/auto-insurance/index.html">Kentucky</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Louisiana Auto Insurance" href="../../louisiana/auto-insurance/index.html">Louisiana</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Massachusetts Auto Insurance" href="../../massachusetts/auto-insurance/index.html">Massachusetts</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Maryland Auto Insurance" href="../../maryland/auto-insurance/index.html">Maryland</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Maine Auto Insurance" href="../../maine/auto-insurance/index.html">Maine</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Michigan Auto Insurance" href="../../michigan/auto-insurance/index.html">Michigan</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Minnesota Auto Insurance" href="../../minnesota/auto-insurance/index.html">Minnesota</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Missouri Auto Insurance" href="../../missouri/auto-insurance/index.html">Missouri</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Mississippi Auto Insurance" href="../../mississippi/auto-insurance/index.html">Mississippi</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Montana Auto Insurance" href="../../montana/auto-insurance/index.html">Montana</a></li>
+<li class="item state-li"><a trailing_slash="true" title="North Carolina Auto Insurance" href="../../north-carolina/auto-insurance/index.html">North Carolina</a></li>
+<li class="item state-li"><a trailing_slash="true" title="North Dakota Auto Insurance" href="../../north-dakota/auto-insurance/index.html">North Dakota</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Nebraska Auto Insurance" href="../../nebraska/auto-insurance/index.html">Nebraska</a></li>
+<li class="item state-li"><a trailing_slash="true" title="New Hampshire Auto Insurance" href="../../new-hampshire/auto-insurance/index.html">New Hampshire</a></li>
+<li class="item state-li"><a trailing_slash="true" title="New Jersey Auto Insurance" href="../../new-jersey/auto-insurance/index.html">New Jersey</a></li>
+<li class="item state-li"><a trailing_slash="true" title="New Mexico Auto Insurance" href="../../new-mexico/auto-insurance/index.html">New Mexico</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Nevada Auto Insurance" href="../../nevada/auto-insurance/index.html">Nevada</a></li>
+<li class="item state-li"><a trailing_slash="true" title="New York Auto Insurance" href="../../new-york/auto-insurance/index.html">New York</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Ohio Auto Insurance" href="../../ohio/auto-insurance/index.html">Ohio</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Oklahoma Auto Insurance" href="../../oklahoma/auto-insurance/index.html">Oklahoma</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Oregon Auto Insurance" href="../../oregon/auto-insurance/index.html">Oregon</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Pennsylvania Auto Insurance" href="../../pennsylvania/auto-insurance/index.html">Pennsylvania</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Rhode Island Auto Insurance" href="../../rhode-island/auto-insurance/index.html">Rhode Island</a></li>
+<li class="item state-li"><a trailing_slash="true" title="South Carolina Auto Insurance" href="../../south-carolina/auto-insurance/index.html">South Carolina</a></li>
+<li class="item state-li"><a trailing_slash="true" title="South Dakota Auto Insurance" href="../../south-dakota/auto-insurance/index.html">South Dakota</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Tennessee Auto Insurance" href="../../tennessee/auto-insurance/index.html">Tennessee</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Texas Auto Insurance" href="../../texas/auto-insurance/index.html">Texas</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Utah Auto Insurance" href="../../utah/auto-insurance/index.html">Utah</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Virginia Auto Insurance" href="../../virginia/auto-insurance/index.html">Virginia</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Vermont Auto Insurance" href="../../vermont/auto-insurance/index.html">Vermont</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Washington Auto Insurance" href="../../washington/auto-insurance/index.html">Washington</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Wisconsin Auto Insurance" href="../../wisconsin/auto-insurance/index.html">Wisconsin</a></li>
+<li class="item state-li"><a trailing_slash="true" title="West Virginia Auto Insurance" href="../../west-virginia/auto-insurance/index.html">West Virginia</a></li>
+<li class="item state-li"><a trailing_slash="true" title="Wyoming Auto Insurance" href="../../wyoming/auto-insurance/index.html">Wyoming</a></li>
+</ul>
+</li>
+
+<li class="dropdown state-mobile">
+<select name="states" id="states"><option value="Auto Insurance">Auto Insurance</option>
+<option value="Alaska">Alaska</option>
+<option value="Alabama">Alabama</option>
+<option value="Arkansas">Arkansas</option>
+<option value="Arizona">Arizona</option>
+<option value="California">California</option>
+<option value="Colorado">Colorado</option>
+<option value="Connecticut">Connecticut</option>
+<option value="District of Columbia">District of Columbia</option>
+<option value="Delaware">Delaware</option>
+<option value="Florida">Florida</option>
+<option value="Georgia">Georgia</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Iowa">Iowa</option>
+<option value="Idaho">Idaho</option>
+<option value="Illinois">Illinois</option>
+<option value="Indiana">Indiana</option>
+<option value="Kansas">Kansas</option>
+<option value="Kentucky">Kentucky</option>
+<option value="Louisiana">Louisiana</option>
+<option value="Massachusetts">Massachusetts</option>
+<option value="Maryland">Maryland</option>
+<option value="Maine">Maine</option>
+<option value="Michigan">Michigan</option>
+<option value="Minnesota">Minnesota</option>
+<option value="Missouri">Missouri</option>
+<option value="Mississippi">Mississippi</option>
+<option value="Montana">Montana</option>
+<option value="North Carolina">North Carolina</option>
+<option value="North Dakota">North Dakota</option>
+<option value="Nebraska">Nebraska</option>
+<option value="New Hampshire">New Hampshire</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New Mexico">New Mexico</option>
+<option value="Nevada">Nevada</option>
+<option value="New York">New York</option>
+<option value="Ohio">Ohio</option>
+<option value="Oklahoma">Oklahoma</option>
+<option value="Oregon">Oregon</option>
+<option value="Pennsylvania">Pennsylvania</option>
+<option value="Rhode Island">Rhode Island</option>
+<option value="South Carolina">South Carolina</option>
+<option value="South Dakota">South Dakota</option>
+<option value="Tennessee">Tennessee</option>
+<option value="Texas">Texas</option>
+<option value="Utah">Utah</option>
+<option value="Virginia">Virginia</option>
+<option value="Vermont">Vermont</option>
+<option value="Washington">Washington</option>
+<option value="Wisconsin">Wisconsin</option>
+<option value="West Virginia">West Virginia</option>
+<option value="Wyoming">Wyoming</option></select>
+<i class="fa fa-chevron-down toggle-dropdown"></i>
+</li>
+
+<li class="dropdown">
+<a class="nav-link" href="../../blog/index.html">EverQuote Blog</a>
+<i class="fa fa-chevron-down toggle-dropdown"></i>
+<ul class="content">
+<li class="item"><a href="../../blog/car-insurance/index.html">Car Insurance</a></li>
+<li class="item"><a href="../../blog/questions/index.html">Questions</a></li>
+<li class="item"><a href="../../blog/car-insurance/discounts/index.html">Discounts</a></li>
+<li class="item"><a href="../../blog/car-insurance/agents/index.html">Agents</a></li>
+<li class="item"><a href="../../blog/safe-driving/index.html">Safe Driving</a></li>
+<li class="item"><a href="../../blog/car-insurance/news/index.html">News</a></li>
+<li class="item"><a href="../../blog/money-saving-tips/index.html">Money Saving Tips</a></li>
+<li class="item"><a href="../../blog/financial-advice/index.html">Financial Advice</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="nav-link" href="../../faq/index.html">Help</a>
+<i class="fa fa-chevron-down toggle-dropdown"></i>
+<ul class="content">
+<li class="item"><a href="../../faq/index.html">FAQ For Consumers</a></li>
+<li class="item"><a href="../../pro/faq/index.html">FAQ For Agents</a></li>
+<li class="item"><a href="../../auto-insurance/tips/index.html">Auto Insurance Tips</a></li>
+<li class="item"><a href="../../auto-insurance/terms-definitions/index.html">Auto Insurance Terms</a></li>
+</ul>
+</li>
+</ul>
+<ul class="right nav-right">
+<li class="search-bar"><div id="search-button">
+<i class="fa fa-search"></i>
+</div>
+</li>
+<li class="dropdown"><a class="agents nav-link" target="_blank" id="pro-users" href="../../pro/index.html">For Agents</a></li>
+<li><a id="menu-dropdown" href="#">menu</a></li>
+</ul>
+</nav>
+
+</div>
+<div class="header-search-bar">
+<div id="search-bar-container">
+<form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;">
+<div id="search-bar-input">
+<input type="text" name="query" id="query" value="">
+</div>
+<div id="search-bar-submit">
+<input type="submit" value="Search">
+</div>
+</form>
+
+</div>
+
+</div>
+</header>
+<main>
+
+<div class="header-bar">
+<header class="row">
+<h1 class="entry-title">Florida Car Insurance Info</h1>
+</header>
+</div>
+<section class="main-section row">
+<div class="posts-container column state-pages">
+<div class="inner-container">
+<div class="entry-content">
+<p><span><div class="zip-submit-shortcode full-width">
+<div class="row">
+<div class="column">
+<h3 class="no-margin">Fast, Free Auto Insurance Quotes</h3>
+<form data-form-type="landing" data-form-popunder="true" data-popunder-timeout="1000" class="new_landing" id="new_landing" action="/landings/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"><input type="hidden" name="authenticity_token" value="rCfQjw0GIeIri7jAPAbeyBO+z6IqjZEJneuwuDzQiRlNEG61DmMaybGigszb3STZpjZay9HYVK6vnXYYjgX/0g=="><input name="landing_form_check" type="hidden" value="true">
+<div class="row">
+<div class="column validate large-6">
+<label class="inline " for="reason-for-quote">How Can We Help You?</label>
+<input type="hidden" name="landing[_x][reason_for_quote]" id="reason-for-quote-fallback">
+<select name="landing[_x][reason_for_quote]" id="reason-for-quote" tabindex="2"><option value="">Please select</option>
+<option value="insured_savings">Currently insured, need savings</option>
+<option value="insured_curious">Currently insured, just curious</option>
+<option value="uninsured_coverage">Uninsured, need coverage</option>
+<option value="uninsured_curious">Uninsured, just curious</option></select>
+</div>
+<div class="columns validate large-3">
+<label class="inline" for="landing_zip_code">Your ZIP Code:</label>
+<input value="" maxlength="5" tabindex="1" placeholder="ZIP Code" class="zip-code-input" id="landing-zip-code" pattern="[0-9]*" title="Five-Digit ZIP Code" size="5" type="text" name="landing[zip_code]">
+<input type="hidden" name="landing[force_zip_code_validation]" id="landing_force_zip_code_validation" value="true">
+<input type="hidden" name="mini_zip_submit" id="mini_zip_submit" value="true">
+</div>
+<div class="columns large-3">
+<button name="nav[save]" type="submit" tabindex="3" class="no-margin bottom"><i class="fa fa-check"></i> Continue</button>
+</div>
+</div>
+</form></div>
+</div>
+</div>
+</span><a href="../../auto-insurance/florida/fort-lauderdale/index.html">Fort Lauderdale Car Insurance</a> | <a href="../../auto-insurance/florida/hialeah/index.html">Hialeah Car Insurance</a> | <a href="../../auto-insurance/florida/jacksonville/index.html">Cheap Car Insurance&nbsp;Jacksonville</a>&nbsp;| <a href="../../auto-insurance/florida/miami/index.html">Cheap Car Insurance&nbsp;Miami</a>&nbsp;| <a href="../../auto-insurance/florida/orlando/index.html">Orlando Car Insurance</a> |&nbsp;<a href="../../auto-insurance/florida/port-saint-lucie/index.html">Port St. Lucie Car Insurance</a> |&nbsp;<a href="../../auto-insurance/florida/saint-petersburg/index.html">St. Petersburg Car Insurance</a> | <a href="../../auto-insurance/florida/tallahassee/index.html">Tallahassee Car Insurance</a> |&nbsp;<a href="../../auto-insurance/florida/tampa/index.html">Tampa Car Insurance</a>&nbsp;| <a href="../../auto-insurance/florida/west-palm-beach/index.html">West Palm Beach Car Insurance</a></p>
+
+<div class="eleaderboard"><script>
+function capitalizeEachWord(str) {
+    return str.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+function rearrangeEDHeader () {
+  var section = $('#everdrive-leaderboard');
+  var header = section.find('.header');
+  var logo = section.find('.logo');
+  var reallogo = logo.find('a');
+  if (section.length && header.length && logo.length)
+  {
+    logo.remove();
+    var lbtext = header.html();
+    header.empty();
+    var newtext = capitalizeEachWord(lbtext);
+    newtext = newtext + "<div id=\"joincomp\">\n<a href=\"https://www.everquote.com/everdrive/\">Join the Competition</a>\n</div>";
+    header.append(newtext);
+    header.prepend(logo);
+    logo.empty();
+    logo.append(reallogo);
+  }
+}
+if(window.addEventListener){
+  window.addEventListener('load', rearrangeEDHeader);
+}else{
+  window.attachEvent('onload', rearrangeEDHeader);
+}</script>
+<style type="text/css">#everdrive-leaderboard td {
+  padding:.4em;
+}
+#everdrive-leaderboard {min-width:280px;}
+
+#joincomp a:link, #joincomp a:visited {  font-size:.75em; color:#fff;font-weight:normal;}
+#everdrive-leaderboard{padding:0px;max-width:750px;margin:1em auto;border-width:1px;border-style:solid;border-color:#4d78bc;}
+td{vertical-align:middle;padding:10px}
+@media only screen and (max-width: 450px) {
+.crumbs {
+display:none;
+}
+.promessage {
+  display:none;
+}
+.entry-title
+{
+ font-size:10px;
+ padding:0.25em 1.3em;
+}
+.header-bar header {
+  padding:0.2em 1.3em;
+}
+.inner-container {
+  font-size:10px;
+  padding:0px;
+}
+.zip-submit-shortcode.full-width {
+  margin: 0;
+  color:#205bb9;
+  background: #FFF;
+}
+.zip-submit-shortcode label, .zip-submit-shortcode h3 {
+  color:#205bb9 !important;
+}
+.zip-submit-shortcode h3 {
+  padding-bottom:5px;
+  margin:0 auto;
+  width: 180px;
+}
+.zip-submit-shortcode {padding:5px 0px 0px 0px;}
+select{float:right;display:inline;width:160px;}
+label{width:120px;display:inline-block !important;}
+input{float:right;display:inline !important;width:160px;}
+button{width:160px !important;}
+[type=text] {width:160px;}
+[type=submit] {margin:0 auto !important;}
+}
+</style>
+<style>
+.eleaderboard{
+  float:right;
+  min-width:290px;
+}
+</style>
+<section id="everdrive-leaderboard">
+<div class="header">
+florida leaderboard
+<div class="logo">
+powered by
+<a class="app-button" href="../../everdrive/index.html">
+<img class="app-button" src="../../evq/assets/static/common/everdrive-logo-white-f939b0ab18acaa793ac4247bc808f1ede1cd7c0e6b81d34419efff580fab3963.png" alt="Everdrive logo white">
+</a>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th class="score title">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>kolipokiamb</td>
+<td class="score">
+100.0
+<br>
+<div class="miles">150+ miles</div>
+</td>
+</tr>
+<tr>
+<td>1</td>
+<td>kolipokiamb</td>
+<td class="score">
+100.0
+<br>
+<div class="miles">150+ miles</div>
+</td>
+</tr>
+<tr>
+<td>1</td>
+<td>kolipokiamb</td>
+<td class="score">
+100.0
+<br>
+<div class="miles">150+ miles</div>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OVS</td>
+<td class="score">
+99.9
+<br>
+<div class="miles">650+ miles</div>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OVS</td>
+<td class="score">
+99.9
+<br>
+<div class="miles">650+ miles</div>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td>OVS</td>
+<td class="score">
+99.9
+<br>
+<div class="miles">650+ miles</div>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>katanani1960</td>
+<td class="score">
+95.8
+<br>
+<div class="miles">150+ miles</div>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>katanani1960</td>
+<td class="score">
+95.8
+<br>
+<div class="miles">150+ miles</div>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>rgriffith26</td>
+<td class="score">
+99.9
+<br>
+<div class="miles">600+ miles</div>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>katanani1960</td>
+<td class="score">
+95.8
+<br>
+<div class="miles">150+ miles</div>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>rgriffith26</td>
+<td class="score">
+99.9
+<br>
+<div class="miles">600+ miles</div>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>rgriffith26</td>
+<td class="score">
+99.9
+<br>
+<div class="miles">600+ miles</div>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jake2021</td>
+<td class="score">
+99.8
+<br>
+<div class="miles">300+ miles</div>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jake2021</td>
+<td class="score">
+99.8
+<br>
+<div class="miles">300+ miles</div>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jake2021</td>
+<td class="score">
+99.8
+<br>
+<div class="miles">300+ miles</div>
+</td>
+</tr>
+<tr>
+<td>5</td>
+<td>sjlrn</td>
+<td class="score">
+99.8
+<br>
+<div class="miles">100+ miles</div>
+</td>
+</tr>
+<tr>
+<td>5</td>
+<td>sjlrn</td>
+<td class="score">
+99.8
+<br>
+<div class="miles">100+ miles</div>
+</td>
+</tr>
+<tr>
+<td>5</td>
+<td>sjlrn</td>
+<td class="score">
+99.8
+<br>
+<div class="miles">100+ miles</div>
+</td>
+</tr>
+<tr>
+<td>6</td>
+<td>tristan_nickels</td>
+<td class="score">
+99.7
+<br>
+<div class="miles">950+ miles</div>
+</td>
+</tr>
+<tr>
+<td>6</td>
+<td>tristan_nickels</td>
+<td class="score">
+99.7
+<br>
+<div class="miles">950+ miles</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<h3>General Florida Insurance Guidelines</h3>
+
+<p>Florida currently requires that all drivers be covered under property damage liability and no-fault auto insurance. Proof of insurance must always be accessible in the vehicle.</p>
+
+<h3>Minimum Liability Coverage in Florida</h3>
+
+<p>Florida&#39;s minimum liability amounts are as follows:</p>
+
+<ul>
+	<li>0 (recommended minimum - $10,000) bodily injury per person.</li>
+	<li>0 (recommended minimum - $20,000) total bodily injury per accident.</li>
+	<li>$10,000 total property damage per accident.</li>
+</ul>
+
+<p>These are only the minimum requirements set by the state. Experts advise protecting your assets by getting more coverage than the state-mandated minimums as these limits tend not to keep pace with the ever increasing costs of car repairs and medical bills. Most drivers also add collision and comprehensive coverage to their policies to cover possible damage to their own cars as well.</p>
+
+<h3>Penalties for Driving Without Insurance</h3>
+
+<p>The penalties for driving without insurance in Florida are:</p>
+
+<ul>
+	<li>Department of Highway Safety and Motor Vehicles will suspend license, vehicle tag and registration</li>
+	<li>Reinstatement fees of $150, $250 and $500</li>
+</ul>
+
+<h3>Uninsured/Underinsured Motorist Coverage</h3>
+
+<p>Some states require drivers to carry UM/UIM, or uninsured/underinsured motorist coverage. This coverage protects a driver if they get in an accident where the other party does not have auto insurance. Florida does not require UM/UIM coverage.</p>
+
+<h3>No-Fault Insurance</h3>
+
+<p>Some states have &ldquo;No-Fault&rdquo; laws where a policyholder will be reimbursed by their insurance company without proof of fault, and restricted in the right to seek reimbursement through the court system for losses caused by other parties. Florida is a &ldquo;No-Fault&rdquo; state.</p>
+
+<h3>Personal Injury Protection (PIP)</h3>
+
+<p>Some states have Personal Injury Protection or &ldquo;PIP&rdquo; regulations requiring drivers to carry PIP insurance. This is an extension of auto insurance that covers medical expenses, lost wages and/or other damages. Florida requires drivers to purchase PIP insurance. The minimum PIP coverage amounts for Florida are $10,000. (Standard coverage: 80% medical expenses, 60% lost wages, 100% replacement services such as child care, housekeeping or yard work, up to $5,000 for death benefits)</p>
+
+<h3>SR-22 Requirements for Florida</h3>
+
+<p>An <a href="../../blog/car-insurance/what-is-an-sr-22/index.html">SR-22 form</a> is a vehicle liability insurance document to be filed with a state&rsquo;s DMV as proof that a driver has the minimum required liability insurance coverage for that state. SR-22 filings are usually only required to reinstate driving privileges after an offense such as a DUI conviction, uninsured auto accident or driving without insurance. Florida requires an SR-22 filing for driver&rsquo;s license reinstatement.</p>
+
+<h3>Florida DUI Laws</h3>
+
+<p>It is illegal to operate a motor vehicle in the United States with a BAC (Blood Alcohol Content) level of 0.08% or higher. All states have driver&#39;s licensing laws that state that a licensed driver has given implied consent to a field sobriety test and/or method of determining BAC. This means that a driver is required to take such tests if a law enforcement officer has reasonable grounds for administering one, with automatic penalties for refusing to comply. If BAC is determined to be above the legal level a driver will be penalized in various ways. The first <a href="../../blog/car-insurance/car-insurance-after-dui/index.html">DUI offense</a> penalties for Florida are:</p>
+
+<ul>
+	<li>6 month imprisonment if BAC between 0.08% - 0.15%</li>
+	<li>9 months imprisonment if BAC is above 0.15%</li>
+	<li>$500 - $1000 fine if BAC between 0.08% and 0.15%</li>
+	<li>$1000 - $2000 fine if BAC above 0.15%</li>
+	<li>180 days to 1 yr license suspension</li>
+	<li>Hardship reinstatement after successful completion of DUI school</li>
+	<li>Ignition interlock device required for 6 months</li>
+	<li>Up to 50 hrs community service</li>
+	<li>Community service $10 for each hr served</li>
+	<li>Treatment may be sought in lieu of prison</li>
+	<li>10-day vehicle impound</li>
+</ul>
+
+<p>If a driver is found guilty or pleads no contest, he or she will need higher minimum liability insurance: $100,00 to cover 1 person injured or killed in 1 crash, $300,000 to cover 2 or more persons injured or killed in 1 crash, $50,000 property damage liability. You may opt to post a bond/certificate of $350,000 instead&nbsp;but you must then maintain extra coverage for 3 years. If your driving record stays clean, you can return to the standard insurance level.</p>
+
+<h3>Additional Information on Insurance for Florida</h3>
+
+<p>For more information, please contact Florida Office of Insurance Regulation: 1-850-413-3140 or visit their website at <a href="../../index.html" target="_blank">www.floir.com</a>.</p>
+
+<p><span>Be the best driver in Florida: &nbsp;Download&nbsp;</span><a href="../../everdrive/index.html">EverDrive</a><span>&nbsp;for your iOS or Android phone and start competing with your neighbors and friends!</span></p>
+
+<p><a href="../../auto-insurance/florida/boca-raton/index.html">Boca Raton Car Insurance</a><span>&nbsp;| <a href="../../auto-insurance/florida/boynton-beach/index.html">Boynton Beach Car Insurance</a> | <a href="../../auto-insurance/florida/cape-coral/index.html">Bradenton Car Insurance</a> |&nbsp;</span><a href="../../auto-insurance/florida/cape-coral/index.html">Cape Coral Car Insurance</a><span>&nbsp;|&nbsp;</span><a href="../../auto-insurance/florida/clearwater/index.html">Clearwater Car Insurance</a><span>&nbsp;| <a href="../../auto-insurance/florida/daytona-beach/index.html">Daytona Beach Car Insurance</a> |&nbsp;</span><a href="../../auto-insurance/florida/deerfield-beach/index.html">Deerfield Beach Car Insurance</a><span>&nbsp;| <a href="../../auto-insurance/florida/delray-beach/index.html">Delray Beach Car Insurance</a> |&nbsp;</span><a href="../../auto-insurance/florida/deltona/index.html">Deltona Car Insurance</a><span>&nbsp;| <a href="../../auto-insurance/florida/fort-myers/index.html">Fort Myers Car Insurance</a> |&nbsp;</span><a href="../../auto-insurance/florida/gainesville/index.html">Gainesville Car Insurance</a><span>&nbsp;| <a href="../../auto-insurance/florida/homestead/index.html">Homestead Car Insurance</a> |&nbsp;</span><a href="../../auto-insurance/florida/hollywood/index.html">Hollywood Car Insurance</a><span>&nbsp;| <a href="../../auto-insurance/florida/jupiter/index.html">Jupiter Car Insurance</a> |&nbsp;<a href="../../auto-insurance/florida/kissimmee/index.html">Kissimmee Car Insurance</a> |&nbsp;</span><a href="../../auto-insurance/florida/lakeland/index.html">Lakeland Car Insurance</a><span>&nbsp;|&nbsp;</span><a href="../../auto-insurance/florida/largo/index.html">Largo Car Insurance</a><span>&nbsp;|&nbsp;</span><a href="../../auto-insurance/florida/melbourne/index.html">Melbourne Car Insurance</a><span>&nbsp;|&nbsp;</span><a href="../../auto-insurance/florida/miami-beach/index.html">Miami Beach Car Insurance</a>&nbsp;| <a href="../../auto-insurance/florida/north-port/index.html">North Port Car Insurance</a> | <a href="../../auto-insurance/florida/ocala/index.html">Ocala Car Insurance</a> |&nbsp;<a href="../../auto-insurance/florida/palm-bay/index.html">Palm Bay Car Insurance</a><span>&nbsp;|&nbsp;</span><a href="../../auto-insurance/florida/palm-coast/index.html">Palm Coast Car Insurance</a><span>&nbsp;|&nbsp;</span><a href="../../auto-insurance/florida/pembroke-pines/index.html">Pembroke Pines Car Insurance</a><span>&nbsp;| <a href="../../auto-insurance/florida/pensacola/index.html">Pensacola Car Insurance</a> | <a href="../../auto-insurance/florida/pinellas-park/index.html">Pinellas Park Car Insurance</a> |&nbsp;</span><a href="../../auto-insurance/florida/pompano-beach/index.html">Pompano Beach Car Insurance</a>&nbsp;| <a href="../../auto-insurance/florida/port-orange/index.html">Port Orange Car Insurance</a>&nbsp;| <a href="../../auto-insurance/florida/sanford/index.html">Sanford Car Insurance</a>&nbsp;| <a href="../../auto-insurance/florida/sarasota/index.html">Sarasota Car Insurance</a></p>
+
+<p>MORE: <a href="additional-cities/index.html">Additional Florida Cities &amp; Towns</a></p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+</main>
+<footer class="everquote page-footer">
+<div class="social">
+<a class="fa fa-twitter fa-fw" target="_blank" href="../../EverQuoteInsure/index.html"><span class="hide-accessible">Twitter</span>
+</a><a class="fa fa-facebook fa-fw" target="_blank" href="../../unsupportedbrowser/index.html"><span class="hide-accessible">Facebook</span>
+</a><a class="fa fa-youtube-play fa-fw" target="_blank" href="../../user/EverQuote/index.html"><span class="hide-accessible">YouTube</span>
+</a><a class="fa fa-google-plus fa-fw" target="_blank" href="../../+EverQuote/index.html"><span class="hide-accessible">Google Plus</span>
+</a><a class="fa fa-pinterest fa-fw" target="_blank" href="../../everquote/index.html"><span class="hide-accessible">Pinterest</span>
+</a></div>
+<nav>
+<a href="../../news/index.html">News</a>
+<a href="../../faq/index.html">FAQ</a>
+<a href="../../auto-insurance/tips/index.html">Auto Insurance Tips</a>
+<a href="../../auto-insurance/terms-definitions/index.html">Auto Insurance Definitions</a>
+</nav>
+<nav>
+<a href="../../index.html">Home</a>
+<a href="../../about/index.html">About</a>
+<a href="../../terms/index.html">Terms of Use</a>
+<a href="../../privacy-policy/index.html">Privacy Policy</a>
+<a href="../../careers/index.html">Careers</a>
+<a href="../../contact/index.html">Contact</a>
+</nav>
+<div class="legal">
+<p class="text-center">Copyright &copy;2017 EverQuote, Inc.</p>
+
+</div>
+</footer>
+<div class="modal-container"></div><div class="Pixelsaurus"><input type="hidden" name="pixel_path" id="pixel-path" value="/pixels?current_page=Landing&amp;previous_page=&amp;zip_code="><iframe id="pixel-frame" src="" style="height:0;width:0;visibility:hidden;"></iframe></div><div data-ultrawave-app-name="lynx" data-ultrawave-endpoint="https://ultrawave.everquote.com/prod/records" data-ultrawave-stream-name="ultrawave-prod" data-ultrawave-token="6c417450dfe501347b9312b52a671dc4" id="ultrawave">
+<script src="../../evq/assets/static/ultrawave-b2859f1d622aa08556438fbc0aea9ee56b19790f8e4765c6479c0afdbb622c9e.js"></script>
+</div>
+
+<!--[if gte IE 9 | !IE]><!--><script src="../../ajax/libs/jquery/2.1.1/jquery.min.js"></script><!-- <![endif]-->
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<![endif]-->
+<script>
+  jQuery(function($) {
+    if(Modernizr.touch) {
+      $('<script>', { src: 'https://cdn.everquote.com/evq/assets/static/initFC-c9eaa2a0ed3edbbfb7ed5e9fc7df81adc9bd51ec042bfaeb86ad4881748c65bf.js' }).appendTo('body');
+    }
+  });
+</script>
+<script src="../../evq/assets/static/themes/everquote-c304e1867ec7e93d1a8513d47ba96e2fd44d1f02bfffb1b4149b27e5bbb99f8d.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html data-placeholder-live="false">
+<head>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b067134aff","applicationID":"36413647,544012","transactionName":"cQleFUpcDQlXRU5SDFwSVQ9MHBUAQFoS","queueTime":0,"applicationTime":63,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="f/JpDOsFY/xtScqK85o2ekWavgbnby2vnoFNYoxSzsRYEiLF6mt9m/DwjPY2eTd2CLj/I4mAZ81Yheuh6BRIhw==">
+<meta content="noindex" name="robots">
+<!--[if IE]>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<![endif]-->
+<meta content="auto.everquote.com is a free service that helps consumers compare prices on auto insurance, home insurance, and life insurance plans as well as mortgage rates for new home purchase and loan refinancing in their area. Get quotes for auto, home and life insurance coverage, mortgage loans for purchase and refinancing and find your lowest rate today!" name="description">
+
+<title>Proven Advice To Save You Money On Your Car Insurance Bill</title>
+<link rel="stylesheet" media="screen" href="../evq/assets/static/content/styles-e030fe3ef2fff662cb2328a8242453d8a706b6792263401944e0c6ba466761ef.css">
+
+
+
+<!--[if lt IE 9]>
+<script src="http://cdn.everquote.com/evq/assets/static/html5shiv-9e07e1dd43f748c7160cd00552976c91b874e4cc86bfc912f4af1595acd45fc4.js"></script>
+<![endif]-->
+</head>
+<body class="empty-page-with-theme" data-controller="content">
+<div class="container">
+<div id="NavBar" style="display: none;">
+<a class="NavBarLink" href="../landings/index.html">HOME</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../stateinfo/index.html">STATE INSURANCE</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../ins101/index.html">INSURANCE DEFINITIONS</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../tips/index.html">INSURANCE TIPS</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../faq/index.html">FAQ</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../privacy/index.html">PRIVACY POLICY</a>
+<span class="NavBarSeparator">|</span>
+<a class="NavBarLink" href="../feedbacks/index.html">CONTACT US</a>
+</div>
+
+<style>
+  #MainMiddle {
+      width: 100%;
+  }
+  
+  #zipwindow {
+      background-image: url(../evq/assets/static/common/zipwindow-45e3ce3e269f646201b9977c59ea32c3b922ee0c87568d09fa923d120a9e0c79.jpg);
+      float: right;
+      height: 101px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      position: relative;
+      width: 296px;
+  }
+  
+  #landing_zip_code {
+      border-style: none;
+      font-size: 12px;
+      font-weight: bold;
+      left: 17px;
+      position: relative;
+      top: 55px;
+      width: 100px;
+  }
+  
+  #minizip_headline {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 6px 10px;
+      position: absolute;
+  }
+  
+  #minisubmit {
+      height: 33px;
+      left: 135px;
+      position: absolute;
+      top: 53px;
+      width: 149px;
+  }
+</style>
+<div id="zipwindow">
+<div id="minizip_headline">
+Get Auto Insurance Quotes
+</div>
+<form data-form-type="landing" data-form-popunder="true" data-popunder-timeout="1000" class="new_landing" id="new_landing" action="/landings" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;"><input type="hidden" name="authenticity_token" value="4lez8xSm3fv04kTxLhU/WI3ySNR2uhRCZdbAgh09LmjFt/g6FcjDnGlbAo3r9j5UwNAJ8RhVXiCj0mZBeXuoKw=="><input name="landing_form_check" type="hidden" value="true">
+<input value="8000" maxlength="5" tabindex="1" size="5" type="text" name="landing[zip_code]" id="landing_zip_code">
+<input type="hidden" name="mini_zip_submit" id="mini_zip_submit" value="true">
+<input id="minisubmit" src="../evq/assets/static/common/nothing-04a99a6e3d7afd2bebec2715e42a27de703f86646703a62938930eca1a38f80d.png" tabindex="2" type="image" value="Submit">
+</form></div>
+
+<h1 class="entry-title">Terms and Conditions of Use</h1>
+<h3 class="entry-title">Effective as of October 10, 2013</h3>
+<h2>PLEASE READ THESE TERMS AND CONDITIONS OF USE CAREFULLY BEFORE USING THIS SITE.</h2>
+<p>
+By accessing this website (the &quot;Site&quot;), or any of the Site's Content (as defined below), you acknowledge
+that you agree to and are subject to the following terms and conditions , including without limitation, the <a href="index.html#arbitration">arbitration provision</a>, the <a href="../privacy/index.html">Privacy Policy</a> and the <a href="index.html#eSignConsent">E-SIGN Consent</a>, and any operating rules, policies,
+and procedures that may be published from time to time on this Site (collectively, the “Terms”).
+If you do not agree to these Terms, you may not access or otherwise use the Site or the Content. The Terms constitute a legally binding agreement between you and us,
+everquote.com, the operator of the Site (hereafter referred to as “we”, “us” or “our”).
+References in these Terms to “Site operator,” “we”, “us” and “our” include our affiliates (including, without limitation, EverQuote, Inc), agents, successors and assigns.
+The Site is available only to, and may only be used by, individuals who can form legally binding contracts under applicable law.
+Without limiting the foregoing, the Site is not available to persons under age 18. By accessing and using the Site,
+you accept and agree to, without qualification, the Terms and represent and warrant that you have the authority to bind the User (as defined below) to these Terms and that your use of the Site,
+including the provision or use of any Content, does not violate any applicable law.
+</p>
+<ol>
+<li>
+<strong>Our Services.</strong>
+The Site acts as a portal to facilitate insurance agents, insurance companies and other similar parties (each a “Provider”) to offer for sale and to sell,
+insurance and other products to potential consumers who have applied through the Site to receive insurance or other authorized quotations from a Provider (each, a “Prospect”),
+and all Prospects and potential Prospects that use the Site are collectively called the Site’s “Users” (and hereafter may be referred to as “you” or “your”).
+We may, with a Prospect’s authorization, collect certain information (a “Lead”) about a Prospect and sell the Lead to a Provider. We are not responsible for the legality,
+safety or quality of the products offered for sale by a Provider, the accuracy or veracity of the representations regarding the products,
+the ability of Providers to sell the products or the ability of Prospects to pay for the products. For all purposes we are an independent contractor.
+We do not issue insurance contracts or bind coverage. We are not responsible for, nor do we assume any financial or other liability whatsoever, for the conduct of any Prospect or Provider.
+We do not endorse or recommend any Providers or insurance policies or other related products offered by such Providers.
+We do not provide any type of insurance, tax, financial, legal or any other advice.
+We do not guarantee that any Providers to whom we send a Prospect's application will contact the Prospect or agree to provide the Prospect with the requested insurance coverage.
+If you would like personal advice or insurance specific policy recommendations, please consult with a qualified professional.
+Be advised that we do not offer or sell any insurance or other products shown on the Site.
+</li>
+<br>
+<li>
+<strong>Personal Use.</strong>
+We do not charge Users to access the Site. We grant each User a limited, revocable, non-exclusive license to access the Site and the text, images, maps, files, photos,
+information and other materials on the Site (the “Content”) in order to view, access or make inquiries to us regarding our services, in accordance with these Terms.
+Any other use of the Site is expressly prohibited. This limited license does not include any right of display, copying, aggregation, collection, or derivative use of the Site nor any right of use of spiders, data mining,
+robots or similar data extraction and gathering tools without our prior express written permission. Any rights not expressly granted herein are reserved by us.
+</li>
+<br>
+<li>
+<strong>Downloading of Information from the Site and Proprietary Rights.</strong>
+All Content and the Site itself is protected by copyright and database rights as a compilation and/or collective work, pursuant to U.S. copyright laws, other copyright laws, and international conventions.
+The Content is only for each User’s personal use in accordance with Section 2 (Personal Use).
+All Users agree to abide by these Terms and any and all additional information, restrictions or copyright notices contained in or relating to any Content on the Site.
+Copying or storing any Content other than for noncommercial, personal use is expressly prohibited without prior written permission from us or the applicable copyright holder.
+</li>
+<br>
+<li>
+<strong>Unauthorized Use.</strong>
+Unless otherwise provided herein, or unless otherwise allowed under applicable law, you may not do any of the following without our prior written consent:
+<ul>
+<li>
+Upload, post, display, copy, republish, reproduce, transmit, or distribute any Content in any form whatsoever;
+</li>
+<li>
+Reproduce any portion of the Site on your website or, using any device,
+including but not limited to use of a border or frame environment around the Site, or other framing technique to enclose any portion or aspect of the Site,
+or replicate or mirror any portion of the Site;
+</li>
+<li>
+Reverse engineer any part of the Site;
+</li>
+<li>
+Modify, translate into any written or computer language, or create derivative works or translations from any
+Content or part of the Site;
+</li>
+<li>
+Offer for sale, sell, license, or transfer, in any form, any portion of the Site any third parties;
+</li>
+<li>
+Use any spider, robot or other automated device or automated or manual process to copy, monitor, or keep a database copy of the Content or any portion of the Site;
+</li>
+<li>
+Use the Site other than to make legitimate inquiries to us regarding our services or to learn about our services;
+</li>
+<li>
+Use the Site to create any fraudulent or false inquiry or account;
+</li>
+<li>
+Transmit or post any abusive, threatening, unlawful, defamatory, libelous, false, misleading indications of origin or statements of fact, vulgar, obscene, indecent, sexually explicit, pornographic, profane or inflammatory material,
+or any material that could constitute or encourage conduct that would be considered a criminal offense, give rise to civil liability, or otherwise violate any law or for any other purpose that is unlawful or prohibited by these Terms;
+</li>
+<li>
+Access or use the Site in any way that, in our sole discretion, adversely affects the function or performance of the Site or any other networks or computer systems used by us or the Site,
+or infringes on our or any third party’s trademark, copyright, patent rights, rights of privacy or publicity or any other proprietary rights;
+</li>
+<li>
+Transmit or upload to the Site, or use in connection with the Site, any software, device or routine that contains viruses, worms, time bombs, Trojan horses or other computer programming routines that may interfere with or attempt to interfere with,
+damage or in any way intercept the normal operation of the Site, or appropriate the Site or any system, or take any action that imposes an unreasonable load on our computing platform; or
+</li>
+<li>
+Circumvent any encrypted data or gain access to more materials or data than was licensed or use the Site in any manner which violates these Terms or any applicable laws.
+</li>
+</ul>
+</li>
+Unauthorized access to and/or use of the Site, or the telecommunications or computer facilities used to deliver the Site, is a breach of these Terms and is a violation of law.
+If you are or become aware of or experience any Content, activity or communication through or in connection with the Site that appears to be in violation of the above, or in violation of any other provision of these Terms, we ask that you please inform us of any such violation by sending notification to legal@everquote.com.
+<br>
+<br>
+<li>
+<strong>Site Changes.</strong>
+We may change, discontinue or suspend any aspect of the Site at any time, including the availability of any Site features, Content or database.
+We may also impose limits on certain services or features or restrict your access to all or part of the Site without notice to you or liability to us.
+</li>
+<br>
+<li>
+<strong>Our Privacy Policy.</strong>
+When you use the Site to send us an inquiry, you agree to allow us and our affiliates to add your e-mail address to our User database.
+You may receive one or more promotional e-mails from us and/or our affiliates. You may opt-out of receiving such promotional e-mails from us at any time.
+Our <a href="../privacy/index.html">Privacy Policy</a> explains our information collection practices and safeguards and how to opt-out of receiving such e-mails.
+Your use of the Site signifies your acknowledgement of and agreement with our <a href="../privacy/index.html">Privacy Policy</a>, which is expressly incorporated into these Terms.
+</li>
+<br>
+<li>
+<strong>Identity Verification.</strong>
+We encourage all Users to use appropriate caution when interacting with anyone whom you may be doing business with specifically via the Site or generally via the Internet.
+</li>
+<br>
+<li>
+<strong>LIMITATION OF LIABILITY.</strong>
+IN NO EVENT WILL WE OR ANY OF OUR OFFICERS, DIRECTORS, SHAREHOLDERS OR EMPLOYEES BE LIABLE FOR ANY LOST PROFITS, COVER, LOSS OF REVENUE OR ANY INDIRECT,
+CONSEQUENTIAL, SPECIAL, INCIDENTAL, OR PUNITIVE DAMAGES ARISING OUT OF, BASED ON,
+OR RESULTING FROM YOUR USE OF THE SITE OR ANY TRANSACTION BETWEEN US OR BETWEEN YOU AND PROVIDERS THAT IS ENABLED BY OR ARISES IN CONNECTION WITH YOUR USE OF THE SITE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+THESE LIMITATIONS AND EXCLUSIONS APPLY WITHOUT REGARD TO WHETHER THE DAMAGES ARISE FROM (i) BREACH OF CONTRACT, (ii) BREACH OF WARRANTY, (iii) STRICT LIABILITY, (iv) TORT, (v) NEGLIGENCE, (vi) STATUTE, OR (vii) ANY OTHER CAUSE OF ACTION,
+TO THE MAXIMUM EXTENT SUCH EXCLUSION AND LIMITATIONS ARE NOT PROHIBITED BY APPLICABLE LAW. IN ALL EVENTS, OUR LIABILITY,
+TO YOU OR TO ANY THIRD PARTY IN ANY CIRCUMSTANCE ARISING OUT OF OR IN CONNECTION WITH THE SITE IS LIMITED TO THE GREATER OF (a) THE AMOUNT OF FEES ACTUALLY RECEIVED BY US FROM YOU DURING THE CALENDAR MONTH DURING WHICH SUCH ALLEGED CLAIM(S) ACCRUED, AND (b) $200.00.
+Any cause of action you may have hereunder or with respect to your use of the Site must be commenced within one (1) year after the claim or cause of action first arises.
+</li>
+<br>
+<li>
+<strong>DISCLAIMER.</strong>
+THE SITE, INCLUDING ALL CONTENT, SERVICES, FUNCTIONS, SOFTWARE, MATERIALS AND INFORMATION MADE AVAILABLE ON OR ACCESSED THROUGH THE SITE, IS PROVIDED "AS IS."
+TO THE FULLEST EXTENT PERMISSIBLE BY LAW, WE MAKE NO REPRESENTATIONS OR WARRANTIES OF ANY KIND WHATSOEVER FOR THE CONTENT ON THE SITE OR THE SERVICES,
+INFORMATION, FUNCTIONS AND MATERIALS AVAILABLE THROUGH THE SITE,
+FOR ANY SERVICES OR PRODUCTS OR HYPERTEXT LINKS TO THIRD PARTIES OR FOR ANY BREACH OF SECURITY ASSOCIATED WITH THE TRANSMISSION OF SENSITIVE INFORMATION THROUGH THE SITE OR ANY LINKED SITE.
+FURTHER, WE EXPRESSLY DISCLAIM ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, NON-INFRINGEMENT, TITLE, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.
+WE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE SITE OR ANY SERVICES, CONTENT OR MATERIALS CONTAINED THEREIN WILL MEET YOUR NEEDS, BE UNINTERRUPTED OR ERROR FREE, THAT DEFECTS WILL BE CORRECTED,
+OR THAT THE SITE OR THE SERVER THAT MAKES IT AVAILABLE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ANY MATERIAL OR DATA DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SITE IS DONE AT USER'S OWN DISCRETION AND RISK,
+AND USER WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO USER’S COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OR USE OF SUCH MATERIAL OR DATA.
+NO INFORMATION OBTAINED BY USER THROUGH THE SITE SHALL CREATE ANY WARRANTY NOT EXPRESSLY MADE HEREIN.
+<br>
+<br>
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES. ACCORDINGLY, SOME OF THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU.
+</li>
+<br>
+<li>
+<strong>Release.</strong>
+In the event that you have a dispute arising from or in connection with the use of the Site (including, without limitation,
+any dispute between you and any Provider regarding any transaction or interaction between you and such Provider that is enabled by or arises in connection with your use of the Site),
+you hereby agree to release, remise and forever discharge us and our agents, directors, officers, employees, shareholders and all other related persons or entities from any and all manner of rights,
+complaints, demands, claims, causes of action, proceedings, obligations, liabilities, legal fees, costs, and disbursements of any nature whatsoever, whether known or unknown,
+which now or hereafter arise from, relate to, or are connected with such dispute or your use of the Site. If you are a California resident, you hereby waive California civil code section 1542,
+which says: “a general release does not extend to claims which the creditor does not know or suspect to exist in his favor at the time of executing the release, which, if known by him must have materially affected his settlement with the debtor.”
+If you are a resident of a state other than California, you explicitly waive the terms and protections of any statute of your own state that has a similar import or intent.
+</li>
+<br>
+<li>
+<strong>Indemnity.</strong>
+You hereby agree to indemnify, defend and hold us and our agents, directors, officers, employees,
+shareholders and all other related persons or entities (collectively, the “Indemnified Parties”) harmless from and against any and all liability and costs
+(including reasonable attorneys’ fees and court costs) incurred by the Indemnified Parties in connection with any claim arising out of your use of the Site
+(including, without limitation, as a result of any transaction or interaction between you and a Provider or any of Provider’s affiliates,
+partners or agents that is enabled by or arises in connection with your use of the Site),
+any act (or failure to act) by you or other users of your account or any breach by you of these Terms, including, without limitation, the representations, warranties and covenants made by you herein.
+</li>
+<br>
+<li>
+<strong>Copyright Notification</strong>
+We do not permit copyright infringing activities and other infringement of intellectual property rights on the Site, and we will remove Content if properly notified that such Content infringes on another’s intellectual property rights.
+If you are a copyright owner or an agent thereof and believe that any Content in any public area of the Site infringes upon or otherwise conflicts with your copyrights,
+you may submit a notification pursuant to the Digital Millennium Copyright Act (“DMCA”) by providing our copyright agent with the following information in writing (see 17 U.S.C. § 512(c)(3) for further detail):
+<ul>
+<li>
+A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed;
+</li>
+<li>
+Identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works are covered by a single notification, a representative list of such works;
+</li>
+<li>
+Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled and information reasonably sufficient to permit us to locate the material;
+</li>
+<li>
+Information reasonably sufficient to permit us to contact you, such as an address, telephone number, and an electronic mail address;
+</li>
+<li>
+A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and
+</li>
+<li>
+A statement that the information in the notification is accurate and, under penalty of perjury, that you are authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
+</li>
+Please contact our designated Copyright Agent at compliance@everquote.com to send notifications of claimed infringement.
+For clarity, only DMCA notices should go to the Copyright Agent; any other feedback, comments, requests for technical support, and other communications should be directed to our customer service through the Contact Us area of the Site.
+You hereby acknowledge and agree that if you fail to comply with all of the requirements listed above, your DMCA notice may not be valid.
+</ul>
+</li>
+<li>
+<strong>Trademarks</strong>
+Our logo and our other product and service names are our trademarks (the “Marks”).
+You agree not to display, reproduce or otherwise use in any manner such Marks without our prior written permission.
+</li>
+<br>
+<li>
+<strong>Choice of Law and Forum</strong>
+This agreement is governed by the laws of the Commonwealth of Massachusetts, United States of America, excluding its choice of law rules.
+Subject to Section 15 (Dispute Resolution By Binding Arbitration), you irrevocably agree that such jurisdiction and venue will be the sole and exclusive jurisdiction and venue of any legal dispute.
+You covenant not to sue us in any other forum for any cause of action.
+Our failure to exercise or enforce any right or provision of these Terms shall not constitute a waiver of any such right or provision.
+Subject to Section 15, if for any reason a court of competent jurisdiction finds any provision of these Terms, or portion thereof,
+to be unenforceable, that provision shall be enforced to the maximum extent permissible so as to affect the intent of these Terms, and the remainder of these Terms shall continue in full force and effect.
+</li>
+<br>
+<li>
+<a href="#arbitration" id="arbitration">
+<strong>Dispute Resolution By Binding Arbitration.  PLEASE READ THIS CAREFULLY. IT AFFECTS YOUR RIGHTS.</strong>
+</a>
+<br>
+<br>
+You agree to attempt in good faith to settle any dispute or claim that has or may arise between us, which arises out of or relates in any way to these Terms or your use of the Site or the Content, including, without limitation, any dispute or claim between you and a Provider (each, a “Claim”), by way of consultations between you and us, which consultations will be initiated upon written notice by any party to the other (the “Consultation Notice”).
+The Consultation Notice must describe the nature and basis of the Claim and set forth the specific relief sought (“Demand”).
+If such Claim cannot be resolved within thirty (30) days after the Consultation Notice is received, any party to the consultations may initiate an arbitration proceeding upon written notice to the other party in accordance with this Section 15. Any notice to us under this Section 15 should be addressed to: compliance@everquote.com ("Notice Address").
+<br>
+<br>
+You agree to arbitrate all Claims between you and us that cannot be amicably resolved in accordance with the foregoing paragraph.
+This agreement to arbitrate is intended to be broadly interpreted.
+It includes, but is not limited to: (a) claims arising out of or relating to any aspect of your relationship with us, whether based in contract, tort, statute, fraud, misrepresentation or any other legal theory; and (b) claims that could be alleged as class action Claims (and you agree to waive the right to participate in a class action in accordance with this Section 15).
+For the avoidance of doubt, references in this Section 15 to “Site operator,” “Provider,” “we”, “Prospect”, “you,” and “us” include our respective subsidiaries, affiliates, agents, employees, predecessors in interest, successors and assigns, as well as all authorized or unauthorized users or beneficiaries of the services, information or Site Content available through the use the Site.
+This arbitration agreement does not preclude you from bringing an individual action in small claims court or bringing issues to the attention of federal, state, or local agencies, including, for example, the Federal Communications Commission.
+You agree that, by entering into this arbitration agreement, you and we are each waiving our respective rights to a trial by jury or to participate in a class action.
+You acknowledge and agree that the Federal Arbitration Act governs the interpretation and enforcement of this provision.
+This arbitration provision shall survive termination of this Agreement.
+<br>
+<br>
+The arbitration will be governed by the American Arbitration Association (“AAA”) under its rules and procedures, including the AAA’s Supplementary Procedures for Consumer-Related Disputes (collectively, the “AAA Rules”), as modified by this Agreement (but expressly excluding the Supplementary Rules for Class Arbitration and any other AAA Rules that conflict with the waiver of class arbitration and representative proceedings below), and will be administered by one (1) arbitrator with relevant industry experience appointed in accordance with the AAA Rules.
+The arbitrator is bound by the terms of this Agreement.
+All issues are for the arbitrator to decide, including, without limitation, issues relating to the applicability and enforceability of this arbitration agreement.
+<br>
+<br>
+Unless otherwise mutually agreed by the parties to the arbitration, any arbitration hearings under this Section 15 will take place in the county where you are domiciled.
+If your Claim is for $5,000 or less, you may choose whether the arbitration will be conducted solely on the basis of documents submitted to the arbitrator, through a telephonic hearing, or by an in-person hearing as established by the AAA Rules.
+If your Claim exceeds $5,000, the right to a hearing will be determined by the AAA Rules.
+Except as otherwise provided for in this Section 15, in any arbitration between you and us under this Section 15, all AAA filing, administration and arbitrator fees for any arbitration initiated in accordance with the notice requirements above where Claims for damages do not exceed $10,000 shall be paid, at your written request, by us.
+Any request for payment of fees by us shall be submitted by mail to the AAA along with your demand for arbitration, and we will make arrangements to pay all necessary fees directly to the AAA.
+If the value of the relief sought is more than $10,000 and you are able to demonstrate that the costs of arbitration will be prohibitive as compared to the costs of litigation, we will pay as much of the filing, administration and arbitrator fees as the arbitrator deems necessary to prevent the arbitration from being cost-prohibitive.
+If, however, the arbitrator finds that either the substance of your Claim or the relief sought in the Demand is frivolous or brought for an improper purpose, you agree to reimburse us for all monies previously disbursed that are otherwise your obligation to pay under the AAA Rules.
+<br>
+<br>
+The arbitrator may award declaratory or injunctive relief only in favor of the individual party seeking relief and only to the extent necessary to provide relief warranted by that party's individual claim.
+YOU AGREE THAT YOU MAY BRING CLAIMS AGAINST US ONLY IN YOUR INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING, AND THAT THIS AGREEMENT EXPRESSLY PROHIBITS CLASS ARBITRATION BY ANY PARTY.
+Further, unless the parties to the arbitration agree otherwise, the arbitrator may not consolidate more than one person’s Claims, and may not otherwise preside over any form of a representative or class proceeding.
+The arbitrator shall not be bound by rulings in prior arbitrations involving our other Users, but is bound by rulings in prior arbitrations involving the same User to the extent required by applicable law.
+<br>
+<br>
+With the exception of the provision in the preceding paragraph prohibiting class arbitration or representative proceedings, if an arbitrator or court decides that any part of this Section 15 is invalid or unenforceable, the other parts of this Section 15 shall still apply.
+In the event that the foregoing prohibition on class arbitration or representative proceedings is deemed invalid or unenforceable, then the entirety of this Section 15 shall be null and void.
+The remainder of the Terms, including, without limitation, Section 14 (Choice of Law and Forum), will remain in force.
+<br>
+<br>
+You may opt-out of this arbitration provision only by written notice to us at the Notice Address within thirty (30) days of your acceptance of this agreement, which notice shall include your name, address, and a clear statement that you do not wish to resolve disputes with us through arbitration.
+<br>
+<br>
+If we make any change to this arbitration provision (other than a change to the Notice Address) during the term of your relationship with us, that change shall not apply to any Claim against us initiated prior to the effective date of the change.
+The change shall apply to all other Claims that have arisen or may arise between you and us.
+We will notify you of changes to this arbitration provision by posting the amended terms on the Site or by email, in each case at least thirty (30) days before the effective date of the changes.
+<br>
+<br>
+Notwithstanding anything to the contrary in these Terms, Providers shall be third party beneficiaries of the rights to dispute resolution and arbitration set forth in this Section 15, and each Provider shall have the right to enforce this Section 15 against Users as if such Provider were a party to the agreement set forth in this Section 15 in the event of any dispute or claim between you and such Provider based on or relating to any transaction or interaction between you and such Provider that is enabled by or arises in connection with your use of the Site.
+</li>
+<br>
+<li>
+<strong>No Agency.</strong>
+The relationship between the Company and each User and Provider is that of independent
+contractors, and no agency, joint venture, partnership, employee-employer or franchiser-franchisee relations is
+intended or created by these Terms or your use of the Site.
+</li>
+<br>
+<li>
+<strong>Notices.</strong>
+Except as explicitly stated otherwise, any notices sent from you to us shall be submitted via e-mail at legal@everquote.com with a copy of such notice sent by certified postal mail, return receipt requested, to: Legal Department, everquote.com, c/o EverQuote, Inc, 210 Broadway, Suite 302, Cambridge, MA 02139.
+When we need to send a notice to you, it shall be sent to the e-mail address you last provided to us.
+Notice shall be deemed given upon receipt or 24 hours after e-mail is sent, unless the sending party is notified that the e-mail address is invalid.
+Alternatively, we may give you notice by certified mail, postage prepaid and return receipt requested, to any address provided to us by you.
+In such cases, notice shall be deemed given three days after the date of mailing.
+</li>
+<br>
+<li>
+<strong>Amendments.</strong>
+We reserve the right to change, modify, add or remove any portion of these Terms, in whole or in part, at any time.
+Notification of changes to these Terms will be posted on the Site and will be effective immediately thereafter.
+Your use of the Site following the posting of any such change, modification or amendment to these Terms will constitute your acceptance thereof.
+These Terms may not otherwise be modified, except in a writing signed by both parties.
+No delay or failure on the part of either party in exercising any right or remedy hereunder shall operate as a waiver thereof or of any other right or remedy.
+No waiver whatsoever shall be valid unless in writing, signed by the party to be charged, and then only to the extent therein set forth. These Terms (including, without limitation, the E-Sign Consent) and the Privacy Policy constitute the entire agreement between us and Users with respect to the matters contemplated hereby.
+</li>
+<br>
+<li>
+<strong>Links to Third-Party Sites.</strong>
+This Site may contain links to other Internet sites.
+We are not responsible for the availability of such external sites or resources, and do not endorse and are not responsible or liable for any content, advertising, products, or other materials on or available from such sites or resources.
+We shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, products or services available on such external sites or resources.
+We provide these links and references to you only as a convenience, and inclusion of any link or reference does not imply endorsement of the Web site or other resource.
+</li>
+<br>
+<li>
+<strong>Partial Invalidity</strong>
+The invalidity or unenforceability of any one or more sections of these Terms shall not affect the validity or enforceability of its remaining provisions.
+</li>
+<br>
+<li>
+<strong>Acknowledgement</strong>
+You acknowledge that You have read and understand these Terms, and that these Terms have the same force and effect as a signed agreement.
+These Terms shall confer no rights upon any other party other than the parties hereto.
+</li>
+<br>
+<li>
+<a href="#eSignConsent" id="eSignConsent">
+<strong>E-Sign Consent</strong>
+</a>
+In this E-Sign Consent, the following definitions apply: (i) “You” and “your” refer to you, the User; (ii) “We,” “us,” and “our” refer to the Site operator and its affiliates (including, without limitation, EverQuote, Inc), agents, successors and assigns.
+By clicking the “I agree” button, which you adopt as your electronic signature, you consent and agree that:
+<ul>
+<li>
+We can provide you disclosures required by law, and other information about your legal rights and duties, electronically.
+</li>
+<li>
+Your electronic signature on agreements and documents has the same effect as if you signed them in ink.
+</li>
+<li>
+We can send all communications and disclosures, including, but not limited to, this E-Sign Consent, the telephone and e-mail contact consent, and the Privacy Policy and Terms of Use (collectively defined as “Disclosures”) to you electronically: (1) via e-mail; (2) by access to a web site that we designate in an e-mail notice we send to you at the time the information is available; or (3) to the extent permissible by law, by access to a web site that we generally designate in advance for such purpose.
+</li>
+<li>
+If you would like a paper copy, you can print a copy of the Disclosures or download the information for your records.
+</li>
+<li>
+This consent applies to: (1) your use of products and services offered by us; (2) all future Disclosures associated with us; and (3) all future transactions with us, at any time, and to other Disclosures that we provide to you by email, unless you have, prior to such transaction, withdrawn your consent by the procedure mentioned below.
+</li>
+</ul>
+You understand that, to access and retain the electronic Disclosures, you will need the following:
+<ul>
+<li>
+A computer with an Internet connection.
+</li>
+<li>
+A current web browser that includes 128-bit encryption. Minimum recommended browser standards are Microsoft Internet Explorer version 8.0 and above (see www.microsoft.com/ie for current version), Mozilla Firefox current version (see www.mozilla.com for current version), Apple Safari current version (see www.apple.com/safari for current version), or Opera current version (see www.opera.com for current version). The browser must have cookies enabled.
+</li>
+<li>
+A valid email address.
+</li>
+<li>
+Sufficient storage space to save past Disclosures and/or an installed printer to print them.
+</li>
+<li>
+If you use a spam filter that blocks or re-routes emails from senders not listed in your email address book, you must add @EverQuote, Inc.com to your email address book.
+</li>
+</ul>
+You understand that you may request paper copies of the Disclosures, and that we will provide them to you by mail at no charge.
+You can request paper copies and/or withdraw consent by contacting us at:
+<p>
+everquote.com
+<br>
+c/o EverQuote, Inc
+<br>
+210 Broadway, Suite 302
+<br>
+Cambridge, MA 02139
+</p>
+Any withdrawal of your consent to receive electronic Disclosures will be effective only after we have a reasonable period of time to process your withdrawal.
+You understand and agree that if you withdraw your consent to receive electronic Disclosures, we may – though we are not obligated to – cancel your account.
+<br>
+<br>
+At any time, you can update the email address to which we will send alerts that Disclosures are available.  You can change your email address by contacting us at:  compliance@everquote.com
+<br>
+<br>
+By consenting, you agree that electronic Disclosures have the same meaning and effect as if we provided paper Disclosures to you.
+When we send you an email or other electronic notification alerting you that Disclosures are available electronically and we do in fact make them available online, that shall have the same meaning and effect as if we provided paper Disclosures to you, whether or not you choose to view the Disclosures, unless you had previously withdrawn your consent to receive Disclosures electronically.
+You understand and agree that Disclosures are considered received by you within 24 hours of the time posted to our website, or within 24 hours of the time emailed to you unless we receive notice that the e-mail address is invalid.
+<br>
+<br>
+You understand and agree that we reserve the right to cancel this electronic Disclosure service, change the terms of use of this service or send Disclosures in paper form at any time.
+<br>
+<br>
+You understand and agree that we are responsible for sending notice of the Disclosures to you electronically including at the email address you have provided, but are not responsible for any delay or failure in your receipt of the email notices.
+</li>
+</ol>
+
+</div>
+
+
+
+
+
+<div class="Pixelsaurus">
+<input type="hidden" name="pixel_path" id="pixel_path" value="/pixels?current_page=Landing&amp;previous_page=&amp;zip_code=">
+<iframe id="pixel_frame" src="" style="height:0;width:0;visibility:hidden;"></iframe>
+</div>
+<div data-ultrawave-app-name="lynx" data-ultrawave-endpoint="https://ultrawave.everquote.com/prod/records" data-ultrawave-stream-name="ultrawave-prod" data-ultrawave-token="53915870dfe50134c4060a8944010ec6" id="ultrawave">
+<script src="../evq/assets/static/ultrawave-b2859f1d622aa08556438fbc0aea9ee56b19790f8e4765c6479c0afdbb622c9e.js"></script>
+</div>
+
+
+
+
+</body>
+</html>
