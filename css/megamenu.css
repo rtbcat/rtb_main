@@ -224,6 +224,17 @@ figure.r16by9 .wrapper {
     position: absolute;
     top: 0; left: 0px;
 }
+#menu_swipe .col-row a {
+    display: block;
+    padding: 8px;
+    width: 100%;
+}
+#menu_swipe .col-row a:hover {
+    background-color: rgba(200,200,200,0.1);
+}
+#menu_swipe .col-row a img {
+    vertical-align: middle;
+}
 
 /* Custom Grid System */
 .responsive-img {
