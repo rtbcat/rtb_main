@@ -13,6 +13,11 @@
     <link rel="stylesheet" type="text/css" href="css/basic.css" />
     <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
     <style>
+        #swipe_table th {
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        
         #swipe_table td {
             vertical-align: top;
             padding-bottom: 15px;
@@ -1340,11 +1345,21 @@
             <li id="menu_contact">
                 <a class="nodrop" href="contact.html">Contact</a>
             </li>
-            <li id="menu_home" class="megamenu_button"><span>Menu</span></li>
-            <!--
-        -->
-            <li>
-                <a class="nodrop" href="swipe-file.html">Swipe File</a>
+            <li id="menu_swipe">
+                <a class="drop">Swipe File</a>
+                <div class="megamenu_fullwidth">
+                    <div class="col-row">
+                        <div class="col-33">
+                            <a href="">US</a>
+                        </div>
+                        <div class="col-33">
+                            <a href="">DE</a>
+                        </div>
+                        <div class="col-33">
+                            <a href="">UK</a>
+                        </div>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
@@ -1352,6 +1367,12 @@
         <div class="width-constrainer">
             <h1 class="page-title">Swipe File</h1>
             <table id="swipe_table">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Page</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td>
