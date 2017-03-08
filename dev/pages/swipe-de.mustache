@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <base href="" />
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Swipe File</title>
-        <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
-        <link rel="stylesheet" type="text/css" href="plugins/jvectormap-2.0.3/jvectormap.css" />
-        <link rel="stylesheet" type="text/css" href="css/basic.css" />
-        <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
-        <style>
-            #swipe_table th {padding-bottom:15px;text-align:center;}
-            #swipe_table td {vertical-align: top;padding-bottom:15px;}
-            #swipe_table td:first-child {width: 35%;padding-right:15px;}
-            #swipe_table img {max-width: 100%;}
-            #swipe_table td img:hover {
-                -webkit-box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75);
-                -moz-box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75);
-                box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75);
-                transform: scale(1.02);
-                -webkit-transform: scale(1.02);
-            }
-        </style>
-    </head>
-    <body>
-        <!-- Megamenu HTML Tags -->
-		{{> ../partials/megamenu_html.html }}
-        <main>
-            <div class="width-constrainer">
-                <h1 class="page-title">Swipe File</h1>
-                <h3>Proven DR landers and their most run native ads</h3>
-                <table id="swipe_table">
-                    <thead>
-                        <tr>
-                            <th>Ad</th><th>Page</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="swipe/preview/ad/www.gesundheitsnachrichten.co.jpg">
-                            </td>
-                            <td>
-                                <p>
-                                    <a href="swipe/DE/www.gesundheitsnachrichten.co" target="_blank">
-                                        <img src="swipe/preview/page/www.gesundheitsnachrichten.co.jpg">
-                                    </a>
-                                </p>
-                                <p>
-                                    Original URL: <a href="http://www.gesundheitsnachrichten.co/desk/?t202id=235519&t202kw=de_skin_desk_486729&c2=34370&c3=" target="_blank">www.gesundheitsnachrichten.co</a>
-                                </p>
-                                <p>#skin </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-        </main>
-        <footer>&nbsp;</footer>
-        <script src="libs/jquery-1.11.3.min.js"></script>
-        <!-- Megamenu JS Tags -->
-		{{> ../partials/megamenu_js.html }}
-        <!-- Google Analytics Universal -->
-        {{> ../partials/ga_js.html }}
-    </body>
+<head>
+{{> ../pixels/header_core-facebook.html }}
+    <base href="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swipe File</title>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/jvectormap-2.0.3/jvectormap.css" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+    <style>
+        #swipe_table th {padding-bottom:15px;text-align:center;}
+        #swipe_table td {vertical-align: top;padding-bottom:15px;}
+        #swipe_table td:first-child {width: 35%;padding-right:15px;}
+        #swipe_table img {max-width: 100%;}
+        #swipe_table td img:hover {
+            -webkit-box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75);
+            box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75);
+            transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <!-- Megamenu HTML Tags -->
+	{{> ../partials/megamenu_html.html }}
+    <main>
+        <div class="width-constrainer">
+            <h1 class="page-title">Swipe File</h1>
+            <h3>Proven DR landers and their most run native ads</h3>
+            <table id="swipe_table">
+                <thead>
+                    <tr>
+                        <th>Ad</th><th>Page</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="swipe/preview/ad/www.gesundheitsnachrichten.co.jpg">
+                        </td>
+                        <td>
+                            <p>
+                                <a href="swipe/DE/www.gesundheitsnachrichten.co" target="_blank">
+                                    <img src="swipe/preview/page/www.gesundheitsnachrichten.co.jpg">
+                                </a>
+                            </p>
+                            <p>
+                                Original URL: <a href="http://www.gesundheitsnachrichten.co/desk/?t202id=235519&t202kw=de_skin_desk_486729&c2=34370&c3=" target="_blank">www.gesundheitsnachrichten.co</a>
+                            </p>
+                            <p>#skin </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </main>
+    <footer>&nbsp;</footer>
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <!-- Megamenu JS Tags -->
+	{{> ../partials/megamenu_js.html }}
+
+<!-- Tracking Pixels -->
+{{> ../pixels/body_page_view-amazon_uk.html }}
+{{> ../pixels/body_page_view-amazon_us.html }}
+{{> ../pixels/body_page_view-facebook.html }}
+{{> ../pixels/body_page_view-google.html }}
+{{> ../pixels/body_page_view-twitter.html }}
+</body>
 </html>

@@ -2,6 +2,34 @@
 <html lang="en">
 
 <head>
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1213800238717879'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
+/></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
     <base href="" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1533,27 +1561,27 @@
                 <div class="table-control section-header clearfix">
                     <div class="filter-result-widget left">
                         <select class="sorting">
-                                <!-- <option value="bk_id">BlueKai ID</option>
-                                <option value="apn_id">Appnexus ID</option> -->
-                                <option value="path">Path</option>
-                                <option value="size" selected="true">Size</option>
-                                <!-- <option value="cpm">CPM</option> -->
-                            </select>
+                            <!-- <option value="bk_id">BlueKai ID</option>
+                            <option value="apn_id">Appnexus ID</option> -->
+                            <option value="path">Path</option>
+                            <option value="size" selected="true">Size</option>
+                            <!-- <option value="cpm">CPM</option> -->
+                        </select>
                         <select class="ordering">
-                                <option value="asc">Asc</option>
-                                <option value="des" selected="true">Desc</option>
-                            </select>
+                            <option value="asc">Asc</option>
+                            <option value="des" selected="true">Desc</option>
+                        </select>
                     </div>
                     <div class="pagination-widget right">
                         <button class="btn btn-default btn-sm btn-prev">
-                                <i class="glyphicon glyphicon-chevron-left"></i>
-                            </button>
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                        </button>
                         <select class="page-number" name="page">
-                                <option value="1">1</option>
-                            </select> &nbsp;of <span class="page-total">0</span>
+                            <option value="1">1</option>
+                        </select> &nbsp;of <span class="page-total">0</span>
                         <button class="btn btn-default btn-sm btn-next">
-                                <i class="glyphicon glyphicon-chevron-right"></i>
-                            </button>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
                 <div id="table_container" class="section-body clearfix">
@@ -1561,11 +1589,11 @@
                         <thead>
                             <tr>
                                 <!-- <th>
-                                        Blukai ID
-                                    </th>
-                                    <th>
-                                        Apnx ID
-                                    </th> -->
+                                    Blukai ID
+                                </th>
+                                <th>
+                                    Apnx ID
+                                </th> -->
                                 <th data-sort="path" class="sort" title="Click to sort">
                                     Path
                                     <div class="sort-direction">
@@ -1585,11 +1613,11 @@
                                     </div>
                                 </th>
                                 <!-- <th data-sort="cpm" class="sort" title="Click to sort">
-                                        CPM
-                                        <div class="sort-direction">
-                                            <span class="glyphicon"></span>
-                                        </div>
-                                    </th> -->
+                                    CPM
+                                    <div class="sort-direction">
+                                        <span class="glyphicon"></span>
+                                    </div>
+                                </th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -1597,35 +1625,35 @@
                                 <td colspan="6">Fetching...</td>
                             </tr>
                             <!--
-                                    Ajax response will fill this section.
-                                -->
+                                Ajax response will fill this section.
+                            -->
                         </tbody>
                     </table>
                 </div>
                 <div class="table-control section-footer clearfix">
                     <div class="filter-result-widget left">
                         <select class="sorting">
-                                <!-- <option value="bk_id">BlueKai ID</option>
-                                <option value="apn_id">Appnexus ID</option> -->
-                                <option value="path">Path</option>
-                                <option value="size" selected="true">Size</option>
-                                <!-- <option value="cpm">CPM</option> -->
-                            </select>
+                            <!-- <option value="bk_id">BlueKai ID</option>
+                            <option value="apn_id">Appnexus ID</option> -->
+                            <option value="path">Path</option>
+                            <option value="size" selected="true">Size</option>
+                            <!-- <option value="cpm">CPM</option> -->
+                        </select>
                         <select class="ordering">
-                                <option value="asc">Asc</option>
-                                <option value="des" selected="true">Desc</option>
-                            </select>
+                            <option value="asc">Asc</option>
+                            <option value="des" selected="true">Desc</option>
+                        </select>
                     </div>
                     <div class="pagination-widget right">
                         <button class="btn btn-default btn-sm btn-prev">
-                                <i class="glyphicon glyphicon-chevron-left"></i>
-                            </button>
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                        </button>
                         <select class="page-number" name="page">
-                                <option value="1">1</option>
-                            </select> &nbsp;of <span class="page-total">0</span>
+                            <option value="1">1</option>
+                        </select> &nbsp;of <span class="page-total">0</span>
                         <button class="btn btn-default btn-sm btn-next">
-                                <i class="glyphicon glyphicon-chevron-right"></i>
-                            </button>
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -1645,8 +1673,8 @@
             </div>
             <div class="buttons">
                 <button type="button" class="btn btn-default btn-sm" onclick="message.close()">
-                        Ok
-                    </button>
+                    Ok
+                </button>
             </div>
         </div>
     </div>
@@ -1700,7 +1728,28 @@
             }
         }
     </script>
-    <!-- Google Analytics Universal -->
+
+    <!-- Tracking Pixels -->
+    <!-- AMS US Page View -->
+    <script type='text/javascript'>
+        var _pix = document.getElementById('_pix_id_a4c9002b-4968-26ab-6f27-9592b4c07b9c');
+        if (!_pix) {
+            var protocol = '//';
+            var a = Math.random() * 1000000000000000000;
+            _pix = document.createElement('img');
+            _pix.style.display = 'none';
+            _pix.setAttribute('src', protocol + 's.amazon-adsystem.com/iu3?d=forester-did&ex-fargs=%3Fid%3Da4c9002b-4968-26ab-6f27-9592b4c07b9c%26type%3D55%26m%3D1&ex-fch=416613&ex-src=rtb.cat&ex-hargs=v%3D1.0%3Bc%3D4491937840601%3Bp%3DA4C9002B-4968-26AB-6F27-9592B4C07B9C' + '&cb=' + a);
+            _pix.setAttribute('id', '_pix_id_a4c9002b-4968-26ab-6f27-9592b4c07b9c');
+            document.body.appendChild(_pix);
+        }
+    </script><noscript> <img height='1' width='1' border='0' alt='' src='https://s.amazon-adsystem.com/iui3?d=forester-did&ex-fargs=%3Fid%3Da4c9002b-4968-26ab-6f27-9592b4c07b9c%26type%3D55%26m%3D1&ex-fch=416613&ex-src=rtb.cat&ex-hargs=v%3D1.0%3Bc%3D4491937840601%3Bp%3DA4C9002B-4968-26AB-6F27-9592B4C07B9C' /></noscript>
+    <!-- Page View Event Pixel -->
+    <script>
+        fbq('track', 'ViewContent', {
+            value: 3.50,
+            currency: 'USD'
+        });
+    </script>
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -1713,26 +1762,25 @@
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
         ga('create', 'UA-90309796-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <!-- Twitter universal website tag code-->
-    <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        twttr.conversion.trackPid('nuzl2', {
-            tw_sale_amount: 0,
-            tw_order_quantity: 0
-        });
+    <!-- Twitter universal website tag code -->
+    <script>
+        ! function(e, t, n, s, u, a) {
+            e.twq || (s = e.twq = function() {
+                    s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+                }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+                a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'nuzl2');
+        twq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-        <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nuzl2&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-        </noscript>
-    <!-- End Twitter universal website tag code
-        <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY
-        <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
-        <!-- End of Segment Pixel -->
+    <!-- End Twitter universal website tag code -->
+    <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
+    <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
+    <!-- End of Segment Pixel -->
 </body>
 
 </html>
