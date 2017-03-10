@@ -1541,33 +1541,13 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
             var aParts = a.split(".");
             var nVisits = aParts[5];
 
-            function populateHiddenFields(f) {
-                f.source.value = source;
-                f.medium.value = medium;
-                f.term.value = term;
-                f.content.value = content;
-                f.campaign.value = campaign;
-                f.segment.value = csegment;
-                f.numVisits.value = nVisits;
-
-                // alert('source='+f.source.value); 
-                // alert('medium='+f.medium.value); 
-                // alert('term='+f.term.value); 
-                // alert('content='+f.content.value); 
-                // alert('campaign='+f.campaign.value); 
-                // alert('custom segment='+f.segment.value); 
-                // alert('number of visits='+f.numVisits.value);
-
-                console.log('source=' + f.source.value);
-                console.log('medium=' + f.medium.value);
-                console.log('term=' + f.term.value);
-                console.log('content=' + f.content.value);
-                console.log('campaign=' + f.campaign.value);
-                console.log('custom segment=' + f.segment.value);
-                console.log('number of visits=' + f.numVisits.value);
-
-                // return false; 
-            }
+            console.log('source=' + source);
+            console.log('medium=' + medium);
+            console.log('term=' + term);
+            console.log('content=' + content);
+            console.log('campaign=' + campaign);
+            console.log('custom segment=' + segment);
+            console.log('number of visits=' + numVisits);
         }())
     </script>
     <!-- Twitter universal website tag code -->
