@@ -7,6 +7,32 @@ body {
     color: white;
     background-color: #566473;
 }
+a.cta-btn {
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 5px;
+    color: rgba(0,0,0,0.8) !important;
+    -webkit-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.35);
+    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.35);
+    transition: background ease 700ms;
+    -webkit-transition: background ease 700ms;
+    text-decoration: none;
+}
+a.cta-btn.yellow {
+    text-shadow: 1px 1px 1px rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, #fcf000 0%, #f5d000 100%);
+    background: -webkit-linear-gradient(top, #fcf000 0%,#f5d000 100%);
+    background: linear-gradient(to bottom, #fcf000 0%,#f5d000 100%);
+}
+a.cta-btn:hover {
+    -webkit-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.55);
+    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.55);
+    background: -moz-linear-gradient(top, #f0e000 0%, #e5c000 100%);
+    background: -webkit-linear-gradient(top, #f0e000 0%,#e5c000 100%);
+    background: linear-gradient(to bottom, #f0e000 0%,#e5c000 100%);
+}
 small {color: white !important; font-size: 45% !important;}
 header {margin: auto;padding: 20px 0px;}
 header .logo {
