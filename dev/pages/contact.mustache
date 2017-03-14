@@ -22,6 +22,12 @@
 				<h1>Contact Us</h1>
 			</div>
 			<form id="myform" class="fs-form fs-form-full" autocomplete="off">
+				<input type="hidden" name="task" value="contact">
+				<input type="hidden" name="source" value="NA">
+                <input type="hidden" name="medium" value="NA">
+                <input type="hidden" name="c_name" value="NA">
+                <input type="hidden" name="c_term" value="NA">
+                <input type="hidden" name="content" value="NA">
 				<ol class="fs-fields">
 					<li>
 						<label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
@@ -102,39 +108,48 @@
 				$("#message_box").css("display","none");
 			}
 		}
-		;(function($){
-			$("#myform").submit(function(e){
-				e.preventDefault();
-				var data = $(this).serialize();
-				$("#contact_container").css("opacity","0");
-				// Trigger url call to iframe.
-				var cache_buster = (new Date()).getTime();
-				var callback_url = 'http://trends.revcontent.com/conv.php?t=eJwFwYEBwCAIA7CXZsEK51AH%2F59gQmpWubBlE%2Ba3cMKsBSJZX6ZtrOU0IaDjw%2F96qyJa0%2FkAJPwRWg%3D%3D&cache_bust='+cache_buster;
-				$('#pixel_loader_1').attr('src',callback_url);
-				$.ajax({
-					method : 'GET',
-					url : 'http://sandbox.lat.com.es/index.php/contact',
-					data : data,
-					success : function(response){
-						var reply = response;
-						if(reply.status == "success"){
-							$("#contact_container").css("opacity","1");
+		;(function($) {
+            var __utmz = (document.cookie.match('(^|; )__utmz=([^;]*)')||0)[2];
+            function getParam(param){
+                return (__utmz.match(param+'=([^\|]*)')||0)[1];
+            }
+            var c_src = (getParam('utmcsr')||"NA"); // campaign source
+            var c_med = (getParam('utmcmd')||"NA"); // campaign medium
+            var c_nme = (getParam('utmccn')||"NA"); // campaign name
+            var c_trm = (getParam('utmctr')||"NA"); // paid keywords
+            var c_con = (getParam('utmcct')||"NA"); // campaign content
+            $('#myform [name="source"]').val(c_src);
+            $('#myform [name="medium"]').val(c_med);
+            $('#myform [name="c_name"]').val(c_nme);
+            $('#myform [name="s_term"]').val(c_trm);
+            $('#myform [name="content"]').val(c_con);
 
-							// var fx = function(){
-							// 	$("#message_box .overlay_box").css("display","none");
-							// 	setTimeout(function(){
-							// 		location = location.protocol+'//'+location.host;
-							// 	},1000);
-							// }
+            $("#myform").submit(function(e) {
+                e.preventDefault();
+                var data = $(this).serialize();
+                $("#contact_container").css("opacity", "0");
+                $.ajax({
+                    method: 'POST',
+                    url: 'http://sandbox.lat.com.es/index.php/contact/mail',
+                    data: data,
+                    success: function(response) {
+                        var reply = response;
+                        if (reply.status == "success") {
+                            $("#contact_container").css("opacity", "1");
 
-							// $('#twitter_converter').attr('src','twitter-convert.html');
-							// message_box.open("Message sent.",fx);
-							top.location = "thank-you.html";
-						}
-					}
-				});
-			});
-		}(jQuery))
+                            // var fx = function(){
+                            // 	$("#message_box .overlay_box").css("display","none");
+                            // 	setTimeout(function(){
+                            // 		location = location.protocol+'//'+location.host;
+                            // 	},1000);
+                            // }
+                            // message_box.open("Message sent.",fx);
+                            top.location = "thank-you.html";
+                        }
+                    }
+                });
+            });
+        }(jQuery))
 	</script>
 
 <!-- Tracking Pixels -->
@@ -143,6 +158,7 @@
 {{> ../pixels/body_page_segment-appnexus.html }}
 {{> ../pixels/body_page_view-facebook.html }}
 {{> ../pixels/body_page_view-google.html }}
+{{> ../pixels/body_page_view-revcontent.html }}
 {{> ../pixels/body_page_view-twitter.html }}
 </body>
 </html>
