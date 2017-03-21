@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUANTUM CODE - No Uncertainty</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/newstyle-special.css">
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="css/css_3.css" rel="stylesheet" type="text/css">
+<link href="css/css_2.css" rel="stylesheet" type="text/css">
+<link href="css/css_4.css" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/soundmanager2-nodebug-jsmin.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<link rel="stylesheet" type="text/css" href="css/countdown.css">
+<script>
+	function closem()
+	{
+		$('#MouseLeftTrend').hide();
+		$('.modal-backdrop').hide();
+	}
+    $(document).ready(function(){
+        $('.trigger').click(function(){
+            $('.trigger').not(this).popover('hide');
+        })
+		
+		$('.modal-backdrop').click(function(){
+			$('#MouseLeftTrend').fadeOut(500);
+			$('.modal-backdrop').fadeOut(500);
+		});
+		$('#closetxt').click(function(){
+			$('#MouseLeftTrend').fadeOut(500);
+			$('.modal-backdrop').fadeOut(500);
+		});
+		
+        $(document).ready(function() {
+			exitMessageDisplayed = false;
+			$(document).mousemove(function(e) {
+				if(e.pageY <= 5)
+				{
+					if(!exitMessageDisplayed){
+						// Show the exit popup
+						$('#MouseLeftTrend').fadeIn(500);
+						$('.modal-backdrop').fadeIn(500);
+					}
+				}
+			});
+       	});
+    });
+</script>
+<script type="text/javascript">
+    (function(p,u,s,h){
+        p._pcq=p._pcq||[];
+        p._pcq.push(['_currentTime',Date.now()]);
+        s=u.createElement('script');
+        s.type='text/javascript';
+        s.async=true;
+        s.src='https://cdn.pushcrew.com/js/e5431a367da79e79b5bc494d5997bfc2.js';
+        h=u.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s,h);
+    })(window,document);
+</script>
+<style>
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	opacity: 0.7;
+	background-color: #000;
+}
+#MouseLeftTrend .modal-dialog {
+	margin-top: 10%;
+	width: 760px;
+	overflow: visible !important;
+}
+#MouseLeftTrend .modal-body h2 strong {
+	display: block;
+	font-size: 60px;
+	color: #d42824;
+}
+#MouseLeftTrend .modal-body h2 {
+	font-size: 30px;
+	padding-top: 10px;
+}
+.col-md-7 {
+	width: 58.33333333%;
+}
+.col-md-5 {
+	width: 41.66666667%;
+}
+#MouseLeftTrend img {
+	margin: 20px 0 0 20px;
+}
+#MouseLeftTrend .leave-details {
+	/*background-color: #e6e6e6;*/
+	border-radius: 0 0 6px 6px;
+	padding: 0 40px;
+}
+/*.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}*/
+#MouseLeftTrend .modal-body form {
+	margin-top: 30px;
+	padding: 0;
+	background: none !important;
+}
+#MouseLeftTrend .modal-body form p {
+	color: #df241f;
+	font-size: 25px;
+	font-weight: 400;
+	padding: 0;
+}
+#MouseLeftTrend .modal-body p {
+	font-size: 17px;
+	line-height: normal;
+	padding-right: 70px;
+	padding-top: 20px;
+}
+#MouseLeftTrend form .form-bg {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+#MouseLeftTrend .modal-body form .btn {
+	padding: 15px 8px;
+}
+form .btn {
+    padding: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+    color: rgb(0, 0, 0);
+    font: 700 22px "Montserrat";
+    padding: 20px;
+    background-size: 139%;
+    background: #ffc518;
+	border-radius:0 !important;
+    background: -moz-linear-gradient(top, #ffc518 0%, #ff7f00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc518', endColorstr='#ff7f00',GradientType=0 );
+    white-space: normal;
+}
+#MouseLeftTrend a.no-thanks {
+	color: #d42824;
+	display: block;
+	padding-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<iframe src="widgets/76" id="widget76" style="width:225px; height:85px; position:fixed; right:10px; bottom:10px; border:0px; z-index:1;" scrolling="no"></iframe>
+<iframe src="widgets/76_2" id="widget76_2" style="width:225px; height:85px; position:fixed; left:10px; bottom:10px; border:0px; z-index:1;" scrolling="no"></iframe>
+
+<div id="home">
+<div class="top" style="padding-bottom:0px;">
+  <div class="container" style="max-width:972px">
+    <div class="col-lg-4 col-md-12 col-sm-12">
+      <div class="logo"><img src="images/qclogo.png" width="302" class="img-responsive qclogo" style="margin-top:5px;"></div>
+    </div>
+    <div class="col-lg-8 col-md-12 col-sm-12" style="margin-top:10px;margin-bottom:10px;">
+      <div>
+        <h1 class="headline" style="font-family: 'Roboto Condensed', sans-serif !important; color:#FFF !important; margin:0px !important;">WATCH THIS IMPORTANT VIDEO AND LEARN HOW</h1>
+        <h1 class="headline" style="font-family: 'Roboto Condensed', sans-serif !important; color:#FFF !important; margin:0px !important;">TO MAKE OVER $1,892,460 EVERY MONTH!<strong></strong></h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="city-bg">
+  <div class="additonal-bg">
+    <div class="row">
+      <div class="container">
+        <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 left">
+          <div class="embed-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/xw-9XRgLnSY?autoplay=1&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen id="YouTubeVid"></iframe>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="float:none;margin:0 auto">
+          <div class="form" id="index-form" style="width:100%">
+            <form action="http://tqcode.com/go3.php" accept-charset="utf-8" method="get">
+             
+              <div id="af-form-245981371" class="af-form" style="margin-top:20px;position:relative">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" name="name" class="text name" autocomplete="off" value="" placeholder="Enter Your Name" required>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input class="text email" type="email" name="email" autocomplete="off" value="" placeholder="Valid E-Mail Address" required>
+                </div>
+                <button name="submit" class="submit btn" type="submit" value="" style="font-family: 'Roboto Condensed', sans-serif !important; font-size:30px;"> YES! I WANT INSTANT VIP ACCESS TO THE QUANTUM CODE </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-wrap container">
+      <center>
+        <p><img src="images/securitygrey.png" width="695" height="61" class="securityimg"></p>
+      </center>
+      <p>&nbsp;</p>
+      
+      <p><a href="mailto:support@tqcode.com" style="font-size:9px;">Contact Us</a><font style="font-family:Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font> <a href="terms.php" target="_blank" style="font-size:9px;">Privacy</a><font style="font-family:Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font> <a href="terms.php" target="_blank" style="font-size:9px;">Disclaimer</a><br>
+        <span style="font-size:9px;">Copyright © 2016 QuantumCode.co</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script> 
+<!--<script>
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+  document.getElementById("YouTubeVid").style.pointerEvents = "auto";
+  document.getElementById("overlay").style.display = "none";
+} else {
+  document.getElementById("YouTubeVid").style.pointerEvents = "none";
+}
+</script> -->
+<script language="javascript">
+var exitsplashmessage = '*** WAIT!!! BEFORE THIS PAGE EXPIRES, I NEED TO GIVE YOU THIS $112,589.65 APP RIGHT NOW! ***';
+var exitsplashpage = 'e1s.php';
+        </script> 
+<script language="javascript" src="http://www.visitorbarscript.com/exit.js"></script>
+<link href="css/popup.css" rel="stylesheet" type="text/css">
+<link href="css/css_1.css" rel="stylesheet" type="text/css">
+<div class="popups-cont">
+  <div class="popups-cont__overlay" style="opacity:0.9"></div>
+  <div class="popup">
+    <div class="popup__pieces">
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+      <div class="popup__piece">
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+        <div class="popup__piece-inner"></div>
+      </div>
+    </div>
+    <div class="popup__content">
+      <div class="popup__close" style="right:-40px; top:0px;"></div>
+      <img src="images/qclogo.png" class="img-responsive">
+      <h3 class="popup__heading" style="margin:0px;"><span style="color:#ffdc1d; font-size:70px; font-weight:bold; font-family: 'Roboto Condensed', sans-serif !important;">VIP ACCESS NOW</span></h3>
+      <center>
+    <span style="font-size:20px; font-family: 'Roboto Condensed', sans-serif !important; text-align:center; color:#F00 !important; margin-top:-5px;">SEE HOW I MADE $44,234,728 WITH MY SOFTWARE</span><br>
+
+  <img src="images/sproof.jpg" width="523" height="117"><br>
+<span style="font-size:24px; font-family: 'Roboto Condensed', sans-serif !important; text-align:center;">SIGNUP AND START MAKING PROFITS RIGHT NOW</span></center>
+      <p class="popup__text"><div style="width: 100%;text-align:center;">
+         <form action="http://tqcode.com/go3.php" accept-charset="utf-8" method="get">
+         
+            <input type="text" name="name" class="text name" autocomplete="off" value="" placeholder="Enter Your Name" required style="width:480px; margin-left:0px; margin-right:0px; float:none; ">
+            <br>
+           <input class="text email" type="email" name="email" autocomplete="off" value="" placeholder="Valid E-Mail Address" required style="width:480px; margin-left:0px; margin-right:0px; float:none;">
+            <br>
+            <button name="submit" class="submit btn" type="submit" value="" style="font-family: 'Roboto Condensed', sans-serif !important;font-size: 50px;width: 100%; border-radius:5px !important;"> SIGN UP TODAY! <br>
+            </button></form><br>
+          <img src="images/securitygrey.png" width="500"> </div></p>
+    </div>
+  </div>
+</div>
+<script src="js/analytics.js" async></script>
+    <script src="js/funnel.min.js"></script>
+    <script>
+        BOA.funnel();
+
+        $('form').on('submit.nmspc1', function(){
+            BOA.getCookies().setCookie('first_name', $(this).find('input[name=name]').val());
+
+        });
+    </script>
+
+<script>
+var numOfPieces = 6 * 6;
+
+var frag = document.createDocumentFragment();
+
+function insertInnerPieces($el, innerPieces) {
+  for (var i = 0; i < innerPieces; i++) {
+    var $inner = document.createElement('div');
+    $inner.classList.add('popup__piece-inner');
+    $el.appendChild($inner);
+  }
+};
+
+for (var i = 1; i <= numOfPieces; i++) {
+  var $piece = document.createElement('div');
+  $piece.classList.add('popup__piece');
+  
+  insertInnerPieces($piece, 3);
+  frag.appendChild($piece);
+}
+
+document.querySelector('.popup__pieces').appendChild(frag);
+
+var $popupsCont = document.querySelector('.popups-cont');
+var $popup = document.querySelector('.popup');
+var popupAT = 900;
+
+/*document.querySelector('.popup-btn').addEventListener('click', function() {
+  $popupsCont.classList.add('s--popup-active');
+  $popup.classList.add('s--active');
+});*/
+
+function closeHandler() {
+  $popupsCont.classList.remove('s--popup-active');
+  $popup.classList.remove('s--active');
+  $popup.classList.add('s--closed');
+  
+  setTimeout(function() {
+    $popup.classList.remove('s--closed');
+  }, popupAT);
+}
+
+document.querySelector('.popup__close').addEventListener('click', closeHandler);
+
+document.querySelector('.popups-cont__overlay').addEventListener('click', closeHandler);
+
+$(document).ready(function() {
+	exitMessageDisplayed = false;
+	$(document).mousemove(function(e) {
+		if(e.pageY <= 5)
+		{
+			if(!exitMessageDisplayed){
+				// Show the exit popup
+				$popupsCont.classList.add('s--popup-active');
+  				$popup.classList.add('s--active');
+			}
+		}
+	});
+});
+</script>
+
+
+
+<script language="javascript">
+  var exitsplashmessage = '*** WAIT!!! BEFORE THIS PAGE EXPIRES, I NEED TO GIVE YOU THIS $112,589.65 APP RIGHT NOW! ***';
+  var exitsplashpage = 'e1s.php';
+</script>
+<script language="javascript" src="js/exit.js"></script>
+<!--link href="css/responsive.css" rel="stylesheet" /-->
+
+
+</div></body>
+</html>
