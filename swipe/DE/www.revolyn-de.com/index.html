@@ -1,0 +1,1245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    
+
+
+
+    
+    
+    
+<meta name="google-site-verification" content="6NGEj19G8NLm0aOxt6cl1faMVd7cpIpwD02Q3ok7raA">
+<title>Revolyn Ultra</title>
+
+<meta name="Description" content="">
+
+<meta name="Keywords" content="">
+
+<script type="text/javascript" src="js/general.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+<script language="javascript"><!--
+var checkboxHeight = "25";
+var radioHeight = "30";
+var selectWidth = "190";
+
+
+/* No need to change anything after this */
+
+
+document.write('<style type="text/css">input.styled { display: none; } select.styled { position: relative; width: ' + selectWidth + 'px; opacity: 0; filter: alpha(opacity=0); z-index: 5; } .disabled { opacity: 0.5; filter: alpha(opacity=50); }</style>');
+
+var Custom = {
+	init: function() {
+		var inputs = document.getElementsByTagName("input"), span = Array(), textnode, option, active;
+		for(a = 0; a < inputs.length; a++) {
+			if((inputs[a].type == "checkbox" || inputs[a].type == "radio") && inputs[a].className == "styled") {
+				span[a] = document.createElement("span");
+				span[a].className = inputs[a].type;
+				span[a].id = inputs[a].value;
+
+				if(inputs[a].checked == true) {
+					if(inputs[a].type == "checkbox") {
+						position = "0 -" + (checkboxHeight*2) + "px";
+						span[a].style.backgroundPosition = position;
+					} else {
+						position = "0 -" + (radioHeight*2) + "px";
+						span[a].style.backgroundPosition = position;
+					}
+				}
+				inputs[a].parentNode.insertBefore(span[a], inputs[a]);
+				inputs[a].onchange = Custom.clear;
+				if(!inputs[a].getAttribute("disabled")) {
+					span[a].onmousedown = Custom.pushed;
+					span[a].onmouseup = Custom.check;
+				} else {
+					span[a].className = span[a].className += " disabled";
+				}
+			}
+		}
+		inputs = document.getElementsByTagName("select");
+		for(a = 0; a < inputs.length; a++) {
+			if(inputs[a].className == "styled") {
+				option = inputs[a].getElementsByTagName("option");
+				active = option[0].childNodes[0].nodeValue;
+				textnode = document.createTextNode(active);
+				for(b = 0; b < option.length; b++) {
+					if(option[b].selected == true) {
+						textnode = document.createTextNode(option[b].childNodes[0].nodeValue);
+					}
+				}
+				span[a] = document.createElement("span");
+				span[a].className = "select";
+				span[a].id = "select" + inputs[a].name;
+				span[a].appendChild(textnode);
+				inputs[a].parentNode.insertBefore(span[a], inputs[a]);
+				if(!inputs[a].getAttribute("disabled")) {
+					inputs[a].onchange = Custom.choose;
+				} else {
+					inputs[a].previousSibling.className = inputs[a].previousSibling.className += " disabled";
+				}
+			}
+		}
+		document.onmouseup = Custom.clear;
+	},
+	pushed: function() {
+		element = this.nextSibling;
+		if(element.checked == true && element.type == "checkbox") {
+			this.style.backgroundPosition = "0 -" + checkboxHeight*3 + "px";
+		} else if(element.checked == true && element.type == "radio") {
+			this.style.backgroundPosition = "0 -" + radioHeight*3 + "px";
+		} else if(element.checked != true && element.type == "checkbox") {
+			this.style.backgroundPosition = "0 -" + checkboxHeight + "px";
+		} else {
+			this.style.backgroundPosition = "0 -" + radioHeight + "px";
+		}
+	},
+	check: function() {
+		element = this.nextSibling;
+		if(element.checked == true && element.type == "checkbox") {
+			this.style.backgroundPosition = "0 0";
+			element.checked = false;
+		} else {
+			if(element.type == "checkbox") {
+				this.style.backgroundPosition = "0 -" + checkboxHeight*2 + "px";
+			} else {
+				this.style.backgroundPosition = "0 -" + radioHeight*2 + "px";
+				group = this.nextSibling.name;
+				inputs = document.getElementsByTagName("input");
+				for(a = 0; a < inputs.length; a++) {
+					if(inputs[a].name == group && inputs[a] != this.nextSibling) {
+						inputs[a].previousSibling.style.backgroundPosition = "0 0";
+					}
+				}
+			}
+			element.checked = true;
+		}
+	},
+	clear: function() {
+		inputs = document.getElementsByTagName("input");
+		for(var b = 0; b < inputs.length; b++) {
+			if(inputs[b].type == "checkbox" && inputs[b].checked == true && inputs[b].className == "styled") {
+				inputs[b].previousSibling.style.backgroundPosition = "0 -" + checkboxHeight*2 + "px";
+			} else if(inputs[b].type == "checkbox" && inputs[b].className == "styled") {
+				inputs[b].previousSibling.style.backgroundPosition = "0 0";
+			} else if(inputs[b].type == "radio" && inputs[b].checked == true && inputs[b].className == "styled") {
+				inputs[b].previousSibling.style.backgroundPosition = "0 -" + radioHeight*2 + "px";
+			} else if(inputs[b].type == "radio" && inputs[b].className == "styled") {
+				inputs[b].previousSibling.style.backgroundPosition = "0 0";
+			}
+		}
+	},
+	choose: function() {
+		option = this.getElementsByTagName("option");
+		for(d = 0; d < option.length; d++) {
+			if(option[d].selected == true) {
+				document.getElementById("select" + this.name).childNodes[0].nodeValue = option[d].childNodes[0].nodeValue;
+			}
+		}
+	}
+}
+window.onload = Custom.init;
+
+//-->
+</script>	
+<style type="text/css">
+.radio {
+	width: 19px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	display: block;
+	clear: left;
+	float: left;
+	background: url("images/checkbox.gif") no-repeat;
+}
+</style>
+</head>
+    <body>
+    <script type="text/javascript" src="js/tabshow.js"></script>
+      <div id="container"><!-- START OF CONTAINER -->
+      <div id="wrapper"><!-- START OF WRAPPER -->
+      <div id="banner"><!-- START OF BANNER -->
+           <div class="banner_2015">
+			<div class="text">Es freut mich, ein Produkt wie Revolyn Ultra zu haben, das ich zur Behandlung meiner Patienten, die unter &Uuml;bergewicht oder mit &Uuml;bergewicht in Verbindung  stehenden Beschwerden leiden, empfehlen kann. </div>
+           </div>
+           <ul id="navigation">
+           		<li><a href="index_1.html"><span>Startseite</span></a></li>
+                
+                <li><a href="drweis.html"><span>&Auml;rztlich empfohlen</span></a></li>
+                <li><a href="ingredients.html"><span>Inhaltsstoffe</span></a></li>
+                <li class="activ"><a href="testimonials.html"><span>Kundenberichte</span></a></li>
+                <li><a href="faq.html"><span>FAQ</span></a></li>
+                <li><a href="contact_us.php"><span>Kontakt</span></a></li>
+                <li><a href="order_now.html"><span>Jetzt bestellen</span></a></li>
+          </ul>
+      </div><!-- END OF BANNER -->
+      <div id="main-contents"><!-- START OF MAIN CONTENTS -->
+
+<script>
+	    $(document).ready(function() {
+	       $( "button" ).click(function(){
+		    alert('Vielen Dank für Ihre Stimme!');
+                    var $p = $(this).parent();
+                    var $idt = $p.attr("id");
+                    var $voteValue = false;
+		    $p.find("button").attr("disabled",true);
+                    
+		    if ($(this).html() == 'JA')
+		    {
+			var peopleall = parseInt($p.find('.peopleyes').html())+1;
+			$p.find('.peopleyes').text(peopleall);
+                        $voteValue = true;
+		    }
+		    var peopleall = parseInt($p.find('.peopleall').html())+1;
+		    $p.find('.peopleall').text(peopleall);
+                    updateTable($idt,$voteValue);
+
+	       });
+               
+               function updateTable(id,yes){
+                    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp=new XMLHttpRequest();
+                    }
+                    else{// code for IE6, IE5
+                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                xmlhttp.open("GET","vote.php?id="+id+"&yes="+yes,true);
+                xmlhttp.send();
+                }
+	    });
+	</script>
+
+
+<script type="text/javascript" src="js/cookies.js"></script>        
+
+        
+
+<div class="video_bg">
+    <iframe width="560" height="345" src="https://www.youtube.com/embed/tSZIMI2Qcd4?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+</div>
+<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+ 
+		<div class="title"><img src="images/title_pic_05.png" style="margin-top: -30px;">Echte Menschen, echte Erfolge!</div>
+<!--        	<p class="bold" style="margin-left: 73px; font-size: 14px;">*Die
+folgenden Kundenempfehlungen wurden per E-Mail oder per Brief von
+Revolyn Ultra-Kunden erhalten. Erfolge k&ouml;nnen variieren und die
+folgenden beispielhaften Erfolge k&ouml;nnen nicht f&uuml;r 100%
+aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+               
+                
+           
+              
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_04.jpg">
+                <img src="images/testimonials_new_big_04.jpg" style="margin-left: 31px;">
+                <p>Steven T. nahm <span>17,5 Kilo in nur 6 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Als
+ich j&uuml;nger war, spielte ich tats&auml;chlich zweimal in der
+Woche Fu&szlig;ball und trainierte noch zus&auml;tzlich. Als
+Au&szlig;enst&uuml;rmer war ich auf dem ganzen Feld unterwegs und ein
+paar Bier nach dem Spiel oder w&auml;hrend der Woche machten keinen
+Unterschied. Es schien, dass mein Metabolismus mit allem fertig
+wurde. Meine Mutter hat mich immer damit aufgezogen, dass ich
+aufgehen w&uuml;rde wie ein Ballon, falls ich je aufh&ouml;ren w&uuml;rde,
+Fu&szlig;ball zu spielen.</p>
+				<p>Damals
+habe ich dar&uuml;ber gelacht, aber nach zwei ernsthaften
+Kn&ouml;chelverletzungen in meinen Drei&szlig;igern h&ouml;rte ich
+auf, zu spielen. Als ich aufh&ouml;rte zu spielen, stellte sich
+heraus, dass meine Mutter Recht hatte. Ich begann fast sofort,
+Gewicht zuzulegen. Es ist schwer, bestimmte Speisen aufzugeben, wenn
+man das nie zuvor tun musste. Wenn ich zuvor einen Nachschlag wollte,
+habe ich mir den einfach geholt. Jetzt, da ich nicht mehr Fu&szlig;ball
+spielen konnte, schien es, dass diese Zeiten vorbei w&auml;ren. Ich
+habe es zuerst mit anderem Sport versucht, aber erkannte, dass ich
+einfach keine Lust dazu hatte.</p>
+
+				<p>Als
+ich eine Werbung f&uuml;r Revolyn Ultra sah, unterschied sich diese von
+anderen Di&auml;t-Erg&auml;nzungsmitteln auf dem Markt; es versprach
+vollkommen nat&uuml;rliche Inhaltsstoffe, was mir wichtig ist, weil
+ich nicht mit Chemikalien herumhantieren will. Nach einer Weile bekam
+ich das Gef&uuml;hl, dass meine Hose an der Taille und an den
+Oberschenkeln etwas weiter sei.*</p>
+            </div>                <div id="tes14" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">5437</span> von <span class="peopleall">8134</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_18.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_18.jpg" style="margin-left: 31px;">
+                <p>Mark nahm <span>25 Kilo in 2 Monaten ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Hallo, mein Name ist Mark und wie Sie auf dem ersten Bild sehen, habe ich es gerne gemütlich. Es gefiel mir, alles zu essen und zu trinken, was ich wollte. Leider dachte ich nicht viel an die Konsequenzen. Ich war aufgeblasen, nicht fit und fühlt mich meistens krank. Das war kein Problem, dem ich mich wirklich stellen wollte. Ich schob es vor mir her, bis ich der Realität nicht mehr entkommen konnte.</p>
+				<p>Die Realität war, dass meine Kumpel mit attraktiven Frauen zusammenkamen und ich immer zurück blieb. Ich beschloss, etwas deswegen zu unternehmen.</p>
+				<p>Voller Sorge dachte ich an Hungerkuren und erschöpfende Stunden im Fitnesscenter. Ehrlich gesagt konnte ich mir das nicht antun und deshalb nutzt ich schließlich etwas, das ich mir nie hätte vorstellen können – Diätpillen!</p>
+				<p>Nach ein bisschen Recherche fand ich Revolyn Ultra. Von der Hälfte der Dinge, die darin enthalten sind, hatte ich noch nie gehört. Diese hörten sich recht exotisch an. Die Kundenempfehlungen klangen gut und es schien medizinisch untermauert. Ich hatte keine Ahnung, ob es etwas bringen würde, aber das tat es. Was soll ich sonst noch dazu sagen?*</p>                                
+            </div>                <div id="tes10" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">3470</span> von <span class="peopleall">5154</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+            
+       <a href="order_now.html"><div class="buy_now"></div></a>
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_03.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_03.jpg" style="margin-left: 31px;">
+                <p>Michael J. <span>nahm 21 Kilo in 1,5 Monaten ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Als
+Teenager war ich recht sportlich. Aber als ich &auml;lter wurde,
+konzentrierte ich mich st&auml;rker auf meine Karriere als auf mein
+Aussehen. Ich sa&szlig; im B&uuml;ro und anstatt irgendwo f&uuml;r
+einen gesunden Imbiss hinzurennen, ging ich einfach ans Eck, holte
+mir stattdessen einen D&ouml;ner oder Pommes und ging wieder an die
+Arbeit.</p>
+
+				<p>Ich
+habe herausgefunden, dass man ganz sch&ouml;n zunimmt, wenn man
+keinen Sport treibt und nur den ganzen Tag am Schreibtisch sitzt. Das
+Problem war, dass ich es zuerst gar nicht bemerkt habe. Man sieht
+sich jeden Tag im Spiegel, so dass man die langsame Gewichtszunahme
+gar nicht bemerkt. Nach einer Weile h&ouml;rte ich auf, einen G&uuml;rtel
+zu tragen und achtete immer noch nicht darauf, dass ich langsam fett
+wurde. Als ich dann eines Tages meine Smokinghose f&uuml;r eine
+elegante Gala-Veranstaltung ben&ouml;tigte, habe ich erst bemerkt,
+wie fett ich inzwischen geworden war.</p>
+				<p>>Meine
+Smokinghose passte &uuml;berhaupt nicht. Ich legte mich aufs Bett und
+hielt die Luft an, aber nichts half. Ich war ersch&uuml;ttert, denn
+ich wusste, es gab einfach keinen Weg, um an dem Abend hinzugehen. Da
+habe ich erkannt, dass sich etwas &auml;ndern musste und dass ich
+abnehmen musste!</p>
+				<p>Ein
+Kumpel von mir erz&auml;hlte mir von Revolyn Ultra und wie es sich von
+Cyclotrim oder Slim Bomb unterscheidet.</p>
+
+				<p>Meine
+Erfahrung mit Revolyn Ultra ist positiv. Revolyn Ultra ist f&uuml;r meinen
+Lebensstil unverzichtbar, da es keine bekannten Probleme verursacht
+(v&ouml;llig nat&uuml;rlich, keine Kopfschmerzen oder &auml;hnliches).
+Nachdem ich dieses vollkommen nat&uuml;rliche Produkt eine Weile
+eingenommen hatte, wusste ich bereits, dass es wirkt.*</p>
+            </div>                <div id="tes13" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">3434</span> von <span class="peopleall">5515</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_01.jpg" alt="Gewichtsverlust-Erfolgsgeschichten">
+                <img src="images/testimonials_new_big_01.jpg" style="margin-left: 31px;">
+                <p>Julie M. nahm <span>15,5 Kilo in 1 Monat ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Vor
+meiner Schwangerschaft konnte ich essen und trinken, was ich wollte.
+Aber nachdem meine zwei Kinder auf der Welt waren, mit nur 18 Monaten
+Abstand, habe ich bemerkt, dass das Gewicht, welches ich w&auml;hrend
+meiner Schwangerschaften zugenommen hatte, einfach nicht mehr weg
+ging. Nat&uuml;rlich wusste ich, dass Schwangerschaft, besonders zwei
+in einer solch kurzen Zeit, mir etwas zus&auml;tzliches Gewicht
+verleihen w&uuml;rde. Schlie&szlig;lich ist einer der Vorteile, wenn
+man schwanger ist, dass man einfach essen kann, wonach einem gerade
+der Sinn steht.</p>
+				<p>Aber
+ich hatte erwartet, dass ich nach einer kurzen Zeit wieder anfangen
+w&uuml;rde, abzunehmen und bald wieder so aussehen w&uuml;rde, wie
+zuvor oder zumindest so &auml;hnlich. Ich war frustriert, als ich
+bemerkte, dass ich das Gewicht nicht nur behielt, sondern nach meinen
+Schwangerschaften sogar noch ein paar Pfunde zulegte.</p>
+				<p>Ich
+begann, darauf zu achten, was ich a&szlig;, etwas, das ich nie zuvor
+getan hatte. Aber nachdem ich all meine liebsten Gen&uuml;sse und
+Gerichte gestrichen hatte, bemerkte ich, dass ich immer noch
+
+&uuml;bergewichtig war. Es schien, dass das Gewicht entschlossen war,
+auf immer ein Teil von mir zu sein.</p>
+				<p>Oder
+zumindest bis ich Revolyn Ultra versuchte. Als ich es zun&auml;chst
+ausprobierte, hatte ich das Gef&uuml;hl, als ob ich mehr Energie
+h&auml;tte, als ob ich einen neuen Antrieb h&auml;tte. Ich vergleiche
+es mit dem Gef&uuml;hl, wenn man etwas zuerst durch einen d&uuml;nnen
+Schleier sieht und dieser Schleier dann entfernt wird. Ich hatte mehr
+Motivation, Sport zu treiben und f&uuml;hlte mich insgesamt
+gro&szlig;artig. Ich begann auch, zu merken, dass ich an Gewicht
+verlor und mir Kleidung passte, die vorher zu klein war. Ich nahm
+weiter Revolyn Ultra und es hat mir wirklich das gebracht, was ich suchte.
+Es ist ein tolles Produkt und wird Ihnen dabei helfen, abzunehmen.
+Ich empfehle es nachdr&uuml;cklich.*</p>
+            </div>                <div id="tes1" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">3221</span> von <span class="peopleall">4966</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_26.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_26.jpg" style="margin-left: 31px;">
+                <p>Patricia nahm <span>16 Kilo in 6 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Mein Name ist Patricia und ich bin 24 Jahre alt. Um ganz ehrlich zu sein, hat es mir nie wirklich viel ausgemacht, übergewichtig zu sein. Ich war wirklich glücklich und genoss ein schönes Leben mit einer liebenden Familie und vielen Freunden. Der Tag, an dem ich meine Meinung über mein überschüssiges Gewicht änderte, war, als ich versehentlich das Gespräch einiger Kolleginnen überhörte und entsetzt erfuhr, dass diese mich tatsächlich Fettsack nannten und dass ich einfach aufgrund meines Aussehens zu verschiedenen Veranstaltungen nicht eingeladen worden war.</p>
+				<p>Ich wusste nicht, dass andere einfach aufgrund meines Aussehens nicht mit mir zusammen sein wollten. Ich genoss mein Essen und wusste, dass ich Hilfe brauchte. Ich las von Revolyn Ultra und erfuhr, dass es aus vollkommen natürlichen Inhaltsstoffen hergestellt wird. Ich war beeindruckt genug, um es auszuprobieren. Ich war wirklich neugierig, ob die aus Guarana und Ginseng bestehenden Pillen wirklich funktionieren würden.</p>
+				<p>Sehen Sie mich nun an. Ich fühle mich fantastisch und denke, ich sehe auch recht gut aus. Ich sagte den Frauen in der Arbeit, dass das, was sie über mich gesagt hatten, der Anstoß für mich war abzunehmen, und bedankte mich. Obwohl meine Gefühle damals verletzt waren, bin ich dankbar, dass es mich inspiriert hat, mit Revolyn Ultra abzunehmen und ich weiß jetzt, dass ich beim Ausgehen niemand mehr peinlich sein werde.*</p>                                
+            </div>                <div id="tes4" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">2840</span> von <span class="peopleall">4295</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+            
+       <a href="order_now.html"><div class="buy_now"></div></a>
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_25.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_25.jpg" style="margin-left: 31px;">
+                <p>Lin, 33 J. <span>nahm 12 Kilo in 3 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Da ich sehr klein bin – ich bin nur 1,50 m – wirkte ich immer dicker, als ich wirklich bin. Ich hatte genug davon, unförmige Kleidung anzuziehen, um meinen dicken Bauch und meine schwabbeligen Beine zu verstecken. Mein Arzt wollte mir keine Diätpillen verschreiben, weil ich nicht ernsthaft übergewichtig war.</p>
+				<p>Ich wollte kein Geld für Pillen verschwenden, die nicht wirken, selbst wenn gute Freunde diese empfohlen hatten. Ich wollte sichergehen, dass ich ein Diätmittel kaufe, das wirkt wie behauptet wird. Das Video auf der Revolyn Ultra-Website ist sehr hilfreich. Es hat mir wirklich gefallen, mehr über die 4 Aspekte der Gewichtsabnahme, die von dem Mittel angegangen werden, zu erfahren.</p>
+				<p>Ich wusste, dass der Appetitzügelungsaspekt mir sehr wichtig war, weil ich gerne Süßes mag und es mir schwer fällt, etwas mit Zucker zu widerstehen. Schokolade ist mein Untergang!</p>
+				<p>Ich begann Revolyn Ultra einzunehmen und Sport zu treiben. Ich bin eine vielbeschäftigte Mutter, und habe deshalb nicht immer Zeit, aber jetzt bringe ich die Kinder zu Fuß zur Schule, anstatt sie den kurzen Weg zu fahren.</p>
+				<p>Ich bin froh, dass meine Freunde mir Revolyn Ultra empfohlen haben, und die sind es auch, wenn Sie mich ansehen.*</p>                                
+            </div>                <div id="tes12" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">2228</span> von <span class="peopleall">3501</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_19.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_19.jpg" style="margin-left: 31px;">
+                <p>Jennifer nahm <span>44 Kilo in 3 Monaten ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Ich möchte Ihnen gerne erzählen, was mir passiert ist und weshalb ich zugestimmt habe, diese Kundenempfehlung zu schreiben. Ich kämpfe praktisch schon mein ganzes Leben gegen das Fett. Tatsächlich war es nicht so schlimm, als ich jünger war. Ich konnte den gelegentlichen Schokokuchen oder die Torte leicht mit einigen durchtanzten Nächten mit meinen Freundinnen verbrennen. Es gibt nichts Besseres als einige Stunden auf dem Tanzboden, um die Kalorien zu verbrennen! Leider scheint es, dass das Leben etwas gegen schlanke Taillen hat. Ich habe meine nach meinem ersten Baby verloren.</p>
+				<p>Wie die meisten Mütter hatte ich nicht viel Zeit, um mich um mich selbst zu kümmern. Es nahm meine ganze Zeit in Anspruch, mich um Mann und Kinder zu kümmern. Jede Mutter wird das verstehen, wenn sie es liest. Man neigt dazu, sich selbst gehen zu lassen. Jedes Mal, wenn ich den Schrank öffnete, hätte ich schwören können, dass ich meine Kleider seufzen hörte!</p>
+				<p>Um es kurz zu machen, ich probierte alle Diäten aus. Ich joggte, schwamm und tanzte, aber erreichte nicht die Erfolge, die ich mir wünschte. Verstehen Sie mich nicht falsch, der Sport half und ich fühlte mich auf jeden Fall besser, aber ab einem gewissen Punkt schien der Nutzen abzunehmen. Also schaute ich mich nach ein bisschen Unterstützung um und entdeckte Revolyn Ultra. Dessen Mischung an Inhaltsstoffen verbrennt Fett in verschiedenen Geschwindigkeiten, so dass es stets wirkt. Die natürlichen Inhaltsstoffe machen es vollkommen sicher und die Gewichtsabnahme ist die Inspiration, um weiterzumachen. Es hat bei mir fantastisch gewirkt und ich würde es jedem empfehlen.*</p>                                
+            </div>                <div id="tes9" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1823</span> von <span class="peopleall">2642</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_07.jpg" alt="Gewichtsverlust Ergebnisse">
+                <img src="images/testimonials_new_big_07.jpg" style="margin-left: 31px;">
+                <p>Anne R. nahm <span>13 Kilo in 1 Monat ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Als
+mein Mann und ich in den Urlaub fuhren, hat mir mein Aussehen im
+Badeanzug &uuml;berhaupt nicht gefallen. Revolyn Ultra sah sehr
+vielversprechend aus und ein Arzt empfahl es. Ich dachte, es w&auml;re
+dumm, es nicht auszuprobieren! Nachdem ich die Erfolge, die es bei
+mir erzielt hat, gesehen habe, benutze ich es noch heute, weil es mir
+so viel geholfen hat. Danke! Sehen Sie sich die beigef&uuml;gten
+Fotos an.*</p>
+            </div>                <div id="tes17" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1924</span> von <span class="peopleall">2990</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+            
+       <a href="order_now.html"><div class="buy_now"></div></a>
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_15.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_15.jpg" style="margin-left: 31px;">
+                <p>Judy, 51 J. nahm <span>30 Kilo in 2,5 Monaten ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Mein Name ist J. und mein ganzes Leben war ich als "Fetti" bekannt. In der Schule wollte niemand mit mir befreundet sein. Ich war furchtbar im Sport und auch im Unterricht nicht gut. Ich fühlte mich wirklich verloren. Als Erwachsene beschloss ich, ernsthaft etwas gegen das Gewicht, das ich mit mir herumtrug, zu unternehmen. Also begann ich, Diätpillen zu nehmen, aber die waren alle nutzlos. Ich nahm ab und zu ein Pfund ab, aber keiner glaubte es, weil ich immer noch so dick war. Ich versuchte Sport zu treiben, aber das half auch nicht viel.</p>
+				<p>Dann schlug eine Freundin, der erfolgreich viel abgenommen hatte, vor, dass ich es mit Revolyn Ultra versuchen sollte, da dies ein hundert Prozent natürliches Produkt ist und ihr von ihrem Arzt empfohlen worden war. Da ich nichts zu verlieren hatte, kaufte ich es. Nun, diese kleinen Pillen haben wirklich bei mir gewirkt. Ich sah, wie die Kilos dahin schmolzen. Ich konnte es nicht glauben; endlich hatte ich eine Diätpille gefunden, die bei mir tatsächlich wirkte. Ich habe dann gelesen, dass Revolyn Ultra wissenschaftlich erprobt ist und dass alle neun enthaltenen Inhaltsstoffe natürlich sind. Das Beste ist, dass ich das störende Fett endlich los bin.*</p>                                
+            </div>                <div id="tes3" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1857</span> von <span class="peopleall">2944</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_16.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_16.jpg" style="margin-left: 31px;">
+                <p>Emma, 24 J. nahm <span>28 Kilo in 2 Monaten ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Es war mir peinlich, einen Badeanzug zu tragen, obwohl ich es mir sehnlichst wünschte, einen Bikini zu tragen. Deshalb beschloss ich, etwas Konstruktives gegen mein Gewichtsproblem zu unternehmen, bevor ich älter wurde. Ich bevorzuge immer Naturprodukte; mein Arzt empfahl mir, Revolyn Ultra als natürliches Mittel zur Diätunterstützung einzunehmen, da es wissenschaftlich erwiesen Menschen dabei hilft, ihr Übergewicht los zu werden.</p>
+				<p>Das hatte mich sehr enttäuscht, weil ich so viele gute Sachen darüber gelesen hatte.</p>
+				<p>Ich fühle mich jetzt wie ein neuer Mensch und kann mit meinen Freundinnen wetteifern, wenn es um schicke Kleidung geht. Ich werde öfter auf Verabredungen eingeladen und habe jetzt ein aktives Freizeitleben. Das kommt auch durch Revolyn Ultra, welches nicht nur meinem Körper mehr Energie gibt, sondern mich auch dabei unterstützt hat, Fett abzubauen und mich in mein neues, dankbares Ich zu verwandeln.*</p>                                
+            </div>                <div id="tes5" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1744</span> von <span class="peopleall">2821</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_02.jpg" alt="Gewichtsverlust Ergebnisse">
+                <img src="images/testimonials_new_big_02.jpg" style="margin-left: 31px;">
+                <p>Matthew C. nahm <span>27,5 Kilo in 9 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Meine
+ganze Familie ist schon immer schwer. Meine Mutter war zu fett, mein
+Vater war zu fett und schon von Kindesbeinen an waren meine zwei
+Br&uuml;der zu fett! Man kann sagen, das sei eine Ausrede, aber
+Tatsache ist, dass ich nie richtig gelernt habe, was ich essen
+sollte. Meine Ern&auml;hrungsgewohnheiten waren furchtbar.</p>
+				<p>Ich
+hatte zuvor einige Di&auml;ten ausprobiert, ich habe die meisten
+Modeerscheinungen ausprobiert, von denen andere schw&auml;rmen, wie
+South Beach und wie sie alle hei&szlig;en. Ich habe einige Di&auml;tpillen
+ausprobiert, aber keine davon hat bei mir gewirkt.</p>
+
+				<p>Ich
+dachte nie, dass ich das Gewicht verlieren k&ouml;nnte. Tats&auml;chlich
+hat mir mein Arzt gesagt, dass ich eines Tages Probleme mit meinen
+Knien haben w&uuml;rde, weil ich zu schwer f&uuml;r die Gelenke w&auml;re.
+Um die Wahrheit zu sagen, dachte ich, Revolyn Ultra kl&auml;nge etwas
+verd&auml;chtig, als ich zuerst davon h&ouml;rte.</p>
+				<p>Nun,
+das ist nichts als ein Haufen Unsinn! Ich nahm Revolyn Ultra und hatte das
+Gef&uuml;hl, dass jemand in mir eine Kurbel drehte, die mich richtig
+auf Dampf brachte. Ich begann, abzunehmen und hatte mehr Energie,
+besonders am Morgen, wenn ich normalerweise sehr langsam bin. Ich
+begann, mehr mit unserem Hund spazieren zu gehen und a&szlig; keine
+S&uuml;&szlig;igkeiten mehr. Wie Sie auf dem Bild sehen, wurde ich in
+wenigen Monaten zu einem neuen Mann. Haltet euch an Revolyn Ultra, Leute,
+ist alles was ich sagen will.*</p>
+            </div>                <div id="tes2" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1408</span> von <span class="peopleall">2283</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+            
+       <a href="order_now.html"><div class="buy_now"></div></a>
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_17.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_17.jpg" style="margin-left: 31px;">
+                <p>Geraldine, 47 J. nahm <span>31 Kilo in 2 Monaten ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Dick zu sein hat mich schon immer unglücklich gemacht. Ich habe verschiedene Diäten und Diätpillen ausprobiert, aber ohne viel Erfolg. Mein Problem ist, dass ich zu gerne esse. In meiner Verzweiflung und weil die üblichen Produkte zum Abnehmen nicht viel geholfen haben, begann ich nach etwas anderem zu suchen.</p>
+				<p>Ich beschloss, ein natürliches Produkt auszuprobieren und entdeckte Revolyn Ultra. Es ist ein wissenschaftlich entwickeltes Produkt mit neun hauptsächlichen Inhaltsstoffen, das sogar einige dieser tollen Antioxidantien enthält. Ich hatte gehört, dass es wunderbar beim Abnehmen hilft, und wollte es probieren, um selbst zu sehen, ob es mir vielleicht helfen würde, dieses Mal einige Pfunde erfolgreich los zu werden. Und das tat es!</p>
+				<p>Ich sage "Danke, Revolyn Ultra", da dies das erste Mal ist, dass ich bei mir einen echten Fortschritt sehe. Ich fühle mich besser, habe mehr Energie, kann endlich modisch aussehende Kleidung tragen und fühle mich nicht mehr einfach fett. Durch die Gewichtsabnahme habe ich mehr Selbstvertrauen, so dass ich jetzt sogar beginne, auf meine Ernährung zu achten. Revolyn Ultra einzunehmen hat bei mir und meiner Einstellung zum Leben viel verändert.*</p>                              
+            </div>                <div id="tes8" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">876</span> von <span class="peopleall">1286</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_10.jpg" alt="Tipps zum Abnehmen">
+                <img src="images/testimonials_new_big_10.jpg" style="margin-left: 31px;">
+                <p>Dawn H. <span>nahm 26 Kilo in 6 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Eines
+Tages haben wir den Dachboden entr&uuml;mpelt und ich entdeckte eine
+ganze Reihe Kisten mit Kleidung. Es waren all jene Kleider, die ich
+im Laufe der Jahre dort hinauf gebracht hatte, weil sie mir nicht
+l&auml;nger passten. Ich beschloss, nicht mehr l&auml;nger zu z&ouml;gern
+und ging noch an dem Tag los, um das erste Mal Revolyn Ultra zu kaufen. Ich
+verkaufte meine Kleidung in &Uuml;bergr&ouml;&szlig;en und beschloss,
+die alten Kleider anzuziehen!*</p>
+            </div>                <div id="tes20" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1219</span> von <span class="peopleall">2044</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_08.jpg" alt="Gewichtsverlust-Erfolgsgeschichten">
+                <img src="images/testimonials_new_big_08.jpg" style="margin-left: 31px;">
+                <p>Kate T. nahm <span>10,5 Kilo in 1 Monat ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Mein
+Arzt sagte, dass eine der h&auml;ufigsten Nebenwirkungen der
+Wechseljahre f&uuml;r Frauen eine Gewichtszunahme sei. Er sagte, dass
+es wenig oder gar nichts g&auml;be, dass ich deswegen tun k&ouml;nnte.
+Es sei einfach eine Reaktion auf die Hormone im K&ouml;rper. Ich kann
+ihn das heute noch sagen h&ouml;ren. Aber es ist verdammt
+unwahrscheinlich, dass mein Arzt je von Revolyn Ultra geh&ouml;rt hat.*</p>
+            </div>                <div id="tes18" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1110</span> von <span class="peopleall">1856</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+            
+       <a href="order_now.html"><div class="buy_now"></div></a>
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_05.jpg" alt="Tipps zum Abnehmen">
+                <img src="images/testimonials_new_big_05.jpg" style="margin-left: 31px;">
+                <p>Mary S. nahm <span>25,5 Kilo in 6 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Ich
+war schon immer ein bisschen schwerer. Ich war schwerer als die
+anderen M&auml;dchen in meiner Klasse. Da ich dicker war, habe ich im
+Essen Trost gesucht, was zu noch mehr Gewicht f&uuml;hrte, was dazu
+f&uuml;hrte, dass ich noch mehr a&szlig;, um mich besser zu f&uuml;hlen.
+Ich f&uuml;hlte mich wie ein Ballon, aber ich a&szlig; trotzdem
+weiter. Ich nahm mir eine Packung Chips, um mich besser zu f&uuml;hlen,
+aber es half nur f&uuml;r einen Augenblick. Ich will nicht jammern,
+aber es ist schwer.</p>
+				<p>Ich
+versuchte verschiedene Radikaldi&auml;ten, ich habe Trimspa
+ausprobiert, die Atkins-Di&auml;t und sogar diese
+furchtbare Saft-Di&auml;t, bei der ich &ouml;fter aus Klo rennen
+musste, als sch&ouml;n war. Aber jedes Mal kam das Gewicht, das ich
+verloren hatte, gleich wieder zur&uuml;ck. Manchmal, wenn ich zehn
+Pfund abgenommen hatte, nahm ich wieder zw&ouml;lf zu. Es war genug,
+um mich verr&uuml;ckt zu machen.</p>
+
+				<p>Ehrlich,
+ich w&uuml;rde so gerne bei den normalen Gr&ouml;&szlig;en oder sogar
+den schlanken einkaufen. Ich fand schon immer, dass die Kleidung f&uuml;r
+molligere Frauen nicht so farbenfroh ist. Das scheint mir besonders
+bei Sommerkleidung so zu sein. Ich hatte endlich genug davon und
+beschloss, dass ich mich operieren und meinen Magen mit einem dieser
+B&auml;nder verkleinern lassen w&uuml;rde, wenn sonst nichts half.
+Aber bevor ich das tat, sagte ich mir: Was soll's, ich werde es mit
+Revolyn Ultra versuchen.</p>
+				<p>Ich
+bin verdammt froh, dass ich das getan habe! Dank Revolyn Ultra verlor ich
+Gewicht und hatte mehr Energie und im Gegensatz zu den vorherigen
+Produkten kam das Gewicht auch nicht wieder. Selbst nachdem ich mein
+momentanes Gewicht erreicht hatte, nahm ich weiter Revolyn Ultra, weil es
+mich bei guter Stimmung h&auml;lt. Wenn ich jetzt einkaufen gehe,
+kann ich nach den Kleidern sehen, die mir gefallen. Ich kann endlich
+eine kleinere Gr&ouml;&szlig;e tragen. Ich habe bemerkt, dass mit
+Revolyn Ultra mein Appetit gesunken ist. Ich f&uuml;hle mich wieder
+wirklich gut. Ich finde, ich sehe toll aus!*</p>
+</div>                <div id="tes15" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1129</span> von <span class="peopleall">1942</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_12.jpg" alt="Gewichtsverlust-Erfolgsgeschichten">
+                <img src="images/testimonials_new_big_12.jpg" style="margin-left: 31px;">
+                <p>Rosemary C. nahm <span>11,5 Kilo in 1 Monat ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Ich
+wog so viel, dass es mir peinlich war, mich im Fitness-Studio sehen zu lassen. Das bedeutete, dass es keine M&ouml;glichkeit gab, mir das
+Gewicht abzutrainieren. Ich steckte in der Klemme. Zu gehemmt, um ins
+Fitness-Studio zu gehen, aber immer noch zu fett. Revolyn Ultra hat das
+Problem gel&ouml;st. Es gab mir den Antrieb, den ich ben&ouml;tigte,
+um Gewicht zu verlieren. Jetzt gehe ich drei Mal pro Woche ins
+Fitness-Studio. Nicht weil ich es n&ouml;tig habe, sondern weil ich
+es verdammt toll finde, hinzugehen!*</p>
+            </div>                <div id="tes22" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1051</span> von <span class="peopleall">1855</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_11.jpg" alt="Gewichtsverlust">
+                <img src="images/testimonials_new_big_11.jpg" style="margin-left: 31px;">
+                <p>Steven K. nahm <span>19 Kilo in 5 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Ich
+begann ein neues Trainingsprogramm und befolgte eine Di&auml;t, aber
+habe nur sehr wenig Gewicht verloren. Erst als ich begann, Revolyn Ultra
+einzunehmen, begann ich wirklich abzunehmen. Danke!*</p>
+            </div>                <div id="tes21" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1232</span> von <span class="peopleall">2223</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+            
+       <a href="order_now.html"><div class="buy_now"></div></a>
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_24.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_24.jpg" style="margin-left: 31px;">
+                <p>Maria, 27 J. nahm <span>24 Kilo in nur 9 Wochen ab!*</span> </p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Meine Hochzeit war wahnsinnig teuer. Ich habe tatsächlich lange gezögert, ob ich es mir 
+
+leisten könnte, Revolyn Ultra zu kaufen. Meine Freunde erzählten begeistert davon. Sie waren 
+
+überzeugt davon, dass es mir helfen könnte, diese überschüssigen Pfunde loszuwerden, bevor 
+
+ich zum Altar schritt.</p>
+				<p>Es fiel mir nicht schwer, zu glauben, dass es wirken würde. Mein Gewicht ging seit Jahren auf
+
+und ab und es schien, dass ich immer irgendeine Diät machte. Ich glaube ich habe mich über 
+
+jede erhältliche Diätunterstützung erkundigt und hatte sicherlich eine ganze Menge davon 
+
+ausprobiert. Als ich las, woraus Revolyn Ultra besteht, waren mir die meisten Inhaltsstoffe bereits 
+
+bekannt.</p>
+				<p>Aber Revolyn Ultra schien voll der besten Produkte zum Abnehmen zu sein, also würde mein Geld
+
+vielleicht etwas erwerben, das wirklich das hält, was es verspricht.</p>
+				<p>In Anbetracht der in Kürze bevorstehenden Hochzeit wagte ich den Schritt und bin so froh
+
+darüber. Anstatt mich zu sorgen, dass mein Kleid weiter gemacht werden müsste, konnte man 
+
+es tatsächlich enger machen. Auch wenn ich es selbst sage: Ich sah an meinem Hochzeitstag 
+
+fantastisch aus – dank Revolyn Ultra.*</p>                                
+            </div>                <div id="tes6" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1086</span> von <span class="peopleall">1908</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_09.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_09.jpg" style="margin-left: 31px;">
+                <p>Gary C. <span>nahm 24 Kilo in 3 Monaten ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Mit dem Rauchen aufzuhören, war eines der schwersten Dinge, die ich je in meinem Leben 
+
+getan habe. Ich bin ganz stolz, dass ich nicht ein Mal rückfällig geworden bin und wieder eine 
+
+Zigarette geraucht habe. Aber ich merkte, dass ich anstatt zum Glimmstängel nach Plätzchen, 
+
+Keksen oder was sonst gerade da war griff, um mich zu beruhigen. Es dauerte nicht lange, 
+
+bis ich mich fett wie ein Haus fühlte. Ich suchte nach etwas, das mir helfen würde, diese 
+
+Hungergelüste in Schach zu halten und habe Revolyn Ultra gefunden. Es hat bei meinem Appetit, 
+
+der wieder normal ist, und einer körperlichen Energie Wunder gewirkt. Ein tolles Gefühl!*</p>
+            </div>                <div id="tes19" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1197</span> von <span class="peopleall">2157</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_06.jpg" alt="Gewichtsverlust">
+                <img src="images/testimonials_new_big_06.jpg" style="margin-left: 31px;">
+                <p>Susan A. nahm <span>10,5 Kilo in 2 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Mein Mann und ich haben uns schon sehr jung an der Universität kennengelernt und waren
+
+seither nie getrennt. Als ich Ende 20 und Anfang 30 war, begann ich zuzunehmen, wie es, 
+
+denke ich, für Frauen normal ist, wenn sie älter werden. Es war ärgerlich und frustrierend, 
+
+weil ich manche meiner Kleidungsstücke an der Taille ändern lassen musste, aber ich machte 
+
+mir nicht zu viele Gedanken über die Gewichtszunahme.</p>
+				<p>Eines Abends fühlte ich mich aber recht gehemmt wegen meines Gewichts, und aus 
+
+irgendeinem Grund fragte ich meinen Mann, während wir im Bett waren, ob er dachte, ich 
+
+sehe noch so fit aus wie damals, als wir uns kennenlernten. Offensichtlich war ich auf der 
+
+Suche nach Bestätigung. Aber als er zögerte, war ich recht überrascht. Mein Mann würde 
+
+normalerweise alles tun, um mir etwas Nettes zu sagen. Zuerst dachte ich, er mache nur Spaß, 
+
+aber ich konnte sehen, dass er nach Worten suchte! Ich hatte die Nase voll.</p>
+				<p>Das war der Moment, in dem ich wusste, dass ich mein Aussehen ändern wollte. Eines Tages 
+
+sah ich im Internet zufällig Werbung für Revolyn Ultra und beschloss, mir das genauer anzusehen, 
+
+da ich absolut nichts zu verlieren hatte. Als ich mir die Inhaltsstoffe ansah, klangen diese 
+
+super. Ich wusste bereits, dass grüner Tee angeblich hilft, dass man sich besser fühlt und dass 
+
+er voller Antioxidantien ist.</p>
+
+				<p>Ich nahm Revolyn Ultra und es war von Anfang an fantastisch. Ich hatte weniger Hunger, war
+
+eher satt und musste nicht ständig zwischendurch eine Pause machen wie zuvor. Ich hatte 
+
+eine ganze Menge Gewicht abgenommen und fühlte mich wie seit Jahren nicht. Ich bin mit 
+
+den Ergebnissen sehr zufrieden und es ist ein tolles Gefühl, Komplimente von Freunden und 
+
+Nachbarn zu bekommen, aber besonders von meinem Ehemann!*</p>
+            </div>                <div id="tes16" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">951</span> von <span class="peopleall">1630</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+            
+       <a href="order_now.html"><div class="buy_now"></div></a>
+<div class="testimonials">
+            	<img src="images/testimonials_old_big_13.jpg" alt="Gewichtsverlust Ergebnisse">
+                <img src="images/testimonials_new_big_13.jpg" style="margin-left: 31px;">
+                <p>Paige D. nahm <span>12 Kilo in 4 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Ich
+bin Mutter von zwei Kindern und habe einen wunderbar erf&uuml;llenden
+Beruf, der mich den ganzen Tag &uuml;ber auf Trab h&auml;lt. Revolyn Ultra
+erm&ouml;glicht es mir, mich ges&uuml;nder zu f&uuml;hlen und hilft
+mir abzunehmen, w&auml;hrend ich mich weiter auf das konzentriere,
+was mir am wichtigsten ist. Danke, Revolyn Ultra!*</p>
+            </div>                <div id="tes23" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1091</span> von <span class="peopleall">1927</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+
+   			<div class="testimonials">
+            	<img src="images/testimonials_old_big_22.jpg" alt="Schnell Abnehmen">
+                <img src="images/testimonials_new_big_22.jpg" style="margin-left: 31px;">
+                <p>Jacqueline <span>nahm 17 Kilo in 5 Wochen ab!*</span></p>
+   			</div>
+            <div class="testimonials_index">
+				<p>Denken Sie nicht, dass es komisch ist, dass man sich keine Gedanken darüber macht, was man seinem Körper antut, wenn man viel zu viel isst, aber sobald man es mit einer Diätpille zu tun hat, macht man sich Sorgen darüber, woraus diese besteht?</p>
+				<p>Ich brauchte etwas Hilfe, um Gewicht los zu werden, aber ehrlich gesagt führte der Gedanke an die Unmenge von Chemikalien dazu, dass ich nichts mit den vielen Diätpillen, die es gibt, zu tun haben wollte. Doch dann fand ich Revolyn Ultra.</p>
+				<p>Nicht nur, dass es ausschließlich natürliche Inhaltsstoffe enthält, sondern auch solche, von denen ich schon einmal gehört hatte, Akai, Guarana und Ginseng. Außerdem noch grüner Tee und Granatapfel und ich weiß, dass diese überhaupt nichts schädlich sind.</p>
+				<p>Ich interessierte mich auch dafür, dass Revolyn Ultra etwas namens Resveratrol enthält, was anscheinend über beträchtliche Anti-Oxidans-Eigenschaften verfügt. Wenn ich meine Ernährungsgewohnheiten umstellen und einen gesünderen Körper anstreben wollte, konnte ich dabei gleich alle Aspekte berücksichtigen.</p>
+				<p>Ich habe die gemachten Versprechungen mit meinem Arzt besprochen, um ganz sicher zu gehen und obwohl es ihm lieber wäre, wenn ich versuchen würde, ganz alleine abzunehmen, so sah er doch keine Probleme damit, dass ich Revolyn Ultra einnehme. Und schauen Sie mich nun an!*</p>                                
+            </div>                <div id="tes11" style="margin: 30px 0px 0px 75px;">
+		    <p style="font-size: 11px; font-weight: bold; color: #808080;">Helfen Sie anderen Kunden, die hilfreichsten Bewertungen zu finden</p>
+		    <p style="font-size: 14px; font-weight: bold; margin-top: -5px;"><span class="peopleyes">1898</span> von <span class="peopleall">3049</span> finden diese Bewertung hilfreich</p>
+		    <span style="font-size: 14px; color: #000000; margin-top: -5px;">War diese Bewertung hilfreich?</span>
+                    <button>JA</button>
+		    <button>NEIN</button>
+		</div>
+		<!--<span style="margin: 10px; text-align: center;"><center>*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</center></span>-->
+		 <div class="testimonials_hr"></div> 
+            
+
+            
+           
+            
+            
+            
+
+
+<div style="clear:both;"></div>
+
+			<img src="images/pic_10.jpg" class="img_left">
+            <p>&nbsp;</p>
+            <p id="1">[1] - <a href="15640470.html">http://www.ncbi.nlm.nih.gov/pubmed/15640470?dopt=Abstract</a></p>
+            <p id="2">[2] - <a href="11424516.html">http://www.ncbi.nlm.nih.gov/pubmed/11424516</a></p>
+            <p id="4">[4] - <a href="pomegranate-and-natural-nutrients-can-help.html">http://technorati.com/lifestyle/article/pomegranate-and-natural-nutrients-can-help/</a></p>
+			<p>&nbsp;</p>
+      </div><!-- END OF MAIN CONTENTS -->
+      
+      <div id="right-sidebar"><!-- START OF RIGHT SIDEBAR -->
+          <a href="order_now.html"><div class="right_box">
+            	<p>Besonderes Internet-Angebot</p>
+                <ul>
+                	<li>Bonus-Flaschen<br>gratis</li>
+                	<li>Kostenloser Versand<br>weltweit</li>
+                	<li>Ärztlich empfohlen</li>
+                </ul>
+            </div>
+			<div class="right_box_bottom">Jetzt kaufen!</div></a>
+			<img src="images/right_results.jpg" style="margin-top: 5px;">
+<!--            <p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Die
+folgenden Kundenempfehlungen wurden per E-Mail oder per Brief von
+Revolyn Ultra-Kunden erhalten. Erfolge k&ouml;nnen variieren und die
+folgenden beispielhaften Erfolge k&ouml;nnen nicht f&uuml;r 100%
+aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+
+              <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+			<a href="order_now.html">
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_01.jpg">
+                    <img src="images/testimonials_new_01.jpg" style="margin-left: 16px;">
+                    <p>Julie M. nahm 15,5 Kilo in 1 Monat ab!*</p>
+                </div>
+            <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_02.jpg">
+                    <img src="images/testimonials_new_02.jpg" style="margin-left: 16px;">
+                    <p>Matthew C. nahm 27,5 Kilo in 9 Wochen ab!*</p>
+                </div>
+            <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_03.jpg">
+                    <img src="images/testimonials_new_03.jpg" style="margin-left: 16px;">
+                    <p>Michael J. nahm 21 Kilo in 1,5 Monaten ab!*</p>
+                </div>
+            <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_04.jpg">
+                    <img src="images/testimonials_new_04.jpg" style="margin-left: 16px;">
+                    <p>Steven T. nahm 17,5 Kilo in nur 6 Wochen ab!*</p>
+                </div>
+	<!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+            <div class="right_testimonials">
+                	<img src="images/testimonials_old_05.jpg">
+                    <img src="images/testimonials_new_05.jpg" style="margin-left: 16px;">
+                    <p>Mary S. nahm 25,5 Kilo in 6 Wochen ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_06.jpg">
+                    <img src="images/testimonials_new_06.jpg" style="margin-left: 16px;">
+ 					<p>Susan A. nahm 10,5 Kilo in 2 Wochen ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_07.jpg">
+                    <img src="images/testimonials_new_07.jpg" style="margin-left: 16px;">
+ 					<p>Anne R. nahm 13 Kilo in 1 Monat ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_08.jpg">
+                    <img src="images/testimonials_new_08.jpg" style="margin-left: 16px;">
+ 					<p>Kate T. nahm 10,5 Kilo in 1 Monat ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_09.jpg">
+                    <img src="images/testimonials_new_09.jpg" style="margin-left: 16px;">
+ 					<p>Gary C. nahm 24 Kilo in 3 Monaten ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_10.jpg">
+                    <img src="images/testimonials_new_10.jpg" style="margin-left: 16px;">
+ 					<p>Dawn H. nahm 26 Kilo in 6 Wochen ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_11.jpg">
+                    <img src="images/testimonials_new_11.jpg" style="margin-left: 16px;">
+ 					<p>Steven K. nahm 19 Kilo in 5 Wochen ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_13.jpg">
+                    <img src="images/testimonials_new_13.jpg" style="margin-left: 16px;">
+ 					<p>Paige D. nahm 12 Kilo in 4 Wochen ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+				<div class="right_testimonials">
+                	<img src="images/testimonials_old_14.jpg">
+                    <img src="images/testimonials_new_14.jpg" style="margin-left: 16px;">
+ 					<p>Katherine S. nahm 16,5 Kilo in 6 Wochen ab!*</p>
+                </div>
+        <!--<p style="font-size: 12px; color:#707070; margin: 0; width: 250px;">*Erfolge können variieren und die folgenden beispielhaften Erfolge können nicht für 100% aller Revolyn Ultra-Benutzer erwartet werden.</p>-->
+			</a>
+      </div><!-- END OF RIGHT SIDEBAR -->
+           <div style="clear:both;"></div>
+           <ul class="footer_menu">           	<li><a href="impressum.html">IMPRESSUM</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+
+           	<li><a href="wholesale.html">Großhandel</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+           	<li><a href="submit.html">Kundenreferenzen einreichen</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+           	<li><a href="index_1.html">Startseite</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                
+                <li><a href="drweis.html">&Auml;rztlich empfohlen</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="ingredients.html">Inhaltsstoffe</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li class="activ"><a href="testimonials.html">Kundenberichte</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="faq.html">FAQ</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="contact_us.php">Kontakt</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="order_now.html">Jetzt bestellen</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="privacy_policy.html">Datenschutzrichtlinie</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="terms.html">Allgemeine Geschäftsbedingungen/ Ruecksendung/ Rückerstattung</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+           </ul>
+           <img src="images/logo_footer.jpg" style="margin-left: 395px;">
+	  	   <div class="copyright_box">
+            	<div class="copyright">Copyright: Revolyn Ultra 2011. Alle Rechte vorbehalten.</div>
+      	   </div>
+      </div><!-- END OF WRAPPER -->
+      </div><!-- END OF CONTAINER -->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq.disablePushState = true;
+fbq('addPixelId', '356805528027112');
+fbq('addPixelId', '666678153500679');
+fbq('addPixelId', '263416800737980');
+
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="tr"></noscript>
+<noscript><img height="1" width="1" style="display:none" src="tr_1"></noscript>
+<noscript><img height="1" width="1" style="display:none" src="tr_2"></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code --> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43585615-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+var _ac = {};
+// _ac.value = '19.99'; // Optional: add value to conversions.
+// _ac.order_id = 'ABC123'; // Add your own order-id for reporting (optional)
+//_ac.product = '123456'; // Webmaster: replace 123456 on the product page with the product id.
+
+(function(d, t) {
+  var a = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  a.async = a.src = '//pixel.adcrowd.com/smartpixel/5553cfaf751a4b14960b7581a20bc142.js';
+  s.parentNode.insertBefore(a, s);
+}(document, 'script'));
+</script>
+    </body>
+</html>
