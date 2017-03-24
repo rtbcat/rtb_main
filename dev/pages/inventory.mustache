@@ -24,13 +24,13 @@
             <aside id="side_bar" class="grid-item">
                 <div class="spanel">
                     <form id="search_form">
-                        <input type="hidden" name="sort_by" value="filtered_impressions" />
+                        <input type="hidden" name="sort_by" value="filtered_imps" />
                         <input type="hidden" name="order_by" value="des" />
                         <input type="hidden" name="page" value="1" />
                         <input type="hidden" name="limit" value="25" />
                         <div class="spanel-head">
                             <div class="search-field">
-                                <input type="text" name="keyword" placeholder="Seller's name or ID" />
+                                <input type="text" name="keyword" placeholder="Seller's name" />
                                 <i class="search-icon"></i>
                             </div>
                             <i class="toggle-icon"></i>
@@ -60,16 +60,16 @@
                                 <div class="filter-content">
                                     <ul>
                                         <li>
-                                            <label><input type="radio" name="device_type" value="0" checked="true" /> All</label>
+                                            <label><input type="radio" name="device_type" value="any" checked="true" /> All</label>
                                         </li>
                                         <li>
-                                            <label><input type="radio" name="device_type" value="1" /> Desktop</label>
+                                            <label><input type="radio" name="device_type" value="desktop" /> Desktop</label>
                                         </li>
                                         <li>
-                                            <label><input type="radio" name="device_type" value="2" /> Phone</label>
+                                            <label><input type="radio" name="device_type" value="phone" /> Phone</label>
                                         </li>
                                         <li>
-                                            <label><input type="radio" name="device_type" value="3" /> Tablet</label>
+                                            <label><input type="radio" name="device_type" value="tablet" /> Tablet</label>
                                         </li>
                                     </ul>
                                 </div>
@@ -79,16 +79,16 @@
                                 <div class="filter-content">
                                     <ul>
                                         <li>
-                                            <label><input type="radio" name="supply_type" value="0" checked="true" /> All</label>
+                                            <label><input type="radio" name="supply_type" value="any" checked="true" /> All</label>
                                         </li>
                                         <li>
-                                            <label><input type="radio" name="supply_type" value="1" /> Web</label>
+                                            <label><input type="radio" name="supply_type" value="web" /> Web</label>
                                         </li>
                                         <li>
-                                            <label><input type="radio" name="supply_type" value="2" /> Mobile Web</label>
+                                            <label><input type="radio" name="supply_type" value="mobile_web" /> Mobile Web</label>
                                         </li>
                                         <li>
-                                            <label><input type="radio" name="supply_type" value="3" /> Mobile App</label>
+                                            <label><input type="radio" name="supply_type" value="mobile_app" /> Mobile App</label>
                                         </li>
                                     </ul>
                                 </div>
@@ -101,8 +101,8 @@
                 <div class="table-control section-header clearfix">
                     <div class="filter-result-widget left">
                         <select class="sorting">
-                            <option value="seller_name">Seller</option>
-                            <option value="filtered_impressions" selected="true">Imps</option>
+                            <option value="seller_member_name">Seller</option>
+                            <option value="filtered_imps" selected="true">Imps</option>
                         </select>
                         <select class="ordering">
                             <option value="asc">Asc</option>
@@ -126,13 +126,13 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th data-sort="seller_name" class="sort" title="Click to sort">
+                                <th data-sort="seller_member_name" class="sort" title="Click to sort">
                                     Seller
                                     <div class="sort-direction">
                                         <span class="glyphicon"></span>
                                     </div>
                                 </th>
-                                <th data-sort="filtered_impressions" class="sort" title="Click to sort">
+                                <th data-sort="filtered_imps" class="sort" title="Click to sort">
                                     Avg. Daily Impressions
                                     <div class="sort-direction">
                                         <span class="glyphicon"></span>
@@ -151,8 +151,8 @@
                 <div class="table-control section-footer clearfix">
                     <div class="filter-result-widget left">
                         <select class="sorting">
-                            <option value="seller_name">Seller</option>
-                            <option value="filtered_impressions" selected="true">Imps</option>
+                            <option value="seller_member_name">Seller</option>
+                            <option value="filtered_imps" selected="true">Imps</option>
                         </select>
                         <select class="ordering">
                             <option value="asc">Asc</option>
@@ -211,31 +211,7 @@
             </div>
             <div class="list">
                 <ul>
-                    <li data-code="AR">Argentina</li>
-                    <li data-code="AU">Australia</li>
-                    <li data-code="BR">Brazil</li>
-                    <li data-code="CA">Canada</li>
-                    <li data-code="CN">China</li>
-                    <li data-code="DE">Germany</li>
-                    <li data-code="ES">Spain</li>
-                    <li data-code="FR">France</li>
-                    <li data-code="GB">United Kingdom</li>
-                    <li data-code="ID">Indonesia</li>
-                    <li data-code="IN">India</li>
-                    <li data-code="IT">Italy</li>
-                    <li data-code="JP">Japan</li>
-                    <li data-code="KR">South Korea</li>
-                    <li data-code="MX">Mexico</li>
-                    <li data-code="NL">Netherlands</li>
-                    <li data-code="PH">Philippines</li>
-                    <li data-code="PL">Poland</li>
-                    <li data-code="RU">Russia</li>
-                    <li data-code="TH">Thailand</li>
-                    <li data-code="TR">Turkey</li>
-                    <li data-code="TW">Taiwan</li>
-                    <li data-code="UA">Ukraine</li>
-                    <li data-code="US">United States</li>
-                    <li data-code="VN">Vietnam</li>
+                    <!-- <li data-code="AR">Argentina</li> -->
                 </ul>
             </div>
             <div class="buttons">

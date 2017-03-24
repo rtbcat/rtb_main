@@ -1,6 +1,6 @@
 ;(function($){
     var config = {
-        url : "http://hooks.rtb.cat:8000/info/inventory",
+        url : "http://sandbox.lat.com.es/index.php/info/inventory",
         loading: false,
         last_data: null,
         sellers: [
