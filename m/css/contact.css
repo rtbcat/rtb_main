@@ -15,6 +15,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
     width: 100%;
     height: 100%;
     color: #fff;
+    overflow: hidden;
 }
 .overview .fs-form-wrap {
     height: auto;
@@ -112,7 +113,7 @@ button.fs-continue,
 }
 
 .fs-form-wrap button[disabled] {
-    opacity: 0.3;
+    opacity: 0.5;
     pointer-events: none;
 }
 
@@ -453,6 +454,8 @@ button.fs-continue,
     background: transparent;
     -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative;
+    text-align: right;
 }
 
 .fs-nav-dots button::before,
@@ -477,8 +480,8 @@ button.fs-continue,
 }
 
 .fs-nav-dots button.fs-dot-current {
-    -webkit-transform: perspective(1000px) rotate3d(0,1,0,180deg);
-    transform: perspective(1000px) rotate3d(0,1,0,180deg);
+    /*-webkit-transform: perspective(1000px) rotate3d(0,1,0,180deg);
+    transform: perspective(1000px) rotate3d(0,1,0,180deg);*/
 }
 
 .fs-nav-dots button:hover::before,
@@ -486,6 +489,16 @@ button.fs-continue,
     background: #4cc0e5;
 }
 
+.fs-nav-dots button .label {
+    width: 80px;
+    height: 16px;
+    line-height: 14px;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 0; right: 26px;
+}
 /* Progress bar */
 .fs-progress {
     position: absolute;
