@@ -54,7 +54,7 @@
                 var country_query = location.search;
                 var country_match = country_query.match(/country=([A-Z]{2})/);
                 try {
-                    var country_found = country_match[1] || null;
+                    var country_found = country_match[1];
                 } catch(e) {
                     var country_found = null;
                 }
