@@ -1,0 +1,17 @@
+{
+    "version": "1.0",
+    "uniqueId": "buf8de5d6bc114268a80b25b6f493a9669",
+    "title": "Tipp24_LOT_Challenger_v2_6felder_Mobile_300x250_main_asset",
+    "description": "",
+    "width": 300,
+    "height": 250,
+    "events": {
+        "enabled": 0,
+        "list": {
+        }
+    },
+    "clicktags": {
+        "clickTAG": "http:\/\/www.tipp24.com"
+    },
+    "source": "index.html"
+}
