@@ -1,0 +1,851 @@
+{
+  "id": "4308",
+  "name": "Free Course SEO Squeeze Page",
+  "mobile": true,
+  "notes": "TMP-211, updated template name",
+  "syntax": 4,
+  "version": 1.16,
+  "style": {
+    "replacements": [
+      {
+        "type": "color",
+        "name": "Link Color",
+        "find": "#1294ff"
+      },
+      {
+        "type": "color",
+        "name": "Link Hover Color",
+        "find": "#ff6038"
+      },
+      {
+        "type": "color",
+        "name": "Primary Background Color",
+        "find": "#fffffe"
+      },
+      {
+        "type": "color",
+        "name": "Secondary Background Color",
+        "find": "#f6f7f7"
+      },
+      {
+      	"type": "color",
+      	"name": "Primary Action Color",
+      	"find": "#1fa2ed"
+      },
+      {
+      	"type": "color",
+      	"name": "Secondary Action Color",
+      	"find": "#e55632"
+      },
+      {
+        "type": "color",
+        "name": "Primary Text Color",
+        "find": "#333333"
+      },
+      {
+        "type": "color",
+        "name": "Secondary Text Color",
+        "find": "#fffffb"
+      },
+      {
+        "type": "color",
+        "name": "Headline Text Color",
+        "find": "#fffffc"
+      },
+      {
+        "type": "color",
+        "name": "Headline Emphasis Text Color",
+        "find": "#ffeb65"
+      },
+      {
+        "type": "color",
+        "name": "Checkmark Color",
+        "find": "#2cb37b"
+      },
+      {
+        "type": "color",
+        "name": "Button Background Color",
+        "find": "#ffc600"
+      },
+      {
+        "type": "color",
+        "name": "Button Text Color",
+        "find": "#fffffd"
+      },
+      {
+        "type": "color",
+        "name": "Button Background Hover Color",
+        "find": "#ffba00"
+      },
+      {
+        "type": "color",
+        "name": "Button Text Hover Color",
+        "find": "#fffffa"
+      },
+      {
+        "type": "color",
+        "name": "Video Divider Color",
+        "find": "#dddddd"
+      },
+      {
+        "type": "color",
+        "name": "Footer Background Color",
+        "find": "#eeefef"
+      }
+    ]
+	},
+	"variables": {
+		"facebookurl": {
+		  "variable": "facebookurl",
+		  "dafault": "",
+		  "name": "The URL to share on Facebook. Leave blank to share the current page."
+		},
+		"twitterurl": {
+		  "variable": "twitterurl",
+		  "dafault": "",
+		  "name": "The URL to share on Twitter. Leave blank to share the current page."
+		},
+		"googleurl": {
+		  "variable": "googleurl",
+		  "dafault": "",
+		  "name": "The URL to share on Google+. Leave blank to share the current page."
+		}
+	},
+	"elements": [
+		{
+			"id": "header",
+			"name": "Page Header",
+			"type": "container"
+		},
+		{
+			"id": "site-header-logo",
+			"name": "Logo image",
+			"type": "image"
+		},
+		{
+			"id": "facebook-like",
+			"name": "Facebook Like Button",
+			"type": "facebook-button"
+		},
+		{
+			"id": "headline-wrap",
+			"name": "Headline container",
+			"type": "container"
+		},
+		{
+			"id": "headline-title",
+			"name": "Headline Title Text",
+			"type": "text"
+		},
+		{
+			"id": "headline-body",
+			"name": "Headline Body Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-wrap",
+			"name": "Benefits container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-img",
+			"name": "Product Image",
+			"type": "image",
+			"comment": "An image in portrait orientation with a maximum width of 225 pixels is recommended."
+		},
+		{
+			"id": "benefits-title",
+			"name": "Benefits Title Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-outline-list",
+			"name": "Benefits Outline List Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-intro",
+			"name": "Benefits Introduction Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-feature-list",
+			"name": "Benefits Feature List Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-feature-list-icons",
+			"name": "Benefits Feature List with Icons Container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-feature-list-icons-video",
+			"name": "Video Feature Container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-feature-list-icons-video-text",
+			"name": "Video Feature Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-feature-list-icons-audio",
+			"name": "Audio Feature Container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-feature-list-icons-audio-text",
+			"name": "Audio Feature Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-feature-list-icons-transcript",
+			"name": "Transcript Feature Container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-feature-list-icons-transcript-text",
+			"name": "Transcript Feature Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-feature-list-icons-pdf",
+			"name": "PDF Feature Container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-feature-list-icons-pdf-text",
+			"name": "PDF Feature Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-feature-list-icons-copy",
+			"name": "Copy Feature Container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-feature-list-icons-copy-text",
+			"name": "Copy Feature Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-feature-list-icons-etc",
+			"name": "Etc Feature Container",
+			"type": "container"
+		},
+		{
+			"id": "benefits-feature-list-icons-etc-text",
+			"name": "Etc Feature Text",
+			"type": "text"
+		},
+		{
+			"id": "benefits-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "share-container",
+			"name": "Social Share Container",
+			"type": "container"
+		},
+		{
+		  "id": "share-twitter",
+		  "name": "Twitter",
+		  "type": "dynamic",
+		  "data": {
+		    "variables": ["twitterurl"]
+		  }
+		},
+		{
+		  "id": "share-facebook",
+		  "name": "Facebook",
+		  "type": "dynamic",
+		  "data": {
+		    "variables": ["facebookurl"]
+		  }
+		},
+		{
+		  "id": "share-google",
+		  "name": "Google+",
+		  "type": "dynamic",
+		  "data": {
+		    "variables": ["googleurl"]
+		  }
+		},
+		{
+			"id": "benefits-conclusion",
+			"name": "Benefits Conclusion Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-wrap",
+			"name": "Main Content Container",
+			"type": "container"
+		},
+		{
+			"id": "main-content-section-01",
+			"name": "Section 01 Container",
+			"type": "container"
+		},
+		{
+			"id": "main-content-section-01-title",
+			"name": "Section 01 Header Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-section-01-body",
+			"name": "Section 01 Body Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-section-02",
+			"name": "Section 02 Container",
+			"type": "container"
+		},
+		{
+			"id": "main-content-section-02-title",
+			"name": "Section 02 Header Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-section-02-body",
+			"name": "Section 02 Body Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-section-03",
+			"name": "Section 03 Container",
+			"type": "container"
+		},
+		{
+			"id": "main-content-section-03-title",
+			"name": "Section 03 Header Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-section-03-body",
+			"name": "Section 03 Body Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-section-04",
+			"name": "Section 04 Container",
+			"type": "container"
+		},
+		{
+			"id": "main-content-section-04-title",
+			"name": "Section 04 Header Text",
+			"type": "text"
+		},
+		{
+			"id": "main-content-section-04-body",
+			"name": "Section 04 Body Text",
+			"type": "text"
+		},
+		{
+			"id": "cta-box-01",
+			"name": "Top Callout Container",
+			"type": "container"
+		},
+		{
+			"id": "cta-box-01-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "cta-box-01-body",
+			"name": "Body Text",
+			"type": "text"
+		},
+		{
+			"id": "cta-box-01-btn",
+			"name": "Call to Action button",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "cta-box-01-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "videos-title",
+			"name": "Videos Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-01",
+			"name": "Video 01 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-01-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-01-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-01-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-01-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-02",
+			"name": "Video 02 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-02-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-02-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-02-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-02-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-03",
+			"name": "Video 03 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-03-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-03-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-03-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-03-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-04",
+			"name": "Video 04 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-04-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-04-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-04-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-04-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-05",
+			"name": "Video 05 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-05-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-05-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-05-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-05-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-06",
+			"name": "Video 06 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-06-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-06-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-06-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-06-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-07",
+			"name": "Video 07 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-07-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-07-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-07-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-07-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-08",
+			"name": "Video 08 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-08-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-08-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-08-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-08-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-09",
+			"name": "Video 09 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-09-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-09-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-09-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-09-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-10",
+			"name": "Video 10 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-10-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-10-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-10-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-10-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-11",
+			"name": "Video 11 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-11-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-11-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-11-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-11-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-12",
+			"name": "Video 12 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-12-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-12-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-12-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-12-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-13",
+			"name": "Video 13 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-13-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-13-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-13-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-13-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-14",
+			"name": "Video 14 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-14-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-14-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-14-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-14-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "video-15",
+			"name": "Video 15 Container",
+			"type": "container"
+		},
+		{
+			"id": "video-15-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "video-15-desc",
+			"name": "Description Text",
+			"type": "text"
+		},
+		{
+			"id": "video-15-embed-wrap",
+			"name": "Video",
+			"type": "video"
+		},
+		{
+			"id": "video-15-cta-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "cta-box-02",
+			"name": "Bottom Callout Container",
+			"type": "container"
+		},
+		{
+			"id": "cta-box-02-title",
+			"name": "Header Text",
+			"type": "text"
+		},
+		{
+			"id": "cta-box-02-body",
+			"name": "Body Text",
+			"type": "text"
+		},
+		{
+			"id": "cta-box-02-btn",
+			"name": "Call to Action button",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+			"id": "cta-box-02-link",
+			"name": "Call to Action Link",
+			"type": "link",
+			"data": {
+				"href": "#/optin"
+			}
+		},
+		{
+		    "id": "facebook-comments",
+		    "name": "Facebook Comments",
+		    "type": "facebook-comments"
+		},
+		{
+			"id": "footer",
+			"name": "Footer",
+			"type": "container"
+		},
+		{
+			"id": "fineprint",
+			"name": "Copyright Text",
+			"type": "text"
+		}
+  ]
+}
