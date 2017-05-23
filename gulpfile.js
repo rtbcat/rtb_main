@@ -74,6 +74,7 @@ gulp.task('build', function(){
             'dev/pages/fill-rate-tool.mustache',
             'dev/pages/appnexus-co-pilot.mustache',
             'dev/pages/programmatic-audio.mustache',
+            'dev/pages/programmatic-tv-glossary.mustache',
             'dev/pages/proprietary-bidder.mustache',
             'dev/pages/swipe-us.mustache',
             'dev/pages/swipe-de.mustache',
