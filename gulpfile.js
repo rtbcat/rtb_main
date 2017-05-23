@@ -66,7 +66,7 @@ gulp.task('build', function(){
             'dev/pages/index.mustache',
             'dev/pages/dmp.mustache',
             'dev/pages/inventory.mustache',
-            'dev/pages/world-map-imps.mustache',
+            'dev/pages/traffic-map.mustache',
             'dev/pages/about-us.mustache',
             'dev/pages/contact.mustache',
             'dev/pages/thank-you.mustache',

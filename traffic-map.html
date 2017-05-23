@@ -34,14 +34,125 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Programmatic Audio</title>
-    <link rel="amphtml" href="http://rtb.cat/m/programmatic-audio.html" />
+    <title>World Map - Impressions</title>
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="plugins/megamenu/css/megamenu.css" />
     <link rel="stylesheet" type="text/css" href="plugins/jvectormap-2.0.3/jvectormap.css" />
-    <link rel="stylesheet" type="text/css" href="plugins/tooltip/css/tooltip-classic.css" />
     <link rel="stylesheet" type="text/css" href="css/basic.css" />
     <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+    <style>
+        main.fullscreened .width-constrainer {
+            max-width: 100% !important;
+        }
+
+        main.fullscreened #world_map {
+            border: none;
+            border-radius: 0 !important;
+        }
+
+        #world_map {
+            width: calc(100% - 30px);
+            height: auto;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding-bottom: 56.25%;
+            position: relative;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 10px solid #333;
+        }
+
+        #world_map .jvectormap-container {
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            overflow: visible;
+        }
+
+        #world_map .jvectormap-zoomin,
+        #world_map .jvectormap-zoomout {
+            padding: 7px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+        }
+
+        #world_map .jvectormap-zoomin:hover,
+        #world_map .jvectormap-zoomout:hover {
+            color: rgba(255, 255, 255, 1);
+            background: rgba(0, 0, 0, 0.8)
+        }
+
+        #world_map .jvectormap-zoomin {
+            top: auto;
+            bottom: 0;
+            left: 27px;
+            margin-bottom: -5px;
+            margin-left: -5px;
+        }
+
+        #world_map .jvectormap-zoomout {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            margin-bottom: -5px;
+            margin-left: -5px;
+        }
+
+        #world_map .controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+            display: none;
+        }
+
+        #world_map .controls .glyphicon {
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        #world_map .controls .glyphicon.max:before {
+            content: "\e096";
+        }
+
+        #world_map .controls .glyphicon.restore:before {
+            content: "\e097";
+        }
+
+        #world_map .controls .glyphicon:hover {
+            color: rgba(255, 255, 255, 1);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        #world_map:hover .jvectormap-zoomin,
+        #world_map:hover .jvectormap-zoomout,
+        #world_map:hover .map-title,
+        #world_map:hover .controls {
+            display: inline-block;
+        }
+
+        .jvectormap-tip {
+            z-index: 2147483647;
+        }
+
+        .jvectormap-tip table {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+
+        .jvectormap-tip table th {
+            font-size: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -633,73 +744,93 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
     </div>
     <main>
         <div class="width-constrainer">
-            <h1 class="page-title">Programmatic Audio</h1>
-            <p class="left max-800">
-                Inventory available: Spotify, Triton digital, AdsWizz.
-            </p>
-            <h2>Spotify</h2>
-            <p class="left max-800">
-                File type: MP3, WAV or OGG<br> Companion Banner: 640x640 or 300x250<br> Bit rate: Minimum 128 kbps<br> Ad length: 15 or 30 seconds<br>
-            </p>
-            <p class="left max-800">
-                Companion banner: Optional static companion banner images available, 640x640 hosted JPG<br> Creatives must be submitted for audit and be fully SSL compliant<br> (Alcohol: Allowed only with 21+ age targeting)<br> Users hear 1 ad every 15
-                minutes.<br> All ads are non-skippable<br> All ads come with completion rate percentage.<br> Global inventory available at scale. Daily imps by market available on request.<br> Rate card by geo available on request.
-            </p>
-            <p class="left max-800">
-                Targeting available:
-            </p>
-            <ul>
-                <li>Geo/DMA, time-of-day, re-targeting (Android only)</li>
-                <li>Age &amp; gender</li>
-                <li>Song genre</li>
-                <li>Playlist</li>
-            </ul>
-            <p>&nbsp;</p>
-            <h2>Triton</h2>
-            <p class="left max-800">
-                File type: MP3<br> Bit rate:128 kbps<br> Ad length: 15, 30, or 60 seconds<br> Sample rate: 44100 Hz<br> Volume: Normalized to -4db
-            </p>
-            <div class="max-800" style="padding: auto 10px">
-                <table class="table table-bordered" style="margin-bottom: 0">
-                    <thead>
-                        <tr>
-                            <th>Device</th>
-                            <th>Spec</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Computer App</td>
-                            <td>Players in PC-based apps such as iTunes, Windows Media Player, Winamp, or VLC. Does not use cookies.</td>
-                        </tr>
-                        <tr>
-                            <td>Computer Browsers</td>
-                            <td>Players rendered in PC-based web browsers. Uses cookies.</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile Apps</td>
-                            <td>Players in mobile device player apps. Does not use cookies.</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile Browser</td>
-                            <td>Players in device-optimized mobile web browsers, such as iOS Safari and Android Chrome. Uses cookies.</td>
-                        </tr>
-                        <tr>
-                            <td>Uncategorized</td>
-                            <td>The vast majority of this inventory is intended for mobile apps, but it also includes consoles such as Roku. Does not use cookies.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h1 class="page-title">World Map - Impressions</h1>
+            <div id="world_map">
+                <div class="controls">
+                    <i class="glyphicon scr-toggle max" title="Fullscreen"></i>
+                </div>
             </div>
-            <p>&nbsp;</p>
-            <h2>AdsWizz</h2>
-            <p class="left max-800">
-                File type: MP3, AAC, WAV<br> File size: Maximum 20MB<br> Bit rate: Minimum 128 kbps, 196kbs recommended<br> Ad length: 15, 30, or 60 seconds
-            </p>
         </div>
     </main>
     <footer>&nbsp;</footer>
     <script src="libs/jquery-1.11.3.min.js"></script>
+    <script src="plugins/jvectormap-2.0.3/jvectormap.min.js"></script>
+    <script src="plugins/jvectormap-2.0.3/world-mill-mod.js"></script>
+    <script>
+        ;
+        (function($) {
+            var main_div = $('main');
+            var scrn_btn = $('#world_map .scr-toggle');
+            var data_url = "http://sandbox.lat.com.es/index.php/stat/json?seller=map_all";
+
+            function goFullScreen(id) {
+                var el = document.getElementById(id);
+                if (el.requestFullscreen) {
+                    el.requestFullscreen();
+                } else if (el.webkitRequestFullscreen) {
+                    el.webkitRequestFullscreen();
+                } else if (el.mozRequestFullScreen) {
+                    el.mozRequestFullScreen();
+                } else if (el.msRequestFullscreen) {
+                    el.msRequestFullscreen();
+                }
+            }
+
+            function exitFullScreen() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+
+            function toggleFS(e) {
+                if (main_div.hasClass('fullscreened')) {
+                    main_div.removeClass('fullscreened');
+                    $(this).removeClass("restore").addClass("max").attr("title", "Fullscreen");
+                    exitFullScreen();
+                } else {
+                    main_div.addClass('fullscreened');
+                    $(this).addClass("restore").removeClass("max").attr("title", "Exit fullscreen");
+                    goFullScreen('world_map');
+                }
+            }
+            scrn_btn.click(toggleFS);
+            $.getJSON(data_url, function(data) {
+                $('#world_map').vectorMap({
+                    map: 'world_mill',
+                    backgroundColor: '#f5f5f5',
+                    series: {
+                        regions: [{
+                            values: data.map,
+                            scale: ['#9bd62c', '#cc2129'],
+                            normalizeFunction: 'polynomial'
+                        }]
+                    },
+                    onRegionTipShow: function(e, el, code) {
+                        var trows = '';
+                        for (var seller in data.label[code]) {
+                            var name = seller.charAt(0).toUpperCase() + seller.slice(1);
+                            trows += '<tr><td>' + name + '</td><td>&nbsp;=&nbsp;</td><td>' + parseInt(data.label[code][seller]).toLocaleString() + '</td></tr>';
+                        }
+                        trows += '<tr><td colspan=3 style="text-align:center;color:#eee;line-height:1;padding-top:4px"><span style="font-size: 10px">(Click for all 800+ exchanges <br>&amp; direct publishers.)</span></td><tr>';
+                        var table = '<table style="margin:5px">' +
+                            '<thead><th colspan="3" style="text-align:left;padding-bottom:3px;font-size:15px">' + el.html() + '</th></thead>' +
+                            '<tbody>' + trows + '</tbody>' +
+                            '</table>';
+                        el.html(table);
+                    },
+                    onRegionClick(e, code) {
+                        window.location = "inventory.html#country=" + code;
+                    }
+                });
+            });
+        }(jQuery))
+    </script>
     <!-- Megamenu JS Tags -->
     <script src="plugins/megamenu/js/jquery.easing.js"></script>
     <script src="plugins/megamenu/js/megamenu_plugins.js"></script>
@@ -749,6 +880,19 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
     </script>
 
     <!-- Tracking Pixels -->
+    <!-- AMS UK Page View -->
+    <script type='text/javascript'>
+        var _pix = document.getElementById('_pix_id_0fb50c20-f94e-2613-4aea-3fedd9378a15');
+        if (!_pix) {
+            var protocol = '//';
+            var a = Math.random() * 1000000000000000000;
+            _pix = document.createElement('img');
+            _pix.style.display = 'none';
+            _pix.setAttribute('src', protocol + 'aax-eu.amazon-adsystem.com/s/iu3?d=forester-did&ex-fargs=%3Fid%3D0fb50c20-f94e-2613-4aea-3fedd9378a15%26type%3D55%26m%3D3&ex-fch=416613&ex-src=rtb.cat&ex-hargs=v%3D1.0%3Bc%3D2999062330702%3Bp%3D0FB50C20-F94E-2613-4AEA-3FEDD9378A15' + '&cb=' + a);
+            _pix.setAttribute('id', '_pix_id_0fb50c20-f94e-2613-4aea-3fedd9378a15');
+            document.body.appendChild(_pix);
+        }
+    </script><noscript> <img height='1' width='1' border='0' alt='' src='https://aax-eu.amazon-adsystem.com/s/iui3?d=forester-did&ex-fargs=%3Fid%3D0fb50c20-f94e-2613-4aea-3fedd9378a15%26type%3D55%26m%3D3&ex-fch=416613&ex-src=rtb.cat&ex-hargs=v%3D1.0%3Bc%3D2999062330702%3Bp%3D0FB50C20-F94E-2613-4AEA-3FEDD9378A15' /></noscript>
     <!-- AMS US Page View -->
     <script type='text/javascript'>
         var _pix = document.getElementById('_pix_id_a4c9002b-4968-26ab-6f27-9592b4c07b9c');
@@ -769,9 +913,6 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
             currency: 'USD'
         });
     </script>
-    <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
-    <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
-    <!-- End of Segment Pixel -->
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -802,6 +943,9 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
         twq('track', 'PageView');
     </script>
     <!-- End Twitter universal website tag code -->
+    <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
+    <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
+    <!-- End of Segment Pixel -->
 </body>
 
 </html>
