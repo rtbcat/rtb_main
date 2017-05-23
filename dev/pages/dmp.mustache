@@ -18,7 +18,7 @@
     <!-- Megamenu HTML Tags -->
 	{{> ../partials/megamenu_html.html }}
     <main>
-        <div class="width-constrainer">
+        <div class="width-constrainer clearfix">
             <h1 class="page-title">3rd Party Data</h1>
             <aside id="side_bar" class="grid-item">
                 <form id="search_form">
@@ -303,9 +303,10 @@
                     </div>
                 </div>
             </section>
+            <div style="clear: both">&nbsp;</div>
         </div>
     </main>
-    <footer>&nbsp;</footer>
+    {{> ../partials/footer.html }}
     <!-- Modals -->
     <div id="loader" class="screen-overlay">
         <div class="box">

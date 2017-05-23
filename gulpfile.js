@@ -79,7 +79,8 @@ gulp.task('build', function(){
             'dev/pages/swipe-us.mustache',
             'dev/pages/swipe-de.mustache',
             'dev/pages/swipe-uk.mustache',
-            'dev/pages/tutorials.mustache'
+            'dev/pages/tutorials.mustache',
+            'dev/pages/privacy.mustache'
         ])
         .pipe(must()).pipe(beau())
         .pipe(name(function(path){path.extname = ".html";}))

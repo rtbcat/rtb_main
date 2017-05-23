@@ -19,7 +19,7 @@
     <!-- Megamenu HTML Tags -->
 	{{> ../partials/megamenu_html.html }}
     <main>
-        <div class="width-constrainer">
+        <div class="width-constrainer clearfix">
             <h1 class="page-title">Inventory Data (<span id="selected_country_title">All</span>)</h1>
             <aside id="side_bar" class="grid-item">
                 <div class="spanel">
@@ -173,9 +173,10 @@
                     </div>
                 </div>
             </section>
+            <div style="clear: both;">&nbsp;</div>
         </div>
     </main>
-    <footer>&nbsp;</footer>
+    {{> ../partials/footer.html }}
     <div id="loader" class="screen-overlay">
         <div class="box">
             <img src="images/spinner.gif" />&nbsp;LOADING
