@@ -75,15 +75,41 @@
         </div><!-- /fs-form-wrap -->
     </div><!-- /container -->
 
+    <!-- Modals -->
+    <div class="modal" id="message_box">
+        <div class="dialog">
+            <div class="dialog-head">Message</div>
+            <div class="dialog-body message">
+                Default message.
+            </div>
+            <div class="dialog-foot">
+                <button role="ok">Ok</button>
+            </div>
+        </div>
+    </div>
+
 	<script src="libs/jquery-1.11.3.min.js"></script>
 	<script src="plugins/modernizr/modernizr.custom.js"></script>
     <script src="js/FForm.js"></script>
 	<script>
+        var message_box = {
+            open : function(message,fx){
+                $("#message_box .message").text(message);
+                $("#message_box").css("display","block");
+                $("#message_box button[role='ok']").unbind().click(function(){if(fx){fx()};message_box.close()});
+            },
+            close : function(){
+                $("#message_box").css("display","none");
+            }
+        }
+
 		function load_JS(filename){
 			var script_tag = document.createElement('script');
 			script_tag.setAttribute("type","text/javascript");
 			script_tag.setAttribute("src", filename);
 		}
+
+        // FForm display logic.
 		(function() {
 			var formWrap = document.getElementById( 'fs-form-wrap' );
 
@@ -98,31 +124,32 @@
 
 			new FForm( formWrap, {
 				onReview : function() {
-					classie.add( document.body, 'overview' ); // for demo purposes only
+					classie.add( document.body, 'overview' );
 				}
 			} );
 		})();
 
-		var message_box = {
-			open : function(message,fx){
-				$("#message_box .message").text(message);
-				$("#message_box").css("display","block");
-				$("#message_box button[role='ok']").unbind().click(fx);
-			},
-			close : function(){
-				$("#message_box").css("display","none");
-			}
-		}
 		;(function($) {
             var __utmz = (document.cookie.match('(^|; )__utmz=([^;]*)')||0)[2];
+            var c_src = "NA"; // campaign source
+            var c_med = "NA"; // campaign medium
+            var c_nme = "NA"; // campaign name
+            var c_trm = "NA"; // paid keywords
+            var c_con = "NA"; // campaign content
             function getParam(param){
                 return (__utmz.match(param+'=([^\|]*)')||0)[1];
             }
-            var c_src = (getParam('utmcsr')||"NA"); // campaign source
-            var c_med = (getParam('utmcmd')||"NA"); // campaign medium
-            var c_nme = (getParam('utmccn')||"NA"); // campaign name
-            var c_trm = (getParam('utmctr')||"NA"); // paid keywords
-            var c_con = (getParam('utmcct')||"NA"); // campaign content
+
+            console.log(__utmz);
+
+            if(__utmz) {
+                c_src = (getParam('utmcsr')||"NA"); // campaign source
+                c_med = (getParam('utmcmd')||"NA"); // campaign medium
+                c_nme = (getParam('utmccn')||"NA"); // campaign name
+                c_trm = (getParam('utmctr')||"NA"); // paid keywords
+                c_con = (getParam('utmcct')||"NA"); // campaign content
+            }
+                
             $('#myform [name="source"]').val(c_src);
             $('#myform [name="medium"]').val(c_med);
             $('#myform [name="c_name"]').val(c_nme);
@@ -135,20 +162,15 @@
                 $("#contact_container").css("opacity", "0");
                 $.ajax({
                     method: 'POST',
-                    url: 'http://sandbox.lat.com.es/index.php/contact/mail',
+                    url: 'http://lat.com.es/ci/contact/jen/',
                     data: data,
+                    error: function(jqXHR,textStatus,errorThrown){
+                        message_box.open("Server communication error. Please send your message to jen@rtb.cat. \n Thanks!",function(){window.location = "index.html"});
+                    },
                     success: function(response) {
                         var reply = response;
                         if (reply.status == "success") {
                             $("#contact_container").css("opacity", "1");
-
-                            // var fx = function(){
-                            // 	$("#message_box .overlay_box").css("display","none");
-                            // 	setTimeout(function(){
-                            // 		location = location.protocol+'//'+location.host;
-                            // 	},1000);
-                            // }
-                            // message_box.open("Message sent.",fx);
                             top.location = "thank-you.html";
                         }
                     }

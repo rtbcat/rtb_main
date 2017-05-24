@@ -2,13 +2,46 @@
 <html lang="en" class="no-js">
 
 <head>
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1213800238717879'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
+/></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Send Us a Message</title>
+    <link rel="amphtml" href="http://rtb.cat/m/contact-us.html" />
+    <meta name="description" content="contact rtb.cat" />
+    <meta name="keywords" content="contact, rtb, programmatic advertising" />
+    <meta name="author" content="rtb.cat" />
+    <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700">
-    <link rel="stylesheet" type="text/css" href="css/contact.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
 </head>
 
 <body>
@@ -35,29 +68,29 @@
                                 <span class="icon">
                                     <i class="fa fa-film" aria-hidden="true"></i>
                                 </span>
-                                <input id="q1b" name="type[]" type="checkbox" value="in-banner-video"/>
-                                <label for="q1b" class="for-checkbox">In-banner Video</label>
+                            <input id="q1b" name="type[]" type="checkbox" value="in-banner-video" />
+                            <label for="q1b" class="for-checkbox">In-banner Video</label>
                             </span>
                             <span title="Click to select or deselect.">
                                 <span class="icon">
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                 </span>
-                                <input id="q2b" name="type[]" type="checkbox" value="mobile-app-traffic"/>
-                                <label for="q2b" class="for-checkbox">Mobile App Traffic</label>
+                            <input id="q2b" name="type[]" type="checkbox" value="mobile-app-traffic" />
+                            <label for="q2b" class="for-checkbox">Mobile App Traffic</label>
                             </span>
                             <span title="Click to select or deselect.">
                                 <span class="icon">
                                     <i class="fa fa-window-maximize" aria-hidden="true"></i>
                                 </span>
-                                <input id="q3b" name="type[]" type="checkbox" value="web"/>
-                                <label for="q3b" class="for-checkbox">Web</label>
+                            <input id="q3b" name="type[]" type="checkbox" value="web" />
+                            <label for="q3b" class="for-checkbox">Web</label>
                             </span>
                             <span title="Click to select or deselect.">
                                 <span class="icon">
                                     <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                                 </span>
-                                <input id="q4b" name="type[]" type="checkbox" value="native"/>
-                                <label for="q4b" class="for-checkbox">Native</label>
+                            <input id="q4b" name="type[]" type="checkbox" value="native" />
+                            <label for="q4b" class="for-checkbox">Native</label>
                             </span>
                         </div>
                     </li>
@@ -65,36 +98,120 @@
                         <label class="fs-field-label fs-anim-upper" for="q4">How can we help you?</label>
                         <textarea class="fs-anim-lower" id="q4" name="message" placeholder="I would like to scale..." required></textarea>
                     </li>
-                </ol><!-- /fs-fields -->
+                </ol>
+                <!-- /fs-fields -->
                 <button class="fs-submit" type="submit">Send</button>
-            </form><!-- /fs-form -->
-        </div><!-- /fs-form-wrap -->
+            </form>
+            <!-- /fs-form -->
+        </div>
+        <!-- /fs-form-wrap -->
+    </div>
+    <!-- /container -->
 
-    </div><!-- /container -->
-    <script src="js/modernizr.custom.js"></script>
+    <!-- Modals -->
+    <div class="modal" id="message_box">
+        <div class="dialog">
+            <div class="dialog-head">Message</div>
+            <div class="dialog-body message">
+                Default message.
+            </div>
+            <div class="dialog-foot">
+                <button role="ok">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <script src="plugins/modernizr/modernizr.custom.js"></script>
     <script src="js/FForm.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
-        ;(function() {
+        var message_box = {
+            open: function(message, fx) {
+                $("#message_box .message").text(message);
+                $("#message_box").css("display", "block");
+                $("#message_box button[role='ok']").unbind().click(function() {
+                    if (fx) {
+                        fx()
+                    };
+                    message_box.close()
+                });
+            },
+            close: function() {
+                $("#message_box").css("display", "none");
+            }
+        }
+
+        function load_JS(filename) {
+            var script_tag = document.createElement('script');
+            script_tag.setAttribute("type", "text/javascript");
+            script_tag.setAttribute("src", filename);
+        }
+
+        // FForm display logic.
+        (function() {
             var formWrap = document.getElementById('fs-form-wrap');
+
+            [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function(el) {
+                new SelectFx(el, {
+                    stickyPlaceholder: false,
+                    onChange: function(val) {
+                        document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+                    }
+                });
+            });
+
             new FForm(formWrap, {
                 onReview: function() {
                     classie.add(document.body, 'overview');
                 }
             });
         })();
+
+        ;
         (function($) {
+            var __utmz = (document.cookie.match('(^|; )__utmz=([^;]*)') || 0)[2];
+            var c_src = "NA"; // campaign source
+            var c_med = "NA"; // campaign medium
+            var c_nme = "NA"; // campaign name
+            var c_trm = "NA"; // paid keywords
+            var c_con = "NA"; // campaign content
+            function getParam(param) {
+                return (__utmz.match(param + '=([^\|]*)') || 0)[1];
+            }
+
+            console.log(__utmz);
+
+            if (__utmz) {
+                c_src = (getParam('utmcsr') || "NA"); // campaign source
+                c_med = (getParam('utmcmd') || "NA"); // campaign medium
+                c_nme = (getParam('utmccn') || "NA"); // campaign name
+                c_trm = (getParam('utmctr') || "NA"); // paid keywords
+                c_con = (getParam('utmcct') || "NA"); // campaign content
+            }
+
+            $('#myform [name="source"]').val(c_src);
+            $('#myform [name="medium"]').val(c_med);
+            $('#myform [name="c_name"]').val(c_nme);
+            $('#myform [name="s_term"]').val(c_trm);
+            $('#myform [name="content"]').val(c_con);
+
             $("#myform").submit(function(e) {
                 e.preventDefault();
                 var data = $(this).serialize();
                 $("#contact_container").css("opacity", "0");
                 $.ajax({
-                    method: 'GET',
-                    url: 'http://sandbox.lat.com.es/index.php/contact',
+                    method: 'POST',
+                    url: 'http://lat.com.es/ci/contact/mike/',
                     data: data,
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        message_box.open("Server communication error. Please send your message to jen@rtb.cat. \n Thanks!", function() {
+                            window.location = "index.html"
+                        });
+                    },
                     success: function(response) {
                         var reply = response;
                         if (reply.status == "success") {
+                            $("#contact_container").css("opacity", "1");
                             top.location = "thank-you.html";
                         }
                     }
@@ -102,8 +219,21 @@
             });
         }(jQuery))
     </script>
-    
+
     <!-- Tracking Pixels -->
+    <!-- AMS UK Page View -->
+    <script type='text/javascript'>
+        var _pix = document.getElementById('_pix_id_0fb50c20-f94e-2613-4aea-3fedd9378a15');
+        if (!_pix) {
+            var protocol = '//';
+            var a = Math.random() * 1000000000000000000;
+            _pix = document.createElement('img');
+            _pix.style.display = 'none';
+            _pix.setAttribute('src', protocol + 'aax-eu.amazon-adsystem.com/s/iu3?d=forester-did&ex-fargs=%3Fid%3D0fb50c20-f94e-2613-4aea-3fedd9378a15%26type%3D55%26m%3D3&ex-fch=416613&ex-src=rtb.cat&ex-hargs=v%3D1.0%3Bc%3D2999062330702%3Bp%3D0FB50C20-F94E-2613-4AEA-3FEDD9378A15' + '&cb=' + a);
+            _pix.setAttribute('id', '_pix_id_0fb50c20-f94e-2613-4aea-3fedd9378a15');
+            document.body.appendChild(_pix);
+        }
+    </script><noscript> <img height='1' width='1' border='0' alt='' src='https://aax-eu.amazon-adsystem.com/s/iui3?d=forester-did&ex-fargs=%3Fid%3D0fb50c20-f94e-2613-4aea-3fedd9378a15%26type%3D55%26m%3D3&ex-fch=416613&ex-src=rtb.cat&ex-hargs=v%3D1.0%3Bc%3D2999062330702%3Bp%3D0FB50C20-F94E-2613-4AEA-3FEDD9378A15' /></noscript>
     <!-- AMS US Page View -->
     <script type='text/javascript'>
         var _pix = document.getElementById('_pix_id_a4c9002b-4968-26ab-6f27-9592b4c07b9c');
@@ -117,6 +247,9 @@
             document.body.appendChild(_pix);
         }
     </script><noscript> <img height='1' width='1' border='0' alt='' src='https://s.amazon-adsystem.com/iui3?d=forester-did&ex-fargs=%3Fid%3Da4c9002b-4968-26ab-6f27-9592b4c07b9c%26type%3D55%26m%3D1&ex-fch=416613&ex-src=rtb.cat&ex-hargs=v%3D1.0%3Bc%3D4491937840601%3Bp%3DA4C9002B-4968-26AB-6F27-9592B4C07B9C' /></noscript>
+    <!-- Segment Pixel - RTBcat rtg - DO NOT MODIFY -->
+    <script src="https://secure.adnxs.com/seg?add=5437611&t=1" type="text/javascript"></script>
+    <!-- End of Segment Pixel -->
     <!-- Page View Event Pixel -->
     <script>
         fbq('track', 'ViewContent', {
@@ -139,6 +272,8 @@
         ga('create', 'UA-90309796-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <!-- RevContent All Pages -->
+    <script src="http://trends.revcontent.com/seg.js.php?data-rc=rc-seg-pix" id="rBqblFj7CEPHHZD4gdlbM%2Fmtl2mVs7eo7YS3DuVeIIP9CXMevtmUbeiQv0ZWN0u%2B" class="rc-seg-pix"></script>
     <!-- Twitter universal website tag code -->
     <script>
         ! function(e, t, n, s, u, a) {
