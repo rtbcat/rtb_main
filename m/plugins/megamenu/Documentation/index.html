@@ -1,0 +1,626 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Mega Menu Reloaded</title>
+	
+	<meta name="description" content="Thank you for purchasing my work. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here (in the sidebar). Thanks so much!">
+	<meta name="author" content="Pixelworkshop">
+	<meta name="copyright" content="Pixelworkshop">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2012-01-27T11:02:25+01:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="http://alexgorbatchev.com.s3.amazonaws.com/pub/sh/3.0.83/scripts/"></script>
+	<script src="js/shBrushPhp.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.jpg);}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#changelog">Changelog</a></li>
+			<li><a href="#quick_menu_setup">Quick Menu Setup</a></li>
+			<li><a href="#html_structure">HTML Structure</a></li>
+			<li><a href="#inner_tabs">Inner Slider</a></li>
+			<li><a href="#menu_carousel">Menu Carousel</a></li>
+			<li><a href="#menu_scrollbars">Menu Scrollbars</a></li>
+			<li><a href="#css_files_and_structure">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#contact_form">Contact Form</a></li>
+			<li><a href="#sources_and_credits">Sources and Credits</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Pixelworkshop 2012<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+<h1>Mega Menu Reloaded</h1>
+<hr>
+<ul>
+<li>Created : 02/04/2012</li>
+<li>Last Update : 03/12/2013</li>
+<li>Current Version : 2.0</li>
+<li>By : Pixelworkshop</li>
+<li><a href="http://pixelworkshop.fr/">http://pixelworkshop.fr/</a></li>
+</ul>
+<p>Thank you for purchasing my work. If you have any questions that are beyond the scope of this help file, please feel free to email via my <a href="http://codecanyon.net/user/Pixelworkshop">user page contact form here</a> (in the sidebar). Thanks so much!</p>
+</section>
+
+<section id="changelog">
+<h3>Changelog</h3><hr class="notop">
+
+<h5>03/12/2013 - Version 2.0</h5>
+<ul>
+<li>Completely rewrote <strong>megamenu.js</strong> for better performance and mobile compatibility</li>
+<li>Updated the scripts in <strong>megamenu_plugins.js</strong></li>
+<li>Modified the CSS to make the menu more responsive</li> 
+</ul>
+
+<h5>06/23/2012 - Version 1.41</h5>
+<ul>
+<li>Fixed an issue occurring with drop downs opened on page load in <strong>megamenu.js</strong></li>
+</ul>
+
+<h5>05/19/2012 - Version 1.4</h5>
+<ul>
+<li>Fixed an issue with Internet Explorer in <strong>megamenu_plugins.js</strong></li>
+</ul>
+
+<h5>05/04/2012 - Version 1.3</h5>
+<ul>
+<li>Updated <strong>megamenu_plugins.js</strong> to enable multiple usage of the custom scrollbars</li>
+<li>Added the ability to use easing effects</li>
+</ul>
+
+<h5>04/17/2012 - Version 1.22</h5>
+<ul>
+<li>Added an option to hide the menu bar on page load</li>
+</ul>
+
+<h5>03/16/2012 - Version 1.21</h5>
+<ul>
+<li>Fixed a small bug that was blocking the drop downs on mobile devices</li>
+</ul>
+
+<h5>02/29/2012 - Version 1.2</h5>
+<ul>
+<li>Improved compatibility with mobile devices (modified the javascript and CSS files)</li>
+<li>Improved the megamenu script</li>
+</ul>
+
+<h5>02/24/2012 - Version 1.1</h5>
+<ul>
+<li>Fixed an issue caused by the custom scrollbars (modified megamenu.js)</li>
+</ul>
+
+<h5>02/15/2012 - Version 1.0</h5>
+<ul>
+<li>Initial Release</li>
+</ul>
+</section>
+<section id="quick_menu_setup">
+	<h3>Quick Menu Setup</h3><hr class="notop">
+<p>To start integrating this menu, there are 4 necessary files :</p>
+
+<ul>
+<li>css/megamenu.css</li>
+<li>js/jquery.js (or your own copy of jQuery)</li>
+<li>js/megamenu_plugins.js (already minified)</li>
+<li>js/megamenu.js (or js/megamenu.min.js - the minified version)</li>
+</ul>
+
+<p>If you choose to support IE6 and IE7, there's an additional file that must be included, <strong>megamenu_ie.css</strong></p>
+
+<p>In your HTML file, just make sure that you link properly to each of the above files.</p>
+
+<p>In the folder <strong>img</strong>, there are a few images that should be included too, just take the ones you need (icons, elements, etc.)</p>
+
+<p>Now it&#39;s time to add the HTML : in the package, there are 12 HTML files all showing a possible use / variant of the menu. All of them use exactly the same CSS, most of the HTML markup (except a few classes for the menu variants) and the difference is the small javascript code in the head (enabling the various effects).</p>
+
+<p>We'll distinguish 3 main variants : the fixed menu, the regular menu (both covering the page content) and the "pushing" menu (pushing down the following page content).</p>
+
+<p>The fixed menu is contained in :</p>
+
+<pre class="brush: html">
+&lt;div class="megamenu_wrapper megamenu_fixed"&gt;
+
+    &lt;ul class="megamenu"&gt;
+
+    MEGA MENU CONTENT
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+
+<p>The regular menu is contained in :</p>
+
+<pre class="brush: html">
+&lt;div class="megamenu_wrapper megamenu_container"&gt;
+
+    &lt;ul class="megamenu"&gt;
+
+    MEGA MENU CONTENT
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+
+<p>The "pushing" menu is contained in :</p>
+
+<pre class="brush: html">
+&lt;div class="megamenu_wrapper megamenu_container megamenu_push"&gt;
+
+    &lt;ul class="megamenu"&gt;
+
+    MEGA MENU CONTENT
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+
+<p>Just by changing a few classes you'll be able to switch between 3 versions of the menu. All manue variants require the common class <strong>megamenu_wrapper</strong>.</p>
+<p>Each HTML page has a few lines of script in the head. You can use it to set some options and the comments will help you to modify them.</p>
+<p>See the sections below for more informations about the different effects that can be applied to the drop downs.</p>
+<pre class="brush: javascript">
+$(document).ready(function($){
+	$('.megamenu').megaMenuReloaded({
+        menu_speed_show : 300, // Time (in milliseconds) to show a drop down
+        menu_speed_hide : 200, // Time (in milliseconds) to hide a drop down
+        menu_speed_delay : 200, // Time (in milliseconds) before showing a drop down
+        menu_effect : 'open_close_slide', // Drop down effect, choose between 'hover_fade', 'hover_slide', 'click_fade', 'click_slide', 'open_close_fade', 'open_close_slide'
+        menu_easing : 'jswing', // Easing Effect : 'easeInQuad', 'easeInElastic', etc.
+        menu_click_outside : 1, // Clicks outside the drop down close it (1 = true, 0 = false)
+        menu_show_onload : 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
+        menubar_trigger : 1, // Show the menu trigger (button to show / hide the menu bar), only for the fixed version of the menu (1 = show, 0 = hide)
+        menubar_hide : 0, // Hides the menu bar on load (1 = hide, 0 = show)
+        menu_responsive : 1, // Enables mobile-specific script
+        menu_carousel : 0, // Enable / disable carousel
+        menu_carousel_groups : 0 // Number of groups of elements in the carousel
+	});
+	$('#megamenu_form').ajaxForm({target:'#alert'}); 
+});
+</pre>
+
+
+</section>
+
+
+<section id="html_structure">
+<h3>HTML Structure</h3><hr class="notop">
+<p>In the package, you&#39;ll find 12 coded HTML pages that contain (almost) the same markup, it shows the different possibilities but you can of course include other type of content.</p>
+<p>All your content can be organized into columns (up to 12), but the basic structure for each drop down is the same.</p>
+<p>Let&#39;s start with a couple of containers that will hold our menu :</p>
+<pre class="brush: html">
+&lt;div class=&quot;megamenu_wrapper megamenu_container&quot;&gt;
+
+    &lt;ul class=&quot;megamenu&quot;&gt;
+
+    MEGA MENU CONTENT
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;</pre>
+<p>Our menu items associated with their respective drop downs will be hold within the UL element. Let&#39;s insert a basic menu item with the drop down container :</p>
+<pre class="brush: html">
+&lt;div class=&quot;megamenu_wrapper megamenu_container&quot;&gt;
+
+    &lt;ul class=&quot;megamenu&quot;&gt;
+
+        &lt;li&gt;&lt;span class=&quot;drop&quot;&gt;Menu Item&lt;/span&gt;
+
+            &lt;div class=&quot;megamenu_fullwidth&quot;&gt;
+
+            DROP DOWN CONTENT
+
+            &lt;/div&gt;
+
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+<p>The above structure will be the base to create a menu item with a drop down. Now all the content of the drop down will be placed within the DIV <strong>megamenu_fullwidth</strong>. As you can see in the HTML markup, there&#39;s a system of columns and you have 12 sizes available. To use them, the code is :</p>
+<pre class="brush: html">
+&lt;div class=&quot;col_12&quot;&gt;
+
+    HERE COMES YOUR 930 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_11&quot;&gt;
+
+    HERE COMES YOUR 850 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_10&quot;&gt;
+
+    HERE COMES YOUR 770 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_9&quot;&gt;
+
+    HERE COMES YOUR 690 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_8&quot;&gt;
+
+    HERE COMES YOUR 610 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_7&quot;&gt;
+
+    HERE COMES YOUR 530 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_6&quot;&gt;
+
+    HERE COMES YOUR 450 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_5&quot;&gt;
+
+    HERE COMES YOUR 370 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_4&quot;&gt;
+
+    HERE COMES YOUR 290 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_3&quot;&gt;
+
+    HERE COMES YOUR 210 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_2&quot;&gt;
+
+    HERE COMES YOUR 130 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+<pre class="brush: html">
+&lt;div class=&quot;col_1&quot;&gt;
+
+    HERE COMES YOUR 50 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+</section>
+
+
+
+<section id="inner_tabs">
+<h3>Inner Tabs</h3><hr class="notop">
+<p>You'll find in all HTML files examples of tabs when you open for example the first drop down. You can see that the content is organised into panels allowing you to add as much content as you need. It requires some additional markup but the columns grid explained above remains the same here. It means that each panel will contain a structure similar to a regular drop down. Let's take back our basic drop down structure :</p>
+<pre class="brush: html">
+&lt;div class=&quot;megamenu_wrapper megamenu_container&quot;&gt;
+
+    &lt;ul class=&quot;megamenu&quot;&gt;
+
+        &lt;li&gt;&lt;span class=&quot;drop&quot;&gt;Menu Item&lt;/span&gt;
+
+            &lt;div class=&quot;megamenu_fullwidth&quot;&gt;
+
+            DROP DOWN CONTENT
+
+            &lt;/div&gt;
+
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+<p>And let's add 2 panels as well as the top navigation to switch between each panel :</p>
+<pre class="brush: html">
+&lt;div class=&quot;megamenu_wrapper megamenu_container&quot;&gt;
+
+    &lt;ul class=&quot;megamenu&quot;&gt;
+
+        &lt;li&gt;&lt;span class=&quot;drop&quot;&gt;Menu Item&lt;/span&gt;
+
+            &lt;div class=&quot;megamenu_fullwidth&quot;&gt;
+
+                &lt;div class=&quot;megamenu_tabs&quot;&gt;
+                
+                    &lt;ul class="megamenu_tabs_nav"&gt;
+                        &lt;li&gt;&lt;a href="#section1" class="current"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#section2"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+        
+                    &lt;div class="clear"&gt;&lt;/div&gt;
+
+                    &lt;div class=&quot;megamenu_tabs_panels&quot;&gt;
+
+                        &lt;div id="section1"&gt;
+                        
+                        PANEL 1
+                        
+                        &lt;/div&gt;
+
+                        &lt;div id="section2"&gt;
+                        
+                        PANEL 2
+                        
+                        &lt;/div&gt;
+                    
+                    &lt;/div&gt;
+                
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+<p>In each section, you can use regular columns as shown above, it works like any other drop down and should fill the whole width every time.</p>
+<p>Since the version 2.0 of this menu, it's no longer necessary to set up the tabs in the scripts.</p>
+<p>Now it's all ready for your own content, the HTML files show a couple of usages under "PANELS" and "MISCELLANEOUS".</p>
+</section>
+
+
+
+<section id="menu_carousel">
+<h3>Menu Carousel</h3><hr class="notop">
+<p>As we saw earlier, the basic structure of the menu is an unordered list and each element can contain a drop down. Now there's an additional option allowing you to add as many menu items as you want, in some HTML pages you'll see that the menu bar has arrows on each side. On mouse click, it scrolls to the next set of menu items.</p>
+<p>To enable this option, all you have to do is first to add your menu items, and you'll see that they don't fit naturally into the menu bar if you add many of them. Once done, you'll need to enable the carousel in the script placed in the head part of the HTML files :</p>
+<pre class="brush: javascript">
+menu_carousel : 1, // Enable / disable carousel
+menu_carousel_groups : 2 // Number of groups of elements in the carousel
+</pre>
+<p>The first option requires the value '1' to enable the carousel and the second option is the number of groups (or 'slides') that will contains your menu elements. For example using the value '2' will split the menu elements into 2 groups that you can slide with the left and right arrows.</p>
+</section>
+
+
+
+<section id="menu_scrollbars">
+<h3>Menu Scrollbars</h3><hr class="notop">
+<p>You can use custom scrollbars within the drop downs that can help you to keep all the content visible / accessible in the case that a drop down is too tall. For that, let's take a regular drop down :</p>
+<pre class="brush: html">
+&lt;div class=&quot;megamenu_container&quot;&gt;
+
+    &lt;ul class=&quot;megamenu&quot;&gt;
+
+        &lt;li&gt;&lt;span class=&quot;drop&quot;&gt;Menu Item&lt;/span&gt;
+
+            &lt;div class=&quot;megamenu_fullwidth&quot;&gt;
+
+            DROP DOWN CONTENT
+
+            &lt;/div&gt;
+
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+<p>And let's add a few containers / classes to enable the scrollbars :</p>
+<pre class="brush: html">
+&lt;div class=&quot;megamenu_container&quot;&gt;
+
+    &lt;ul class=&quot;megamenu&quot;&gt;
+
+        &lt;li&gt;&lt;span class=&quot;drop&quot;&gt;Menu Item&lt;/span&gt;
+
+            &lt;div class=&quot;megamenu_fullwidth megamenu_scrollbars&quot;&gt;
+            
+                &lt;div class="megamenu_scroller_container"&gt;
+                
+                    &lt;div class="megamenu_scroll_area"&gt;
+
+                    DROP DOWN CONTENT
+
+                    &lt;/div&gt;
+        
+                &lt;/li&gt;
+
+            &lt;/div&gt;
+
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</pre>
+<p>The javascript will take care of the scrollbars and older browsers will show regular scrollbars. The same happens if javascript is disabled, all the content remains accessible thanks to the regular scrollbars, and if you use the tabs, their content won't be visible without javascript enabled.</p>
+</section>
+
+
+
+<section id="css_files_and_structure">
+<h3>CSS Files and Structure</h3><hr class="notop">
+<p>In the <strong>css</strong>&nbsp;folder, you&#39;ll find 2 files :</p>
+
+<ul>
+<li><strong>megamenu.css</strong> : contains all required (and optional) styling for the mega menu.</li>
+<li><strong>megamenu_ie.css</strong> : this file is for Internet Explorer 6 and 7 only (if you want to support them) and fixes some layout issues.</li>
+</ul>
+
+<p>So the most important CSS file is <strong>megamenu.css</strong> and it&#39;s divided into 7 parts, modifying this file may affect the functionnality of the menu so it&#39;s better to make a copy before doing customizations :</p>
+
+<ul>
+<li><strong>00 PAGE STYLING (REMOVABLE)</strong> : this code styles the page, it's used for demonstration purposes only and can be safely removed.</li>
+<li><strong>01 MENU BAR</strong> : It&#39;s the code for the menu container and menu items.</li>
+<li><strong>02 DROP DOWN CONTAINER</strong> : All drop downs use a common class (<strong>megamenu_fullwidth</strong>) so modifying this class will affect all drop downs, this part is also required to show the drop down on mouse hover (if javascript is disabled).</li>
+<li><strong>03 DROP DOWN SCROLLBARS</strong> : Scrollbars used within the drop downs.</li>
+<li><strong>04 COLUMNS GRID</strong> : Here are the containers used to organize your content into columns (up to 12).</li>
+<li><strong>05 CONTENT & TYPOGRAPHY</strong> : This is the largest part of the CSS, changing or removing styling into this section won&#39;t affect the drop down core functionnality, I&#39;ve put together a lot of typography examples such as lists, images, headings, etc.</li>
+<li><strong>06 DROP DOWN TABS</strong> : It's the code used to style the tabs within the drop downs.</li>
+<li><strong>07 CONTACT FORM</strong> : This part styles the contact form and all elements such as feedback messages appearing when using the form.</li>
+<li><strong>08 MOBILE DEVICES</strong> : All the markup that make the menu mobile-friendly, responsive.</li>
+</ul>
+</section>
+
+
+
+<section id="javascript">
+<h3>JavaScript</h3><hr class="notop">
+<p>This menu imports four Javascript files.</p>
+<ol>
+<li>jquery.js</li>
+<li>jquery.easing.js</li>
+<li>megamenu_plugins.js</li>
+<li>megamenu.js</li>
+</ol>
+<p><strong>jquery.js</strong> is the necessary framework, there are chances that you're already using it so there's no need to use it twice.</p>
+<p><strong>jquery.easing.js</strong> is a set of easing effects.</p>
+<p><strong>megamenu.js</strong> enables the drop down functionnality working on mouse click or mouse hover. Just link to this file after the jQuery framework and set the options situated in the head of the HTML files.</p>
+<p><strong>megamenu_plugins.js</strong> contains the scripts used for :</p>
+<ul>
+<li>The Nanoscroller (scrollbars within the drop downs)</li>
+<li>HoverIntent</li>
+<li>Hammer.JS (for better mobile compatibility)</li>
+<li>The contact form</li>
+</ul>
+<p>Also keep in mind that the contact form works with <strong>sendmail.php</strong></p>
+<p>Using this menu doesn't require any modification in the javascript files but in the head part of each HTML file, you'll find a small script. It lets you choose a different effect applied to the menu and some other options. Let's take an example :</p>
+<pre class="brush: javascript">
+$(document).ready(function($){
+	$('.megamenu').megaMenuReloaded({
+        menu_speed_show : 300, // Time (in milliseconds) to show a drop down
+        menu_speed_hide : 200, // Time (in milliseconds) to hide a drop down
+        menu_speed_delay : 200, // Time (in milliseconds) before showing a drop down
+        menu_effect : 'open_close_slide', // Drop down effect, choose between 'hover_fade', 'hover_slide', 'click_fade', 'click_slide', 'open_close_fade', 'open_close_slide'
+        menu_easing : 'jswing', // Easing Effect : 'easeInQuad', 'easeInElastic', etc.
+        menu_click_outside : 1, // Clicks outside the drop down close it (1 = true, 0 = false)
+        menu_show_onload : 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
+        menubar_trigger : 1, // Show the menu trigger (button to show / hide the menu bar), only for the fixed version of the menu (1 = show, 0 = hide)
+        menubar_hide : 0, // Hides the menu bar on load (1 = hide, 0 = show)
+        menu_responsive : 1, // Enables mobile-specific script
+        menu_carousel : 0, // Enable / disable carousel
+        menu_carousel_groups : 0 // Number of groups of elements in the carousel
+	});
+	$('#megamenu_form').ajaxForm({target:'#alert'}); 
+});
+</pre>
+<p>The <strong>menu_effect</strong> lets you choose between 6 different options :</p>
+<ul>
+<li><strong>hover_fade</strong> : the drop downs fade in on mouse hover, fade out when the mouse is outside the menu.</li>
+<li><strong>hover_slide</strong> : the drop downs slide down on mouse hover, slide up when the mouse is out.</li>
+<li><strong>click_fade</strong> : the drop downs fade in on mouse click, fade out when the mouse is outside the menu.</li>
+<li><strong>click_slide</strong> : the drop downs slide down on mouse click, slide up when the mouse is out.</li>
+<li><strong>open_close_fade</strong> : the drop downs fade on mouse click and remain visible until the user clicks on the same menu item to close it (fade out).</li>
+<li><strong>open_close_slide</strong> : the drop downs slides down on mouse click and remain visible until the user clicks on the same menu item to close it (slide up).</li>
+</ul>
+<p>There are a few other values that you may want to adjust in the code above, let's see them in details :</p>
+<ul>
+<li><strong>menu_speed_show</strong> : duration to show a drop down (in milliseconds).</li>
+<li><strong>menu_speed_hide</strong> : duration to hide a drop down (in milliseconds).</li>
+<li><strong>menu_speed_delay</strong> : delay before showing a drop down (in milliseconds).</li>
+<li><strong>menu_easing</strong> : easing effect to show or hide the drop downs (see the <a href="http://gsgd.co.uk/sandbox/jquery/easing/">official plugin page</a> for more examples).</li>
+<li><strong>menu_click_outside</strong> : if clicks outside the drop downs close them.</li>
+<li><strong>menu_show_onload</strong> : this option works for the effects 'open_close_fade' and 'open_close_slide', it allows you to show any drop down on page load, for example if you replace 0 by 2, the second drop down will be visible on page load and will remain until the user clicks on the menu.</li>
+<li><strong>menubar_trigger</strong> : shows a button to toggle the menu bar.</li>
+<li><strong>menubar_hide</strong> : hides the menu bar when the page loads if set to "1".</li>
+<li><strong>menu_responsive</strong> : when set to '1', it enables a part of the script necessary for better mobile compatibility.</li>
+<li><strong>menu_carousel</strong> : can be used to add more items in a full menu bar (so it makes the menu 'scrollable').</li>
+<li><strong>menu_carousel_groups</strong> : this option is used along with the previous one to define how many groups of items the menu bar will contain.</li>
+</ul>
+</section>
+
+
+
+<section id="contact_form">
+<h3>Contact Form</h3><hr class="notop">
+<p>Using the contact form requires a single change : you&#39;ll need to add your email address. For that, open the file <strong>sendmail.php</strong> and find the line :</p>
+<pre class="brush: php">
+$sendto = abc@xyz.com;</pre>
+<p>Just put your email address there, it should be at the line 59.</p>
+<p>If you want to translate the feedback messages appearing when sending an email, just scroll down this same file and you'll find sentences like "Please enter your name" or "Please enter a valid email address". You can of course change them there.</p>
+</section>
+
+
+
+<section id="sources_and_credits">
+<h3>Sources and Credits</h3><hr class="notop">
+<p>I&#39;ve used the following images, icons or other files as listed.</p>
+<h4>CSS</h4>
+<ul>
+<li><a href="http://960.gs/">960Grid</a></li>
+</ul>
+<h4>Javascript</h4>
+<ul>
+<li><a href="http://jquery.com/">jQuery</a></li>
+<li><a href="http://css-tricks.com/organic-tabs/">Organic Tabs</a></li>
+<li><a href="http://code.google.com/p/simple-carousel/">Simple Carousel</a></li>
+<li><a href="http://eightmedia.github.com/hammer.js/">HammerJS</a></li>
+<li><a href="http://jamesflorentino.com/jquery.nanoscroller/">NanoScroller</a></li>
+<li><a href="http://midmodesign.com/news/coding/jquery-ajax-contact-form-with-honeypot/">jQuery AJAX Contact Form</a></li>
+</ul>
+
+<hr />
+<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I&#39;d be glad to help you if you have any questions relating to this theme. No guarantees, but I&#39;ll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the &quot;Item Discussion&quot; section.</p>
+<p><strong>Pixelworkshop</strong></p>
+</section>
+
+	</div>
+</body>
+</html>
