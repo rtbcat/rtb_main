@@ -275,8 +275,18 @@
 			this._updateFieldNumber();
 
 			var nextField = this.fields[ this.current ];
+
 			classie.add( nextField, 'fs-current' );
 			classie.add( nextField, 'fs-show' );
+
+			// Auto-focus email and textarea.
+			var emailInput = nextField.querySelector('input');
+			var messageInput = nextField.querySelector('textarea');
+			if(emailInput) {
+				if(emailInput.getAttribute('name') == 'email') emailInput.focus();
+			} else if(messageInput) {
+				messageInput.focus();
+			}
 		}
 
 		// after animation ends remove added classes from fields
