@@ -23,6 +23,11 @@
                 <h1>Contact Us</h1>
             </div>
             <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+                <input type="hidden" value="NA" name="source" />
+                <input type="hidden" value="NA" name="medium" />
+                <input type="hidden" value="NA" name="c_name" />
+                <input type="hidden" value="NA" name="s_term" />
+                <input type="hidden" value="NA" name="content" />
                 <ol class="fs-fields">
                     <li>
                         <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
@@ -150,11 +155,10 @@
             var c_nme = "NA"; // campaign name
             var c_trm = "NA"; // paid keywords
             var c_con = "NA"; // campaign content
+
             function getParam(param){
                 return (__utmz.match(param+'=([^\|]*)')||0)[1];
             }
-
-            console.log(__utmz);
 
             if(__utmz) {
                 c_src = (getParam('utmcsr')||"NA"); // campaign source
@@ -162,6 +166,9 @@
                 c_nme = (getParam('utmccn')||"NA"); // campaign name
                 c_trm = (getParam('utmctr')||"NA"); // paid keywords
                 c_con = (getParam('utmcct')||"NA"); // campaign content
+                console.log("__utmz is set");
+            } else {
+                console.log("__utmz is not set");
             }
                 
             $('#myform [name="source"]').val(c_src);
