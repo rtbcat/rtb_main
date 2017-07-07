@@ -1,6 +1,6 @@
 ;(function($){
     var config = {
-        url : "http://hooks.rtb.cat:8000/info/inventory",
+        url : "http://35.177.235.179:8000/info/inventory",
         loading: false,
         last_data: null,
         sellers: [
