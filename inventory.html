@@ -744,11 +744,11 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
             <section id="main_content" class="grid-item">
                 <div class="table-control section-header clearfix">
                     <div class="filter-result-widget left">
-                        <select class="sorting">
+                        <select class="sorting" style="visibility:hidden">
                             <option value="seller_member_name">Seller</option>
                             <option value="filtered_imps" selected="true">Imps</option>
                         </select>
-                        <select class="ordering">
+                        <select class="ordering" style="visibility:hidden">
                             <option value="asc">Asc</option>
                             <option value="des" selected="true">Desc</option>
                         </select>
@@ -771,13 +771,13 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
                             <tr>
                                 <th data-sort="seller_member_name" class="sort" title="Click to sort">
                                     Seller
-                                    <div class="sort-direction">
+                                    <div class="sort-direction" style="opacity: initial">
                                         <span class="glyphicon"></span>
                                     </div>
                                 </th>
                                 <th data-sort="filtered_imps" class="sort" title="Click to sort">
                                     Avg. Daily Impressions
-                                    <div class="sort-direction">
+                                    <div class="sort-direction" style="opacity: initial">
                                         <span class="glyphicon"></span>
                                     </div>
                                 </th>
@@ -788,7 +788,7 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
                                 <td colspan="2">Fetching...</td>
                             </tr>
                             <!--
-                                Ajax table will fill this section.
+                                Ajax table will fill this sectclass="sorting"ion.
                             -->
                         </tbody>
                     </table>
