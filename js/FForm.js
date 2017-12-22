@@ -118,7 +118,7 @@
 		// continue button (jump to next field)
 		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.ctrls } );
 		this._showCtrl( this.ctrlContinue );
-		var label_text = ['name','email','type','message'];
+		var label_text = ['name','email','phone','type','message'];
 		// navigation dots
 		if( this.options.ctrlNavDots ) {
 			this.ctrlNav = createElement( 'nav', { cName : 'fs-nav-dots', appendTo : this.ctrls } );
