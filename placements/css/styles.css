@@ -100,11 +100,6 @@ footer {
     background-color: #ddd;
 }
 
-.flex.wrapper{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
 
 @media screen and (max-width: 720px){
     main aside .ad-300x250 {
@@ -120,9 +115,9 @@ footer {
         width: 100%;
         display: block;
         float: none;
-        order: 1;
+        order: 2;
     }
-    div.wrapper{
+    main{
         display: flex;
         flex-direction: column;
     }
