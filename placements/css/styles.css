@@ -100,20 +100,30 @@ footer {
     background-color: #ddd;
 }
 
+.flex.wrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 @media screen and (max-width: 720px){
     main aside .ad-300x250 {
         width: 100%;
-        max-width: 300px;
         height: auto;
     }
     main aside {
         display: block;
         float: none;
+        order: 1;
     }
-
     main article {
         width: 100%;
         display: block;
         float: none;
+        order: 1;
+    }
+    div.wrapper{
+        display: flex;
+        flex-direction: column;
     }
 }
