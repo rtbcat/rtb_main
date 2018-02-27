@@ -106,8 +106,8 @@ footer {
 
 @media screen and (max-width: 720px){
     main aside .ad-300x250 {
-        width: 100%;
-        height: auto;
+        width: 300px;
+        height: 250px;
     }
     main aside {
         display: block;
