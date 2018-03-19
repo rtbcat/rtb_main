@@ -1,6 +1,6 @@
 ;(function($){
     var config = {
-        url : "http://35.177.235.179:8000/info/inventory",
+        url: "http://52.56.46.93:8000/info/inventory",
         loading: false,
         last_data: null,
         sellers: [
@@ -24,7 +24,7 @@
         $sort_box: $('.table-control select.sorting'),
         $order_box: $('.table-control select.ordering'),
         $prev_btn: $('.table-control .btn-prev'),
-        $next_btn: $('.table-control .btn-next'),
+        $next_btn: $('.table-control .btn-git log --follow -pnext'),
         $page_tot: $('.table-control span.page-total'),
         $page_num: $('.table-control select.page-number')
     };
