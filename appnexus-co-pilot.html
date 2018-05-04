@@ -763,17 +763,8 @@
                     <div class="appnexus_fullwidth">                
                         <div class="col-row">
                             <div class="col-33">
-                                <video width="300" height="250" controls="controls" poster="http://placehold.it/300x250/">
-                                   <source src="video/#.ogv" type='video/ogg; codecs="theora, vorbis"'>
-                                   <source src="video/#.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                                   <source src="video/#.webm" type='video/webm; codecs="vp8, vorbis"'>
-                                   Тег video не поддерживается вашим браузером. 
-                                   <a href="video/#.mp4">Скачайте видео</a>.
-                                </video>
-                            </div>
-                            <div class="col-33">
-                                <div id="rmpPlayer"></div>
-                                <a href="tel:+16462572570" id="click">CALL US NOW</a>
+                                <div id="rmpPlayer1"></div>
+                                <a href="tel:+16462572570" id="click1" class="center">CALL US NOW</a>
                                 <script>
                                     var settings = {
                                          licenseKey: 'Z3FmdGZybXpuZkAxNTE3OTEw',
@@ -787,6 +778,34 @@
                                          adTagUrl: 'https://vastengine.rtb.cat/?613352495',
                                          // waterfalling if needs be
                                          adTagWaterfall: [
+                                           'https://vastengine.rtb.cat/?613352495'
+                                         ],
+                                         adOutStream: true,
+                                         poster: '/images/rtb.jpg',
+                                         // end of video poster if different from poster
+                                         endOfVideoPoster: '/images/rtb.jpg'
+                                    };
+                                    var elementID = 'rmpPlayer1';
+                                    var rmp = new RadiantMP(elementID);
+                                    rmp.init(settings);
+                                </script>
+                            </div>
+                            <div class="col-33">
+                                <div id="rmpPlayer2"></div>
+                                <a href="tel:+16462572570" id="click2" class="center">CALL US NOW</a>
+                                <script>
+                                    var settings = {
+                                         licenseKey: 'Z3FmdGZybXpuZkAxNTE3OTEw',
+                                         width: 300,
+                                         height: 250,
+                                         // autoplay if needs be
+                                         autoplay: true,  
+                                         // hide controls if needs be
+                                         // hideControls: true,
+                                         ads: true,
+                                         adTagUrl: 'https://vastengine.rtb.cat/?98047072',
+                                         // waterfalling if needs be
+                                         adTagWaterfall: [
                                            'https://vastengine.rtb.cat/?98047072'
                                          ],
                                          adOutStream: true,
@@ -794,7 +813,7 @@
                                          // end of video poster if different from poster
                                          endOfVideoPoster: '/images/rtb.jpg'
                                     };
-                                    var elementID = 'rmpPlayer';
+                                    var elementID = 'rmpPlayer2';
                                     var rmp = new RadiantMP(elementID);
                                     rmp.init(settings);
                                 </script>
@@ -802,7 +821,7 @@
                             <div class="col-33">
                                 <div class="video_img">
                                     <!-- AdGlare: ndr HTML 5 300x250 zone -->
-                                    <span id=zone789233105></span><script async src='//vastengine.rtb.cat/?98047072'></script>
+                                    <span id=zone789233105></span><script async src='//vastengine.rtb.cat/?789233105'></script>
                                 </div>
                             </div>
                         </div>
