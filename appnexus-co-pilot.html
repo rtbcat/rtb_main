@@ -1046,6 +1046,9 @@
 
                         <h2 class="left max-900">Want to build on your success?<br>To start building on your TV success, contact us at:</h2>
                         <form id="appnexus_page_form" class="appnexus_page_form_me" method="post" action="">
+
+                            <p class="left rez_appnexus_page_form"></p>
+
                             <input type="text" class="form_input_0 name" name="firstname" minlength="1" placeholder="First Name *" pattern="^[_a-zA-Zа-яА-ЯёЁ ]+$" required>
 
                             <input type="text" class="form_input_0 lastname" name="lastname" minlength="1" placeholder="Last Name *" pattern="^[_a-zA-Zа-яА-ЯёЁ ]+$" required>
@@ -1068,7 +1071,31 @@
                         <p class="left max-900">
                             * - required fields.
                         </p>
+                        
 
+                        <script>
+                        $(document).ready(function(){ 
+
+
+                            $("#appnexus_page_form").submit(function() {
+
+                                var th = $(this);
+                                $.ajax({
+                                    type: "POST",
+                                    url: "appnexus-co-pilot_mail.php", 
+                                    data: th.serialize()
+                                }).done(function() {
+                                    
+                                    th.trigger("reset");
+                                    $(".rez_appnexus_page_form").text("Thank you, we will contact you soon.");
+                                    
+                                });
+                                return false;
+                            });
+
+
+                        });
+                        </script>
 
 
                     </div>
