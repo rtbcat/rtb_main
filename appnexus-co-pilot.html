@@ -797,7 +797,7 @@
                             outline: -webkit-focus-ring-color auto 0px;
                         }
 
-                        .appnexus_page_form_me input.form_input_0:focus {
+                        .appnexus_page_form_me input.form_input_0:focus, :focus {
                             outline-offset: 0px;
                             outline: -webkit-focus-ring-color auto 0px;
                         }
@@ -1092,11 +1092,11 @@
 
 
                             $("#appnexus_page_form").submit(function() {
-
+                                //  http://rtb.cat/appnexus-co-pilot_mail.php
                                 var th = $(this);
                                 $.ajax({
                                     type: "POST",
-                                    url: "http://rtb.cat/appnexus-co-pilot_mail.php", 
+                                    url: "appnexus-co-pilot_mail.php", 
                                     data: th.serialize()
                                 }).done(function() {
                                     
