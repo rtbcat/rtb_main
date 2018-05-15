@@ -1,4 +1,5 @@
 <?php
+echo "EEE";
 $my_url= $_SERVER['HTTP_HOST'];
 $to = "fire913n@gmail.com";
 $subject = $my_url . " - start building on your TV.";
