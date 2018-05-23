@@ -80,7 +80,34 @@
             </article>
             <aside>
                 <div class="ad ad-300x250">
-                   <iframe src="https://vplayer.rtb.cat/flawless-call-full.html" frameborder='0' scrolling='no' width='300' height='250' >
+                   <!-- <iframe src="https://vplayer.rtb.cat/flawless-call-full.html" frameborder='0' scrolling='no' width='300' height='250' > -->
+
+
+                    <div id="rmpPlayer1"></div>
+                    <script>
+                        var settings = {
+                             licenseKey: 'Z3FmdGZybXpuZkAxNTE3OTEw',
+                             width: 300,
+                             height: 250,
+                             // autoplay if needs be
+                             autoplay: true,  
+                             // hide controls if needs be
+                             // hideControls: true,
+                             ads: true,
+                             adTagUrl: 'https://vastengine.rtb.cat/?613352495',
+                             // waterfalling if needs be
+                             adTagWaterfall: [
+                               'https://vastengine.rtb.cat/?613352495'
+                             ],
+                             adOutStream: true,
+                             poster: '/images/rtb.jpg',
+                             // end of video poster if different from poster
+                             endOfVideoPoster: '/images/rtb.jpg'
+                        };
+                        var elementID = 'rmpPlayer1';
+                        var rmp = new RadiantMP(elementID);
+                        rmp.init(settings);
+                    </script>
                 </div>
                 <div class="ad ad-300x250">
                     <div class="center-middle">Ad size: 300 x 250</div>
