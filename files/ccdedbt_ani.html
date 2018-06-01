@@ -13,7 +13,7 @@
 		width           : 300,
 		height          : 250,
 		HD              : true,
-		mode			: 1,
+		mode			: 0,
 		autoPlay        : true,
 		loop            : true,
 		vastRetry 	    : 3,
@@ -47,5 +47,12 @@
         (new Image()).src = "https://yourdomain.com/pixel.png?sub1=macro1&sub2=macro2";
     }
 </script>
+<style>
+	#aniplayer canvas {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+	}
+</style>
 </body> 
 </html>
