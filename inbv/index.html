@@ -5,6 +5,11 @@
     <title>click-to-call: dog mat demo</title>
     <link rel="stylesheet" type="text/css" href="../placements/css/styles.css">
     <meta name="viewport" content="width=device-widh, initial-scale=1, viewport-fit=cover">
+<script type="text/javascript">
+    var gifSource = $('#gif_animata').attr('src'); //get the source in the var
+    $('#gif_animata').attr('src', ""); //erase the source     
+    $('#gif_animata').attr('src', gifSource+"?"+new Date().getTime()); //add the date to the source of the image... :-) 
+</script>
 </head>
 <body>
     <div class="wrapper">
@@ -62,7 +67,7 @@
             </article>
             <aside>
                 <div class="ad ad-300x250">
-                    <a href="https://tuky.net/ads/rdrctc.html"><img src="https://tuky.net/ads/Ad-4Gif.gif"></a>
+                    <a href="https://tuky.net/ads/rdrctc.html"><img id="gif_animata" src="https://tuky.net/ads/Ad-4Gif.gif"></a>
                 </div>
                 <div class="ad ad-300x250">
                     <div class="center-middle">Ad size: 300 x 250</div>
