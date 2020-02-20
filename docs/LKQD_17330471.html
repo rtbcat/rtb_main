@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : LKQD</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="dsp.rtb.cat_15638054.html">dsp.rtb.cat</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Video_16912274.html">Video</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : LKQD
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Jen Brannstrom</span>, last modified on Sep 05, 2017
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>When using LKQD ad server please use the following config.</p><p>if you want to buy from<span> </span><strong>Google Ad Exchange</strong></p><ol><li>all calls must be HTTPS !!<br/>This means every image, pixel, icon, logo, ....everything that gets called in the ad-chain must be https://. <br/><br/></li><li>please add the macro <br/><span style="color: rgb(55,62,68);"><span style="color: rgb(55,62,68);">[UNENCODED_CLICK_REDIRECT] <strong>or</strong><br/></span></span>[ENCODED_CLICK_REDIRECT] <strong>or</strong><br/>[DBL-ENCODED_CLICK_REDIRECT]<br/><br/>VAST URL: place it like this:eg: <a rel="nofollow">http://ssp.lkqd.net/ad?pid=XXX&amp;sid=123456&amp;output=vastvpaid&amp;support=html5flash&amp;execution=any&amp;placement=&amp;playinit=auto&amp;volume=100&amp;width=[WIDTH]&amp;height=[HEIGHT]&amp;dnt=[DO_NOT_TRACK]&amp;ip=[IP]&amp;ua=[USERAGENT]&amp;pageurl=[PAGE_URL]&amp;contentid=[CONTENT_ID]&amp;contenttitle=[CONTENT_TITLE]&amp;contentlength=[VIDEO_DURATION]&amp;contenturl=[CONTENT_URL]&amp;rnd=[RANDOM_NUMBER]<strong>&amp;[UNENCODED_CLICK_REDIRECT</strong></a><strong>]<br/><br/></strong>in JS, like this:<br/> <span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/17330471/29818895.png" data-image-src="attachments/17330471/29818895.png" data-unresolved-comment-count="0" data-linked-resource-id="29818895" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="lkqd-coded.png" data-base-url="https://rtbcat.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="17330471" data-linked-resource-container-version="8" data-media-id="4aa3dcd0-8742-4db7-9a95-6279f15c0b23" data-media-type="file"></span><br/><strong>only one of the click macro's is needed.<br/><br/></strong></li><li>To make things easy for your optimisation, add some identifier macro's, eg: <span>[STRATEGY_ID] or </span><span>[CREATIVE_NAME] or </span><span>[CREATIVE_ID]<span> </span></span></li></ol><h2 id="LKQD-CorrespondingMacros">Corresponding Macros</h2><p>For the full list of rtbcat macros, please look <a href="Macros_15638239.html" data-linked-resource-id="15638239" data-linked-resource-version="21" data-linked-resource-type="page">here</a></p><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th class="confluenceTh">LKQD</th><th class="confluenceTh">dsp.RTB.Cat</th></tr><tr><td class="confluenceTd">contenturl </td><td class="confluenceTd">[PAGE_URL]</td></tr><tr><td class="confluenceTd">content id </td><td class="confluenceTd">[PLACEMENT_ID] <br/>Note: ADX doesn't support placement ID's</td></tr><tr><td colspan="1" class="confluenceTd">rnd</td><td colspan="1" class="confluenceTd">[RANDOM_NUMBER]</td></tr><tr><td class="confluenceTd">idfa</td><td class="confluenceTd">[IFA]</td></tr><tr><td class="confluenceTd">dnt</td><td class="confluenceTd">[DNT]</td></tr><tr><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="confluenceTd">appStoreUrl</td><td class="confluenceTd">'<a rel="nofollow">http://example-tracking-domain.com?AppStoreUrl=&quot;https://play.google.com/store/apps/details?id=[DOMAIN</a>]'<br/>(you must include the entire snippet above, between single quotation marks ' .</td></tr><tr><td class="confluenceTd">appVersion</td><td class="confluenceTd">not supported</td></tr><tr><td colspan="1" class="confluenceTd">appName</td><td colspan="1" class="confluenceTd"><p><span>[APP_NAME]</span></p></td></tr><tr><td colspan="1" class="confluenceTd">CONTENT_LENGTH</td><td colspan="1" class="confluenceTd"><p>[VIDEO_DURATION]</p></td></tr><tr><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd">a full list of macros <a href="Macros_15638239.html" data-linked-resource-id="15638239" data-linked-resource-version="21" data-linked-resource-type="page">here</a>...</td></tr></tbody></table></div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/17330471/29818895.png">lkqd-coded.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : Conversions - Postback</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="dsp.rtb.cat_15638054.html">dsp.rtb.cat</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : Conversions - Postback
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Jen Brannstrom</span>, last modified on May 31, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><strong>Postback URL</strong><span> </span>allows you to track conversions using a third-party tracking platform and send the information about conversions to RTB.CAT reports. This way you can track ROI on the reports page and optimize campaigns to achieve better results. As a rule Postback URL is used for CPA campaigns.</p><p>To get a Postback URL, follow the steps listed below:</p><p>1. On the New Campaign page, enable<span> </span><strong>Attribution &amp; Tracking</strong>.</p><p>2. Choose the<strong><span> </span>Postback URL</strong><span> </span>option and find the URL generated.</p><p>3. Copy the URL, replace<span> </span><strong>[CLICK_ID]</strong><span> </span>and<span> </span><strong>return_value_USD</strong><span> </span>with the parameters from your tracking platform. </p><p><a style="text-decoration: none;" href="http://rtb.adx1.com/log?action=conversion&amp;key=" class="external-link" rel="nofollow">http://rtb.adx1.com/log?action=conversion&amp;key=</a><strong>[CLICK_ID]</strong>&amp;price=<strong>return_value_USD</strong></p><p>For example, if your tracking platform uses <em><strong>{clickid}</strong></em> and <em><strong>{payout}</strong></em> parameters, your Postback URL would be formatted as follows:</p><p><a style="text-decoration: none;" href="http://rtb.adx1.com/log?action=conversion&amp;key=" class="external-link" rel="nofollow">http://rtb.adx1.com/log?action=conversion&amp;key=</a><span> </span><em><strong>{clickid}</strong></em>&amp;price=<em><strong>{payout}</strong></em></p><p><strong>Please note</strong><span> </span>that the parameters may be different. You need to obtain all the parameters from your tracking platform.</p><p>4. Paste the Postback URL you have created into your tracking platform, for example:</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/57daad6cc697913ea646dec3/images/5a43a6642c7d3a194367adce/file-7WhmCVHQfv.png" data-image-src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/57daad6cc697913ea646dec3/images/5a43a6642c7d3a194367adce/file-7WhmCVHQfv.png"></span></p><p>Once your Postback URL has been set up, you need to provide a click-through URL when adding a creative to your campaign.</p><p>To do that:</p><p>1.Copy the<span> </span><strong>Offer Link</strong><span> </span>from your tracking platform.</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/57daad6cc697913ea646dec3/images/5a43a6df04286319380069e4/file-XZDkX5kEly.png" data-image-src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/57daad6cc697913ea646dec3/images/5a43a6df04286319380069e4/file-XZDkX5kEly.png"></span></p><p>2. Modify the Offer Link by adding RTB.cat<span> </span><strong>[CLICK_ID]</strong><span> </span>macro.</p><p>Normally, offer links contain Click ID parameters:</p><p><em>http://YourTracking.com/cpa?oid=OFFERid1111222333&amp;clickid=77778888999</em></p><p>You need to replace the<span> </span><em><strong>clickid</strong></em><span> </span><em><strong>value<span> </span></strong></em>with the<strong><em><span> </span>[</em></strong><em><strong>CLICK_ID]<span> </span></strong></em>macro as follows: <em>clickid=<em>77778888999 </em>--&gt; clickid=<strong>[CLICK_ID]</strong></em></p><p><em>http://YourTracking.com/cpa?oid=OFFERid1111222333&amp;clickid=<strong>[CLICK_ID]</strong></em></p><p>In case there is no Click ID parameter included into your offer link, you need to add it manually depending on the parameters supported by your tracking platform. It can be either<span> </span><strong><em>clickid</em><span> </span></strong>or<span> </span><strong><em>subid</em></strong>. Please note that the<span> </span><em><strong>clickid</strong></em><span> </span>parameter prevails.</p><p>For example, your offer link looks like this:</p><p><span style="color: rgb(0,0,0);"><em>http://<a style="text-decoration: none;color: rgb(0,0,0);" href="http://trgln.com/cpa?oid=hj874827483h534i5o4krllm=f98f9e4f3hgeh24620ae&amp;" class="external-link" rel="nofollow">YourTracking.com</a></em>/</span>cpa?oid=<em>OFFERid1111222333</em></p><p>After adding the click ID parameter (<span> </span><strong><em>clickid</em></strong><span> </span>or<span> </span><strong><em>subid</em></strong>) and our macro<span> </span><strong>[CLICK_ID]</strong>, your link should look like this:</p><p><em>http://<a style="text-decoration: none;" href="http://trgln.com/cpa?oid=hj874827483h534i5o4krllm=f98f9e4f3hgeh24620ae&amp;" class="external-link" rel="nofollow">YourTracking.com</a></em>/cpa?oid=<em>OFFERid1111222333</em><strong>&amp;clickid=</strong><strong>[CLICK_ID]</strong></p><p><strong>or</strong></p><p><em>http://<a style="text-decoration: none;" href="http://trgln.com/cpa?oid=hj874827483h534i5o4krllm=f98f9e4f3hgeh24620ae&amp;" class="external-link" rel="nofollow">YourTracking.com</a></em>/cpa?oid=<em>OFFERid1111222333</em><strong>&amp;subid=</strong><strong>[CLICK_ID]</strong></p><h5 id="Conversions-Postback-Pleasenotethatifbothclickidandsubidparametersaresupportedbyyourtrackingplatform,theclickidparameterprevails."><span style="color: rgb(0,0,0);"><strong>Please note </strong>that if both <strong><em>clickid</em></strong> and <em><strong>subid</strong></em> parameters are supported by your tracking platform, the <em><strong>clickid </strong></em>parameter prevails.</span></h5><p>3. Put the link into the<span> &quot;</span><strong>Click-through URL&quot; </strong>field.<span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/57daad6cc697913ea646dec3/images/5a43a4cd2c7d3a194367adc9/file-2R1pa18Xue.png" data-image-src="https://d33v4339jhl8k0.cloudfront.net/docs/assets/57daad6cc697913ea646dec3/images/5a43a4cd2c7d3a194367adc9/file-2R1pa18Xue.png"></span></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/15638759/17379324.png">image2017-7-30_13-35-37.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

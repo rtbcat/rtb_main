@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : Create auto-optimisation Rules</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="AppNexus-How-to-articles_11010065.html">AppNexus How-to articles</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : Create auto-optimisation Rules
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Jen Brannstrom</span>, last modified on May 03, 2017
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="confluence-information-macro confluence-information-macro-information"><p class="title">Important</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Remember to put the conversion tracking code on the lander <em>or the rule will not fire.</em></p><p>An Api will soon be available</p><p>The Rules-section can be adapted to work with other platforms, eg: Rev:content, Facebook,...</p></div></div><p>Rules can be combined in many ways. </p><p>Examples:</p><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="http://image.prntscr.com/image/4a03317be3a44999b0b16562e0988130.png" data-image-src="http://image.prntscr.com/image/4a03317be3a44999b0b16562e0988130.png"></span></p><p><br/></p><h1 id="Createauto-optimisationRules-definitions:">definitions:</h1><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/></colgroup><tbody><tr><th class="confluenceTh">F+ </th><td class="confluenceTd">add a single field</td></tr><tr><th class="confluenceTh">G+ </th><td class="confluenceTd">add a Group of fields, inside a red bracket. The bracketed fields will get executed inside the bracket.</td></tr></tbody></table></div><p><br/></p><h2 id="Createauto-optimisationRules-Ruleslatency">Rules latency</h2><p>Our platform can use two different sources for statistical data for rules:</p><ol><li>AppNexus's reporting service;</li><li>RTBCat Impression Tracker service (see <a href="https://rtbcat.atlassian.net/wiki/x/BgD" rel="nofollow">RTBCat ImpTracker Service</a>)</li></ol><p>Which source to use you can choose in adminitrative console of RTBCat (asc your Admin for support).</p><p>Both sources have pros and cons. For example AppNexus reporting service has 3 hours latency so rules based on it will have at least 3 hours latency also.</p><p>ATST RTBCat ImpTracker can have up 5% of impressions loss because network issues of users' browsers as it does not act on auction level and can track only actually displayed impressions. Though its latency is about 5 minutes.</p><p><br/></p><div class="confluence-information-macro confluence-information-macro-information"><p class="title">Rules latency</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>RTBCat runs rules every 10 minutes but as they rely on statistical data of a campaign/placement the real latency can be from 5 minutes to 3 hours.</p><p>It all depends on the following:</p><ul><li>AppNexus has latency of up to 15min. <span>(approx.)</span> to apply any changes to campaign targeting.</li><li>RTBCat has two sources of statistics: AppNexus reporting services and RTBCat Impression/Click/Conversion tracker.</li><li>If advertiser decides to use the RTBCat trackers - the statistics latency will be about 6 minutes (AppNexus may charge an additional $0.02 CPM charge for adding this)</li><li>If advertiser decides to use AppNexus' own data and not use RTBCat trackers - the latency will be about 3 hours as this is the latency of AppNexus Reporting Service.</li></ul></div></div><p><br/></p><h2 id="Createauto-optimisationRules-Rulesbehavior">Rules <span>behavior</span></h2><p> </p><p>Each rule of the campaign acts independently from other campaigns’ rules and from rules of same campaign.</p><p>Rule can only set placement state: BLACKLISTED, WHITELISTED, SUSPENDED.</p><p>Rule is not able to clear placement state (i.e. make it has no state).</p><p>Only placements in state SUSPENDED can be UNSUSPENDED (i.e. has no state) by timeout set in the rule.</p><p>Once rule been applied to a placement it remembers placement’s statistical data within the campaign and next time it will wait for new statistic been collected until this new data will indicate that the placement is eligible to this rule. That means that if some placement will be firstly blacklisted or suspended or whitelisted and then its state will be changed manually or automatically (for suspend case) next time same rule will be applied to this placement only after new statistics will be collected (it does not matter how long it will take). Though other rules will be applied if the placement is eligible.</p><h2 id="Createauto-optimisationRules-Relatedarticles">Related articles</h2><p></p><p>
+
+
+
+
+
+
+
+
+
+
+
+<ul class="content-by-label">
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582918" data-linked-resource-type="page" data-linked-resource-version="7" href="/wiki/spaces/RCHW/pages/12582918/Add+Impression+Tracker+to+APNX+advertiser">Add Impression Tracker to APNX advertiser</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="16912274" data-linked-resource-type="page" data-linked-resource-version="2" href="/wiki/spaces/RCHW/pages/16912274/Video">Video</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582929" data-linked-resource-type="page" data-linked-resource-version="4" href="/wiki/spaces/RCHW/pages/12582929/Conversion+Tracker">Conversion Tracker</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582922" data-linked-resource-type="page" data-linked-resource-version="5" href="/wiki/spaces/RCHW/pages/12582922/Click+Tracker">Click Tracker</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="16249087" data-linked-resource-type="page" data-linked-resource-version="1" href="/wiki/spaces/RCHW/pages/16249087/Macros+for+AppNexus">Macros for AppNexus</a>
+                        
+                        
+                    </div>
+    </li>
+    </ul>
+</p><p><br/></p><p><br/></p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

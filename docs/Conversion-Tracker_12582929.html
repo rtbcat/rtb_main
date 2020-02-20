@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : Conversion Tracker</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="AppNexus-How-to-articles_11010065.html">AppNexus How-to articles</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : Conversion Tracker
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Andrii Perkhun</span>, last modified on Jun 08, 2017
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>RTBCat Tracker can track each conversion on advertiser's ad tag. This is needed to supply RTBCat stats and ML algorithms with data.</p><h2 id="ConversionTracker-Addconversiontrackeronadvertiser&#39;spage">Add conversion tracker on advertiser's page </h2><p></p><ol><li>Add html script tag on page where ads point to (both HTTP and HTTPS versions are available)</li></ol><p><br/></p><div class="confluence-information-macro confluence-information-macro-information"><p class="title">Conversion tracker js-URL pixel</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><pre><span class="nt" style="color: navy;">&lt;script</span> <span class="na" style="color: teal;">src=</span><span class="s" style="color: rgb(187,136,68);">&quot;http://imp.rtb.cat/conversiontr.js?advid=${ADV_ID}&amp;delAfterConv=yes&amp;isNeedUseCookieForConv=yes&quot;</span><span class="nt" style="color: navy;">&gt;&lt;/script&gt;</span></pre></div></div><p class="auto-cursor-target">Most parameters are analogous to AppNexus's Creativer Macroses:</p><ul><li><strong>advid</strong> - ${ADV_ID} - advertiser ID in APPNX, should be put by advertiser (optional)</li><li><strong>cpid</strong> - ${CP_ID} - campaign ID in APNX, should be put by advertiser (required)</li><li><strong>CreativeId</strong> - ${CREATIVE_ID} - creative ID in APNX, should be put by advertiser (optional)</li></ul><p>And additional parameter: </p><ul><li><strong>delAfterConv</strong> - remove cookie after tracking ( yes / no )</li><li><strong>isNeedUseCookieForConv</strong> - use conversion's cookie or not ( yes / no ). If yes it will use conversion cookie set by click tracker, otherwise - click cookie set by impression tracker</li></ul><p>This pixel will add one cookie on users prowser to be used later by conversion tracker js-pixels. </p><h2 id="ConversionTracker-DirectaddtrackedconversiontoConversionTracker">Direct add tracked conversion to Conversion Tracker </h2><p>To add conversion to Conversion Tracker DB simple GET call should be done to next API end point:</p><div class="codehilite"><div class="confluence-information-macro confluence-information-macro-information"><p class="title">GET</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><pre><span class="nolink">http://imp.rtb.cat/</span>conv/new?advid=${ADV_ID}&amp;cpid=${CP_ID}&amp;creativeid=${CREATIVE_ID}&amp;auctionid=${AUCTION_ID}</pre></div></div><pre class="auto-cursor-target"><br/></pre></div><h4 id="ConversionTracker-Parameters">Parameters</h4><ul><li><strong>CpId</strong> - ${CP_ID} - advertiser ID in APPNX, should be put by advertiser (optional)</li><li><strong>AdvId</strong> - ${ADV_ID} - campaign ID in APNX, should be put by advertiser (optional)</li><li><strong>CreativeId</strong> - ${CREATIVE_ID} - creative ID in APNX, should be put by advertiser (optional)</li><li><strong>AuctionId</strong> - ${AUCTION_ID} - auction ID - main parameter  (required)</li></ul><h2 id="ConversionTracker-Relatedarticles">Related articles</h2><p></p><p>
+
+
+
+
+
+
+
+
+
+
+
+<ul class="content-by-label">
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582918" data-linked-resource-type="page" data-linked-resource-version="7" href="/wiki/spaces/RCHW/pages/12582918/Add+Impression+Tracker+to+APNX+advertiser">Add Impression Tracker to APNX advertiser</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="16912274" data-linked-resource-type="page" data-linked-resource-version="2" href="/wiki/spaces/RCHW/pages/16912274/Video">Video</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582929" data-linked-resource-type="page" data-linked-resource-version="4" href="/wiki/spaces/RCHW/pages/12582929/Conversion+Tracker">Conversion Tracker</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582922" data-linked-resource-type="page" data-linked-resource-version="5" href="/wiki/spaces/RCHW/pages/12582922/Click+Tracker">Click Tracker</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="16249087" data-linked-resource-type="page" data-linked-resource-version="1" href="/wiki/spaces/RCHW/pages/16249087/Macros+for+AppNexus">Macros for AppNexus</a>
+                        
+                        
+                    </div>
+    </li>
+    </ul>
+</p><p><br/></p><p><br/></p><div><span style="color: rgb(187,136,68);font-family: monospace;white-space: pre-wrap;"><br/></span></div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/12582929/12582930.png">tppx.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

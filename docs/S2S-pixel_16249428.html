@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : S2S pixel</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="AppNexus-How-to-articles_11010065.html">AppNexus How-to articles</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : S2S pixel
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Jen Brannstrom</span>, last modified on May 22, 2017
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><br/></p><p><span style="color: rgb(0,0,0);">For server-side conversion pixels, you'll need to generate a URL that you can call, instead of an HTML-based pixel that is placed on a publisher's web page. To do this, consult the <span>Explore Advanced Options</span> section of the<span> <a href="https://wiki.appnexus.com/x/6hWHAg" rel="nofollow" class="external-link"><span style="color: rgb(0,0,0);">Export Conversion Pixels</span></a> page. The URL that is generated when you export the pixel will look something like this:</span></span></p><p><span style="color: rgb(255,0,0);"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource confluence-content-image-border" width="700" src="https://wiki.appnexus.com/download/attachments/28541131/serverside_conversion.png?version=1&amp;modificationDate=1450213870961&amp;api=v2" data-image-src="https://wiki.appnexus.com/download/attachments/28541131/serverside_conversion.png?version=1&amp;modificationDate=1450213870961&amp;api=v2"></span></span><br/></span></p><h2 id="S2Spixel-ADDINGPARAMETERSTOANSERVER-SIDEPIXELCALL">ADDING PARAMETERS TO AN SERVER-SIDE PIXEL CALL</h2><p>You can add the following parameters to any SSPX call:</p><ul><li><code>order_id</code></li><li><code>value</code></li><li><code>other</code></li></ul><p>To use these parameters, you must insert them into the query string before the <code>sspdata</code> parameter. For more details about these parameters, see <a href="https://wiki.appnexus.com/display/console/Conversion+Pixels+Advanced" class="external-link" rel="nofollow">Conversion Pixels Advanced</a>.</p><p>The following is <strong>an example</strong> of a server-side conversion pixel call with additional parameters:</p><div class="table-wrap"><table class="confluenceTable"><colgroup><col/></colgroup><tbody><tr><td class="confluenceTd"><p><code class="java plain">http:</code><code class="java comments">//<a href="http://sspx-router.adnxs.net/sspx?id=25619&amp;order_id=1234&amp;value=5678&amp;sspdata=ams1AAAAAAAAkQC8rFPulI3JKKU9tUKckv1Oj1WFMAAAAAGULAAA3AAAAUQIAAD4AAA" class="external-link" rel="nofollow">sspx-router.adnxs.net/sspx?id=25619&amp;order_id=1234&amp;value=5678&amp;sspdata=ams1AAAAAAAAkQC8rFPulI3JKKU9tUKckv1Oj1WFMAAAAAGULAAA3AAAAUQIAAD4AAA</a>.</code></p></td></tr></tbody></table></div><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><h2 id="S2Spixel-Donotuseasecurehttpscall,otherwiseitwillfail-youmustusehttp://sspx-router.adnxs.net"><span style="color: rgb(0,51,102);">Do not use a secure https call, otherwise it will fail - you must use <a class="external-link" href="http://sspx-router.adnxs.net/" rel="nofollow"><span style="color: rgb(0,51,102);">http://sspx-router.adnxs.net</span></a></span></h2></div></div><p><br/></p><h2 id="S2Spixel-TESTINGASERVER-SIDEPIXEL">TESTING A SERVER-SIDE PIXEL</h2><ol><li>Serve yourself a campaign on a test page using a test placement. The campaign must include a landing page with the SSP token.</li><li>Click through the ad and see the token populate in the URL.</li><li><p>Copy the token from the http header and fire it back to AppNexus using the command line. The call for this looks like</p><div class="table-wrap"><table class="confluenceTable"><colgroup><col/></colgroup><tbody><tr><td class="confluenceTd"><p><code class="java plain">curl --verbose -L </code><code class="java string">'<a href="http://sspx-router.adnxs.net/sspx?id=78874&amp;sspdata=nym1CJjYiJ3oq6LkMxACGIHey7vM0vGDRyIJMTAuMS4xMi42KAE.%27" class="external-link" rel="nofollow">http://sspx-router.adnxs.net/sspx?id=78874&amp;sspdata=nym1CJjYiJ3oq6LkMxACGIHey7vM0vGDRyIJMTAuMS4xMi42KAE.'</a></code></p></td></tr></tbody></table></div><p>Please note:</p><ul><li><p><code>id</code> is the pixel ID from AppNexus</p></li><li><p><code>sspdata</code> is the populated ${SSP_DATA} token; the length of this string is susceptible to change</p></li></ul></li></ol><h2 id="S2Spixel-GOTCHAS"><span>GOTCHAS</span></h2><ul><li>The sspx-router call when a user converts often includes a 302 redirect. The redirect must be followed for a conversion to be logged. When using the command line tool, cURL, be sure to include –L command in the call to allow the redirect.</li><li>Server-side pixels cannot be used to add or remove users from segments. However, a normal, client-side pixel can add or remove users from segments; see <a href="https://wiki.appnexus.com/display/console/Conversion+Pixels+Advanced" rel="nofollow" class="external-link">Conversion Pixels Advanced</a>.</li><li>There are no secure (https) server-side pixels; however, AppNexus already encrypts their data so secure server-side pixels would be unnecessary.</li><li>The <code>sspdata</code> parameter must be the last parameter listed in the conversion call sent from the attribution server to AppNexus.</li><li>Server-side pixel data tokens typically have a period at the end, which must be included in calls.</li></ul><h2 id="S2Spixel-INVESTIGATIONS">INVESTIGATIONS</h2><p>To investigate issues or discrepancies with server-side pixels, AppNexus must be provided with verbose logs of the pixel fires because these calls provide the information needed to do an investigation.  </p><h2 id="S2Spixel-ALTERNATEUSECASE:POST-VIEWCONVERSIONS">ALTERNATE USE CASE: POST-VIEW CONVERSIONS</h2><p>The steps are the same as above, but in Step 4, you will add the macro to an impression tracking pixel instead of the creative's landing page URL:</p><p> <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource confluence-content-image-border" height="392" width="700" src="https://wiki.appnexus.com/download/attachments/28541131/Screen%20Shot%202014-01-23%20at%206.04.01%20PM.png?version=2&amp;modificationDate=1450213871725&amp;api=v2" data-image-src="https://wiki.appnexus.com/download/attachments/28541131/Screen%20Shot%202014-01-23%20at%206.04.01%20PM.png?version=2&amp;modificationDate=1450213871725&amp;api=v2"></span></span></p><p>Note that with this method, you will have an SSP_DATA token for every single impression rather than for only clicks.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

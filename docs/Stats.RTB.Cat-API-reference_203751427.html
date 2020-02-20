@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : Stats.RTB.Cat API reference</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="AppNexus-How-to-articles_11010065.html">AppNexus How-to articles</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : Stats.RTB.Cat API reference
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Andrii Perkhun</span>, last modified on Nov 28, 2017
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h3 class="western" id="Stats.RTB.CatAPIreference-Listofthedomainlists">List of the domain lists</h3><p class="western"><strong>GET</strong> <span><a href="https://stats-dev.rtb.cat" class="external-link" rel="nofollow">https://stats.rtb.cat</a></span><span>/api/v1/</span><span>client</span><span>/</span><span>domain/</span></p><p class="western"><span>Header - { </span><span>Authorization: Token &lt;token&gt;</span><span>}</span></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Response</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Response: {
+	domainList: [
+		{
+			id: {id}
+			name: {name}
+		},
+		{
+			id: {id}
+			name: {name}
+		}
+		……
+		]
+		}</pre>
+</div></div><p><span>Response status 200</span></p><p><br/></p><hr/><h3 class="western" id="Stats.RTB.CatAPIreference-Createdomainlist"><span>Create domain list</span></h3><p class="western"><span><strong>POST</strong> </span><span><a href="https://stats-dev.rtb.cat" class="external-link" rel="nofollow">https://stats.rtb.cat</a></span><span>/api/v1/</span><span>client</span><span>/</span><span>domain/</span></p><p class="western"><span>Header - { </span><span>Authorization: Token &lt;token&gt;</span><span>}</span></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Body</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Body {
+	name: {name},
+	domains: {array}
+	}</pre>
+</div></div><p class="western"><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Response</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Response: {
+	id: {id},
+}
+</pre>
+</div></div><p class="western"><span>Response status 200</span></p><p class="western"><br/></p><hr/><h3 class="western" id="Stats.RTB.CatAPIreference-Getdomainlistbyid"><span>Get domain list by id</span></h3><p class="western"><span><strong>GET</strong> </span><span><a href="https://stats-dev.rtb.cat" class="external-link" rel="nofollow">https://stats-dev.rtb.cat</a></span><span>/api/v1/</span><span>client</span><span>/</span><span>domain/{domainId}/</span></p><p class="western"><span>Header - { </span><span>Authorization: Token &lt;token&gt;</span><span>}</span></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Response</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Response: {
+	id: {id},
+	name: {name},
+	domains: [
+				‘{domain}’,
+				‘{domain}’,
+				‘{domain}’,
+	]
+}
+
+</pre>
+</div></div><p class="western"><span>Response status 200</span></p><p class="western"><br/></p><hr/><h3 class="western" id="Stats.RTB.CatAPIreference-Updatedomainlistbyid"><span>Update domain list by id</span></h3><p class="western"><strong>PUT </strong><span><a href="https://stats-dev.rtb.cat" class="external-link" rel="nofollow">https://stats.rtb.cat</a></span><span>/api/v1/</span><span>client</span><span>/</span><span>domain/{domainId}/</span></p><p class="western"><span>Header - { </span><span>Authorization: Token &lt;token&gt;</span><span>}</span></p><p class="western"><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Body</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Body {
+	action: {append | remove | replace}
+	domains: {array}
+}</pre>
+</div></div><p class="western"><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Response</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Response: {
+	id: {id},
+	name: {name},
+	domains: [
+				‘{domain}’,
+				‘{domain}’,
+				‘{domain}’,
+	]
+}
+</pre>
+</div></div><p class="western"><span>Response status 200</span></p><hr/><h3 class="western" id="Stats.RTB.CatAPIreference-Removedomainlistbyid"><span>Remove domain list by id</span></h3><p class="western"><strong>DELETE </strong><span><a href="https://stats-dev.rtb.cat" class="external-link" rel="nofollow">https://stats.rtb.cat</a></span><span>/api/v1/</span><span>client</span><span>/</span><span>domain/{domainId}/</span></p><p class="western"><span>Header - { </span><span>Authorization: Token &lt;token&gt;</span><span>}</span></p><p class="western"><span>Response status 200</span></p><p class="western"><br/></p><hr/><h3 class="western" id="Stats.RTB.CatAPIreference-Applydomainlisttocampaign"><span>Apply domain list to campaign</span></h3><p class="western"><span><strong>GET</strong> </span><span><a href="https://stats-dev.rtb.cat" class="external-link" rel="nofollow">https://stats.rtb.cat</a></span><span>/api/v1/</span><span>client/</span><span>domain/{domainId}/apply?&amp;campaign_id={campaign_id}&amp;action={ whitelist | blacklist | remove}</span></p><p class="western"><span>Header - { </span><span>Authorization: Token &lt;token&gt;</span><span>}</span></p><p class="western"><span>Response status 200</span></p><hr/><h3 class="western" id="Stats.RTB.CatAPIreference-Campaignslist"><span>Campaigns list</span></h3><p class="western"><span><strong>GET </strong><a href="https://stats-dev.rtb.cat/api/v1/client/campaign" class="external-link" rel="nofollow">https://stats-dev.rtb.cat/api/v1/client/campaign</a></span></p><p class="western"><span>Header - { </span><span>Authorization: Token &lt;token&gt;</span><span>}</span></p><p class="western"><br/></p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Response</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false; theme: Confluence" data-theme="Confluence">Response: {
+	&quot;campaignList&quot;: [
+		{
+			&quot;id&quot;: {id},
+			&quot;name&quot;: {name},
+			&quot;state&quot;: {&quot;active&quot;/”inactive”}
+		},
+	]
+}
+</pre>
+</div></div><p class="western"><span>Response status 200</span></p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

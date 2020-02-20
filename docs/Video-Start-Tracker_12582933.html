@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : Video-Start Tracker</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="AppNexus-How-to-articles_11010065.html">AppNexus How-to articles</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : Video-Start Tracker
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Andrii Perkhun</span>, last modified by <span class='editor'> Jen Brannstrom</span> on Jan 04, 2017
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>If you wish to optimise for video fill-rate then the RTBCat Tracker can track each video ad-start on advertiser's ad-tag. Once the RTBCat ad-start-tracker can see the video-ad-starts, your rules &amp; ML will become active.</p><p>The following is needed to set this up.</p><h2 id="Video-StartTracker-Howtoaddavideo-starttothe&#39;Ad-StartTracker&#39;">How to add a video-start to the 'Ad-Start Tracker' </h2><p>To add a video-start to the tracker DB simply perform a GET call to this API end point:</p><div class="codehilite"><div class="confluence-information-macro confluence-information-macro-information"><p class="title">GET</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><pre><span class="nolink">http://imp.rtb.cat/</span>adstart/new?advid=${ADV_ID}&amp;cpid=${CP_ID}&amp;creativeid=${CREATIVE_ID}&amp;auctionid=${AUCTION_ID}</pre></div></div><pre class="auto-cursor-target"><br/></pre></div><h4 id="Video-StartTracker-Parameters">Parameters</h4><ul><li><strong>CpId</strong> - ${CP_ID} - advertiser ID in APPNX, should be put by advertiser (optional)</li><li><strong>AdvId</strong> - ${ADV_ID} - campaign ID in APNX, should be put by advertiser (optional)</li><li><strong>CreativeId</strong> - ${CREATIVE_ID} - creative ID in APNX, should be put by advertiser (optional)</li><li><strong>AuctionId</strong> - ${AUCTION_ID} - auction ID - main parameter  <strong>(required)</strong></li><li><strong>CPVM</strong> - a bid for ad-start in other words this is payout for each video played in a ad banner <strong>(required)</strong></li></ul><p><strong><br/></strong></p><h2 id="Video-StartTracker-Note:">Note:</h2><p>For highest efficiency &amp; best results you should make the GET requests as near-real-time as possible. </p><p><strong><br/></strong></p><h2 style="margin-left: 30.0px;" id="Video-StartTracker-Relatedarticles">Related articles</h2><p style="margin-left: 30.0px;"></p><p style="margin-left: 30.0px;">
+
+
+
+
+
+
+
+
+
+
+
+<ul class="content-by-label">
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582918" data-linked-resource-type="page" data-linked-resource-version="7" href="/wiki/spaces/RCHW/pages/12582918/Add+Impression+Tracker+to+APNX+advertiser">Add Impression Tracker to APNX advertiser</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="16912274" data-linked-resource-type="page" data-linked-resource-version="2" href="/wiki/spaces/RCHW/pages/16912274/Video">Video</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582929" data-linked-resource-type="page" data-linked-resource-version="4" href="/wiki/spaces/RCHW/pages/12582929/Conversion+Tracker">Conversion Tracker</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="12582922" data-linked-resource-type="page" data-linked-resource-version="5" href="/wiki/spaces/RCHW/pages/12582922/Click+Tracker">Click Tracker</a>
+                        
+                        
+                    </div>
+    </li>
+        <li>
+        <div>
+                <span class="icon aui-icon aui-icon-small aui-iconfont-page-default" title="Page">Page:</span>        </div>
+
+        <div class="details">
+                                    <a data-linked-resource-id="16249087" data-linked-resource-type="page" data-linked-resource-version="1" href="/wiki/spaces/RCHW/pages/16249087/Macros+for+AppNexus">Macros for AppNexus</a>
+                        
+                        
+                    </div>
+    </li>
+    </ul>
+</p><p><br/></p><p><br/></p><div style="margin-left: 30.0px;"><span style="color: rgb(187,136,68);font-family: monospace;white-space: pre-wrap;"><br/></span></div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/12582933/12582934.png">tppx.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

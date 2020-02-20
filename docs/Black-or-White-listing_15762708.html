@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RTB Cat Help Wiki : Black or White listing</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="RTB-Cat-Help-Wiki_10321927.html">RTB Cat Help Wiki</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="dsp.rtb.cat_15638054.html">dsp.rtb.cat</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            RTB Cat Help Wiki : Black or White listing
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Jen Brannstrom</span>, last modified on Jun 25, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <ul><li><p>*  represents any value.</p></li><li><p><br/></p><p>Please note: <strong>placement_id </strong>can be shown up as any number, letter or word, depending on the exchange you;re buying from.</p><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/><col/></colgroup><tbody><tr><td style="text-align: left;" class="confluenceTd">FORMAT</td><td style="text-align: left;" class="confluenceTd">DESCRIPTION</td><td style="text-align: left;" class="confluenceTd">EXAMPLE</td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:*:* </td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist specific publisher with all their site_ids/domains and placements</td><td style="text-align: left;" class="confluenceTd"><em>34567:*:*</em></td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:*:placement_id </td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all matching placements of specific publisher</td><td style="text-align: left;" class="confluenceTd"><em>34567:*:1</em></td></tr><tr><td style="text-align: left;" class="confluenceTd">*:*:placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all matching placements across all the publishers and site_ids/domains</td><td style="text-align: left;" class="confluenceTd">*<em>:*:1</em></td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:site_id:*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist certain site ID of specific publisher</td><td style="text-align: left;" class="confluenceTd">34567:1234:*</td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:site_id:placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist certain placement within specific site ID of specific publisher</td><td style="text-align: left;" class="confluenceTd">34567:12345:1</td></tr><tr><td style="text-align: left;" class="confluenceTd">*:site_id:placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist certain placement within specifiic site ID</td><td style="text-align: left;" class="confluenceTd">*:1234:1</td></tr><tr><td style="text-align: left;" class="confluenceTd">*:site_id:*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist unique site ID</td><td style="text-align: left;" class="confluenceTd">*:12345:*</td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:domain:*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist certain publisher's  domain</td><td style="text-align: left;" class="confluenceTd">34567:blogspot.com:*</td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:domain:placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist certain placement within specific domain of specific publisher</td><td style="text-align: left;" class="confluenceTd">34567:blogspot.com:1</td></tr><tr><td style="text-align: left;" class="confluenceTd">*:domain:placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all matching placements within matching domains</td><td style="text-align: left;" class="confluenceTd">*:blogspot.com:1</td></tr><tr><td style="text-align: left;" class="confluenceTd">domain          *:domain:*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist a specific domain</td><td style="text-align: left;" class="confluenceTd">blogspot.com</td></tr><tr><td style="text-align: left;" class="confluenceTd">*.domain.com</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all subdomains</td><td style="text-align: left;" class="confluenceTd">*.<a href="http://blogspot.com" class="external-link" rel="nofollow">blogspot.com</a></td></tr><tr><td style="text-align: left;" class="confluenceTd">*::*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist <strong>all blank domains</strong>.</td><td style="text-align: left;" class="confluenceTd">*::*</td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id::placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all matching placements within blank domains of specific publisher</td><td style="text-align: left;" class="confluenceTd"><em>34567::1</em></td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id::*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all placements within blank domains of specific  publisher</td><td style="text-align: left;" class="confluenceTd"><em>34567::</em><em>*</em></td></tr><tr><td style="text-align: left;" class="confluenceTd">*::placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all matching  placements within blank domains across all publishers</td><td style="text-align: left;" class="confluenceTd"><em>*</em><em>::1</em></td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:bundle:*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist certain bundle of application within specific publisher</td><td style="text-align: left;" class="confluenceTd">34567:com.ultralabapps.filterloop:*</td></tr><tr><td style="text-align: left;" class="confluenceTd">publisher_id:bundle:placement_id</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist all matching placements within specific bundle of application of certain publisher</td><td style="text-align: left;" class="confluenceTd">*:com.ultralabapps.filterloop:1</td></tr><tr><td style="text-align: left;" class="confluenceTd">bundle          *:bundle:*</td><td style="text-align: left;" class="confluenceTd">allows to whitelist/blacklist specific bundle of application</td><td style="text-align: left;" class="confluenceTd"><p>com.ultralabapps.filterloop       *:com.ultralabapps.filterloop:*</p></td></tr><tr><td colspan="1" class="confluenceTd">URL</td><td colspan="1" class="confluenceTd"><span style="color: rgb(51,51,51);">allows to whitelist/blacklist specific URL</span></td><td colspan="1" class="confluenceTd"><span class="nolink">http://example.com/blog</span></td></tr></tbody></table></div></li></ul><p><br/></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/15762708/15762752.png">rep1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/15762708/15762813.png">black1.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/15762708/15763150.png">report.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Feb 20, 2020 22:58</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
