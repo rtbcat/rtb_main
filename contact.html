@@ -242,6 +242,9 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
                     url: 'http://lat.com.es/ci/contact/jen/',
                     data: data,
                     error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(jqXHR);
+                        console.log(textStatus);
+                        console.log(errorThrown);
                         message_box.open("Server communication error. Please send your message to jen@rtb.cat. \n Thanks!", function() {
                             window.location = "index.html"
                         });
