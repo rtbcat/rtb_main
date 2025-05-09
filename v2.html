@@ -42,404 +42,15 @@
     <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
 /></noscript>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- up to 10% speed up for external res -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+		<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+		<link rel="preconnect" href="https://fonts.googleapis.com/">
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dark-bg: #252525;
-            --darker-bg: #1c1c1c;
-            --light-text: #e0e0e0;
-            --accent-color: #a12559;
-            --secondary-accent: #fad776;
-            --grid-color: rgba(255, 255, 255, 0.07);
-            --darker-grid: rgba(255, 255, 255, 0.03);
-            --card-bg: rgba(37, 37, 37, 0.7);
-            --border-color: rgba(255, 255, 255, 0.05);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                linear-gradient(var(--grid-color) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
-                linear-gradient(var(--darker-grid) 1px, transparent 1px),
-                linear-gradient(90deg, var(--darker-grid) 1px, transparent 1px);
-            background-size: 40px 40px, 40px 40px, 10px 10px, 10px 10px;
-            background-position: -0.5px -0.5px, -0.5px -0.5px, -0.5px -0.5px, -0.5px -0.5px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        header {
-            padding: 3rem 0 2rem;
-            position: relative;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-section {
-            max-width: 400px;
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            color: var(--light-text);
-            line-height: 1;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.7);
-            margin-top: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: 0.25rem;
-        }
-
-        .mega-heading {
-            font-size: 10rem;
-            font-weight: 700;
-            color: rgba(255, 255, 255, 0.05);
-            position: absolute;
-            top: 50%;
-            right: 10%;
-            transform: translateY(-50%);
-            line-height: 0.8;
-            pointer-events: none;
-            letter-spacing: -5px;
-            z-index: -1;
-        }
-
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-            line-height: 1.1;
-        }
-
-        h1 {
-            font-size: 5rem;
-            margin-top: 6rem;
-            max-width: 1000px;
-            line-height: 0.9;
-            letter-spacing: -2px;
-        }
-
-        h2 {
-            font-size: 12rem;
-            color: rgba(255, 255, 255, 0.05);
-            margin: 8rem 0 4rem;
-            letter-spacing: -4px;
-            line-height: 0.9;
-            text-transform: uppercase;
-        }
-
-        h3 {
-            font-size: 2rem;
-            color: var(--light-text);
-            margin-bottom: 1.5rem;
-        }
-
-        section {
-            margin: 6rem 0;
-            position: relative;
-        }
-
-        .intro-section {
-            margin-top: 10rem;
-            margin-bottom: 10rem;
-        }
-
-        .intro-text {
-            max-width: 700px;
-            margin-top: 2rem;
-            font-size: 1.25rem;
-            line-height: 1.6;
-        }
-
-        .box-highlight {
-            border-left: 4px solid var(--accent-color);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            font-size: 1.2rem;
-        }
-
-        .details {
-            margin: 3rem 0;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 5px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-            background-color: rgba(37, 37, 37, 0.9);
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-        }
-
-        .card ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card li {
-            margin-bottom: 0.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .btn:hover {
-            background-color: #463fbd;
-            transform: translateY(-2px);
-        }
-
-        .arrow-icon {
-            display: inline-block;
-            margin-left: 0.5rem;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover .arrow-icon {
-            transform: translateX(5px);
-        }
-
-        .section-divider {
-            height: 1px;
-            background-color: var(--border-color);
-            margin: 5rem 0;
-        }
-
-        .detail-toggle {
-            cursor: pointer;
-            color: var(--accent-color);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            margin-top: 1rem;
-        }
-
-        .detail-toggle::after {
-            content: "+";
-            display: inline-block;
-            margin-left: 0.5rem;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .detail-toggle.active::after {
-            transform: rotate(45deg);
-        }
-
-        .detail-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
-            opacity: 0;
-        }
-
-        .detail-toggle.active + .detail-content {
-            max-height: 1000px;
-            opacity: 1;
-            margin-top: 1rem;
-        }
-
-        .profile-section {
-            display: flex;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .profile-info {
-            flex: 1;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin: 8rem 0;
-        }
-
-        .cta-section h3 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-form {
-            background-color: var(--darker-bg);
-            padding: 3rem;
-            border-radius: 5px;
-            border: 1px solid var(--border-color);
-            max-width: 700px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            background-color: rgba(255, 255, 255, 0.04);
-            color: var(--light-text);
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--accent-color);
-            outline: none;
-        }
-
-        .radio-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .radio-option {
-            display: flex;
-            align-items: center;
-        }
-
-        .radio-option input {
-            margin-right: 0.5rem;
-            cursor: pointer;
-        }
-
-        .radio-option label {
-            cursor: pointer;
-        }
-
-        .footer {
-            margin-top: 10rem;
-            padding: 5rem 0;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        @media (max-width: 1200px) {
-            h1 {
-                font-size: 4rem;
-            }
-            h2 {
-                font-size: 5rem;
-            }
-            .mega-heading {
-                font-size: 7rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
-                margin-top: 3rem;
-            }
-            h2 {
-                font-size: 3.5rem;
-                margin: 5rem 0 3rem;
-            }
-            .mega-heading {
-                font-size: 5rem;
-                top: 30%;
-            }
-            .grid-container {
-                grid-template-columns: 1fr;
-            }
-            .intro-section {
-                margin-top: 5rem;
-                margin-bottom: 5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
-            }
-            h1 {
-                font-size: 2.5rem;
-            }
-            h2 {
-                font-size: 3rem;
-            }
-            h3 {
-                font-size: 1.5rem;
-            }
-            .card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+		<link rel="stylesheet" href="assets/css/core.min.css">
+		<link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+		<link rel="stylesheet" href="assets/css/customized.css">
 </head>
 <body>
      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ55GSQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -456,7 +67,7 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
     </header>
 
     <section class="intro-section">
-        <div class="container">
+        <div class="container" data-aos="fade-right" data-aos-delay="50" data-aos-offset="0">
             <h1>Expert programmatic media buying for maximizing KPIs</h1>
             <div class="box-highlight">
                 Connecting the right publishers with the right advertisers through 24+ years of media buying experience.
@@ -473,27 +84,29 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
 
     <section id="services">
         <div class="container">
-            <h2>Services</h2>
-            
+            <h2 class="mega-back-heading">
+                <span class="actual-text" data-typing data-type-speed="70" data-type-cursor="true" data-type-text="Services"></span>
+                <span class="placeholder-text">Services</span>
+            </h2>
             <h3>What I Do</h3>
             <p>
                 I provide consulting on programmatic (RTB) media buying. I have a small team of freelancers that I have been working with for at least 10 years, each specializing in different fields of ad-tech and advertiser and publisher match-making. I started buying media 24 years ago. I connect the right publishers with the right advertisers to maximize everyone's KPIs.
             </p>
 
-            <div class="grid-container">
+            <div class="grid-container" data-aos="fade-right" data-aos-delay="50" data-aos-offset="0">
                 <div class="card">
                     <h3>Publisher Matching</h3>
-                    <p>
+                    <p class="text-white">
                         Not all Premium publishers are a good fit for your KPIs.
                     </p>
                     <div class="detail-toggle" tabindex="0">Learn more</div>
                     <div class="detail-content">
-                        <p>
+                        <p class="text-white">
                             You will define your needs and then can use our industry connections and knowledge to connect 
                             you to the appropriate publishers with high-performing inventory perfectly matched to your target 
                             audience—often at better rates through direct deals than through intermediaries.
                         </p>
-                        <p>
+                        <p class="text-white"> 
                             These relationships, built over 24 years in media buying, connect you with quality traffic sources 
                             that deliver real users with genuine purchase intent. Additionally, we analyze your current setup 
                             to identify and eliminate wasteful spend.
@@ -503,17 +116,17 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
 
                 <div class="card">
                     <h3>Our Experience</h3>
-                    <p>
+                    <p class="text-white"> 
                         We maintain a comprehensive database of campaign results.
                     </p>
                     <div class="detail-toggle" tabindex="0">Learn more</div>
                     <div class="detail-content">
-                        <p>
+                       <p class="text-white"> 
                             Through years of direct experience running campaigns, the theme has built detailed knowledge about 
                             the actual performance of ad exchanges, programmatic email, retail media, in-house ad-server 
                             capabilities and data purity.
                         </p>
-                        <p>
+                        <p class="text-white"> 
                             You stand to gain from this hard-won know-how.
                         </p>
                     </div>
@@ -522,55 +135,60 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
                 <div class="card">
                     <h3>Results You Can Expect</h3>
                     <ul>
-                        <li>Introductions to proven, tested publishers or advertisers</li>
-                        <li>Removing platform fees where not warranted</li>
-                        <li>Traffic from authenticated users with genuine purchase intent</li>
-                        <li>Increased ROAS through elimination of fraudulent sources and middlemen costs</li>
-                        <li>Performance-focused campaigns with measurable business outcomes</li>
+                        <li class="text-white">Introductions to proven, tested publishers or advertisers</li>
+                        <li class="text-white">Removing platform fees where not warranted</li>
+                        <li class="text-white">Traffic from authenticated users with genuine purchase intent</li>
+                        <li class="text-white">Increased ROAS through elimination of fraudulent sources and middlemen costs</li>
+                        <li class="text-white">Performance-focused campaigns with measurable business outcomes</li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <h3>How Easy Is It?</h3>
-                    <p>We handle the heavy lifting for you.</p>
-                    <p>Our process focuses specifically on your defined KPIs in Tier 1 & 2 markets, we:</p>
+                    <p class="text-white"> We handle the heavy lifting for you.</p>
+                    <p class="text-white"> Our process focuses specifically on your defined KPIs in Tier 1 & 2 markets, we:</p>
                     <ul>
-                        <li>Connect you with publishers that match your exact business needs - those with proven history of delivering real users</li>
-                        <li>Eliminate wasteful spend by cutting out ad fraud and poorly-performing traffic sources</li>
-                        <li>The complex work of relationship-building and technical implementation is managed by us, so you can focus on results</li>
-                        <li>Direct connections to premium publishers relevant to your audience</li>
-                        <li>Technical integrations that bypass unnecessary intermediaries</li>
-                        <li>Transparent tracking that shows exactly what you're getting</li>
+                        <li class="text-white">Connect you with publishers that match your exact business needs - those with proven history of delivering real users</li>
+                        <li class="text-white">Eliminate wasteful spend by cutting out ad fraud and poorly-performing traffic sources</li>
+                        <li class="text-white">The complex work of relationship-building and technical implementation is managed by us, so you can focus on results</li>
+                        <li class="text-white">Direct connections to premium publishers relevant to your audience</li>
+                        <li class="text-white">Technical integrations that bypass unnecessary intermediaries</li>
+                        <li class="text-white">Transparent tracking that shows exactly what you're getting</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
+    <div class="section-divider d-none d-lg-block"></div>
 
     <section id="cost">
         <div class="container">
-            <h2>Cost</h2>
+            <h2 class="mega-back-heading">
+                <span class="actual-text" data-typing data-type-speed="70" data-type-cursor="true" data-type-text="Cost"></span>
+                <span class="placeholder-text">Cost</span>
+            </h2>
             
             <h3>Cost Structure</h3>
             <div class="details">
                 <p>We offer flexible engagement models:</p>
                 <ul>
-                    <li>Project-based consulting with clear deliverables and timelines</li>
-                    <li>Performance-based fee structures aligned with your KPIs</li>
-                    <li>Often self-funding through the savings and performance gains we deliver</li>
+                    <li class="text-white">Project-based consulting with clear deliverables and timelines</li>
+                    <li class="text-white">Performance-based fee structures aligned with your KPIs</li>
+                    <li class="text-white">Often self-funding through the savings and performance gains we deliver</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
+    <div class="section-divider d-none d-lg-block"></div>
 
     <section id="location">
         <div class="container">
-            <h2>Location</h2>
-            
+            <h2 class="mega-back-heading">
+                <span class="actual-text" data-typing data-type-speed="70" data-type-cursor="true" data-type-text="Location"></span>
+                <span class="placeholder-text">Location</span>
+            </h2>
             <h3>Where to Find Us</h3>
             <p>
                 RTB.CAT is headquartered 30 miles south of London, with a network of specialists and publisher relationships across the US, EU, and APAC. All client engagements are personally overseen by Jen-Lars Brannstrom.
@@ -578,28 +196,31 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <div class="section-divider"></div>
+    <div class="section-divider d-none d-lg-block"></div>
 
     <section id="process">
         <div class="container">
-            <h2>Process</h2>
+            <h2 class="mega-back-heading">
+                <span class="actual-text" data-typing data-type-speed="70" data-type-cursor="true" data-type-text="Process"></span>
+                <span class="placeholder-text">Process</span>
+            </h2>
             
             <h3>How to Get Started</h3>
             <div class="details">
                 <ol>
-                    <li>Initial consultation to understand your audience targeting needs</li>
-                    <li>Custom publisher recommendation and direct connection strategy</li>
-                    <li>Technical integration support and performance monitoring</li>
-                    <li>Continuous optimization and expansion of direct relationships</li>
+                    <li class="text-white">Initial consultation to understand your audience targeting needs</li>
+                    <li class="text-white">Custom publisher recommendation and direct connection strategy</li>
+                    <li class="text-white">Technical integration support and performance monitoring</li>
+                    <li class="text-white">Continuous optimization and expansion of direct relationships</li>
                 </ol>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
+    <div class="section-divider d-none d-lg-block"></div>
 
     <section id="contact-form">
-        <div class="container">
+        <div class="container" data-aos="fade-right" data-aos-delay="50" data-aos-offset="0">
             <h3>Ready to improve your KPIs?</h3>
             <form class="contact-form" action="#" method="POST">
                 <div class="form-group">
@@ -638,11 +259,97 @@ src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
 
     <footer class="footer">
         <div class="container">
-            <p>RTB.cat © 2024 | <a href="#" style="color: inherit;">Privacy Policy</a> | <a href="#contact" style="color: inherit;">Contact Us</a></p>
+            <p>RTB.cat © 2024 | <a href="privacy.html" style="color: inherit;">Privacy Policy</a> | <a href="contact.html" style="color: inherit;">Contact Us</a></p>
         </div>
     </footer>
 
+		<script src="assets/js/core.min.js"></script>
+		<script src="assets/js/vendor_bundle.min.js"></script>
     <script>
+       
+      document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded, initializing typing effect...');
+      
+      // Get all elements with data-typing attribute
+      const typingElements = document.querySelectorAll('[data-typing]');
+      console.log('Found typing elements:', typingElements.length);
+      
+      // Function to check if element is in viewport
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        );
+      }
+      
+      // Function to handle typing effect
+      function handleTypingEffect(element) {
+        // Skip if already processed
+        if (element.dataset.typingStarted === 'true') return;
+        
+        // Mark as processed
+        element.dataset.typingStarted = 'true';
+        
+        // Get typing parameters
+        const text = element.getAttribute('data-type-text') || '';
+        const speed = parseInt(element.getAttribute('data-type-speed')) || 70;
+        const showCursor = element.getAttribute('data-type-cursor') === 'true';
+        
+        // Get parent and placeholder
+        const parent = element.parentElement;
+        const placeholder = parent.querySelector('.placeholder-text');
+        
+        // Hide placeholder text
+        if (placeholder) placeholder.style.display = 'none';
+        
+        // Clear the element text
+        element.textContent = '';
+        
+        // Add cursor if enabled
+        let cursor = null;
+        if (showCursor) {
+          cursor = document.createElement('span');
+          cursor.className = 'typing-cursor';
+          cursor.textContent = '|';
+          element.after(cursor);
+        }
+        
+        // Start typing
+        let i = 0;
+        function typeNextChar() {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeNextChar, speed);
+          } else if (cursor) {
+            // When typing is done, remove the cursor
+            cursor.remove();
+          }
+        }
+        
+        // Start the typing effect
+        typeNextChar();
+      }
+      
+      // Check visible elements
+      function checkVisibleElements() {
+        typingElements.forEach(function(element) {
+          if (isElementInViewport(element) && element.dataset.typingStarted !== 'true') {
+            handleTypingEffect(element);
+          }
+        });
+      }
+      
+      // Initial check with small delay to ensure everything is rendered
+      setTimeout(checkVisibleElements, 100);
+      
+      // Bind scroll and resize events
+      window.addEventListener('scroll', checkVisibleElements);
+      window.addEventListener('resize', checkVisibleElements);
+    });
+
+// =======================
         document.addEventListener('DOMContentLoaded', function() {
             const toggles = document.querySelectorAll('.detail-toggle');
             
