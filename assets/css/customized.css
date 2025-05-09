@@ -1,0 +1,410 @@
+
+        :root {
+            --dark-bg: #252525 !important;
+            --darker-bg: #1c1c1c !important;
+            --light-text: #e0e0e0 !important;
+            --accent-color: #a12559 !important;
+            --secondary-accent: #fad776 !important;
+            --grid-color: rgba(255, 255, 255, 0.07) !important;
+            --darker-grid: rgba(255, 255, 255, 0.03) !important;
+            --card-bg: rgba(37, 37, 37, 0.7) !important;
+            --border-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        * {
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            background-color: var(--dark-bg) !important;
+            color: var(--light-text) !important;
+            line-height: 1.6 !important;
+            overflow-x: hidden !important;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(var(--darker-grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--darker-grid) 1px, transparent 1px) !important;
+            background-size: 40px 40px, 40px 40px, 10px 10px, 10px 10px !important;
+            background-position: -0.5px -0.5px, -0.5px -0.5px, -0.5px -0.5px, -0.5px -0.5px !important;
+        }
+
+        .container {
+            max-width: 1400px !important;
+            margin: 0 auto !important;
+            padding: 0 2rem !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        header {
+            padding: 3rem 0 2rem !important;
+            position: relative !important;
+            border-bottom: 1px solid var(--border-color) !important;
+        }
+
+        .navbar {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+
+        .logo-section {
+            max-width: 400px !important;
+        }
+
+        .logo {
+            font-size: 2.5rem !important;
+            font-weight: 700 !important;
+            letter-spacing: -1px !important;
+            color: var(--light-text) !important;
+            line-height: 1 !important;
+        }
+
+        .tagline {
+            font-size: 1.2rem !important;
+            font-weight: 400 !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            margin-top: 0.5rem !important;
+        }
+
+        .subtitle {
+            font-size: 1rem !important;
+            color: rgba(255, 255, 255, 0.5) !important;
+            margin-top: 0.25rem !important;
+        }
+
+        .mega-heading {
+            font-size: 10rem !important;
+            font-weight: 700 !important;
+            color: rgba(255, 255, 255, 0.05) !important;
+            position: absolute !important;
+            top: 50% !important;
+            right: 10% !important;
+            transform: translateY(-50%) !important;
+            line-height: 0.8 !important;
+            pointer-events: none !important;
+            letter-spacing: -5px !important;
+            z-index: -1 !important;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700 !important;
+            margin-top: 2rem !important;
+            margin-bottom: 1rem !important;
+            letter-spacing: -0.5px !important;
+            line-height: 1.1 !important;
+        }
+
+        h1 {
+            font-size: 5rem !important;
+            margin-top: 6rem !important;
+            max-width: 1000px !important;
+            line-height: 1 !important;
+            letter-spacing: -2px !important;
+        }
+
+        h2 {
+            font-size: 12rem !important;
+            color: rgba(255, 255, 255, 0.05) !important;
+            margin: 8rem 0 4rem !important;
+            letter-spacing: -4px !important;
+            line-height: 0.9 !important;
+            text-transform: uppercase !important;
+        }
+
+        h3 {
+            font-size: 2rem !important;
+            color: var(--light-text) !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        section {
+            margin: 6rem 0 !important;
+            position: relative !important;
+        }
+
+        .intro-section {
+            margin-top: 10rem !important;
+            margin-bottom: 10rem !important;
+        }
+
+        .intro-text {
+            max-width: 700px !important;
+            margin-top: 2rem !important;
+            font-size: 1.25rem !important;
+            line-height: 1.6 !important;
+        }
+
+        .box-highlight {
+            border-left: 4px solid var(--accent-color) !important;
+            padding-left: 1.5rem !important;
+            margin: 2rem 0 !important;
+            font-size: 1.2rem !important;
+        }
+
+        .details {
+            margin: 3rem 0 !important;
+            margin-top: 0 !important;
+            border-left: 4px solid var(--accent-color) !important;
+            padding-left: 2rem !important;
+            font-size: 1.1rem !important;
+        }
+
+        .grid-container {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 2rem !important;
+            margin-top: 4rem !important;
+        }
+
+        .card {
+            background-color: var(--card-bg) !important;
+            padding: 2.5rem !important;
+            border-radius: 5px !important;
+            border: 1px solid var(--border-color) !important;
+            transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) !important;
+            border-color: var(--accent-color) !important;
+            background-color: rgba(37, 37, 37, 0.9) !important;
+        }
+
+        .card h3 {
+            font-size: 1.5rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .card ul {
+            margin-left: 1.5rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem !important;
+        }
+
+        .btn {
+            display: inline-block !important;
+            padding: 1rem 2rem !important;
+            background-color: var(--accent-color) !important;
+            color: white !important;
+            text-decoration: none !important;
+            border-radius: 4px !important;
+            font-weight: 600 !important;
+            margin-top: 2rem !important;
+            transition: all 0.3s ease !important;
+            border: none !important;
+            cursor: pointer !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+            font-size: 0.9rem !important;
+        }
+
+        .btn:hover {
+            background-color: #463fbd !important;
+            transform: translateY(-2px) !important;
+        }
+
+        .arrow-icon {
+            display: inline-block !important;
+            margin-left: 0.5rem !important;
+            font-size: 1.2rem !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .btn:hover .arrow-icon {
+            transform: translateX(5px) !important;
+        }
+
+        .section-divider {
+            height: 1px !important;
+            background-color: var(--border-color) !important;
+            margin: 5rem 0 !important;
+        }
+
+        .detail-toggle {
+            cursor: pointer !important;
+            color: var(--accent-color) !important;
+            font-weight: 600 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            margin-top: 1rem !important;
+        }
+
+        .detail-toggle::after {
+            content: "+" !important;
+            display: inline-block !important;
+            margin-left: 0.5rem !important;
+            font-size: 1.2rem !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .detail-toggle.active::after {
+            transform: rotate(45deg) !important;
+        }
+
+        .detail-content {
+            max-height: 0 !important;
+            overflow: hidden !important;
+            transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease !important;
+            opacity: 0 !important;
+        }
+
+        .detail-toggle.active + .detail-content {
+            max-height: 1000px !important;
+            opacity: 1 !important;
+            margin-top: 1rem !important;
+        }
+
+        .profile-section {
+            display: flex !important;
+            gap: 2rem !important;
+            margin-top: 3rem !important;
+        }
+
+        .profile-info {
+            flex: 1 !important;
+        }
+
+        .cta-section {
+            text-align: center !important;
+            margin: 8rem 0 !important;
+        }
+
+        .cta-section h3 {
+            font-size: 3rem !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .contact-form {
+            background-color: var(--darker-bg) !important;
+            padding: 3rem !important;
+            border-radius: 5px !important;
+            border: 1px solid var(--border-color) !important;
+            max-width: 700px !important;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .form-control {
+            width: 100% !important;
+            padding: 1rem !important;
+            border-radius: 4px !important;
+            border: 1px solid var(--border-color) !important;
+            background-color: rgba(255, 255, 255, 0.04) !important;
+            color: var(--light-text) !important;
+            font-size: 1rem !important;
+            transition: border-color 0.3s ease !important;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color) !important;
+            outline: none !important;
+        }
+
+        .radio-group {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+            gap: 1rem !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .radio-option {
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .radio-option input {
+            margin-right: 0.5rem !important;
+            cursor: pointer !important;
+        }
+
+        .radio-option label {
+            cursor: pointer !important;
+        }
+
+        .footer {
+            padding-bottom: 2rem !important;
+            border-top: 1px solid var(--border-color) !important;
+            text-align: center !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 4rem !important;
+            }
+            h2 {
+                font-size: 5rem !important;
+            }
+            .mega-heading {
+                font-size: 7rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem !important;
+                margin-top: 3rem !important;
+            }
+            h2 {
+                font-size: 3.5rem !important;
+                margin: 5rem 0 3rem !important;
+            }
+            .mega-heading {
+                font-size: 5rem !important;
+                top: 30% !important;
+            }
+            .grid-container {
+                grid-template-columns: 1fr !important;
+            }
+            .intro-section {
+                margin-top: 5rem !important;
+                margin-bottom: 5rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem !important;
+            }
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            h2 {
+                font-size: 3rem !important;
+            }
+            h3 {
+                font-size: 1.5rem !important;
+            }
+            .card {
+                padding: 1.5rem !important;
+            }
+        }
+        
+
+
+        
+    .actual-text, .placeholder-text {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .placeholder-text {
+      visibility: hidden; /* Initially hidden for SEO but still takes space */
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
