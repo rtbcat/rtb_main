@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RTB.CAT - Programmatic Media Buying Consulting specializing in connecting the right publishers with advertisers to maximize KPIs.">
+    <title>RTB.CAT - Programmatic Media Buying Consulting</title>
+    
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NQ55GSQ');</script>
+        <!-- End Google Tag Manager -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1213800238717879'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+
+
+    
+    <noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1213800238717879&ev=PageView&noscript=1"
+/></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #252525;
+            --darker-bg: #1c1c1c;
+            --light-text: #e0e0e0;
+            --accent-color: #a12559;
+            --secondary-accent: #fad776;
+            --grid-color: rgba(255, 255, 255, 0.07);
+            --darker-grid: rgba(255, 255, 255, 0.03);
+            --card-bg: rgba(37, 37, 37, 0.7);
+            --border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(var(--darker-grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--darker-grid) 1px, transparent 1px);
+            background-size: 40px 40px, 40px 40px, 10px 10px, 10px 10px;
+            background-position: -0.5px -0.5px, -0.5px -0.5px, -0.5px -0.5px, -0.5px -0.5px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 3rem 0 2rem;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            max-width: 400px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: var(--light-text);
+            line-height: 1;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.25rem;
+        }
+
+        .mega-heading {
+            font-size: 10rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            line-height: 0.8;
+            pointer-events: none;
+            letter-spacing: -5px;
+            z-index: -1;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-top: 6rem;
+            max-width: 1000px;
+            line-height: 0.9;
+            letter-spacing: -2px;
+        }
+
+        h2 {
+            font-size: 12rem;
+            color: rgba(255, 255, 255, 0.05);
+            margin: 8rem 0 4rem;
+            letter-spacing: -4px;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+        }
+
+        section {
+            margin: 6rem 0;
+            position: relative;
+        }
+
+        .intro-section {
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+        }
+
+        .intro-text {
+            max-width: 700px;
+            margin-top: 2rem;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .box-highlight {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+        }
+
+        .details {
+            margin: 3rem 0;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            background-color: rgba(37, 37, 37, 0.9);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #463fbd;
+            transform: translateY(-2px);
+        }
+
+        .arrow-icon {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover .arrow-icon {
+            transform: translateX(5px);
+        }
+
+        .section-divider {
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 5rem 0;
+        }
+
+        .detail-toggle {
+            cursor: pointer;
+            color: var(--accent-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .detail-toggle::after {
+            content: "+";
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .detail-toggle.active::after {
+            transform: rotate(45deg);
+        }
+
+        .detail-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+            opacity: 0;
+        }
+
+        .detail-toggle.active + .detail-content {
+            max-height: 1000px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 8rem 0;
+        }
+
+        .cta-section h3 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            background-color: var(--darker-bg);
+            padding: 3rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            max-width: 700px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: rgba(255, 255, 255, 0.04);
+            color: var(--light-text);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+
+        .radio-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-option input {
+            margin-right: 0.5rem;
+            cursor: pointer;
+        }
+
+        .radio-option label {
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 10rem;
+            padding: 5rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 4rem;
+            }
+            h2 {
+                font-size: 5rem;
+            }
+            .mega-heading {
+                font-size: 7rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+                margin-top: 3rem;
+            }
+            h2 {
+                font-size: 3.5rem;
+                margin: 5rem 0 3rem;
+            }
+            .mega-heading {
+                font-size: 5rem;
+                top: 30%;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .intro-section {
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ55GSQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo-section">
+                    <div class="logo">RTB.CAT</div>
+                    <div class="tagline">Programmatic Media Buying Consulting</div>
+                    <div class="subtitle">Results. Transparency. Access.</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="container">
+            <h1>Expert programmatic media buying for maximizing KPIs</h1>
+            <div class="box-highlight">
+                Connecting the right publishers with the right advertisers through 24+ years of media buying experience.
+            </div>
+            <p class="intro-text">
+                I provide consulting on programmatic (RTB) media buying. I have a small team of freelancers that 
+                I have been working with for at least 10 years, each specializing in different fields of ad-tech 
+                and advertiser and publisher match-making. I started buying media 24 years ago. I connect the right 
+                publishers with the right advertisers to maximize everyone's KPIs.
+            </p>
+            <a href="#contact" class="btn">Get Started <span class="arrow-icon">→</span></a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Services</h2>
+            
+            <h3>What I Do</h3>
+            <p>
+                I provide consulting on programmatic (RTB) media buying. I have a small team of freelancers that I have been working with for at least 10 years, each specializing in different fields of ad-tech and advertiser and publisher match-making. I started buying media 24 years ago. I connect the right publishers with the right advertisers to maximize everyone's KPIs.
+            </p>
+
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Publisher Matching</h3>
+                    <p>
+                        Not all Premium publishers are a good fit for your KPIs.
+                    </p>
+                    <div class="detail-toggle" tabindex="0">Learn more</div>
+                    <div class="detail-content">
+                        <p>
+                            You will define your needs and then can use our industry connections and knowledge to connect 
+                            you to the appropriate publishers with high-performing inventory perfectly matched to your target 
+                            audience—often at better rates through direct deals than through intermediaries.
+                        </p>
+                        <p>
+                            These relationships, built over 24 years in media buying, connect you with quality traffic sources 
+                            that deliver real users with genuine purchase intent. Additionally, we analyze your current setup 
+                            to identify and eliminate wasteful spend.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Our Experience</h3>
+                    <p>
+                        We maintain a comprehensive database of campaign results.
+                    </p>
+                    <div class="detail-toggle" tabindex="0">Learn more</div>
+                    <div class="detail-content">
+                        <p>
+                            Through years of direct experience running campaigns, the theme has built detailed knowledge about 
+                            the actual performance of ad exchanges, programmatic email, retail media, in-house ad-server 
+                            capabilities and data purity.
+                        </p>
+                        <p>
+                            You stand to gain from this hard-won know-how.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Results You Can Expect</h3>
+                    <ul>
+                        <li>Introductions to proven, tested publishers or advertisers</li>
+                        <li>Removing platform fees where not warranted</li>
+                        <li>Traffic from authenticated users with genuine purchase intent</li>
+                        <li>Increased ROAS through elimination of fraudulent sources and middlemen costs</li>
+                        <li>Performance-focused campaigns with measurable business outcomes</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>How Easy Is It?</h3>
+                    <p>We handle the heavy lifting for you.</p>
+                    <p>Our process focuses specifically on your defined KPIs in Tier 1 & 2 markets, we:</p>
+                    <ul>
+                        <li>Connect you with publishers that match your exact business needs - those with proven history of delivering real users</li>
+                        <li>Eliminate wasteful spend by cutting out ad fraud and poorly-performing traffic sources</li>
+                        <li>The complex work of relationship-building and technical implementation is managed by us, so you can focus on results</li>
+                        <li>Direct connections to premium publishers relevant to your audience</li>
+                        <li>Technical integrations that bypass unnecessary intermediaries</li>
+                        <li>Transparent tracking that shows exactly what you're getting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="cost">
+        <div class="container">
+            <h2>Cost</h2>
+            
+            <h3>Cost Structure</h3>
+            <div class="details">
+                <p>We offer flexible engagement models:</p>
+                <ul>
+                    <li>Project-based consulting with clear deliverables and timelines</li>
+                    <li>Performance-based fee structures aligned with your KPIs</li>
+                    <li>Often self-funding through the savings and performance gains we deliver</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="location">
+        <div class="container">
+            <h2>Location</h2>
+            
+            <h3>Where to Find Us</h3>
+            <p>
+                RTB.CAT is headquartered 30 miles south of London, with a network of specialists and publisher relationships across the US, EU, and APAC. All client engagements are personally overseen by Jen-Lars Brannstrom.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="process">
+        <div class="container">
+            <h2>Process</h2>
+            
+            <h3>How to Get Started</h3>
+            <div class="details">
+                <ol>
+                    <li>Initial consultation to understand your audience targeting needs</li>
+                    <li>Custom publisher recommendation and direct connection strategy</li>
+                    <li>Technical integration support and performance monitoring</li>
+                    <li>Continuous optimization and expansion of direct relationships</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="contact-form">
+        <div class="container">
+            <h3>Ready to improve your KPIs?</h3>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="advertiser" name="client-type" value="advertiser">
+                            <label for="advertiser">I am an advertiser</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="publisher" name="client-type" value="publisher">
+                            <label for="publisher">I am a publisher with provable audiences</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="retail" name="client-type" value="retail">
+                            <label for="retail">I am a retail media publisher with SKU targeting</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="press" name="client-type" value="press">
+                            <label for="press">I am press</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Mobile" name="mobile">
+                </div>
+                <button type="submit" class="btn">Submit <span class="arrow-icon">→</span></button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>RTB.cat © 2024 | <a href="#" style="color: inherit;">Privacy Policy</a> | <a href="#contact" style="color: inherit;">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggles = document.querySelectorAll('.detail-toggle');
+            
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    toggleDetail(this);
+                });
+                
+                // Add keyboard accessibility
+                toggle.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleDetail(this);
+                    }
+                });
+            });
+            
+            function toggleDetail(element) {
+                element.classList.toggle('active');
+                element.textContent = element.classList.contains('active') ? 'Show less' : 'Learn more';
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            window.scrollTo({
+                                top: target.offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
